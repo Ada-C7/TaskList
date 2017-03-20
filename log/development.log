@@ -106,3 +106,17 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 434ms (Views: 432.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks" for ::1 at 2017-03-20 14:53:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-20 14:53:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
