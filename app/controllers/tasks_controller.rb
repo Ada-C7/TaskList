@@ -1,9 +1,5 @@
 class TasksController < ApplicationController
 
-  # def 'random_time'
-  #   Time.at(rand * Time.now.to_i)
-  # end
-
   TASKS = [
         { name: "The First Task", description: "Be amazing", completed_at: 'random_time' },
         { name: "Go to Brunch", description: "Location - Portage Bay" },
@@ -13,20 +9,14 @@ class TasksController < ApplicationController
         { name: "High Five Somebody You Don't Know", description: "", completed_at: 'random_time' },
         { name: "Plant Flowers", description: "sun flowers, roses, lavander", completed_at: 'random_time' },
         { name: "Call Mom", description: "at 6:30pm" },
-        { name: "Nap.", description: "45 min max", completed_at: 'random_time' }
+        { name: "Nap", description: "45 min max", completed_at: 'random_time' }
       ]
 
   def index
-
     @tasks = TASKS
-    # tasks.each do |task|
-    #   Task.create task
-    # end
   end
 
   def show
-    # code below found online as an example
-    #  @book = Book.find(params[:id])
     id = params[:id].to_i
     @task = TASKS[id]
   end

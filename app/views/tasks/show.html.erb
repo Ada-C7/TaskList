@@ -1,4 +1,8 @@
-<h1> should only show one task </h1>
+<!-- <h1> should only show one task </h1> -->
 
-<h2><%= @task[:name] %></h2>
+<h1><%= @task[:name] %></h1>
+<ul>
+  <li>Description: <%= @task[:description] %></li>
+  <li>Due Date: <%= @task[:completed_at] %></li>
+</ul>
 <a href='./index'>index</a>
