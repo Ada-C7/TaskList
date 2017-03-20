@@ -1,9 +1,13 @@
-<h1>Task List</h1>
+<main>
+  <section>
+    <h1>Task List</h1>
 
-  <ul>
-    <% @tasks.each_with_index do |task, id| %>
+    <ul>
+      <% @tasks.each_with_index do |task, id| %>
       <li>
         <%= link_to task[:what], task_path(id) %>
       </li>
       <% end %>
     </ul>
+  </section>
+</main>
