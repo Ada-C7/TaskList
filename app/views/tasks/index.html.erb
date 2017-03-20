@@ -2,9 +2,9 @@
 <!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
 
 <% @tasks.each do |task| %>
-  <p>Task: <%=task[:task] %></p>
+  <p>Task: <%=task[:name] %></p>
   <ul>
-    <li>Descrip: <%=task[:description] %></li>
-    <li>Due Date: <%=task[:due_date]%></li>
+    <li>Description: <%=task[:description] %></li>
+    <li>Due Date: <%=task[:completed_at]%></li>
   </ul>
 <%end%>

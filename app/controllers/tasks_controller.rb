@@ -1,25 +1,26 @@
 class TasksController < ApplicationController
   def index
+
+    def random_time
+      Time.at(rand * Time.now.to_i)
+    end
+
     @tasks = [
-              { task: "grocery shop",
-                description: "Trader Joes: Eggs, Almonds, Oatmeal",
-                due_date: "date",
-              },
+      { name: "The First Task", description: "Be amazing", completed_at: random_time },
+      { name: "Go to Brunch", description: "Location - Portage Bay" },
+      { name: "Go to Lunch", description: "Location: Thai", completed_at: random_time },
+      { name: "Go to Second Lunch", description: "Location: Cafe Ladro" },
+      { name: "Play Video Games", description: "Zelda", completed_at: random_time },
+      { name: "High Five Somebody You Don't Know", description: "", completed_at: random_time },
+      { name: "Plant Flowers", description: "sun flowers, roses, lavander", completed_at: random_time },
+      { name: "Call Mom", description: "at 6:30pm" },
+      { name: "Nap.", description: "45 min max", completed_at: random_time }
+    ]
 
-              { task: "clean bedroom",
-                description: "vacuum, wash sheets, organize desk",
-                due_date: "date",
-              },
+    # tasks.each do |task|
+    #   Task.create task
+    # end
 
-              { task: "homework",
-                description: "finish rails baseline, clean up notes, watch video",
-                due_date: "date" },
-
-              { task: "workout-gym",
-                description: "Belltown Crossfit",
-                due_date: "date",
-              }
-             ]
   end
 
   # def show
