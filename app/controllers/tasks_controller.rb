@@ -1,21 +1,25 @@
 class TasksController < ApplicationController
-  def index
-    @tasks = [
-      { name: "The First Task", description: "", completed_at: random_time },
-      { name: "Go to Brunch", description: "" },
-      { name: "Go to Lunch", description: "", completed_at: random_time },
-      { name: "Go to Second Lunch", description: "" },
-      { name: "Play Video Games", description: "", completed_at: random_time },
-      { name: "High Five Somebody You Don't Know", description: "", completed_at: random_time },
-      { name: "Plant Flowers", description: "", completed_at: random_time },
-      { name: "Call Mom", description: "" },
-      { name: "She worries, you know.", description: "" },
-      { name: "Nap.", description: "", completed_at: random_time }
+
+    TASKS = [
+      { name: "The First Task", description: "Stuff", completed_at: "8AM" },
+      { name: "Go to Brunch", description: "Things" },
+      { name: "Go to Lunch", description: "Yum", completed_at: "8AM" },
+      { name: "Go to Second Lunch", description: "Yummer" },
+      { name: "Play Video Games", description: "Yummmmm", completed_at: "8AM" },
+      { name: "High Five Somebody You Don't Know", description: "HIGH FIVE", completed_at: "8AM" },
+      { name: "Plant Flowers", description: "DIRT", completed_at: "8AM" },
+      { name: "Call Mom", description: "if you really want to" },
+      { name: "She worries, you know.", description: "always" },
+      { name: "Nap.", description: "alwayssssss", completed_at: "8AM" }
     ]
+  def index
+    @tasks = TASKS
   end
 
-  def random_time
-    Time.at(rand * Time.now.to_i)
+  def show
+    id = params[:id].to_i
+    @task = TASKS[id]
   end
-  
+
+
 end
