@@ -1,32 +1,11 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1><%= @result_task[:title] %></h1>
 
-<!-- <table>
-  <thead>
-    <td>
-      <h3>  TASK  </h3>
-    </td>
-    <td>
-      <h3>  DUE DATE  </h3>
-    </td>
-    <td>
-      <h3>  PRIORITY  </h3>
-    </td>
-  </thead> -->
-  <p>
-    <%# my_task = @tasks.select {|task| task[:id] == id } %>
-    <%= @task %>
-  </p>
-
-    <!-- <tr>
-      <td>
-        <%#task[:title]%>
-      </td>
-      <td>
-        <%#task[:duedate]%>
-      </td>
-      <td>
-        <%#task[:priority]%>
-      </td>
-    </tr> -->
-<!-- </table>
+<img src="http://pipsum.com/200x100.jpg" />
+<p>
+  Due: <%= @result_task[:duedate] %>
+</p>
+<p>
+  Priority: <%= @result_task[:priority] %>
+</p>
+<p><%= link_to "Previous Task", @prev_id %></p>
+<p><%= link_to "Next Task", @next_id %></p>
