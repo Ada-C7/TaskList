@@ -1,10 +1,11 @@
 <h1>Tasks</h1>
 <!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
 
-<% @tasks.each do |task| %>
-  <p>Task: <%=task[:name] %></p>
+<% @tasks.each_with_index do |task, id| %>
+  <p>Task: <%= link_to task[:name], task_path(id) %>
+  <!-- <p>Task: <%=task[:name] %></p> -->
   <ul>
-    <li>Description: <%=task[:description] %></li>
-    <li>Due Date: <%=task[:completed_at]%></li>
+    <li>Description: <%= task[:description] %></li>
+    <li>Due Date: <%= task[:completed_at] %></li>
   </ul>
-<%end%>
+<% end %>
