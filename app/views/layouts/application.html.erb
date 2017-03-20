@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Raaaawr This Website is built on RoooooooR</h1>
+    </header>
+    <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <h3>This Excellent Task Website is Copyright Anna Elisabeth</h3>
+  </footer>
+  </body>
+</html>
