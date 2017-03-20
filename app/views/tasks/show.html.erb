@@ -1,8 +1,10 @@
 <!-- <h1> should only show one task </h1> -->
 
 <h1><%= @task[:name] %></h1>
-<ul>
-  <li>Description: <%= @task[:description] %></li>
-  <li>Due Date: <%= @task[:completed_at] %></li>
-</ul>
-<a href='./index'>index</a>
+<h2></h2>
+  <ul>
+    <li><div class="bold">Description:</div> <%= @task[:description] %></li>
+    <li><div class="bold">Due Date:</div> <%= @task[:completed_at] %></li>
+  </ul>
+
+<a href='./index'>Home</a>
