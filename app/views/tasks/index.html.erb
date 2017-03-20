@@ -1,0 +1,10 @@
+
+<h1> Tasklist List </h1>
+<ul>
+  <%@tasks.each do |task|%>
+    <li> <%=task[:task]%> by <%=task[:deadline]%> </li>
+    <%end%>
+  </ul>
+<%50.times do%>
+  <p> This will be there 50 times!</p>
+<%end%>
