@@ -1,0 +1,25 @@
+/*// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+
+h2, h3, a {
+  font-family: helvetica;
+}
+
+h2 {
+  color: #fff;
+}
+
+h3 {
+  color: yellow;
+}
+
+a {
+  color: #2ABB9B;
+}
+
+.show {
+  margin: 200px 30vw;
+  text-align: center;
+}

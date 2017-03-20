@@ -1,4 +1,6 @@
-<h2><%= @task[:what] %></h2>
-<h3>Due: <%= @task[:when] %></h3>
+<body class="show">
+  <h2><%= @task[:what] %></h2>
+  <h3>Due: <%= @task[:when] %></h3>
 
-<%= link_to "Back to task list", tasks_path %>
+  <%= link_to "Back to task list", tasks_path %>
+</body>
