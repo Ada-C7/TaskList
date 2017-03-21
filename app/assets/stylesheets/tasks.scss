@@ -8,9 +8,26 @@
 
 h1 {
   font-size: 1.5rem;
-  color: #4286f4;
+
+  color: #b7d1fb;
 }
 
 li {
   list-style-type: square;
+  color: #4286f4;
+}
+
+li.description,
+li.context {
+  list-style-type: none;
+}
+
+li.description {
+  color: lightgrey;
+  font-style: italic;
+}
+
+li.context {
+  font-style: italic;
+  color: #cfe0fc;
 }

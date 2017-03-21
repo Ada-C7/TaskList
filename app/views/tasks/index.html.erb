@@ -1,11 +1,19 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-<h1>Tasks for this afternoon</h1>
+<h1>Tasks for this week</h1>
 
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <%= task %>
+    <%= task.name %>
+    <ul>
+      <li class="description">
+        <%= task.description %>
+      </li>
+      <li class="context">
+        <%= task.context %>
+      </li>
+    </ul>
   </li>
   <% end %>
 </ul>
