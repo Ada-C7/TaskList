@@ -1,8 +1,9 @@
 <h1>To Do List</h1>
 
-
-<% @tasks. each do |task|  %>
+<ul id=index_list>
+    <% @tasks. each do |task|  %>
     <li>
         <%= task.name %>: <%= task.description %>
     </li>
-<% end %>
+    <% end %>
+</ul>
