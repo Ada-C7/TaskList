@@ -1,0 +1,28 @@
+
+
+li p:first-of-type{
+  color:lightgrey;
+}
+
+*{
+  color:white;
+}
+
+a{
+  text-decoration: none;
+  color: orange;
+}
+
+li{
+  list-style: none;
+}
+
+h1{
+  text-align: center;
+  font-size: 2rem;
+  color: cyan;
+}
+
+body{
+  background-color: lightcoral;
+}

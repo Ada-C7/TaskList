@@ -1,0 +1,7 @@
+<h1><%= @task[:name]%></h1>
+
+    <p>Task: <%= @task[:name] %></p>
+    <p>Description: <%= @task[:description] %></p>
+    <p> Completed Time: <%= @task[:completed_at] %></p>
+
+<%= link_to "Back to task list", tasks_path %>
