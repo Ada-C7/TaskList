@@ -13,11 +13,11 @@ class TasksController < ApplicationController
   #     ]
 
   def index
-    # @tasks = TASKS
+    @tasks = Task.all
   end
 
   def show
-    # id = params[:id].to_i
-    # @task = TASKS[id]
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 end
