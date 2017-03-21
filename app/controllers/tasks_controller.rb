@@ -8,13 +8,13 @@ class TasksController < ApplicationController
 
   def index
     # puts "Inside the puts in books#index!"
-    @tasks = TASKS
+    @tasks = Task.all
   end
 
 
   def show
     id = params[:id].to_i
-  @task = TASKS[id]
+    @task = Task.find(id)
     # @id =[]
     # @tasks.each do |task|
     #   if task[:id] == params[:id]
