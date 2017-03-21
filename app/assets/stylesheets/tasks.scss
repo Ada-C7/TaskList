@@ -1,0 +1,20 @@
+// doesn't work
+// head title:before {
+//   content: '✅ '
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Asap|Bitter');
+
+body {
+  font-size: 24px;
+  font-family: 'Asap', sans-serif;
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  color: #2d1883;
+}
+
+li {
+  padding: 2% 0;
+}
