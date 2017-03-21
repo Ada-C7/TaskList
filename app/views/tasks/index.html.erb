@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> Task List App </title>
-  </head>
-  <body>
-    <h1>Tonight's To Do List:</h1>
+    <h1>Brenna's To Do List:</h1>
     <ul>
-      <% @tasks.each do |task| %>
+      <% Task.all.each do |task| %>
       <li>
-        <%= task %>
+        <h3><%= link_to task.name.upcase, task_path(task.id) %></h3>
+        <p>
+          <%= task.desc %>
+        </p>
+        <p>
+          <% if task.complete != nil %>
+            Completed on: <%= task.complete %>
+          <% else %>
+            Not done yet! Get on it!
+          <% end %>
+        </p>
       </li>
       <% end %>
     </ul>
-  </body>
-</html>

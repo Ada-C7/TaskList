@@ -5,9 +5,20 @@
 
 @import url('https://fonts.googleapis.com/css?family=Asap|Bitter');
 
-body {
+html {
+  background-color: #b8b8b8;
+}
+
+body, a {
   font-size: 24px;
   font-family: 'Asap', sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #2d1883;
 }
 
 h1 {
@@ -17,4 +28,8 @@ h1 {
 
 li {
   padding: 2% 0;
+}
+
+li p:nth-child(3) {
+  font-weight: bold;
 }
