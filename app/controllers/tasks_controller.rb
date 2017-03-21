@@ -31,4 +31,8 @@ class TasksController < ApplicationController
       @next_id = params[:id]
     end
   end
+
+  def new
+    
+  end
 end
