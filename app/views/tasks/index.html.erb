@@ -1,10 +1,9 @@
-<h1>Tasks</h1>
-
+<h1>Task List:</h1>
 <ul>
   <h4>
     <% @tasks.each do | task | %>
       <li>
-        <%= task[:task] %>
+        <%= link_to task.name.capitalize, task_path(task.id) %>
       </li>
     <% end %>
   </h4>

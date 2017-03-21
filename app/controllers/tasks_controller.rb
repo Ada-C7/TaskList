@@ -1,10 +1,9 @@
 class TasksController < ActionController::Base
   def index
-    @tasks = [
-      { task: "Laundry"},
-      { task: "Dishes"},
-      { task: "Homework"},
-      { task: "Clean Bathroom"}
-    ]
+    @tasks = Task.all
+  end
+
+  def show
+    @show_task = Task.find(params[:id])
   end
 end
