@@ -1,23 +1,34 @@
-<h1>Add A New Task</h1>
+<h1>... adding a new task ...</h1>
 
 <form action="/tasks" method="post" accept-charset="utf-8">
   <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <ul id="new-task">
+    <li>
+      <label for="title">Title</label>
+      <input type="text" name="task[title]" value="" id="title">
+    </li>
 
+    <li>
+      <label for="description">Description</label>
+      <input type="text-area" name="task[description]" value="" id="description">
+    </li>
 
-  <label for="title">Title</label>
-  <input type="text" name="title" value="" id="title">
+    <li>
+      <label for="duedate">Due Date</label>
+      <input type="text" name="task[duedate]" value="" id="duedate">
+    </li>
 
-  <label for="description">Description</label>
-  <input type="textarea" name="description" value="" id="description">
+    <li>
+      <label for="priority">Priority</label>
+      <input type="text" name="task[priority]" value="" id="priority">
+    </li>
 
-  <label for="duedate">Due Date</label>
-  <input type="text" name="duedate" value="" id="duedate">
+    <li>
+      <input type="submit" value="Submit">
+    </li>
+  </ul>
 
-  <label for="priority">Priority</label>
-  <input type="text" name="priority" value="" id="priority">
-
-  <input type="submit" value="Submit">
 </form>
 
-<h2><%= link_to "cancel", tasks_path %></h2>
+<h3><%= link_to "cancel", tasks_path %></h3>

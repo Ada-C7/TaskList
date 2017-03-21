@@ -4964,3 +4964,110 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/new" for ::1 at 2017-03-21 16:37:21 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 125ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:37:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:37:52 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:37:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:38:37 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:39:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 80ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:39:26 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:39:49 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:04 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 140ms (Views: 132.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:10 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:26 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-21 16:41:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/new" for ::1 at 2017-03-21 16:41:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTask Load (6.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
