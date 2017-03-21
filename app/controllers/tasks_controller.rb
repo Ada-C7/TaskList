@@ -5,12 +5,12 @@ class TasksController < ApplicationController
     {what: "adopt a dog", when: "ASAP"}]
 
     def index
-      @tasks = TASKS
+      @tasks = Task.all
     end
 
     def show
       id = params[:id].to_i
-      @task = TASKS[id]
+      @task = Task.find(id)
     end
   end
 
