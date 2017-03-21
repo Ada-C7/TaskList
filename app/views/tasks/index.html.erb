@@ -3,10 +3,16 @@
 
 <section>
   <ul>
-    <% @tasks.each do |task| %>
     <li>
-      <%= task %>
-    </li>
+    <% @tasks.each do |task| %>
+      <% task %>
+      </li>
+      <%task.each do |k, v| %>
+        <%= k %>
+        <% v.each do |goals| %>
+          <%= goals %>
+        <% end %>
+      <% end %>
     <% end %>
   </ul>
 </section>
