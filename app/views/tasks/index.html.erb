@@ -1,17 +1,7 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
-<p>
-  Your high priority tasks are:
-  <% high_tasks = @tasks.select { |task| task[:priority] == :high} %>
-  <% high_tasks.each do |task| %>
-    <li> <%= task[:title] %></li>
-  <% end %>
-</p>
-<p>
-  Lower priority tasks:
-  <% other_tasks = @tasks - high_tasks %>
-  <% other_tasks.each do |task| %>
-    <li> <%= task[:title] %> </li>
-  <% end %>
+<h1>Tasks</h1>
 
-</p>
+<ul>
+  <% @tasks.each do |task| %>
+  <li><%= link_to task.name, task_path(task.id) %> </li>
+  <% end %>
+</ul>
