@@ -63,9 +63,9 @@ Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/tasks" for ::1 at 2017-03-20 14:54:34 -0700
-  
+
 ActionController::RoutingError (uninitialized constant TaskController):
-  
+
 activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `const_get'
 activesupport (5.0.2) lib/active_support/inflector/methods.rb:268:in `block in constantize'
 activesupport (5.0.2) lib/active_support/inflector/methods.rb:266:in `each'
@@ -134,9 +134,9 @@ Completed 200 OK in 461ms (Views: 459.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/tasks" for ::1 at 2017-03-20 14:56:23 -0700
-  
+
 ActionController::RoutingError (undefined local variable or method `random_time' for TasksController:Class):
-  
+
 app/controllers/tasks_controller.rb:8:in `<class:TasksController>'
 app/controllers/tasks_controller.rb:1:in `<top (required)>'
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
@@ -148,9 +148,9 @@ app/controllers/tasks_controller.rb:1:in `<top (required)>'
   Rendered /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.5ms)
 Started GET "/books" for ::1 at 2017-03-20 14:57:02 -0700
-  
+
 ActionController::RoutingError (No route matches [GET] "/books"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -190,9 +190,9 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `random_time' for #<TasksController:0x007fcf9cf005a0>):
-  
+
 app/controllers/tasks_controller.rb:6:in `index'
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -223,7 +223,7 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for {:name=>"The First Task", :description=>"", :priority=>"low"}:Hash):
     3: <ul> My tasks for today:
     4:   <% @tasks.each do |task| %>
@@ -232,7 +232,7 @@ ActionView::Template::Error (undefined method `name' for {:name=>"The First Task
     7:     </li>
     8:   <% end %>
     9: </ul>
-  
+
 app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb__1854651048700056352_70264813912640'
 app/views/tasks/index.html.erb:4:in `each'
 app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__1854651048700056352_70264813912640'
@@ -265,14 +265,14 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected '(', expecting ')'
 ...k[:name] - task[:description] (task[:priority]) );@output_bu...
 ...                               ^
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected ')', expecting keyword_end
 ...escription] (task[:priority]) );@output_buffer.safe_append='
 ...                               ^):
-  
+
 app/views/tasks/index.html.erb:6: syntax error, unexpected '(', expecting ')'
 app/views/tasks/index.html.erb:6: syntax error, unexpected ')', expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -311,12 +311,12 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected ')', expecting tSTRING_DEND
 ...scription]} (#{task[:priority])})" );@output_buffer.safe_app...
 ...                               ^
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:6: unterminated string meets end of file):
-  
+
 app/views/tasks/index.html.erb:6: syntax error, unexpected ')', expecting tSTRING_DEND
 app/views/tasks/index.html.erb:6: unterminated string meets end of file
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -348,14 +348,14 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
-'.freeze;       <%= task[:description] if task[:description]!=nil 
+'.freeze;       <%= task[:description] if task[:description]!=nil
                  ^
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected keyword_nil, expecting keyword_end
-'.freeze;       <%= task[:description] if task[:description]!=nil 
+'.freeze;       <%= task[:description] if task[:description]!=nil
                                                                  ^):
-  
+
 app/views/tasks/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
 app/views/tasks/index.html.erb:7: syntax error, unexpected keyword_nil, expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -373,11 +373,11 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected modifier_if, expecting ']'
-'.freeze;       task[:description if task[:description]!=nil 
+'.freeze;       task[:description if task[:description]!=nil
                                     ^):
-  
+
 app/views/tasks/index.html.erb:7: syntax error, unexpected modifier_if, expecting ']'
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -401,11 +401,11 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected '=', expecting keyword_end
-'.freeze;       =task[:description] if task[:description]!=nil 
+'.freeze;       =task[:description] if task[:description]!=nil
                  ^):
-  
+
 app/views/tasks/index.html.erb:7: syntax error, unexpected '=', expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -422,11 +422,11 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
       '.freeze; <%= task[:description] ;@outpu...
                  ^):
-  
+
 app/views/tasks/index.html.erb:7: syntax error, unexpected '<', expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -443,14 +443,14 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:8: syntax error, unexpected '>'
 ...tion]} (#{task[:priority]})" %> -->
 ...                               ^
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:11: unknown regexp option - l
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:12: unterminated string meets end of file
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:8: syntax error, unexpected '>'
 app/views/tasks/index.html.erb:11: unknown regexp option - l
 app/views/tasks/index.html.erb:12: unterminated string meets end of file
@@ -470,14 +470,14 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:8: syntax error, unexpected '>'
 ...tion]} (#{task[:priority]})" %> -->
 ...                               ^
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:11: unknown regexp option - l
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:12: unterminated string meets end of file
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:8: syntax error, unexpected '>'
 app/views/tasks/index.html.erb:11: unknown regexp option - l
 app/views/tasks/index.html.erb:12: unterminated string meets end of file
@@ -539,10 +539,10 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/tasks/index.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -560,10 +560,10 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/tasks/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -581,10 +581,10 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/tasks/index.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -602,10 +602,10 @@ Processing by TasksController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/tamikulon/ada/classwork/week7/TaskList/app/views/tasks/index.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/tasks/index.html.erb:16: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/tamikulon/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -853,3 +853,12 @@ Migrating to CreateTasks (20170321173539)
   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-21 17:38:27 UTC], ["updated_at", 2017-03-21 17:38:27 UTC]]
   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laundry"], ["description", "2 loads"], ["created_at", 2017-03-21 21:06:27 UTC], ["updated_at", 2017-03-21 21:06:27 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laundry"], ["description", "2 loads"], ["created_at", 2017-03-21 21:06:27 UTC], ["updated_at", 2017-03-21 21:06:27 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
