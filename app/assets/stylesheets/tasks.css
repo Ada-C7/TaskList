@@ -1,0 +1,22 @@
+
+*{
+  background-color:lightblue;
+}
+
+h1{
+  margin-left: 4rem;
+}
+
+li {
+list-style-type: none;
+}
+
+
+ul{
+  padding:0;
+  margin-left: 4rem;
+}
+
+li{
+  padding-bottom: 1rem;
+}

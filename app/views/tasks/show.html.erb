@@ -1,0 +1,8 @@
+
+<h1><%= @task[:name]%></h1>
+
+<h2>Description of task: <%= @task[:description].capitalize%></h2>
+
+<h3>When to be completed: <%= @task[:completed_at]%></h3>
+
+<%= link_to "Back to task list", tasks_path%>
