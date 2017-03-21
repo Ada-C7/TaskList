@@ -1,11 +1,15 @@
-<h1><%= @result_task[:title] %></h1>
+<h1><%= @result_task.title %></h1>
 
 <img src="http://pipsum.com/200x100.jpg" />
 <p>
-  Due: <%= @result_task[:duedate] %>
+  Due: <%= @result_task.duedate %>
 </p>
 <p>
-  Priority: <%= @result_task[:priority] %>
+  Priority: <%= @result_task.priority %>
+</p>
+
+<p>
+  <%= @result_task.description %>
 </p>
 <ul class="nav">
   <li>
@@ -15,6 +19,6 @@
     <%= link_to "Next Task", @next_id %>
   </li>
   <li>
-    <%= link_to "All Tasks", "/tasks" %>
+    <%= link_to "All Tasks", tasks_path %>
   </li>
 </ul>
