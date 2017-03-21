@@ -1,7 +1,7 @@
 <h1>tasks tasks tasks</h1>
 <p><%= @selected_task.name %></p>
-<p> <% unless @selected_task.done? %>
-        <%= "This task is incomplete" %>
+<p> <% if @selected_task.done? %>
+        <%= "Nice - this task is done" %>
     <% end %>
 </p>
 <p>Description: <%= @selected_task.description %></p>
