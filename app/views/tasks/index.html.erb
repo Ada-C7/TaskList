@@ -1,0 +1,8 @@
+<h1>To do list before trip!</h1>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= task[:name] %> : <%= task[:completed_at] %>
+  </li>
+  <% end %>
+</ul>
