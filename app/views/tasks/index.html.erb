@@ -1,0 +1,15 @@
+
+<h2>My to-do list:</h2>
+  <% @tasks.each do |task| %>
+  <p><%= task[:name] %></p>
+    <ul>
+    <% if task[:description]!="" && task[:priority]!= nil %>
+      <li><%= "notes: #{task[:description]}" %></li>
+    <% end %>
+
+    <% if task[:priority]!= "" && task[:priority]!= nil %>
+      <li><%= "priority: #{task[:priority]}" %></li>
+    <% end %>
+    </ul>
+  <% end %>
+</ul>

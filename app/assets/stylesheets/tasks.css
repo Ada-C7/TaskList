@@ -1,0 +1,32 @@
+html {
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+body{
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+h2 {
+  background-color: yellow;
+  padding: 0.25rem;
+}
+
+p {
+  background-color: lightgrey;
+  padding-left: 0.25rem;
+
+}
+
+h4::before {
+  content: "-☆-";
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: square;
+  padding: 0;
+}
