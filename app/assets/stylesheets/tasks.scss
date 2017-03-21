@@ -2,19 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// body {
-//   background-color: lavender;
-// }
-//
-// h1 {
-//   font-family: sans-serif;
-//   text-align: center;
-//   border-bottom: solid;
-//   font-size: 2em;
-// }
-//
-// p {
-//   font-family: Arial;
-//   font-size: 1.1em;
-//   margin-left: 3%;
-// }
+
+ body {
+   background-color: lightsteelblue;
+ }
+
+ h1 {
+   border-bottom: solid;
+   font-size: 2em;
+   font-family: sans-serif;
+   text-align: center;
+   padding: 2%;
+ }
+
+ p {
+   font-family: Arial;
+   font-size: 1.1em;
+   margin-left: 3%;
+ }
+
+ ul {
+   list-style-type: square;
+   margin: 1%;
+ }
+
+ li {
+   font-size: 1.1em;
+   font-family: Arial;
+   margin: 1%;
+ }
+
+ .bold {
+   display: inline-block;
+   font-weight: bold;
+ }
+
+ a {
+   color: red;
+   font-family: Arial;
+   font-weight: bold;
+   margin-left: 1%;
+   text-decoration: none;
+ }
+
+ a:hover {
+   color: maroon;
+ }
+
+ footer {
+   text-align: center;
+   padding: 2%;
+ }
