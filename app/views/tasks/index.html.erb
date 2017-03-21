@@ -3,7 +3,7 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <%= task.name %> (<%= task.description %>) by <%= task.deadline %>
+      <%= link_to task.name, task_path(task.id) %>
       <% if task.completed %>
         &check;
       <% end %>

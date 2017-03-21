@@ -1,0 +1,11 @@
+<h2><%= @task.name %></h2>
+
+<p><%= @task.description %></p>
+
+<% if @task.completed %>
+  <p>&check; Task completed! Yay!</p>
+<% else %>
+  <p>Complete by: <%= @task.deadline %></p>
+<% end %>
+
+<p><%= link_to "Back to tasks", tasks_path %></p>
