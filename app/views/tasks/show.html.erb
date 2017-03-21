@@ -1,0 +1,15 @@
+<h1>Task Status</h1>
+
+  <ul>
+    <% if @result_task[:id] == 1 %>
+    <img src="http://weknowyourdreams.com/images/kittens/kittens-07.jpg"  />
+    <% elsif @result_task[:id] == 2 %>
+    <img src="http://cdn.crownmediadev.com/dims4/default/7378e8d/2147483647/thumbnail/720x443%5E/quality/90/?url=http%3A%2F%2Fbrightcove04.o.brightcove.com%2F3388362517001%2F3388362517001_4741618882001_Rob-Gron-Cat-Ski-Celebrates-an-Interception.jpg%3FpubId%3D3388362517001"  />
+    <% elsif @result_task[:id] == 3 %>
+    <img src="http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg"  />
+    <% end %>
+    <h2><%= @result_task[:status] %></h2>
+      <% @result_task[:todo].each do |todo| %>
+      <li><%= todo %></li>
+      <% end %>
+  </ul>
