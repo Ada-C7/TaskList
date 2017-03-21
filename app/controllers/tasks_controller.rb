@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
   def index
-    @tasks = ["Work Out", "Homework", "Eat"]
+    @tasks = Task.all
   end
 end
