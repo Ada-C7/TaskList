@@ -31,6 +31,10 @@ class TasksController < ApplicationController
     @task = Task.find(id)
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   private
 
   def task_params # strong params, prevent bad user input, only permit a task and a name and description to describe that task
