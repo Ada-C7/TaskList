@@ -1,5 +1,5 @@
 
-<h1> Task List </h1>
+<h3> Task List </h3>
 
 <ul>
   <%@tasks.each do |task|%>
@@ -7,5 +7,6 @@
       <%=link_to "Task #{task.id}: #{task.name.capitalize}",task_path(task.id)%>
     </li>
 
+    <%= link_to "add a new task", new_task_path%>
 <%end%>
   </ul>
