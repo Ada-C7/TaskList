@@ -5,4 +5,5 @@
   <h3>Completed at: <%= @task[:completed_at]%></h3>
   <h3>Location: <%= @task[:location]%></h3>
   <%= link_to "Back to tasks", tasks_path%>
+  <%= link_to "Edit task", edit_task_path, id: "edit_task"%>
 </div>

@@ -1,4 +1,4 @@
-<h1>Add a new task:</h1>
+
 <%= form_for @task do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
@@ -12,7 +12,7 @@
 <%= f.label :location %>
 <%= f.text_field :location %>
 
-<%= f.submit value: "Add Task" , class: "add_button" %>
+<%= f.submit value: "Edit Task" , class: "add_button" %>
 
 <% end %>
 
@@ -36,4 +36,4 @@
   <!-- <input type="submit" value="Submit">
 </form> -->
 
-<p id = "goback"> <%= link_to "Go back", tasks_path %> </p>
+<p id = "goback"> <%= link_to "Go back", task_path %> </p>
