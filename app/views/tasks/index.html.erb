@@ -1,11 +1,12 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>Jou-Jou's To-do List</h1>
+
+<img src="http://placebeyonce.com/460-460" />
 
 <h4>
   <ul>
     <% @tasks.each do |task| %>
       <li>
-        To do: <%= task[:task] %> Priority: <%= task[:priority] %>
+        <%= link_to task.action, task_path(task.id) %>
       </li>
     <% end %>
   </ul>

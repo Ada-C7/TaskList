@@ -1,0 +1,7 @@
+<h1>Tasks TO-DO</h1>
+<img src="http://placebeyonce.com/450-300" />
+<p>
+  Task #<%= @result_task[:id] %>: <%= @result_task[:action] %>, <%= @result_task[:priority] %> priority | <%= @result_task[:completion] %> completion date | notes: <%= @result_task[:description] %>
+</p>
+
+<%= link_to "Home", tasks_path %>
