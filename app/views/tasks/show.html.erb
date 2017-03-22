@@ -1,17 +1,23 @@
-<h4>
-    <%= link_to "Home", tasks_path %>
-</h4>
-
 <h1>
   <%= @this_task.name %>
 </h1>
 <p>
   <%= @this_task.desc %>
 </p>
-<p>
-  <% if @this_task != nil %>
-    Completed on: <%= @this_task.complete %>
-  <% else %>
-    Not done yet! Get on it!
-  <% end %>
+
+<p class="comp">
+  <% if @this_task.complete != nil %>
+    Completed on: <%= @this_task.complete.strftime("%b %d, %Y") %> at <%= @this_task.complete.strftime("%I:%M %p") %>
+    <% end %>
 </p>
+<p class="incomp">
+  <% if @this_task.complete == nil %>
+  Not done yet! Get on it!
+  <% end %>
+
+<h4>
+  <%= link_to "Home", tasks_path %>
+</h4>
+
+
+<img src="http://icons.veryicon.com/png/System/Kameleon/Checklist.png" alt="checklist icon"  />

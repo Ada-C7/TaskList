@@ -18,18 +18,33 @@ body, a {
 
 a:hover {
   font-weight: bold;
-  color: #2d1883;
+  color: #0484ab;
 }
 
 h1 {
   font-family: 'Bitter', serif;
-  color: #2d1883;
+  color: #0484ab;
+}
+
+h4 {
+  padding: 5% 0;
 }
 
 li {
   padding: 2% 0;
 }
 
-li p:nth-child(3) {
-  font-weight: bold;
+p.incomp {
+  color: #e04f5f;
+}
+
+p.comp {
+  color: #17b198;
+}
+
+img {
+  position: fixed;
+  width: 25%;
+  top: 20px;
+  right: 20px;
 }
