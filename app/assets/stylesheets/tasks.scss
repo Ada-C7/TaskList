@@ -8,7 +8,6 @@
 
 h1 {
   font-size: 1.5rem;
-
   color: #b7d1fb;
 }
 
@@ -16,6 +15,7 @@ li {
   list-style-type: square;
   color: #4286f4;
 }
+
 
 li.description,
 li.context {
@@ -30,4 +30,13 @@ li.description {
 li.context {
   font-style: italic;
   color: #cfe0fc;
+}
+
+.task ul {
+  display: none;
+  width: 400px;
+}
+
+.unhide ul {
+  display: block;
 }

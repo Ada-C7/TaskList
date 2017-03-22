@@ -1,19 +1,30 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+
 <h1>Tasks for this week</h1>
 
 <ul>
   <% @tasks.each do |task| %>
-  <li>
-    <%= task.name %>
-    <ul>
-      <li class="description">
-        <%= task.description %>
-      </li>
-      <li class="context">
-        <%= task.context %>
-      </li>
-    </ul>
-  </li>
+    <li class="task" onclick="myFunction(event)">
+      <%= task.name %>
+      <ul>
+        <li class="description">
+          <%= task.description %>
+        </li>
+        <li class="context">
+          <%= task.context %>
+        </li>
+      </ul>
+    </li>
   <% end %>
 </ul>
+
+  <script>
+    function myFunction(event) {
+      if (event.target.className == "task")
+          event.target.className += " unhide";
+      else {
+        event.target.className = "task"
+      }
+    }
+  </script>
