@@ -1,0 +1,27 @@
+<%= form_for @task do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :completed_at %>
+  <%= f.text_field :completed_at %>
+
+  <%= f.submit value: "edit task" %>
+
+<% end %>
+
+<!-- <form action="/tasks" method="post" accept-charset="utf-8">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <label for="name">Task Name</label>
+  <input type="text" name="task[name]" value="" id="name">
+
+  <label for="description">Description</label>
+  <input type="text" name="task[description]" value="" id="description">
+
+
+  <input type="submit" value="Submit">
+</form> -->
