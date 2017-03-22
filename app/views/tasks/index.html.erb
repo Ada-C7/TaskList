@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "styles" %>
+<h1>Tasks</h1>
+
+<ul>
+  <% @tasks.each_with_index do |task, id|%>
+    <li>
+      <%= link_to task[:name], task_path(id) %>
+    </li>
+  <% end %>
+</ul>
