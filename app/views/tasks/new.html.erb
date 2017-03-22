@@ -1,26 +1,19 @@
-<form class="" action="/tasks" method="post" accept-charset="utf-8">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-  <h1>Add a New Task</h1>
+<h1>Add a New Task</h1>
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <label for="name">Task</label>
-  <input type="text" name="name" value="" id="title" placeholder="task name">
+  <%= f.label :description %>
+  <%= f.text_field :description %>
 
-  <label for="description">Description</label>
-  <input type="text" name="description" value="" id="description" placeholder="describe task">
+  <%= f.label :due_date %>
+  <%= f.date_field :due_date %>
 
-  <label for="priority">Priority</label>
-  <select class="priority" name="priority">
-      <option value="1">High = 1</option>
-      <option value="2">Medium = 2</option>
-      <option value="3">Low = 3</option>
-  </select>
+  <%= f.label :priority %>
+  <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
 
-  <label for="due_date">Due Date</label>
-  <input type="date" name="due_date" value="" placeholder="e.g. yy/mm/dd or dd/mm/yyyy or dd-mm-yy">
+  <!-- options_for_select([['High', 1], ['Medium', 2], ['Low', 3]]) -->
+  <!-- default name on submit button is "Create + Name of model -->
+  <%= f.submit "add book"%>
 
-
-  <input type="submit" name="submit" value="add new task"></input>
-
-
-</form>
+<% end %>
