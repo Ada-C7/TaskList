@@ -1084,3 +1084,10 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks/new" for ::1 at 2017-03-22 12:50:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
