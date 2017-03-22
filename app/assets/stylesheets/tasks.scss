@@ -1,3 +1,53 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form {
+  width: 95%;
+  max-width: 500px;
+  padding: 10px;
+  border: dashed #ccc 1px;
+  border-radius: 10px;
+}
+
+form * {
+  margin: 2%;
+}
+
+input[type="text"] {
+  height: 20px;
+}
+
+form label + * {
+  border: solid #ccc 1px;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  background: #eee;
+}
+
+input[type="text"], textarea {
+  width: 95%;
+  display: block;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 80%;
+  max-width: 200px;
+  margin: auto;
+  padding: 4px;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+  // border-radius: 5px;
+  // border-width: 1px;
+}
