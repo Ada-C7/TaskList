@@ -27,5 +27,33 @@ class TasksController < ApplicationController
 
     @result_task = Task.find(params[:id])
   end
+
+  def new
+    @task = Task.new
+  end
+
+  def create
+    # task = Task.new
+    # task.title = params[:title]
+    # task.priority = params[:priority]
+    # task.completion = params[:completion]
+    # task.description = params[:description]
+    # if task.save
+    #   redirect_to tasks_path
+    # end
+
+    task = Task.create task_params
+
+    unless task.id == nil
+      redirect_to tasks_path
+    end
+
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :priority, :description, :completion)
+  end
   
 end
