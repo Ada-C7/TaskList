@@ -1,18 +1,17 @@
 <h1>ALL TASKS</h1>
 
 
-<ul id="all-one-line">
-<% @tasks.each do |task| %>
-  <li>
-    <p>
+  <% @tasks.each do |task| %>
+  <ul id="all-one-line">
+
+    <li>
       <%= link_to task.title, task_path(task.id) %>
-    </p>
-    <p>
       <%= button_to "delete task", task_delete_path(task.id), method: :delete %>
-    </p>
-  </li>
+    </li>
+  </ul>
 
-<% end %>
-</ul>
+  <% end %>
 
-<p><%= link_to "add new task", tasks_new_path %></p>
+  <%= button_to "+", tasks_new_path, method: :get %>
+
+<p></p>

@@ -5,8 +5,20 @@
   font-family: helvetica, sans-serif;
 }
 
+a {
+  
+  text-decoration: none;
+  color: green;
+}
+
+a:hover {
+  background-color: gold;
+  border-radius: 10px;
+}
+
 li {
-  list-style-type: none
+  border: 10px;
+  list-style-type: none;
 }
 
 ul.nav{
@@ -16,12 +28,15 @@ ul.nav{
 .nav li {
   display: inline-block;
   padding: 0 10px;
-
-
-  // float: left;
-
 }
 
-// #all-one-line li {
-//   display: inline;
-// }
+#all-one-line li form {
+  display: inline-block;
+}
+
+form input {
+  display: inline-block;
+}
+form label {
+  // display: block;
+}
