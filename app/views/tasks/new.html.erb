@@ -1,0 +1,13 @@
+<form action="/tasks" method="post" accept-charset="utf-8">
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+  <label for="what">What</label>
+  <input type="text" name="task[what]" value="" id="what">
+
+  <label for="when">When</label>
+  <input type="text" name="task[when]" value="" id="when">
+
+  <input type="submit" value="Submit">
+</form>
