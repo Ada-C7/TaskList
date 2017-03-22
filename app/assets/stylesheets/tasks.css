@@ -6,20 +6,34 @@
  }
 
  * {
-   /*margin: 0;*/
-   /*padding: 0;*/
+   margin: 0;
+   padding: 0;
    /*border: solid;*/
  }
 
+ div {
+   display: inline-block;
+   text-align: center;
+   width: 100%;
+   margin-top: 1%;
+ }
+
  h1 {
-   border-bottom: solid;
+   display: inline-block;
    font-size: 2.5em;
    font-family: 'Permanent Marker';
    /*font-family: 'Patrick Hand SC';*/
-
-   padding: 2%;
-   margin: 1%;
    text-align: center;
+   /*margin-left: 1%;*/
+   /*padding-left: 1%;*/
+   margin: 1%;
+ }
+
+ img {
+   display: inline-block;
+   /*width: 20%;*/
+   height: 50px;
+   /*border-bottom: solid;*/
  }
 
  p {
@@ -29,6 +43,7 @@
    /*font-family: 'Lato';*/
    font-size: 1.6em;
    text-align: center;
+   margin: 1%;
  }
 
  ul {
@@ -52,14 +67,15 @@
  }
 
  a {
-   color: Teal;
+   color: red;
+   /*color: ;*/
    font-family: 'Permanent Marker';
    font-size: 1.2em;
    text-decoration: none;
  }
 
  a:hover {
-   color: MidnightBlue;
+   color: Maroon;
    text-decoration: line-through;
  }
 
