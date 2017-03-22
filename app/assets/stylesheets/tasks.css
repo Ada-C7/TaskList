@@ -83,3 +83,23 @@
    text-align: center;
    padding: 2%;
  }
+
+ label {
+   display: inline-block;
+   text-align: center;
+   margin: 3%;
+   /*width: 100%;*/
+   /*it appears that google fonts dont work :(*/
+   font-family: 'Patrick Hand SC';
+   font-size: 1.5em;
+ }
+
+ input {
+   /*this changed the color of submit text on submit button*/
+   color: blue;
+   font-family: 'Patrick Hand';
+   font-size: 1.2em;
+   /*border: none;*/
+   /*background-color: purple;*/
+
+ }
