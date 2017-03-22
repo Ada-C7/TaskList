@@ -4,11 +4,10 @@ class TasksController < ApplicationController
     puts '>>>TT: from TasksController#index'
   end
 
-  def show
-    puts '>>>TT: from inside TasksController#show'
-  end
+  # def show
+  #   puts '>>>TT: from inside TasksController#show'
+  # end
 end
-
 
 # @tasks = [
 #   { name: "The First Task", description: "", priority: "low" },
