@@ -1,0 +1,14 @@
+<h2>Chore Assignments</h2>
+
+<ul>
+  <% @tasks.each  do |task| %>
+  <li>
+    <%= link_to task[:chore], task_path(task.id) %>
+  </li>
+  <% end %>
+  <p>
+    <%= link_to "Add Chore", new_task_path %>
+  </p>
+</ul>
+
+<%= link_to "go back to the home page", welcome_path %>

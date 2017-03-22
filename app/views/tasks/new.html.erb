@@ -1,0 +1,11 @@
+<%= form_for @task do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name  %>
+<%= f.label :chore %>
+<%= f.text_field :chore%>
+
+<%= f.label :completed %>
+<%= f.text_field :completed %>
+<%= f.submit value: "Add task to chore list"%>
+
+<% end %>

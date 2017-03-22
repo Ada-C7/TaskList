@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<%#comment%>
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
@@ -9,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+      <header>
+        <h1>Erica's Terrible Chores</h1>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+    </body>
+  </html>
