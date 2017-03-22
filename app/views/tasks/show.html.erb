@@ -1,0 +1,8 @@
+<div class = "see_task">
+  <h1>Show task info: </h1>
+  <h3><%= @task.name%>: </h3>
+  <h3>Description: <%= @task[:description]%></h3>
+  <h3>Completed at: <%= @task[:completed_at]%></h3>
+  <h3>Location: <%= @task[:location]%></h3>
+  <%= link_to "Back to tasks", tasks_path%>
+</div>

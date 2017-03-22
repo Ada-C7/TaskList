@@ -1,0 +1,69 @@
+body{
+  background-color: #C79CD6;
+}
+body h1{
+  color:#DA4167;
+  font-weight: bold;
+  margin-left: 15%;
+}
+body h2{
+  color:#C2FCEB;
+  margin-left: 15%;
+}
+p{
+  color:#F0EFF4;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+ul li{
+  color:#832161;
+}
+
+div{
+  display: inline-block;
+  border-style: dashed;
+  border-width: thin;
+  padding: 0 4% 2% 5%;
+  margin:0 0 3% 5%;
+  width: 27%;
+  vertical-align: top;
+}
+div a{
+  color: #F0EFF4;
+}
+div li:last-child{
+  color:#CFFCEE;
+}
+.see_task{
+  display: inline-block;
+  width: 40%;
+}
+.see_task h3{
+  color: #E7E6F7;
+}
+.see_task h3:first-of-type{
+  color: #3D2645;
+  font-style: italic;
+}
+
+.create_task_form{
+  display: inline-block;
+  border-style: dashed;
+  border-width: thin;
+  padding: 4% 4% 2% 5%;
+  margin-left: 10%;
+}
+.create_task_form label{
+  margin-bottom: 5%;
+  display: block;
+}
+
+.create_task_form input{
+  margin-bottom: 5%;
+}
+
+
+#add_task{
+  margin-left: 10%;
+}
