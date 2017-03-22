@@ -1,17 +1,31 @@
 
-<div><h1>
-  <img src="https://openclipart.org/download/253846/1467299975.svg">
-  Todo: <%= @task[:name] %>
-</h1></div>
+<header>
+  <h1>
+    <img src="https://openclipart.org/download/253846/1467299975.svg">
+    Todo: <%= @task[:name] %>
+  </h1>
+</header>
 
-  <ul>
-    <li>Description: <%= @task[:description].capitalize %></li>
-    <li>Complete By:
+<main>
+  <nav>
+    <p><%= link_to "Add New Task", new_task_path %></p>
+    <p><%= link_to "Edit Task", edit_task_path %></p>
+    <p>Delete Task</p>
 
-      <%= @task[:complete_by].nil? ? "NA" : @task[:complete_by].strftime("%D - %l:%M %p") %>
+  </nav>
 
-    </li>
-  </ul>
+  <section>
+    <ul>
+      <li>Description: <%= @task[:description].capitalize %></li>
+      <li>Complete By:
+
+        <%= @task[:complete_by].nil? ? "NA" : @task[:complete_by].strftime("%D - %l:%M %p") %>
+
+      </li>
+    </ul>
+  </section>
+
+</main>
 
 <footer>
   <a href='./'>Home</a>
