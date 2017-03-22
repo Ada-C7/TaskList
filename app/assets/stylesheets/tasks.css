@@ -1,18 +1,23 @@
 *{
-  background-color: lightsalmon;
+  background-color: white;
+  color: black;
 }
 
 h1{
   font-style: oblique;
   font-size: 4em;
   text-align: center;
-  color: lightsalmon;
   background-color: beige
+}
+
+h2{
+  font-style: oblique;
+  font-size: 4em;
+  text-align: center;
 }
 ul{
   text-align: center;
   list-style:none;
-  color: beige;
   font-size: 3em;
 }
 
@@ -24,3 +29,5 @@ h3{
   text-align: center;
   font-size: 2.5em;
 }
+
+/*add hover color for links, change font to a nice google font, add photo to background*/
