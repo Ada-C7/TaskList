@@ -1,28 +1,35 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
-<h1>Tasks for this week</h1>
+<header>
+  <h1>Tasks for this week</h1>
+</header>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <!-- <li class="task" onclick="myFunction(event)"> -->
-    <li class="task">
-      <%= link_to task.name, task_path(task.id) %>
-      <!-- <ul>
-        <li class="description">
-          <%= task.description %>
-        </li>
-        <li class="context">
-          <%= task.context %>
-        </li>
-      </ul> -->
-    </li>
-  <% end %>
-</ul>
+<section class="task_list">
+  <ul>
+    <% @tasks.each do |task| %>
+      <!-- <li class="task" onclick="myFunction(event)"> -->
+      <li class="task">
+        <%= link_to task.name, task_path(task.id) %>
+        <!-- <ul>
+          <li class="description">
+            <%= task.description %>
+          </li>
+          <li class="context">
+            <%= task.context %>
+          </li>
+        </ul> -->
+      </li>
+    <% end %>
+  </ul>
+</section>
 
-<p>
-  <%= link_to "[add a new task]", new_task_path %>
-</p>
+<footer class="task_list_footer">
+  <p>
+    <%= link_to "[add a new task]", new_task_path %>
+  </p>
+</footer>
+
 
   <!-- <script>
     function myFunction(event) {

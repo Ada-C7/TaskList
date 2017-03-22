@@ -1,6 +1,11 @@
 
-  <h1>Add new task</h1>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+<header>
+  <h1>Add new task</h1>
+</header>
+
+<section class="form">
   <%= form_for @task do |f| %>
 
     <%= f.label :name %>
@@ -14,9 +19,10 @@
 
     <%= f.submit %>
   <% end %>
+</section>
 
-
-
-<p>
-  <%= link_to "[return to task listing]", tasks_path %>
-</p>
+<footer class="form_footer">
+  <p>
+    <%= link_to "[return to task listing]", tasks_path %>
+  </p>
+</footer>

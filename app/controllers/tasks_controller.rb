@@ -12,12 +12,17 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
-    task.name = params[:name]
-    task.description = params[:description]
-    task.context = params[:context]
-    if task.save
+    task = Task.create task_params
+
+    unless task.id == nil
       redirect_to tasks_path
     end
+
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name, :description, :context)
   end
 end

@@ -1,4 +1,10 @@
-<h1>Task View</h1>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<header>
+  <h1>Task view</h1>
+</header>
+
+<section class="task">
 
 <h2>
   <%= @result_task.name %>
@@ -14,7 +20,8 @@
   </p>
 </section>
 
-
-<p>
-  <%= link_to "[return to task listing]", tasks_path %>
-</p>
+<footer class="task_view">
+  <p>
+    <%= link_to "[return to task listing]", tasks_path %>
+  </p>
+</footer>
