@@ -1,0 +1,30 @@
+<!-- <form action="/tasks" method="post" accept-charset="utf-8"> -->
+  <!--SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <!-- <input name="authenticity_token" value="#<%= form_authenticity_token %>" type="hidden"> -->
+
+
+
+  <!-- <label for="name">Name</label> -->
+  <!-- <input type="text" name="task[name]" value="" id="name"> -->
+
+  <!-- <label for="description">Description</label> -->
+  <!-- <input type="text" name="task[description]" value="" id="description"> -->
+
+  <!-- <label for="tools">Tools</label> -->
+  <!-- <input type="text" name="task[tools]" value="" id="tools"> -->
+
+  <!-- <input type="submit" value="Submit the form"> -->
+<!-- </form> -->
+
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :tools %>
+  <%= f.text_field :tools %>
+
+  <%= f.submit value: "Add Task"%>
+<% end %>
