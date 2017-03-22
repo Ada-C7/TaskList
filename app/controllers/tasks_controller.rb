@@ -8,16 +8,17 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
-    task = Task.new
-    task.name = params[:name]
-    task.description = params[:description]
-    task.deadline = params[:deadline]
-    task.completed = params[:completed]
-    if task.save
-      redirect_to tasks_path
-    end
+    task = Task.create task_params
+    redirect_to tasks_path unless task.id == nil
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name, :description, :deadline, :completed)
   end
 end

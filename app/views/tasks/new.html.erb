@@ -1,22 +1,19 @@
 <h2>Add New Task</h2>
 
-<form action="/tasks" method="post">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: "name that task" %>
 
-  <label for="name">Task: </label>
-  <input type="text" name="name" id="name" placeholder="name of task">
+  <%= f.label :description %>
+  <%= f.text_area :description, size: "60x12" %>
 
-  <label for="description">Description: </label>
-  <input type="text" name="description" id="description" placeholder="describe the task">
+  <%= f.label :deadline %>
+  <%= f.date_field :deadline %>
 
-  <label for="deadline">Must be completed by: </label>
-  <input type="date" name="deadline" id="deadline">
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
 
-  <label for="completed">Check if task is completed</label>
-  <input type="checkbox" name="completed" id="completed">
-
-  <input type="submit" value="Add New Task">
-</form>
+  <%= f.submit "Add Task" %>
+<% end %>
 
 <p><%= link_to "Back to tasks", tasks_path %></p>
