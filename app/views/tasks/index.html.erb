@@ -5,21 +5,22 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li class="task" onclick="myFunction(event)">
-      <%= task.name %>
-      <ul>
+    <!-- <li class="task" onclick="myFunction(event)"> -->
+    <li class="task">
+      <%= link_to task.name, task_path(task.id) %>
+      <!-- <ul>
         <li class="description">
           <%= task.description %>
         </li>
         <li class="context">
           <%= task.context %>
         </li>
-      </ul>
+      </ul> -->
     </li>
   <% end %>
 </ul>
 
-  <script>
+  <!-- <script>
     function myFunction(event) {
       if (event.target.className == "task")
           event.target.className += " unhide";
@@ -27,4 +28,4 @@
         event.target.className = "task"
       }
     }
-  </script>
+  </script> -->

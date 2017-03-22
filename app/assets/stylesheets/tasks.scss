@@ -11,6 +11,22 @@ h1 {
   color: #b7d1fb;
 }
 
+h2 {
+  font-size: 1.3rem;
+}
+
+h2, label, a {
+    color: #4286f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgrey;
+}
+
 li {
   list-style-type: square;
   color: #4286f4;
@@ -22,12 +38,14 @@ li.context {
   list-style-type: none;
 }
 
-li.description {
+li.description,
+p.description {
   color: lightgrey;
   font-style: italic;
 }
 
-li.context {
+li.context,
+p.context {
   font-style: italic;
   color: #cfe0fc;
 }
@@ -39,4 +57,23 @@ li.context {
 
 .unhide ul {
   display: block;
+}
+
+.task_details {
+  width: 400px;
+}
+
+input#name,
+input#description {
+  width: 400px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input#description {
+  height: 100px;
+}
+
+select#context {
+  margin: 0px 10px;
 }

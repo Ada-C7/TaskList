@@ -1,0 +1,20 @@
+<h1>Task View</h1>
+
+<h2>
+  <%= @result_task.name %>
+</h2>
+
+<section class="task_details">
+  <p class="description">
+    <%= @result_task.description %>
+  </p>
+
+  <p class="context">
+    <%= @result_task.context %>
+  </p>
+</section>
+
+
+<p>
+  <%= link_to "return to task listing", tasks_path %>
+</p>

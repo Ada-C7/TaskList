@@ -1,0 +1,28 @@
+
+  <h1>Add new task</h1>
+
+  <form action="/tasks" method="post">
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+  <label for="name">Task
+    <input type="text" name="name" value="" id="name">
+  </label>
+
+  <label for="description">Task description
+    <input type="text" name="description" value="" id="description">
+  </label>
+
+  <label for="context">Task context
+    <select name="context">
+      <option value=""></option>
+      <option value="downtown">downtown</option>
+      <option value="home">home</option>
+      <option value="out and about">out and about</option>
+    </select>
+  </label>
+
+  <input type="submit" value="Add task">
+
+</form>
