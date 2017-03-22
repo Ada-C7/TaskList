@@ -130,7 +130,13 @@
    color: blue;
    font-family: 'Patrick Hand';
    font-size: 1.2em;
+   padding: 0.5%;
  }
+
+/*input[type=submit] {
+   background-color: lightblue;
+   border-radius: 20%;
+}*/
 
  footer {
   border: solid;
