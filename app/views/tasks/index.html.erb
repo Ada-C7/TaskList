@@ -4,6 +4,6 @@
 
 <% @tasks.each_with_index do |task, index| %>
 
-  <p>Task<%=index +1%>: <%= link_to task[:name], task_path(task.id) %></p>
+  <p>Todo <%=index +1%>: <%=link_to task[:name].capitalize, task_path(task.id) %></p>
 
 <% end %>

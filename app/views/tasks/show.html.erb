@@ -1,10 +1,10 @@
 <!-- <h1> should only show one task </h1> -->
 
-<h1><%= @task[:name] %></h1>
+<h1>Todo: <%= @task[:name] %></h1>
 <h2></h2>
   <ul>
-    <li><div class="bold">Description:</div> <%= @task[:description] %></li>
-    <li><div class="bold">Do by:</div> <%= @task[:completed_at] %></li>
+    <li><div class="bold">Description:</div> <%= @task[:description].capitalize %></li>
+    <li><div class="bold">Complete By:</div> <%= @task[:completed_at].strftime("%D - %l:%M %p") %></li>
   </ul>
 
 <footer>
