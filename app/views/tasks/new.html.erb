@@ -1,17 +1,23 @@
 <h1>Here you can ass a new task to the list:</h1>
 
-<form action="/tasks" method="post" accept-charset="utf-8">
+<%= form_for @task do |f| %>
 
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<%= f.label :name %>
+<%= f.text_field :name %>
+</br>
+</br>
+<%= f.label :description %>
+<%= f.text_field :description %>
+</br>
+</br>
+<%= f.label :completed_at %>
+<%= f.text_field :completed_at %>
+</br>
+</br>
+<%= f.submit %>
 
-<label for="task_name">Task Name</label>
-<input type="text" name="task[name]" value="" id="task_name" />
+<% end %>
 
-
-<label for="description">Description</label>
-<input type="text" name="task[description]" value="" id="description" />
-
-<input type="submit" value="Submit the task" />
-
-</form>
+</br>
+</br>
+<%= link_to "Back to Task List", tasks_path %>
