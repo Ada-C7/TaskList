@@ -1,4 +1,4 @@
-<h1>Add a Task</h1>
+<h1>Edit a Task</h1>
 
 <%= form_for @task do |f| %>
   <%= f.label :name %>
@@ -7,7 +7,8 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
-  <%= f.submit value: "Add Task To List" %>
+  <%= f.submit value: "Update Task" %>
 <% end %>
 
+<p><%= link_to "Go Back to Task", task_path %></p>
 <p><%= link_to "Go Back to the Task List", tasks_path %></p>

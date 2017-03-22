@@ -6,6 +6,11 @@
   background-color: pink;
 }
 
+img {
+  height: 300px;
+  box-shadow: 21px 25px 35px -7px rgba(131,112,135,1);
+}
+
 /*li {
   border: 2px solid gray;
   border-radius: 20%;
@@ -20,6 +25,7 @@ div {
   /*margin-top: 20px;*/
   border-radius: 100px;
   width: 40%;
+  box-shadow: 21px 25px 35px -7px rgba(131,112,135,1);
 
 }
 
