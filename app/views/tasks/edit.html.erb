@@ -1,0 +1,8 @@
+<h1> Edit Task Form </h1>
+
+<%= form_for @task do |t| %>
+Name: <%= t.text_field :name %>
+Description: <%= t.text_field :description %>
+Completion Time: <%= t.text_field :completed_at %>
+<%= t.submit "Save Changes"%>
+<%end%>

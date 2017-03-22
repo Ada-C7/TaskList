@@ -26,3 +26,9 @@ h1{
 body{
   background-color: lightcoral;
 }
+
+input{
+  color:black;
+  display: block;
+  margin: 20px;
+}

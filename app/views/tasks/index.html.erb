@@ -1,11 +1,13 @@
 <h1>All the tasks</h1>
 
 <ul>
-  <% @tasks.each_with_index do |task, id| %>
+  <% @tasks.each do |task| %>
     <li>
-      <p><%= link_to task[:name], task_path(id) %></p>
+      <p><%= link_to task[:name], task_path(task[:id]) %></p>
       <p>Description: <%= task[:description] %></p>
       <p> Completed Time: <%= task[:completed_at] %></p>
     </li>
     <% end %>
 </ul>
+
+<%= link_to 'Click to add new task', new_task_path %>
