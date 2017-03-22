@@ -1,4 +1,10 @@
 <h2><%= @task[:name] %></h2>
-<h3>By: <%= @task[:description] %></h3>
+<h3>Task: <%= @task[:description] %></h3>
 
+<p>
+  Task Completed on: <%= @task[:completion_date] %>
+</p>
+
+<p class="link">
 <%= link_to "Back to task list", tasks_path %>
+</p>

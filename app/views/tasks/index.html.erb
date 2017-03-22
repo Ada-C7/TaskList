@@ -1,11 +1,17 @@
 <h1>Task List</h1>
 
-<!-- <section> -->
+<p><%= link_to "Go back to the home page", welcome_path %></p>
+
+<p><%= link_to "Add a new task", new_task_path %></p>
+
+
   <ul>
-    <% @tasks.each do |task, id| %>
+    <% @tasks.each do |task| %>
+    <div>
+      <%= link_to task[:name], task_path(task.id) %>
       <li>
-        <%= link_to task[:name], task_path(task.id) %>
+        <%= task[:description] %>
       </li>
+    </div>
     <% end %>
   </ul>
-<!-- </section> -->

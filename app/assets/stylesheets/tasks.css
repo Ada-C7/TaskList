@@ -10,3 +10,25 @@
   border: 2px solid gray;
   border-radius: 20%;
 }*/
+
+div {
+  border: 2px solid gray;
+  padding-left: 5px;
+  padding-top: 25px;
+  padding-right: 5px;
+  padding-bottom: 25px;
+  /*margin-top: 20px;*/
+  border-radius: 100px;
+  width: 40%;
+
+}
+
+li {
+  margin-left: 65px;
+  margin-right: 100px;
+}
+
+.link {
+  margin-left: 0%;
+  margin-top: 10%;
+}
