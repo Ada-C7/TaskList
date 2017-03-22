@@ -2,7 +2,7 @@
 <ul>
   <% Task.all.each do |task| %>
   <li>
-    <h3><%= link_to task.name.upcase, task_path(task.id) %></h3>
+    <h3><%= task.id %>. <%= link_to task.name.upcase, task_path(task.id) %></h3>
     <p>
       <!-- <%= task.desc %>
     </p> -->
@@ -20,5 +20,6 @@
   <% end %>
 </ul>
 
+<h3><%= link_to "New Task", "/tasks/new" %></h3>
 
 <img src="http://icons.veryicon.com/png/System/Kameleon/Checklist.png" alt="checklist icon"  />
