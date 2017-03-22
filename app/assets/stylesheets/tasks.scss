@@ -7,9 +7,20 @@ a {
 }
 .nav_links {
   list-style-type: none;
+
+}
+
+.nav_links a {
+    color: white;
 }
 
 .nav_links li {
   display: inline;
-  padding: 10px;
+  background-color: gray;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

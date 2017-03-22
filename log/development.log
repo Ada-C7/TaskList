@@ -2208,3 +2208,35 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/tasks" for ::1 at 2017-03-22 16:04:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-22 16:04:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-22 16:05:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-22 16:05:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.3ms)
+
+
