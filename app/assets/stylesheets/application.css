@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Raleway');
+ // font-family: 'Raleway', sans-serif;
+
+ * {
+   font-family: 'Fjalla One', sans-serif;
+ }
+
+ main {
+   padding-left: 5%;
+   background-color: skyblue;
+   position: absolute;
+   left: 0;
+   width: 100%
+ }
+
+ footer {
+
+   position: absolute;
+   bottom: 0;
+
+ }
+
+ ul {
+   list-style-type: none;
+ }

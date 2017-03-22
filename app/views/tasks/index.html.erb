@@ -1,10 +1,25 @@
-<h1>Tasks</h1>
-<h4>Hello and welcome to your task list</h4>
+<main>
 
+<h3>welcome to your to-dos!</h4>
+
+<h4>You have some high priority tasks:</h4>
 <ul>
   <% @tasks.each do |task| %>
-  <li><%= link_to task.name, task_path(task.id) %> </li>
+    <% if task.priority == 1 %>
+      <li><%= link_to task.name, task_path(task.id) %> </li>
+    <% end %>
   <% end %>
 </ul>
 
-<p><%= link_to "add a new task", tasks_new_path %></p>
+<h4>The rest of your tasks are not as urgent</h4>
+<ul>
+  <% @tasks.each do |task| %>
+    <% if task.priority != 1 %>
+      <li><%= link_to task.name, task_path(task.id) %> </li>
+    <% end %>
+  <% end %>
+
+</ul>
+</main>
+
+<footer><p><%= link_to "add a new task", tasks_new_path %></p></footer>
