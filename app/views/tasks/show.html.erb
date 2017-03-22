@@ -2,4 +2,5 @@
 <h3>Description <%= @task[:description] %></h3>
 <h3>completed? <%= @task[:completed_at] %></h3>
 
+<%= link_to "Edit task", edit_task_path %>
 <%= link_to "Back to task list", tasks_path %>
