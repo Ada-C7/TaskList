@@ -1,18 +1,11 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>Tasks</h1>
 
 <section>
   <ul>
-    <li>
     <% @tasks.each do |task| %>
-      <% task %>
-      </li>
-      <%task.each do |k, v| %>
-        <%= k %>
-        <% v.each do |goals| %>
-          <%= goals %>
-        <% end %>
-      <% end %>
+    <li>
+      <%= link_to task.name, task_path(task.id) %>
+    </li>
     <% end %>
   </ul>
 </section>

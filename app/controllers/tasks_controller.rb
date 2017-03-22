@@ -1,9 +1,11 @@
 class TasksController < ApplicationController
   def index
-    @tasks = [
-      {short_term: ["task1", "task2", "task3"]},
-      {medium_term: ["task1", "task2", "task3"]},
-      {big_goals: ["task1", "task2", "task3"]}
-    ]
+    @tasks = Task.all
+    # BASELINE:
+    # @tasks = ["laundry", "clean room", "wash dishes", "work out", "homework", "groceries"]
+  end
+
+  def show
+    @result_task = Task.find(params[:id])
   end
 end
