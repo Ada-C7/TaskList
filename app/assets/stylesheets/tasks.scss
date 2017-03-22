@@ -1,3 +1,59 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: sans-serif;
+  background-color: #fa8072;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+table {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 30px;
+}
+
+tr:hover {
+  background-color: #bcafae;
+}
+
+td {
+  text-align: left;
+  padding: 10px;
+}
+
+.completed a {
+  text-decoration: line-through;
+}
+
+.task-action-buttons {
+  text-align: right;
+  min-width: 190px;
+}
+
+.task-action-buttons .button_to {
+  display: inline-block;
+  visibility: hidden;
+}
+
+tr:hover .task-action-buttons .button_to {
+  visibility: visible;
+}
+
+form.button_to {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
