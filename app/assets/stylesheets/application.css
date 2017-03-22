@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Permanent+Marker');
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+h1 {
+  font: 3em/1em 'Permanent Marker', sans-serif;
+  letter-spacing: -.07em;
+  margin-bottom: 5%;
+}
+
+h2 {
+  font: 300 2em/1.3em 'Open Sans', sans-serif;
+  width: 70%;
+  margin-bottom: 2.5%;
+}
+
+h3, main#form label {
+  font: 300 1.5em 'Open Sans', sans-serif;
+}
+
+p {
+  font: 400 1em/2em 'Open Sans', sans-serif;
+  color: DimGrey;
+}
+/*border-top: 1px solid black;*/
+
+a {
+  font: 300 1em/2em 'Open Sans', sans-serif;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+}
+
+ul, main#show, main#form {
+  list-style: none;
+  background: white;
+  padding: 1em;
+}
+
+a:hover {
+  color: DeepSkyBlue;
+}
+
+a:visited {
+  color: black;
+}
+
+body {
+  background: WhiteSmoke;
+  padding: 2em;
+}

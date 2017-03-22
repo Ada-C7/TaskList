@@ -1,7 +1,10 @@
-<h1>Task List</h1>
-<h2><%= @show_task[:name].upcase %></h2>
-<img src="<%= @show_task[:img_url] %>" alt="<%=@show_task[:name]%> meme">
-<h4>DESCRIPTION:</h4>
-<h2><%= @show_task[:description] %></h2>
-<h4>COMPLETION DATE:</h4>
-<h2><%= @show_task[:completion_date] %></h2>
+<header>
+  <a href="index.html"><h1>Task List</h1></a>
+</header>
+<main id="show">
+  <h2><%= @show_task[:name].capitalize %></h2>
+  <h4>DESCRIPTION:</h4>
+  <p><%= @show_task[:description] %></p>
+  <h4>COMPLETION DATE:</h4>
+  <p><%= @show_task[:completion_date] %></p>
+</main>
