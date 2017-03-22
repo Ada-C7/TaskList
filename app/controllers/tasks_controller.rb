@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    # @tasks = Task.all
+    @tasks = Task.all
     @incomplete_tasks = Task.incomplete
     @complete_tasks = Task.complete
   end
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
-      redirect_to task_path
+      redirect_to tasks_path
     else
       render :edit
     end

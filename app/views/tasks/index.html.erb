@@ -1,52 +1,31 @@
-<h1>ALL TASKS</h1>
+<header>
+  <h1>git 'er done</h1>
+</header>
 
-<%= button_to "add task", tasks_new_path, method: :get %>
 
-<h2>TODO</h2>
-<%= form_tag(tasks_path, method: :get)  do %>
-<table>
-  <% for task in @incomplete_tasks %>
-  <tr>
-    <ul id="all-one-line">
-      <li>
-        <td>
+<body>
+  <section class="list">
+
+    <% @tasks.each do |task| %>
+      <ul class="main-nav">
+        <li>
           <%= link_to task.title, task_path(task.id) %>
-        </td>
-        <td class="hidden">
+        </li>
+        <li class="hidden">
           <%= button_to "delete", task_delete_path(task.id), method: :delete %>
-        </td>
-        <td class="hidden">
+        </li>
+        <li class="hidden">
           <%= button_to "edit", task_edit_path(task.id), method: :get %>
-        </td>
-      </li>
-    </ul>
-  </tr>
-  <% end %>
-</table>
+        </li>
+      </ul>
 
-<h2>DONEZO</h2>
-<table>
-  <% for task in @complete_tasks %>
-  <ul>
-    <li class="complete">
-      <tr>
-        <td>
-          <%= task.title %>
-        </td>
-        <td class="hidden">
-          <%= task.description %>
-        </td>
-        <td class="hidden">
-          <%= task.priority %>
-        </td>
-        <td class="hidden">
-          <%= task.duedate %>
-        </td>
-      </tr>
-    </li>
-  </ul>
+    <% end %>
+    <%= button_to "add task", tasks_new_path, method: :get %>
 
-  <% end %>
-</table>
+  </section>
 
-<% end %>
+</body>
+
+<footer>
+  
+</footer>

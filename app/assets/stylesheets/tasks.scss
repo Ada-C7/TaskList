@@ -2,49 +2,52 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * {
-  font-family: helvetica, sans-serif;
+  font-family: courier;
 }
-* {
-  background-color: cream;
+
+body {
+  background-image: url("http://www.illustratoratoms.com/AtomsNetwork/Files/1414/10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 150px;
+}
+
+h1, h3 {
+  text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: green;
+  color: black;
+  padding: 2px;
+}
+
+a:hover {
+  color: #E36A65;
 }
 
 li {
   list-style-type: none;
+  padding: 5px;
+  display: inline-block;
 }
 
-
-table {
-  border-collapse: collapse;
-}
-
-
-td {
-  padding: 5px 5px;
-}
-
-ul.nav{
-  // display: block;
+ul{
+  margin: 0 auto;
 }  
-
-.nav li {
-  padding: 0 5px;
-}
 
 .hidden {
   visibility: hidden;
 }
 
-a:hover {
-  background-color: grey;
+ul.main-nav {
+  // display: block;
 }
 
-tr:hover td {
+ul.main-nav li {
+  display: inline-block;
+}
+
+ul:hover li.hidden {
   visibility: visible;
-  background-color: grey;
-  color: white;
 }
