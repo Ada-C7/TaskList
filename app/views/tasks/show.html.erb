@@ -5,5 +5,7 @@
     <% end %>
 </p>
 <p>Description: <%= @selected_task.description %></p>
+<p>Complete this task by: <%= @selected_task.due_date %> </p>
 <p>Priority level: <%= @selected_task.priority %></p>
+
 <p><%= link_to "task list", tasks_path %></p>

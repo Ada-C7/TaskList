@@ -7,4 +7,18 @@ class TasksController < ApplicationController
     @selected_task = Task.find params[:id]
   end
 
+  def new
+  end
+
+  def create
+    task = Task.new
+    task.name = params[:name]
+    task.priority = params[:priority]
+    task.description = params[:description]
+    task.due_date = params[:due_date]
+    if task.save
+      redirect_to tasks_path
+    end
+  end
+
 end
