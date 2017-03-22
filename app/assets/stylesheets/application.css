@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+   font-family: 'Raleway', sans-serif;
+ }
+
+ h1 {
+   font-size: 1.5rem;
+   color: #b7d1fb;
+   font-weight: normal;
+ }
+
+ h2 {
+   font-size: 1.3rem;
+ }
+
+ h2, label, a {
+     color: #4286f4;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ a:hover {
+   color: lightgrey;
+ }
+
+ li {
+   list-style-type: square;
+   color: #4286f4;
+ }
+
+
+ li.description,
+ li.context {
+   list-style-type: none;
+ }
+
+ li.description,
+ p.description {
+   color: lightgrey;
+   font-style: italic;
+ }
+
+ li.context,
+ p.context {
+   font-style: italic;
+   color: #cfe0fc;
+ }
+
+ .task ul {
+   display: none;
+   width: 400px;
+ }
+
+ .unhide ul {
+   display: block;
+ }
+
+ .task_details {
+   width: 400px;
+ }
+
+ input#task_name,
+ input#task_description {
+   width: 400px;
+   display: block;
+   margin-bottom: 10px;
+ }
+
+ input#task_description {
+   height: 100px;
+ }
+
+ select#task_context {
+   margin: 0px 10px;
+ }
