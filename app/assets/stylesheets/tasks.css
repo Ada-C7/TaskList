@@ -11,11 +11,20 @@
    /*border: solid;*/
  }
 
- div {
+ .heading {
    display: inline-block;
    text-align: center;
    width: 100%;
-   margin-top: 1%;
+   border-bottom: solid;
+
+ }
+
+ div {
+   vertical-align: text-top;
+   display: inline-block;
+   text-align: center;
+   width: 100%;
+   /*margin-top: 1%;*/
  }
 
  h1 {
@@ -45,14 +54,33 @@
    /*border-bottom: solid;*/
  }
 
+ nav {
+   display: inline-block;
+   vertical-align: text-top;
+   text-align: left;
+   width: 25%;
+
+ }
+
+ nav a {
+   font-size: 1.1em;
+ }
+
+ section {
+   width: 70%;
+   display: inline-block;
+   vertical-align: text-top;
+   border-left: solid;
+ }
+
  p {
-   /*color: dimgrey;*/
    font-family: 'Permanent Marker';
    /*font-family: 'Patrick Hand SC';*/
    /*font-family: 'Patrick Hand';*/
    /*font-family: 'Lato';*/
    font-size: 1.6em;
    text-align: center;
+   text-align: left;
    margin: 1%;
  }
 
