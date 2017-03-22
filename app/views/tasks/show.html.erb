@@ -1,0 +1,11 @@
+<h2>List of Tasks:</h2>
+
+<ul>
+  <li>The task to do is: <%= @result_task.description %>.</li>
+  <li>The assigned person is <%= @result_task.assignee %>. </li>
+  <li>This should be completed by <%= @result_task.completed %></li>
+  <li> The duration of the task is <%= @result_task.duration %> hour(s).</li>
+</ul>
+
+
+<p> <%= link_to "Home", tasks_path %> </p>

@@ -1,3 +1,25 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h3 {
+  color: blue;
+}
+
+li {
+  list-style: none;
+}
+
+#index h2 {
+  font-family: monospace;
+  text-align: center;
+  color: white;
+}
+
+section {
+  width: 100%;
+  background-color: purple;
+  border-style: groove;
+  border-color: blue;
+  border-radius: 10%;
+}
