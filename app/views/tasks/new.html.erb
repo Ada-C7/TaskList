@@ -1,0 +1,36 @@
+<!--
+<form action="/tasks" method="post" accept-charset="utf-8">
+-->
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+
+  <!--
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <label for="name">Task</label>
+  <input type="text" name="task[name]" value="" id="name">
+
+  <label for="description">Description</label>
+  <input type="text" name="task[description]" value="" id="description">
+
+  <input type="submit" value="Submit">
+</form>
+-->
+
+<!--
+#in new.html.erb
+<%= datetime_local_field(:task, :completion_date) %>
+
+#instead of:
+#<label for="completion_date">Due Date</label>
+#<input type="datetime" name="task[completion_date]" value="" id="completion_date">
+-->
+
+
+
+<%= form_for @task do |f| %>
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+ <%= f.label :description %>
+ <%= f.text_field :description %>
+ <%= f.submit %>
+<% end %>

@@ -1,21 +1,27 @@
 
-<header id = "index_header">
-  <h1>Tasks list</h1>
-</header>
-
-
-
 
 <main id = "index_main">
+
+  <h1> Tasks list</h1>
+
   <nav>
     <ul>
       <% @tasks.each_with_index do |task| %>
         <li>
           <%= link_to task[:name], task_path(task.id) %>
+          <%= ":    "%>
+          <%= task[:description] %>
         </li>
       <% end %>
     </ul>
   </nav>
+
+
+  <%= link_to "Add new task", new_task_path %>
+
+  <%= image_tag 'ducks.jpg', alt: 'The canal ducks' , width: '75%' %>
+  <%= link_to image_tag("crew.jpg", alt: "The crew", width: "75%"), "http://www.google.com" %>
+
 
 </main>
 

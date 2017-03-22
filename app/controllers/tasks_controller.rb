@@ -10,13 +10,45 @@ class TasksController < ApplicationController
   #   { name: "She worries, you know.", description: "This is a description for how to worry." },
   #   { name: "Nap.", description: "This is a description for taking a nap.", completed_at: "random_time "}]
 
+
+#### COLLETION
   def index
     puts ">>>>>>amb<<<<<<<<:  Inside tasks index!"
     @tasks = Task.all
   end
 
+  def new
+    @task = Task.new
+  end
+
+  def create
+    Task.create(task_params)
+    redirect_to tasks_path
+  end
+
+
+
+#### SINGLE ITEM
   def show
-    id = params[:id].to_i
-    @task = Task.find(id)
+    # id = params[:id].to_i
+    # @task = Task.find(id)
+    @task = Task.find(params[:id])
+  end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    task =  Task.find(params[:id])
+    task.update_attributes(task_params)
+    task.save
+
+    redirect_to task_path(task)
+  end
+
+  private
+  def task_params
+    params.require(:task).permit(:name, :description)
   end
 end

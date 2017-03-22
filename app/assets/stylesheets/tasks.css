@@ -8,26 +8,38 @@ HEADER
 **********************************************************/
 
 #index_header {
-  position: fixed;
-  top: 100px;
   width: 100%;
-  height: 50px;
   text-align: center;
-  vertical-align: middle;
   background-color: black;
   color: white;
+  z-index: 50
 }
 
 #index_main{
-margin-top: 50px
+  position: relative;
+/*margin-top: 150px*/
 }
+
+#index_main h1 {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 50
+}
+
 
 #index_main nav {
   display: inline-block;
   width: 50%;
-  text-align: center;
-  list-style-type: none;
+
+  /*text-align: center;*/
 }
+
+#index_main ul {
+  padding-left: 0px;
+}
+
 
 #index_main li {
   list-style-type: none;
