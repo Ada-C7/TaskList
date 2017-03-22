@@ -1,0 +1,7 @@
+<h1> These are a list of tasks! </h1>
+
+<% @tasks.each do |task, id| %>
+  <li>
+    <%= link_to task[:name], task_path(task.id) %>
+  </li>
+<% end %>
