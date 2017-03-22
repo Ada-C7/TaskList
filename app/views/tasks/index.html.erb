@@ -6,7 +6,9 @@
 
   <li>
     <%= link_to task.title, task_path(task.id) %>
-    <%= button_to "-", task_delete_path(task.id), method: :delete %>
+    <%= button_to "delete", task_delete_path(task.id), method: :delete %>
+    <%= button_to "edit", task_edit_path(task.id), method: :get %>
+
   </li>
 
 </ul>

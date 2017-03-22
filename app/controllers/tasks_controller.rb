@@ -1,17 +1,13 @@
 class TasksController < ApplicationController
 
   def index
-
     @tasks = Task.all
-
   end
 
   def show
-
-    @result_task = Task.find(params[:id])
-
-    @next_id = Task.where("id > ?", @result_task.id).first
-    @prev_id = Task.where("id < ?", @result_task.id).last
+    @task = Task.find(params[:id])
+    @next_id = Task.where("id > ?", @task.id).first
+    @prev_id = Task.where("id < ?", @task.id).last
   end
 
   def new
@@ -35,7 +31,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
 
-    if @task.update(title: params[:task][:title], description: params[:task][:description], duedate: params[:task][:duedate], priority: params[:task][:priority])
+    if @task.update(title: params[:task][:title], description: params[:task][:description], duedate: params[:task][:duedate], priority: params[:task][:priority], completed: params[:task][:completed])
       redirect_to task_path
     else
       render :edit
