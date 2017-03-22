@@ -1,9 +1,16 @@
 
-<div><img src="https://openclipart.org/download/253846/1467299975.svg"><h1>Task List</h1></div>
+<div>
+  <img src="https://openclipart.org/download/253846/1467299975.svg">
+  <h1>Task List</h1>
+</div>
 <!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
+<div>
+  <% @tasks.each_with_index do |task, index| %>
 
-<% @tasks.each_with_index do |task, index| %>
+    <p>Todo <%=index +1%>: <%=link_to task[:name].capitalize, task_path(task.id) %></p>
 
-  <p>Todo <%=index +1%>: <%=link_to task[:name].capitalize, task_path(task.id) %></p>
+  <% end %>
 
-<% end %>
+  <p id="new_task"><%= link_to "Add New Task", new_task_path %></p>
+
+</div>

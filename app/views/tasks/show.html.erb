@@ -1,4 +1,3 @@
-<!-- <h1> should only show one task </h1> -->
 
 <div><h1>
   <img src="https://openclipart.org/download/253846/1467299975.svg">
@@ -8,9 +7,9 @@
   <ul>
     <li>Description: <%= @task[:description].capitalize %></li>
     <li>Complete By:
-      <%=
-        @task[:complete_by].nil? ? "NA" : @task[:complete_by].strftime("%D - %l:%M %p")
-      %>
+
+      <%= @task[:complete_by].nil? ? "NA" : @task[:complete_by].strftime("%D - %l:%M %p") %>
+
     </li>
   </ul>
 

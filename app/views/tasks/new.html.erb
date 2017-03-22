@@ -6,7 +6,7 @@ talk to model who can create a new entry -->
 going to send a post (HTTP verb) to /books (the URL) the controller action will
 be #new (will have to create a new route soon) - so far only been doing get (HTTP verb) -->
 
-<h1>New Task</h1>
+<h1>Get It Done</h1>
 <form action="/tasks" method="post" accept-charset="utf-8">
   <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM - something you copy/paste -->
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
@@ -18,5 +18,14 @@ be #new (will have to create a new route soon) - so far only been doing get (HTT
   <label for="description">Description</label>
   <input type="text" name="task[description]" value="" id="description">
 
+  <label for="complete_by">Complete By</label>
+  <!-- can i someone say type is datetime? -->
+  <!-- <%= datetime_local_field(:task, :completion_date) %> -->
+  <input type="datetime-local" name="task[complete_by]" id="complete_by">
+
   <input type="submit" value="Submit">
 </form>
+
+<footer>
+  <a href='./'>Home</a>
+</footer>
