@@ -8,4 +8,8 @@
   <p>Complete by: <%= @task.deadline %></p>
 <% end %>
 
+<p>
+  <%= link_to "Edit Task", edit_task_path %>
+</p>
+
 <p><%= link_to "Back to tasks", tasks_path %></p>

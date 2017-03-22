@@ -16,6 +16,10 @@ class TasksController < ApplicationController
     redirect_to tasks_path unless task.id == nil
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   private
 
   def task_params
