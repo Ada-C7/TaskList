@@ -11,9 +11,18 @@ class TasksController < ApplicationController
   def new
   end
 
+  def create
+    puts ">>>>>>> LMS: In TasksController#create"
+    Task.create(task_params)
+  end
+
   def show
     id = params[:id].to_i
     @task = Task.find(id)
+  end
 
+  private
+  def task_params
+    return params.require(:task).permit(:name, :description, :completed_at)
   end
 end
