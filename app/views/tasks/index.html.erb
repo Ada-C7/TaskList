@@ -4,6 +4,7 @@
   <% @tasks.each_with_index do |task, index| %>
   <li>
     <%= link_to task[:name], task_path(index+1) %>
+    <%= link_to "Add a new task", new_task_path %>
   </li>
   <% end %>
 </ul>
