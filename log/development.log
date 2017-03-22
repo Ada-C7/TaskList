@@ -1185,3 +1185,35 @@ puma (3.8.2) lib/puma/server.rb:299:in `block in run'
 puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/lynntrickey/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /Users/lynntrickey/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+Started POST "/tasks" for ::1 at 2017-03-22 12:53:22 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"k/OAEQqvZLTOsLkYeJHL7m1ob10j9payNQNtsICiANzb1qcMK7Lmhndbvbrw3nxFJtfA+KiLGy4fyF8i1my6LA==", "name"=>"Test", "description"=>"Test your butt"}
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 59ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-22 12:53:26 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"k/OAEQqvZLTOsLkYeJHL7m1ob10j9payNQNtsICiANzb1qcMK7Lmhndbvbrw3nxFJtfA+KiLGy4fyF8i1my6LA==", "name"=>"Test", "description"=>"Test your butt"}
+No template found for TasksController#create, rendering head :no_content
+Completed 204 No Content in 60ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-22 12:54:41 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"k/OAEQqvZLTOsLkYeJHL7m1ob10j9payNQNtsICiANzb1qcMK7Lmhndbvbrw3nxFJtfA+KiLGy4fyF8i1my6LA==", "name"=>"Test", "description"=>"Test your butt"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Test"], ["description", "Test your butt"], ["created_at", 2017-03-22 19:54:41 UTC], ["updated_at", 2017-03-22 19:54:41 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 18ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-22 12:54:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
