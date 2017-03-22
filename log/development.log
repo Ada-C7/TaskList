@@ -752,3 +752,26 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-03-21 20:12:38 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/laurams/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/laurams/.rvm/gems/ruby-2.4.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 21ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-21 20:13:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 174ms (Views: 171.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/0" for ::1 at 2017-03-21 20:13:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"0"}
+  Rendering tasks/show.erb within layouts/application
+  Rendered tasks/show.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
