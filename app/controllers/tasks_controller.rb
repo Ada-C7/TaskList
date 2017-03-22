@@ -35,6 +35,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def update
+    task = Task.find(params[:id])
+    task.update_attributes(task_params)
+    task.save
+
+    redirect_to task_path(task)
+  end
+
   private
 
   def task_params # strong params, prevent bad user input, only permit a task and a name and description to describe that task
