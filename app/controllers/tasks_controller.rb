@@ -17,7 +17,7 @@ TASKS = [
 
   def show
     id = params[:id].to_i
-    @task = TASKS[id]
+    @task = TASKS.find[id]
   end
 
   # def random_time
