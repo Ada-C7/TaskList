@@ -1,9 +1,22 @@
 <h1>Tasks List</h1>
-<p><%= @tasks %></p>
 
-<ul><% @tasks.each_with_index do |task, id| %>
-  <li>
-    <%= link_to task[:name], task_path(id) %>
-  </li>
-  <% end %>
-</ul>
+<ul>
+<% @tasks.each_with_index do |task| %>
+    <li>
+      <%= link_to task[:name] %>
+    </li>
+   <% end %>
+ </ul>
+
+<%target = 'world'%><br/>
+<%= "hello + #{target}"%><br/>
+
+
+
+ <%= 9 + 1%><br/>
+
+<% @array.each do |n|%>
+<%= n%>
+<% end %>
+
+<%= link_to('tasks completed' , { :action => 'completed'})%>

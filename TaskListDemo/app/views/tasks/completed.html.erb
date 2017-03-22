@@ -1,0 +1,19 @@
+<h1>Tasks Completed </h1>
+
+
+<ul>
+<% @tasks.each_with_index do |task| %>
+    <li>
+      <%= link_to task[:name] %>
+    </li>
+   <% end %>
+ </ul>
+
+
+
+
+
+
+<%= 9 + 1%><br/>
+
+<%= link_to('tasks list' , { :action => 'index'})%>

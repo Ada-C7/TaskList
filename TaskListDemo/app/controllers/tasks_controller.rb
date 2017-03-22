@@ -13,11 +13,15 @@ class TasksController < ApplicationController
     ].freeze
 
     def index
+      @array = [1,2,3,4,5]
         @tasks = TASKS
     end
 
-    # def show
-    #     id = params[:id]
-    #     @task = TASK[id]
-    # end
+    def completed
+      @tasks = TASKS
+        # redirect_to(controller: 'tasks', action: 'index')
+    end
+
+
+
 end
