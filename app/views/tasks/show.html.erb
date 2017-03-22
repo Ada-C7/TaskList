@@ -3,7 +3,7 @@
 <div><h1><img src="https://openclipart.org/download/253846/1467299975.svg">Todo: <%= @task[:name] %></h1></div>
   <ul>
     <li>Description: <%= @task[:description].capitalize %></li>
-    <li>Complete By: <%= @task[:completed_at].strftime("%D - %l:%M %p") %></li>
+    <li>Complete By: <%= @task[:complete_by].strftime("%D - %l:%M %p") %></li>
   </ul>
 
 <footer>
