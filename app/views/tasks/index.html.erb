@@ -1,13 +1,17 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+
 <h1>Tasks To-Do</h1>
     <% @tasks.each do |task| %>
-    <ul>
+    <section class="tasks">
+    <a href="/tasks/<%= task.id %>"><ul class="task">
         <h2><%= task.title %></h2>
-      <li>
+      <li id="description">
         <%= task.description %>
       </li>
-      <li>
-        <%= task.completion %>
-      </li>
-    </ul>
+    </ul></a>
+    <br />
+  </section>
 
     <% end %>

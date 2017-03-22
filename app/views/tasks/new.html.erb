@@ -1,0 +1,15 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+
+<h1>Add New Tasks</h1>
+
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description, size: "40x10" %>
+  <%= f.hidden_field :completion, value: "Not Yet Completed" %>
+  <%= f.submit %>
+
+<% end %>
