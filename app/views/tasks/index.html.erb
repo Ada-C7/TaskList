@@ -2,7 +2,10 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= link_to task.name, task_path(task.id) %> <%= link_to "edit", task_edit_path(task.id) %></li>
+    <li>
+      <%= link_to task.name, task_path(task.id) %>
+      <%= button_to "edit", task_edit_path(task.id), method: :get %>
+    </li>
   <% end %>
 </ul>
 
