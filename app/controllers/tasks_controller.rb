@@ -1,7 +1,9 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
+    @incomplete_tasks = Task.incomplete
+    @complete_tasks = Task.complete
   end
 
   def show
@@ -15,7 +17,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(title: params[:task][:title], description: params[:task][:description], duedate: params[:task][:duedate], priority: params[:task][:priority])
+    @task = Task.new(task_params)
 
     if @task.save
       redirect_to tasks_path
@@ -31,7 +33,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
 
-    if @task.update(title: params[:task][:title], description: params[:task][:description], duedate: params[:task][:duedate], priority: params[:task][:priority], completed: params[:task][:completed])
+    if @task.update(task_params)
       redirect_to task_path
     else
       render :edit
@@ -43,11 +45,11 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
   #
-  # private
-  #
-  # def task_params
-  #   params.require(:task).permit(:title, :description, :duedate, :priority)
-  # end
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :description, :duedate, :priority, :completed)
+  end
 
 
 end

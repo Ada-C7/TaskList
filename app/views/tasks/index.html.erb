@@ -1,18 +1,52 @@
 <h1>ALL TASKS</h1>
 
+<%= button_to "add task", tasks_new_path, method: :get %>
 
-<% @tasks.each do |task| %>
-<ul id="all-one-line">
+<h2>TODO</h2>
+<%= form_tag(tasks_path, method: :get)  do %>
+<table>
+  <% for task in @incomplete_tasks %>
+  <tr>
+    <ul id="all-one-line">
+      <li>
+        <td>
+          <%= link_to task.title, task_path(task.id) %>
+        </td>
+        <td class="hidden">
+          <%= button_to "delete", task_delete_path(task.id), method: :delete %>
+        </td>
+        <td class="hidden">
+          <%= button_to "edit", task_edit_path(task.id), method: :get %>
+        </td>
+      </li>
+    </ul>
+  </tr>
+  <% end %>
+</table>
 
-  <li>
-    <%= link_to task.title, task_path(task.id) %>
-    <%= button_to "delete", task_delete_path(task.id), method: :delete %>
-    <%= button_to "edit", task_edit_path(task.id), method: :get %>
+<h2>DONEZO</h2>
+<table>
+  <% for task in @complete_tasks %>
+  <ul>
+    <li class="complete">
+      <tr>
+        <td>
+          <%= task.title %>
+        </td>
+        <td class="hidden">
+          <%= task.description %>
+        </td>
+        <td class="hidden">
+          <%= task.priority %>
+        </td>
+        <td class="hidden">
+          <%= task.duedate %>
+        </td>
+      </tr>
+    </li>
+  </ul>
 
-  </li>
-
-</ul>
+  <% end %>
+</table>
 
 <% end %>
-
-<%= button_to "+", tasks_new_path, method: :get %>
