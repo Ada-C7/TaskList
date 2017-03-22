@@ -3,17 +3,17 @@ class TasksController < ApplicationController
     Time.at(rand * Time.now.to_i)
   end
 
-TASKS = [{ name: "Breakfast", description: "Don't forget to eat", completed_at: random_time },
-         { name: "Lunch", description: "Eat MOAR. Food 4 lyfe", completed_at: random_time },
-         { name: "Dinner", description: "Don't forget to eat. OMG!", completed_at: random_time }]
+TASKS = [{ name: "Breakfast", description: "Don't forget to eat", completion_date: random_time },
+         { name: "Lunch", description: "Eat MOAR. Food 4 lyfe", completion_date: random_time },
+         { name: "Dinner", description: "Don't forget to eat. OMG!", completion_date: random_time }]
 
   def index
-    @tasks = TASKS
+    @tasks = Task.all
   end
 
   def show
     id = params[:id].to_i
-    @task = TASKS[id]
+    @task = Task.find(id)
   end
 
 end
