@@ -1,9 +1,11 @@
 <h1>Tasks</h1>
 
 <ul>
-<% @tasks.each_with_index do |task, id| %>
+<% @tasks.each do |task| %>
   <li>
-    <%= link_to task[:name], task_path(id) %>
+    <%= link_to task.name, task_path(task.id) %>
   </li>
   <% end %>
 </ul>
+
+<h4><%= link_to "Add a New Thing to this Already Exhausting List", new_task_path %></h4>
