@@ -6,7 +6,6 @@
 }
 
 a {
-  
   text-decoration: none;
   color: green;
 }
@@ -17,7 +16,6 @@ a:hover {
 }
 
 li {
-  border: 10px;
   list-style-type: none;
 }
 
@@ -27,7 +25,7 @@ ul.nav{
 
 .nav li {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 #all-one-line li form {
@@ -36,7 +34,4 @@ ul.nav{
 
 form input {
   display: inline-block;
-}
-form label {
-  // display: block;
 }
