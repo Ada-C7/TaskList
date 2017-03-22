@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   delete '/tasks/:id', to: 'tasks#destroy', as: 'task_delete'
 
   patch '/tasks/:id/complete' => 'tasks#complete', as: 'task_complete'
+  patch '/tasks/:id/incomplete' => 'tasks#incomplete', as: 'task_incomplete'
 end

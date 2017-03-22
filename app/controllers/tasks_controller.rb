@@ -50,4 +50,12 @@ class TasksController < ApplicationController
 
     redirect_to tasks_path
   end
+
+  def incomplete
+    @task = Task.find(params[:id])
+    @task.mark_incomplete
+    @task.save
+
+    redirect_to tasks_path
+  end
 end

@@ -3,8 +3,10 @@ require 'date'
 class Task < ApplicationRecord
 
   def mark_complete
-    if completion_date.nil?
-      self.completion_date = DateTime.now
-    end
+    self.completion_date = DateTime.now if completion_date.nil?
+  end
+
+  def mark_incomplete
+    self.completion_date = nil
   end
 end
