@@ -45,6 +45,25 @@ class TasksController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+
+    if @task.update(title: params[:task][:title], description: params[:task][:description], duedate: params[:task][:duedate], priority: params[:task][:priority])
+      redirect_to tasks_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id]).destroy
+    redirect_to tasks_path
+  end
   #
   # private
   #

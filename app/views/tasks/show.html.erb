@@ -13,6 +13,9 @@
 </p>
 <ul class="nav">
   <li>
+    <%= link_to "Edit Task", task_edit_path(@result_task[:id]) %>
+  </li>
+  <li>
     <%= link_to "Previous Task", @prev_id %>
   </li>
   <li>
