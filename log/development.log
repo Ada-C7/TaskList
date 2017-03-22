@@ -2924,3 +2924,83 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/tasks/" for ::1 at 2017-03-22 16:28:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 415ms (Views: 386.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/4" for ::1 at 2017-03-22 16:28:27 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 68.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/4/edit" for ::1 at 2017-03-22 16:28:29 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 106ms (Views: 100.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/4" for ::1 at 2017-03-22 16:28:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 66ms (Views: 58.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/4/edit" for ::1 at 2017-03-22 16:28:46 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 76ms (Views: 70.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/4" for ::1 at 2017-03-22 16:28:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 66ms (Views: 57.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-22 16:28:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-22 16:37:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 167ms (Views: 138.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-22 16:37:51 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 54ms (Views: 47.7ms | ActiveRecord: 0.3ms)
+
+
