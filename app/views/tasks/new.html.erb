@@ -1,34 +1,22 @@
 <h1>... adding a new task ...</h1>
 
-<form action="/tasks" method="post" accept-charset="utf-8">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-  <ul id="new-task">
-    <li>
-      <label for="title">Title</label>
-      <input type="text" name="task[title]" value="" id="title">
-    </li>
+<%= form_for @task do |f| %>
 
-    <li>
-      <label for="description">Description</label>
-      <input type="text-area" name="task[description]" value="" id="description">
-    </li>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
 
-    <li>
-      <label for="duedate">Due Date</label>
-      <input type="text" name="task[duedate]" value="" id="duedate">
-    </li>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
 
-    <li>
-      <label for="priority">Priority</label>
-      <input type="text" name="task[priority]" value="" id="priority">
-    </li>
+  <%= f.label :duedate %>
+  <%= f.text_field :duedate %>
 
-    <li>
-      <input type="submit" value="Submit">
-    </li>
-  </ul>
+  <%= f.label :priority %>
+  <%= f.text_field :priority %>
 
-</form>
+  <%= f.submit %>
 
+<% end %>
+
+  
 <h3><%= link_to "cancel", tasks_path %></h3>

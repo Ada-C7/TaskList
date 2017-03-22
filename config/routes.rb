@@ -1,13 +1,20 @@
 Rails.application.routes.draw do
-  get 'days/index'
 
-  get 'days/show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'tasks#index'
+  # resources :tasks
 
   get "/tasks", to: "tasks#index"
+
+  get "/tasks/new", to: "tasks#new"
+  post "/tasks", to: "tasks#create"
+
   get "/tasks/:id", to: "tasks#show", as: "task"
-  get "/new", to: "tasks#new", as: "new"
+
+  get "/tasks/:id/edit", to: "tasks#edit", as: "task_edit"
+  patch "/tasks/:id", to: "tasks#update"
+
+  destroy "/tasks/:id", to: "tasks#destroy"
 
 end
