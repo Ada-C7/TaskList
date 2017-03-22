@@ -1,5 +1,12 @@
-<h1>Editing: "<%= @task.title %>"</h1>
+<%= render partial: "header", locals: {zone: @zone} %>
 
-<%= render partial: "form", locals: {zone: @zone} %>
+<body>
+  <h3>editing: "<%= @task.title %>"</h3>
 
-<h3><%= button_to "cancel", tasks_path, method: :get %></h3>
+  <%= render partial: "form", locals: {zone: @zone} %>
+
+  <%= button_to "cancel", tasks_path, method: :get %>
+
+</body>
+
+<%= render partial: "footer", locals: {zone: @zone} %>

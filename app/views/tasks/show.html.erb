@@ -1,37 +1,39 @@
-<header>
-  <h1><%= @task.title %></h1>
-</header>
 
-<section class="task-data">
 
-  <p>
-    duedate: <%= @task.duedate %>
-  </p>
-  <p>
-    priority: <%= @task.priority %>
-  </p>
-  <p>
-    completed: <%= @task.completed %>
-  </p>
+<%= render partial: "header", locals: {zone: @zone} %>
+<body>
+  <h3><%= @task.title %></h3>
 
-  <p>
-    description: <%= @task.description %>
-  </p>
-</section>
+  <section class="task-data">
+    <p>
+      duedate: <%= @task.duedate %>
+    </p>
+    <p>
+      priority: <%= @task.priority %>
+    </p>
+    <p>
+      completed: <%= @task.completed %>
+    </p>
+    <p>
+      description: <%= @task.description %>
+    </p>
+  </section>
 
-<section class="nav">
-  <ul>
-    <li>
-      <%= link_to "edit", task_edit_path(@task[:id]) %>
-    </li>
-    <li>
-      <%= link_to "prev", @prev_id %>
-    </li>
-    <li>
-      <%= link_to "next", @next_id %>
-    </li>
-    <li>
-      <%= link_to "back", tasks_path %>
-    </li>
-  </ul>
-</section>
+  <section class="nav">
+    <ul>
+      <li>
+        <%= link_to "edit", task_edit_path(@task[:id]) %>
+      </li>
+      <li>
+        <%= link_to "prev", @prev_id %>
+      </li>
+      <li>
+        <%= link_to "next", @next_id %>
+      </li>
+      <li>
+        <%= link_to "back", tasks_path %>
+      </li>
+    </ul>
+  </section>
+</body>
+<%= render partial: "footer", locals: {zone: @zone} %>

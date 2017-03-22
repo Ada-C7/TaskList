@@ -1,7 +1,4 @@
-<header>
-  <h1>git 'er done</h1>
-</header>
-
+<%= render partial: "header", locals: {zone: @zone} %>
 
 <body>
   <section class="list">
@@ -18,7 +15,6 @@
           <%= button_to "edit", task_edit_path(task.id), method: :get %>
         </li>
       </ul>
-
     <% end %>
     <%= button_to "add task", tasks_new_path, method: :get %>
 
@@ -26,6 +22,4 @@
 
 </body>
 
-<footer>
-  
-</footer>
+<%= render partial: "footer", locals: {zone: @zone} %>
