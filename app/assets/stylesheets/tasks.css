@@ -1,0 +1,15 @@
+* {
+  font-family: monospace;
+}
+
+body {
+  background-color: pink;
+}
+
+h1 {
+  color: purple;
+}
+
+h1 {
+  border: 1px solid red;
+}

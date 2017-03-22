@@ -1,0 +1,10 @@
+<h2><%= "#{@task.name}" %></h2>
+<h3>completed_at<%= @task.completed_at %></h3>
+
+<%= link_to "Back to task list", tasks_path %>
+
+<%= link_to "Delete", task_path(@task.id), method: :delete, data: {confirm: "Really delete the article?"} %>
+
+<%= link_to "Edit", edit_task_path(@task.id) %>
+
+<%= link_to "mark_complete", "/tasks/#{@task.id}/mark_complete", method: :patch%>
