@@ -9,12 +9,11 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
-    puts ">>>>>>> LMS: In TasksController#create"
     Task.create(task_params)
-
     redirect_to tasks_path
   end
 
