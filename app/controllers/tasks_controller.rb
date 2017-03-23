@@ -8,6 +8,10 @@ class TasksController < ApplicationController
     @result_task = Task.find(params[:id])
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
   def new
     @task = Task.new
   end
