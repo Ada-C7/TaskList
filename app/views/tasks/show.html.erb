@@ -1,14 +1,16 @@
-<h1> <%= @result_task.name %> </h1>
+<section id="show">
+  <h1> <%= @result_task.name %> </h1>
 
-<p>
-  <strong>Description</strong>: <%= @result_task.description %>
-</p>
-<p>
-  <strong>Due Date</strong>: <%= @result_task.due_date %>
-</p>
-<p>
-  <strong>Completion Date</strong>: <%= @result_task.completion_date %>
-</p>
-<p>
-  <%= link_to "Back to list", tasks_path %>
-</p>
+  <p id="description">
+    <strong>Description:</strong> <%= @result_task.description %>
+  </p>
+  <p>
+    <strong>Due Date:</strong> <%= @result_task.due_date %>
+  </p>
+  <p>
+    <strong>Completion Date:</strong> <%= @result_task.completion_date %>
+  </p>
+  <p>
+    <%= link_to "Back to list", tasks_path %>
+  </p>
+</section>
