@@ -8,6 +8,12 @@
   <%= f.label :description %>
   <%= f.text_area :description, size: "60x12" %>
 
+  <%= f.label :status %>
+  <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
+
+  <%= f.label :complete_by, "Complete Task on date:"%>
+  <%= f.date_select :complete_by, :start_year => 2017 %>
+
   <%= f.submit "Edit Task" %>
 
 <% end %>
