@@ -5,8 +5,11 @@
     <section id="list">
 
       <% @tasks.each do |task| %>
+
         <ul class="main-nav">
-          <li>
+          <li class="task-title">
+            <div class="<%= 'task-done' if task.completed != nil %>">
+            
             <%= link_to task.title, task_path(task.id) %>
           </li>
           <li class="hidden">
