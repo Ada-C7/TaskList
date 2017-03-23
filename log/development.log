@@ -23412,3 +23412,854 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/tasks" for ::1 at 2017-03-23 08:35:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (3.0ms)
+  [1m[36mTask Load (6.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.8ms)
+  Rendered tasks/index.html.erb within layouts/application (139.3ms)
+Completed 200 OK in 766ms (Views: 677.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:35:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.9ms)
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.0ms)
+  Rendered tasks/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 247ms (Views: 241.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:35:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.3ms)
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.5ms)
+  Rendered tasks/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 214ms (Views: 203.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:36:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.9ms)
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 304ms (Views: 294.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:36:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.3ms)
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.5ms)
+  Rendered tasks/index.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 358ms (Views: 344.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:36:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.6ms)
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (156.6ms)
+Completed 200 OK in 287ms (Views: 283.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:36:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 99ms (Views: 96.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:36:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.9ms)
+  [1m[36mTask Load (1.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.1ms)
+  Rendered tasks/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 185ms (Views: 181.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:37:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (3.2ms)
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.1ms)
+  Rendered tasks/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 223ms (Views: 212.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:37:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (4.7ms)
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (3.2ms)
+  Rendered tasks/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 286ms (Views: 282.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/52" for ::1 at 2017-03-23 08:37:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id > 52) ORDER BY "tasks"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id < 52) ORDER BY "tasks"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.9ms)
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 148ms (Views: 122.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/tasks/52/edit" for ::1 at 2017-03-23 08:38:05 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (13.6ms)
+  Rendered tasks/_footer.html.erb (2.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 66ms (Views: 62.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/52/edit" for ::1 at 2017-03-23 08:38:15 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.2ms)
+  Rendered tasks/_form.html.erb (4.1ms)
+  Rendered tasks/_footer.html.erb (0.7ms)
+  Rendered tasks/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 136ms (Views: 131.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/52/edit" for ::1 at 2017-03-23 08:38:19 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/_footer.html.erb (2.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/52" for ::1 at 2017-03-23 08:38:25 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xs8RHzsF/4Vxng0dV6Tm1zJm/OyseiyCrnQKAptXwHz+dpV7GI5+Ij1natltsGalp7vhbhc8dWTcOxf/0Wb9rg==", "task"=>{"title"=>"and another", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save", "id"=>"52"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 41ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:38:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.1ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.8ms)
+  Rendered tasks/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 87ms (Views: 82.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:38:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (0.9ms)
+  Rendered tasks/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 152ms (Views: 148.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/36" for ::1 at 2017-03-23 08:56:35 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id > 36) ORDER BY "tasks"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id < 36) ORDER BY "tasks"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.2ms)
+  Rendered tasks/_footer.html.erb (1.4ms)
+  Rendered tasks/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 130ms (Views: 72.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks/36/edit" for ::1 at 2017-03-23 08:56:39 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.1ms)
+  Rendered tasks/_form.html.erb (12.3ms)
+  Rendered tasks/_footer.html.erb (1.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 111ms (Views: 104.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/36" for ::1 at 2017-03-23 08:56:42 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QkVfz76EXsDrnJMvAqLzip0qZ0rV85r2FXCXODz8U+yWF0kpmOB9uMXUdS4JHZrfgVhvNwfNCJ1sMvM7D4o85w==", "task"=>{"title"=>"go shopping", "due"=>"2017-03-28", "priority"=>"low", "description"=>"get some groceries and mascara"}, "id"=>"36"}
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:56:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.9ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.1ms)
+  Rendered tasks/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:57:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (5.5ms)
+  [1m[36mTask Load (7.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (4.4ms)
+  Rendered tasks/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 176ms (Views: 150.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/tasks/36" for ::1 at 2017-03-23 08:57:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id > 36) ORDER BY "tasks"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE (id < 36) ORDER BY "tasks"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.2ms)
+  Rendered tasks/_footer.html.erb (1.0ms)
+  Rendered tasks/show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 104ms (Views: 90.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/36/edit" for ::1 at 2017-03-23 08:57:14 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mTask Load (11.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.2ms)
+  Rendered tasks/_form.html.erb (16.1ms)
+  Rendered tasks/_footer.html.erb (1.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 88ms (Views: 73.9ms | ActiveRecord: 11.0ms)
+
+
+Started PATCH "/tasks/36" for ::1 at 2017-03-23 08:57:17 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2JRscys2vGWXbWWNXd04wlcs/NsJuNggDVsI2ZafO5IMxnqVDVKfHbklg4xWYlGXS170ptuGSkt0GWzapelUmQ==", "task"=>{"title"=>"go shopping", "due"=>"2017-03-28", "priority"=>"low", "description"=>"get some groceries and mascara"}, "id"=>"36"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 17ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:57:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (3.4ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.5ms)
+  Rendered tasks/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:57:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.4ms)
+  Rendered tasks/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 239ms (Views: 236.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 08:57:27 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.1ms)
+  Rendered tasks/_form.html.erb (6.3ms)
+  Rendered tasks/_footer.html.erb (0.9ms)
+  Rendered tasks/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 69ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 08:57:59 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (3.2ms)
+  Rendered tasks/_form.html.erb (3.1ms)
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 147ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 08:58:01 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P0G6S+RXNzSzQ+C/XQlFC9AWDEZXA8o08MTuu2P3bx8H+D4vx9y2k/+6h3tnHcV5RcsRxOxFk9KCi/NGKcZSzQ==", "task"=>{"title"=>"", "due"=>"", "priority"=>"", "description"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["created_at", 2017-03-23 15:58:01 UTC], ["updated_at", 2017-03-23 15:58:01 UTC], ["priority", ""]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 23ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 08:58:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/tasks/complete/52" for ::1 at 2017-03-23 09:02:10 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"3EvhLWaiIuO990YuOA9YN7wDDZz+TGiIMKhA9v0VVufk8mVJRSmjRPEOIeoCG9hFKd4QHkUKMW5C510LtyRrNQ==", "id"=>"52"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Thu, 23 Mar 2017], ["updated_at", 2017-03-23 16:02:10 UTC], ["id", 52]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 38ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:02:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.1ms)
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.5ms)
+  Rendered tasks/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 125ms (Views: 120.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:04:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.1ms)
+  [1m[36mTask Load (1.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.4ms)
+  Rendered tasks/index.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 185ms (Views: 172.4ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/tasks/54" for ::1 at 2017-03-23 09:04:32 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qjJy4dcQCWjbca4YMROmzN/RNTUSGbabh8Lo3kCDJ/eSi/aF9JuIz5eIydwLBya+Sgwot6lf7331jfUjCrIaJQ==", "id"=>"54"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 54]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 44ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:04:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.8ms)
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.7ms)
+  Rendered tasks/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 139ms (Views: 121.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:04:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (3.1ms)
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (3.5ms)
+  Rendered tasks/index.html.erb within layouts/application (185.0ms)
+Completed 200 OK in 232ms (Views: 226.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:05:17 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"4sLqPHQF13u27YuXeN4fE8IKycF+mZzZermm4H4qIK7ae25YV45W3PoU7FNCyp9hV9fUQ8XfxT8I9rsdNBsdfA=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (4.9ms)
+  Rendered tasks/_footer.html.erb (1.1ms)
+  Rendered tasks/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:05:22 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+vj0B2VOz3UGjzqHMNl9cx1j00MsFpYzTuiqDqevohrCQXBjRsVO0kp2XUMKzf0BiL7OwZdQz9U8p7fz7Z6fyA==", "task"=>{"title"=>"sample", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sample"], ["description", ""], ["created_at", 2017-03-23 16:05:22 UTC], ["updated_at", 2017-03-23 16:05:22 UTC], ["priority", ""]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 18ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:05:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.2ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.4ms)
+  Rendered tasks/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:05:24 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"bB8TT3ghHLilB7tibhBUAjgNbkxr7mHPLQ3A8VEqLPNUppcrW6qdH+n+3KZUBNRwrdBzztCoOClfQt0MGxsRIQ=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (4.5ms)
+  Rendered tasks/_footer.html.erb (0.9ms)
+  Rendered tasks/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:05:27 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGGdm7/3TnovP1c2exvQZ+Ay3oQgSMWZxdTNMyWfif8w2Bn/nHzP3WPGMPJBD1AVde/DBpsOnH+3m9DOb660LQ==", "task"=>{"title"=>"yup", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "yup"], ["description", ""], ["created_at", 2017-03-23 16:05:27 UTC], ["updated_at", 2017-03-23 16:05:27 UTC], ["priority", ""]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:05:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.4ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.6ms)
+  Rendered tasks/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:05:28 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"YihZvRvqNVW7Jc8NegjcLszcSoAy04THtf8Qk6SU8tFakd3ZOGG08vfcqMlAHFxcWQFXAomV3SHHsA1u7qXPAw=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  Rendered tasks/_form.html.erb (4.1ms)
+  Rendered tasks/_footer.html.erb (0.7ms)
+  Rendered tasks/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:05:32 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tsPxXBF6lx4p9X+tBeI1WpA00O4+4sbIlPwl+YCs896OenU4MvEWuWUMGGk/9rUoBenNbIWkny7mszgEyp3ODA==", "task"=>{"title"=>"poop", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "poop"], ["description", ""], ["created_at", 2017-03-23 16:05:32 UTC], ["updated_at", 2017-03-23 16:05:32 UTC], ["priority", ""]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:05:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.2ms)
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (3.8ms)
+  Rendered tasks/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:05:33 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"qy80ISJeFPi+lmYpr3Iqi42KnT92cX6ZrQAj2boFbNqTlrBFAdWVX/JvAe2VZqr5GFeAvc03J3/fTz4k8DRRCA=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.1ms)
+  Rendered tasks/_form.html.erb (3.6ms)
+  Rendered tasks/_footer.html.erb (0.7ms)
+  Rendered tasks/new.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:05:39 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjknSM1jXiAX39RuxD7DQSgH2AptR6IL5Lsy3HcY01CegKMs7ujfh1sms6r+KkMzvdrFiNYB++2W9C8hPSnugg==", "task"=>{"title"=>"Eat all the pie and cake", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Eat all the pie and cake"], ["description", ""], ["created_at", 2017-03-23 16:05:39 UTC], ["updated_at", 2017-03-23 16:05:39 UTC], ["priority", ""]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:05:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.5ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:05:47 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"GOi4sg69DsuezJKdpSPJc9ZBfbfw6TIb27XCqWoSyWYgUTzWLTaPbNI19VmfN0kBQ5xgNUuva/2p+t9UICP0tA=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/_footer.html.erb (0.8ms)
+  Rendered tasks/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:05:50 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GuS13umpMF7tCHWdmK9exqh/G1ZDDWtK0kM8xa82UFIiXTG6yiKx+aHxElmiu960PaIG1PhLMqygDCE45QdtgA==", "task"=>{"title"=>"mmmm", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "mmmm"], ["description", ""], ["created_at", 2017-03-23 16:05:50 UTC], ["updated_at", 2017-03-23 16:05:50 UTC], ["priority", ""]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:05:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.6ms)
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 135ms (Views: 130.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:06:10 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"FXqV9Il7RmhW1vC1empsa+EZvpDImp4DhjKRsWTJPhYtwxGQqvDHzxovl3FAfuwZdMSjEnPcx+X0fYxMLvgDxA=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  Rendered tasks/_form.html.erb (5.5ms)
+  Rendered tasks/_footer.html.erb (0.9ms)
+  Rendered tasks/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:06:19 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bweFcTj8F459/9r8erK0bPzCkZUSNjvrDgRJrlYGwlpXvgEVG3eWKTEGvThApjQeaR+MF6lwYg18S1RTHDf/iA==", "task"=>{"title"=>"Eat all the pie and cakeagain", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Eat all the pie and cakeagain"], ["description", ""], ["created_at", 2017-03-23 16:06:19 UTC], ["updated_at", 2017-03-23 16:06:19 UTC], ["priority", ""]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:06:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.9ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.4ms)
+  Rendered tasks/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-23 09:06:23 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"authenticity_token"=>"6Phoe7iutEJ0ck4eT+R+HMHvRf6RQhF3J3gsA20CMjjQQewfmyU15TiLKdp18P5uVDJYfCoESJFVNzH+JzMP6g=="}
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.5ms)
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/_footer.html.erb (1.0ms)
+  Rendered tasks/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-23 09:06:26 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YapbpZ9t4/JFPlP+S23UVJj/9pKn8IQy7H/jRWVgBwxZE9/BvOZiVQnHNDpxeVQmDSLrEBy23dSeMP64L1E63g==", "task"=>{"title"=>"kyfkhgk", "due"=>"", "priority"=>"", "description"=>""}, "commit"=>"save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "created_at", "updated_at", "priority") VALUES (?, ?, ?, ?, ?)[0m  [["title", "kyfkhgk"], ["description", ""], ["created_at", 2017-03-23 16:06:26 UTC], ["updated_at", 2017-03-23 16:06:26 UTC], ["priority", ""]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:06:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.3ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.2ms)
+  Rendered tasks/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 70ms (Views: 66.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:06:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.7ms)
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.0ms)
+  Rendered tasks/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 494ms (Views: 484.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:07:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.8ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (1.6ms)
+  Rendered tasks/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 182ms (Views: 178.8ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/tasks/complete/60" for ::1 at 2017-03-23 09:07:36 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"BHE2yPIjgopQfYxCJO4A79NvZVgUKTFCbjfgKoLVLvg8yLKs0agDLRyE64Ye+oCdRrJ42q9vaKQceP3XyOQTKg==", "id"=>"60"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Thu, 23 Mar 2017], ["updated_at", 2017-03-23 16:07:36 UTC], ["id", 60]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 25ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:07:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (2.6ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:00 -0700
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/tasks_controller.rb:5:in `sort'
+app/controllers/tasks_controller.rb:5:in `index'
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.0ms)
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.8ms)
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_footer.html.erb (3.3ms)
+  Rendered tasks/index.html.erb within layouts/application (192.3ms)
+Completed 200 OK in 260ms (Views: 237.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:35 -0700
+  
+SyntaxError (/Users/auroraanderson/ada/c7/projects/rails/TaskList/app/controllers/tasks_controller.rb:5: syntax error, unexpected '!', expecting keyword_end
+    @tasks.order(:completed)!
+                             ^
+/Users/auroraanderson/ada/c7/projects/rails/TaskList/app/controllers/tasks_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tasks_controller.rb:5: syntax error, unexpected '!', expecting keyword_end
+app/controllers/tasks_controller.rb:62: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/auroraanderson/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.7ms)
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (0.9ms)
+  Rendered tasks/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/tasks/complete/55" for ::1 at 2017-03-23 09:08:48 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"smFX6q0rPqaFeWym490/kis4+zuKcEFrvS5z5IRqWNSK2NOOjqC/AcmAC2LZyb/gvuXmuTE2GI3PYW4ZzltlBg==", "id"=>"55"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Thu, 23 Mar 2017], ["updated_at", 2017-03-23 16:08:48 UTC], ["id", 55]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.7ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (0.6ms)
+  Rendered tasks/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/tasks/complete/39" for ::1 at 2017-03-23 09:08:51 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"YLLdsPRoS5XYdQFWXZttEGsijmPs7su8OhWNdBUQ+I5YC1nU1+PKMpSMZpJnj+1i/v+T4VeoklpIWpCJXyHFXA==", "id"=>"39"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Thu, 23 Mar 2017], ["updated_at", 2017-03-23 16:08:51 UTC], ["id", 39]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:08:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.8ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (1.4ms)
+  Rendered tasks/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 68ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tasks/60" for ::1 at 2017-03-23 09:09:01 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Xwu/jXtLJidTxO0PSWcXTTXeS4b1p/cjAuY3JibjGj1nsjvpWMCngB89istzc5c/oANWBE7hrsVwqSrbbNIn7w==", "id"=>"60"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 60]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 20ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:09:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.7ms)
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (30.4ms)
+  Rendered tasks/index.html.erb within layouts/application (95.6ms)
+Completed 200 OK in 187ms (Views: 183.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/tasks/complete/58" for ::1 at 2017-03-23 09:09:03 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"T6BHPxDTLbOllQJjmsBd7jBHg2rQPfggSujy3YkcgDd3GcNbM1isFOlsZaeg1N2cpZqe6Gt7ocY4p+8gwy295Q==", "id"=>"58"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Thu, 23 Mar 2017], ["updated_at", 2017-03-23 16:09:03 UTC], ["id", 58]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:09:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (7.9ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (1.6ms)
+  Rendered tasks/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/37" for ::1 at 2017-03-23 09:09:22 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g1494Ie1S/AF3f7qMxx7kQ+bPND2eYeLhU5ALZ+VVrq757mEpD7KV0kkmS4JCPvjmkYhUk0/3m33AV3Q1aRraA==", "id"=>"37"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 37]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 18ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:09:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (0.6ms)
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/tasks/40" for ::1 at 2017-03-23 09:09:29 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Yn6vXV60XaokZ7LL81H+s6R0cMFQZHdXfu2Cyu6IFB5axys5fT/cDWie1Q/JRX7BMaltQ+siLrEMop83pLkpzA==", "id"=>"40"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 40]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 15ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:09:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (1.7ms)
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (1.1ms)
+  Rendered tasks/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 61ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/39" for ::1 at 2017-03-23 09:09:32 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FNHpEVNW+p+zfpULl5cA4p6QmUG7S+5S2MWcn4dc3/I6sPAZsbaTTI0nZAUStxxH6df572rdl85LAuPNCxOrQ==", "id"=>"39"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 39]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-23 09:09:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/_header.html.erb (6.0ms)
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."completed" ASC[0m
+  Rendered tasks/_footer.html.erb (1.2ms)
+  Rendered tasks/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 68ms (Views: 64.1ms | ActiveRecord: 0.2ms)
+
+

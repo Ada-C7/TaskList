@@ -2,6 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @tasks = @tasks.order(:completed)
   end
 
   def show
@@ -50,7 +51,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id]).destroy
     redirect_to tasks_path
   end
-  #
+
   private
 
   def task_params
