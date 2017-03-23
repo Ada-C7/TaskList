@@ -15,19 +15,20 @@
           <li class="hidden">
             <%= button_to "edit", task_edit_path(task.id), method: :get %>
           </li>
-          <li>
+          <li class="hidden">
             <%= button_to "done", complete_task_path(task.id), method: :put %>
           </li>
         </ul>
       <% end %>
-      <ul id="add_task">
-        <li>
-          <%= button_to "add task", tasks_new_path, method: :get %>
 
-        </li>
-      </ul>
+
 
     </section>
+    <ul id="add_task">
+      <li>
+        <%= button_to "add task", tasks_new_path, method: :get %>
+      </li>
+    </ul>
 
   </article>
 
