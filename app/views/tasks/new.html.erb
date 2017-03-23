@@ -3,12 +3,10 @@
 <ul>
   <%= form_for @task do |f| %>
   <li>
-    <!-- <%= label_tag  :name, "Task Name: " %> -->
     <%= f.label :name, "Task Name: " %>
     <%= f.text_field :name %>
   </li>
   <li>
-    <!-- <%= label_tag  :desc, "Description: " %> -->
     <%= f.label :desc, "Description: " %>
     <%= f.text_area :desc, size: "25%" %>
   </li>
