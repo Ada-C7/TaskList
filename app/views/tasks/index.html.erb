@@ -1,6 +1,12 @@
 <main>
-
-<h3>welcome to your to-dos!</h4>
+  <nav>
+    <h3>welcome to your to-dos. let's GSD.</h4>
+    <ul>
+      <li><%= link_to "all", tasks_path %></li>
+      <li><%= link_to "new", tasks_new_path %></li>
+    </ul>
+  </nav>
+<section class="high">
 
 <h4>You have some high priority tasks:</h4>
 <ul>
@@ -10,14 +16,17 @@
     <% end %>
   <% end %>
 </ul>
+</section>
 
-<h4>The rest of your tasks are not as urgent</h4>
+<section>
+<h4>Your other tasks are not as urgent:</h4>
 <ul>
   <% @tasks.each do |task| %>
     <% if task.priority != 1 %>
       <li><%= link_to task.name, task_path(task.id) %> </li>
     <% end %>
   <% end %>
-
 </ul>
+</section>
+
 </main>

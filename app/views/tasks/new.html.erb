@@ -1,19 +1,42 @@
-<h1>Add a New Task</h1>
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<main>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+<nav>
+  <h3>Add a New Task</h3>
+  <ul>
+    <li><%= link_to "all", tasks_path %></li>
+    <li><%= link_to "new", tasks_new_path %></li>
+  </ul>
+</nav>
 
-  <%= f.label :due_date %>
-  <%= f.date_field :due_date %>
+<ul class="form_new">
 
-  <%= f.label :priority %>
-  <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
+  <%= form_for @task do |f| %>
 
-  <!-- options_for_select([['High', 1], ['Medium', 2], ['Low', 3]]) -->
-  <!-- default name on submit button is "Create + Name of model -->
-  <%= f.submit "add task"%>
+  <li><%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
 
-<% end %>
+  <li>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </li>
+
+  <li>
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date %> </li>
+
+  <li>
+    <%= f.label :priority %>
+    <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
+  </li>
+
+    <!-- options_for_select([['High', 1], ['Medium', 2], ['Low', 3]]) -->
+    <!-- default name on submit button is "Create + Name of model -->
+  <li><%= f.submit "add task"%></li>
+
+  <% end %>
+
+</ul>
+
+
+</main>
