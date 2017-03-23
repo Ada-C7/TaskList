@@ -1,33 +1,35 @@
-<%= render partial: "header", locals: {zone: @zone} %>
+<section class="container">
+  <%= render partial: "header", locals: {zone: @zone} %>
 
-<body>
-  <section id="list">
+  <article class="body">
+    <section id="list">
 
-    <% @tasks.each do |task| %>
-      <ul class="main-nav">
+      <% @tasks.each do |task| %>
+        <ul class="main-nav">
+          <li>
+            <%= link_to task.title, task_path(task.id) %>
+          </li>
+          <li class="hidden">
+            <%= button_to "delete", task_delete_path(task.id), method: :delete %>
+          </li>
+          <li class="hidden">
+            <%= button_to "edit", task_edit_path(task.id), method: :get %>
+          </li>
+          <li>
+            <%= button_to "done", complete_task_path(task.id), method: :put %>
+          </li>
+        </ul>
+      <% end %>
+      <ul id="add_task">
         <li>
-          <%= link_to task.title, task_path(task.id) %>
-        </li>
-        <li class="hidden">
-          <%= button_to "delete", task_delete_path(task.id), method: :delete %>
-        </li>
-        <li class="hidden">
-          <%= button_to "edit", task_edit_path(task.id), method: :get %>
-        </li>
-        <li>
-          <%= button_to "done", complete_task_path(task.id), method: :put %>
+          <%= button_to "add task", tasks_new_path, method: :get %>
+
         </li>
       </ul>
-    <% end %>
-    <ul id="add_task">
-      <li>
-        <%= button_to "add task", tasks_new_path, method: :get %>
 
-      </li>
-    </ul>
+    </section>
 
-  </section>
+  </article>
 
-</body>
-
-<%= render partial: "footer", locals: {zone: @zone} %>
+  <%= render partial: "footer", locals: {zone: @zone} %>
+</section>

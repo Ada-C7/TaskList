@@ -1,11 +1,13 @@
-<%= render partial: "header", locals: {zone: @zone} %>
+<section class="container">
+  <%= render partial: "header", locals: {zone: @zone} %>
 
-<body>
-  <h3>editing: "<%= @task.title %>"</h3>
+  <article class="body">
+    <h3>editing: "<%= @task.title %>"</h3>
 
-  <%= render partial: "form", locals: {zone: @zone} %>
+    <%= render partial: "form", locals: {zone: @zone} %>
 
 
-</body>
+  </article>
 
-<%= render partial: "footer", locals: {zone: @zone} %>
+  <%= render partial: "footer", locals: {zone: @zone} %>
+</section>
