@@ -3,9 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <p><%= link_to task[:name], task_path(task[:id]) %></p>
+      <p><%= link_to task[:name], task_path(task[:id]) %></p> <%= link_to 'delete', task_path(task[:id]), data: {:confirm => 'You sure?'}, :method => :delete%>
       <p>Description: <%= task[:description] %></p>
-      <p> Completed Time: <%= task[:completed_at] %></p>
+      <p> Completed Time: <%= task[:completed_at] %></p><%= link_to "Mark as Complete", complete_task_path(task[:id]), :method => :patch %>
     </li>
     <% end %>
 </ul>

@@ -3,6 +3,6 @@
 <%= form_for @task do |t| %>
 Name: <%= t.text_field :name %>
 Description: <%= t.text_field :description %>
-Completion Time: <%= t.text_field :completed_at %>
+Completion Time: <%= t.time_select :completed_at %>
 <%= t.submit "Save Changes"%>
 <%end%>

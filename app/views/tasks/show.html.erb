@@ -4,6 +4,10 @@
     <p>Description: <%= @task[:description] %></p>
     <p> Completed Time: <%= @task[:completed_at] %></p>
 
-<%= link_to "Edit this task", edit_task_path %>    
+
+<%= link_to "Mark as Complete", complete_task_path(params[:id]), :method => :patch %>
+<%= link_to "Edit this task", edit_task_path %>
+<%= link_to 'delete',task_path(params[:id]), data: {:confirm => 'You sure?'}, :method => :delete%>
+
 
 <%= link_to "Back to task list", tasks_path %>
