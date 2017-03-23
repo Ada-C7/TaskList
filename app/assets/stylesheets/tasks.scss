@@ -9,8 +9,8 @@ body {
   background-image: url("http://www.illustratoratoms.com/AtomsNetwork/Files/1414/10.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 50px 100px;
-  margin-bottom: 100px;
+  padding: 50px 75px 0px 130px;
+  height: 400px;
 }
 
 h1, h3 {
@@ -33,33 +33,41 @@ li {
   display: inline-block;
 }
 
-ul{
+ul {
+  display: block;
   margin: 0 auto;
+  padding: 4px 0;
 }  
 
 .hidden {
   visibility: hidden;
 }
 
-ul.main-nav {
-  // display: block;
-}
-
-ul.main-nav li {
-  display: inline-block;
-}
-
-ul:hover li.hidden {
+ul:hover .hidden {
   visibility: visible;
 }
 
+.nav li {
+  padding: 0 40px;
+}
+
+#push-footer-down {
+  margin-bottom: 100px;
+  position: absolute;
+}
+
+#add_task {
+  padding: 20px 0;
+}
+
 footer {
-  display: block;
+  // display: block;
   position: fixed;
   height: 100px;
+  width: 100%;
 }
 
 footer p {
-  display: inline-block;
-  text-align: center;
+  display: block;
+  // text-align: center;
 }
