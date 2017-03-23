@@ -1,12 +1,27 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
-    # BASELINE:
-    # @tasks = ["laundry", "clean room", "wash dishes", "work out", "homework", "groceries"]
   end
 
   def show
     @result_task = Task.find(params[:id])
+  end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    task = Task.find(params[:id])
+
+    task.name = params[:task][:name]
+    task.description = params[:task][:description]
+    task.due_date = params[:task][:due_date]
+    task.completion_date = params[:task][:completion_date]
+
+    if task.save
+      redirect_to task_path(task.id)
+    end
   end
 
   def new
