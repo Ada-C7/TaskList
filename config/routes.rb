@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'tasks#index'
+  put '/tasks/complete/:id' => 'tasks#complete', as: "complete_task", via: :put
+  # put '/tasks/complete/:id', to: 'tasks#index'
   get "/tasks", to: "tasks#index"
   get "/tasks/new", to: "tasks#new"
   post "/tasks", to: "tasks#create"
@@ -7,5 +9,5 @@ Rails.application.routes.draw do
   get "/tasks/:id/edit", to: "tasks#edit", as: "task_edit"
   patch "/tasks/:id", to: "tasks#update"
   delete "/tasks/:id", to: "tasks#destroy", as: "task_delete"
-  # put 'complete_task', to: 'tasks#complete', as: :complete_tasks  
+  # put 'complete_task', to: 'tasks#complete', as: :complete_tasks
 end

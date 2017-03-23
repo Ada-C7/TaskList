@@ -2,8 +2,6 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    @incomplete_tasks = Task.incomplete
-    @complete_tasks = Task.complete
   end
 
   def show
@@ -24,6 +22,14 @@ class TasksController < ApplicationController
     else
       render :new
     end
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+
+    @task.completed = Time.now
+    @task.save
+    redirect_to tasks_path
   end
 
   def edit

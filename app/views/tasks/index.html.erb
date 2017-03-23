@@ -14,6 +14,9 @@
         <li class="hidden">
           <%= button_to "edit", task_edit_path(task.id), method: :get %>
         </li>
+        <li>
+          <%= button_to "done", complete_task_path(task.id), method: :put %>
+        </li>
       </ul>
     <% end %>
     <ul id="add_task">
