@@ -70,6 +70,9 @@ section.task,
 section.form {
   margin-left: 10px;
 }
+.spacer {
+  margin: 0px 5px;
+}
 /*
 =================================
 Task list
@@ -93,14 +96,7 @@ Task list
    font-style: italic;
    color: #cfe0fc;
  }
- /*.task ul {
-   display: none;
-   width: 400px;
- }
- .unhide ul {
-   display: block;
- }*/
- /*
+
  /*
  ==============================================
  Task details

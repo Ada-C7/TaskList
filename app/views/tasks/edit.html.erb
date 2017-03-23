@@ -1,11 +1,11 @@
 
 
 <header>
-  <h1>Add new task</h1>
+  <h1>Edit a task</h1>
 </header>
 
 <section class="form">
-  <%= form_for @task do |f| %>
+  <%= form_for @task, method: :put do |f| %>
 
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -22,6 +22,6 @@
 
 <footer class="form_footer">
   <p>
-    <%= link_to "[return to task listing]", tasks_path %>
+    <%= link_to "[return to task view]", task_path %>
   </p>
 </footer>

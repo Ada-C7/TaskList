@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 
 <header>
@@ -8,17 +7,8 @@
 <section class="task_list">
   <ul>
     <% @tasks.each do |task| %>
-      <!-- <li class="task" onclick="myFunction(event)"> -->
       <li class="task">
         <%= link_to task.name, task_path(task.id) %>
-        <!-- <ul>
-          <li class="description">
-            <%= task.description %>
-          </li>
-          <li class="context">
-            <%= task.context %>
-          </li>
-        </ul> -->
       </li>
     <% end %>
   </ul>
@@ -29,14 +19,3 @@
     <%= link_to "[add a new task]", new_task_path %>
   </p>
 </footer>
-
-
-  <!-- <script>
-    function myFunction(event) {
-      if (event.target.className == "task")
-          event.target.className += " unhide";
-      else {
-        event.target.className = "task"
-      }
-    }
-  </script> -->
