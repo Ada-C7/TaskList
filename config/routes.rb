@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'tasks#index'
   put '/tasks/complete/:id' => 'tasks#complete', as: "complete_task", via: :put
+  put '/tasks/undo/:id' => 'tasks#undo', as: "undo_task", via: :put
+
   # put '/tasks/complete/:id', to: 'tasks#index'
   get "/tasks", to: "tasks#index"
   get "/tasks/new", to: "tasks#new"

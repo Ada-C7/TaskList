@@ -80,7 +80,7 @@ a:hover {
 .task-data, #list, #input-form {
   text-align: left;
   margin-left: 37%;
-  width: 28%;
+  width: 35%;
   min-width: 380px;
   padding: 26px 0 40px 0;
   overflow: scroll;
@@ -112,6 +112,12 @@ footer {
 .hidden {
   visibility: hidden;
   font-size: .7em;
+}
+
+.undo a {
+  color: blue;
+  content: "";
+  // content:
 }
 
 ul:hover li.hidden {

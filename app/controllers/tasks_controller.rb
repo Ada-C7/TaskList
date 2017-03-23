@@ -1,8 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
-    @tasks = @tasks.order(:completed)
+    @tasks = Task.all.order(:completed)
   end
 
   def show
@@ -27,8 +26,11 @@ class TasksController < ApplicationController
 
   def complete
     @task = Task.find(params[:id])
-
-    @task.completed = Time.now
+    if @task.completed == nil
+      @task.completed = Time.now
+    else
+      @task.completed = nil
+    end
     @task.save
     redirect_to tasks_path
   end

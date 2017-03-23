@@ -5,6 +5,13 @@
     <section id="list">
 
       <% @tasks.each do |task| %>
+        <% @button_text = "" %>
+        <% if task.completed != nil %>
+        <%  @button_text = "not done" %>
+        <% else %>
+        <%  @button_text = "done" %>
+        <% end %>
+
 
         <ul class="main-nav">
           <li class="task-title">
@@ -19,7 +26,7 @@
             <%= link_to "edit", task_edit_path(task.id), method: :get %>
           </li>
           <li class="hidden">
-            <%= link_to "done", complete_task_path(task.id), method: :put %>
+            <%= link_to @button_text, complete_task_path(task.id), method: :put %>
           </li>
         </ul>
       <% end %>
