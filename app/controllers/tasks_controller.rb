@@ -18,6 +18,8 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to(tasks_path, :notice => 'Task is not found') unless @task
   end
 
   def edit

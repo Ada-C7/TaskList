@@ -36,10 +36,7 @@ div a{
 div li:last-child{
   color:#7D869C;
 }
-.see_task{
-  display: inline-block;
-  width: 40%;
-}
+
 .see_task h3{
   color: #F78764;
 }
@@ -48,7 +45,7 @@ div li:last-child{
   font-style: italic;
 }
 
-.new_task, .edit_task{
+.new_task, .edit_task, .see_task{
   display: inline-block;
   border-style: dashed;
   border-width: thin;
@@ -63,10 +60,10 @@ div li:last-child{
   margin-bottom: 5%;
 }
 
-.add_button{
-  display: block;
-}
-
 #edit_task{
   float: right;
+}
+
+input[type=submit] {
+   display: block;
 }
