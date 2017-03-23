@@ -10,8 +10,6 @@
 <main>
   <nav>
     <p><%= link_to "Add New Task", new_task_path %></p>
-    <!-- <p>Edit Task</p> -->
-    <p>Delete Task</p>
   </nav>
   <section>
     <% @tasks.each_with_index do |task, index| %>
