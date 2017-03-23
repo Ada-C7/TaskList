@@ -25,12 +25,23 @@
 #<input type="datetime" name="task[completion_date]" value="" id="completion_date">
 -->
 
-
-
-<%= form_for @task do |f| %>
+<!-- <%= form_for @task do |f| %>
  <%= f.label :name %>
  <%= f.text_field :name %>
  <%= f.label :description %>
  <%= f.text_field :description %>
  <%= f.submit %>
-<% end %>
+<% end %> -->
+
+
+
+<section id = "new_task_section">
+  <h2>Enter a new task</h2>
+  <%= form_for @task do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <%= f.label :description %>
+   <%= f.text_field :description %>
+   <%= f.submit %>
+  <% end %>
+</section>

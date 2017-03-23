@@ -1,7 +1,21 @@
-<%= form_for @task do |f| %>
+
+
+<!-- <%= form_for @task do |f| %>
  <%= f.label :name %>
  <%= f.text_field :name %>
  <%= f.label :description %>
  <%= f.text_field :description %>
  <%= f.submit %>
-<% end %>
+<% end %> -->
+
+
+<section id = "edit_task_section">
+  <h2>Edit task</h2>
+  <%= form_for @task do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <%= f.label :description %>
+   <%= f.text_field :description %>
+   <%= f.submit %>
+  <% end %>
+</section>

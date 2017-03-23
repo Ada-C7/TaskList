@@ -6,19 +6,19 @@
 /*********************************************************
 HEADER
 **********************************************************/
-
-#index_header {
-  width: 100%;
-  text-align: center;
-  background-color: black;
-  color: white;
-  z-index: 50
+#index_main, #new_task_section, #edit_task_section, #show_section {
+  margin-top: 100px;
+  padding: 15px;
 }
 
-#index_main{
-  position: relative;
-/*margin-top: 150px*/
+
+#enter_new_task {
+  padding: 20px;
 }
+/*#new_form{
+  margin-top: 100px
+}*/
+
 
 #index_main h1 {
   width: 100%;
@@ -37,7 +37,7 @@ HEADER
 }
 
 #index_main ul {
-  padding-left: 0px;
+  padding-left: 10px;
 }
 
 

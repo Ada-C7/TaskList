@@ -15,9 +15,23 @@
  */
 
 
-header h1{
+
+header {
+  border: 2px solid red;
+  position: fixed;
+  width: 98%;
   background-color: orange;
-  text-align: center;
   z-index: 100;
+  text-align: center;
+}
+
+
+header h1{
+  display: inline-block;
   margin: 0px;
+  line-height: 100px;
+}
+
+body{
+  border: 2px dashed red;
 }

@@ -1,8 +1,12 @@
-<h1><%= @task[:name]%></h1>
-<p>
-  Description: <%= @task[:description] %>
-</p>
 
-  <%= link_to "Back to tasks", tasks_path %>
+<section id = "show_section">
+  <h1><%= @task[:name]%></h1>
+  <p>
+    Description: <%= @task[:description] %>
+  </p>
 
-  <%= link_to "Edit task", edit_task_path %>
+    <%= link_to "Back to tasks", tasks_path %>
+
+    <%= link_to "Edit task", edit_task_path %>
+
+</section>
