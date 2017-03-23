@@ -1,8 +1,3 @@
-// doesn't work
-// head title:before {
-//   content: '✅ '
-// }
-
 @import url('https://fonts.googleapis.com/css?family=Asap|Bitter');
 
 html {
@@ -14,6 +9,7 @@ body, a {
   font-family: 'Asap', sans-serif;
   color: #fff;
   text-decoration: none;
+  padding: 0 2%;
 }
 
 a:hover {
@@ -21,7 +17,11 @@ a:hover {
   color: #0484ab;
 }
 
-h1 {
+h1#newtask a:hover {
+  color: #fff;
+}
+
+h1, h1#newtask a {
   font-family: 'Bitter', serif;
   color: #0484ab;
 }
@@ -38,17 +38,23 @@ li {
   padding: 2% 0;
 }
 
+p.desc {
+  padding: 0 2%;
+}
+
 p.incomp {
   color: #e04f5f;
+  padding: 0 2%;
 }
 
 p.comp {
   color: #17b198;
+  padding: 0 2%;
 }
 
 img {
   position: fixed;
   width: 25%;
-  top: 20px;
-  right: 20px;
+  top: 4%;
+  right: 2%;
 }

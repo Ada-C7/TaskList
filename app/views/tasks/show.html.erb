@@ -1,7 +1,7 @@
 <h1>
   <%= @this_task.id %>. <%= @this_task.name %>
 </h1>
-<p>
+<p class="desc">
   <%= @this_task.desc %>
 </p>
 
@@ -15,9 +15,6 @@
   Not done yet! Get on it!
   <% end %>
 
-<h4>
-  <%= link_to "Home", tasks_path %>
-</h4>
-
-
-<img src="http://icons.veryicon.com/png/System/Kameleon/Checklist.png" alt="checklist icon"  />
+  <%= link_to tasks_path do %>
+    <%= image_tag "checklist.png", alt: "checklist" %>
+  <% end %>

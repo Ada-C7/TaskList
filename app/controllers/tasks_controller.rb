@@ -8,16 +8,20 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
-    task = Task.new
-    task.name = params[:name]
-    task.desc = params[:desc]
-
+  task = Task.create task_params
     if task.save
       redirect_to tasks_path
     end
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name, :desc)
   end
 
 end

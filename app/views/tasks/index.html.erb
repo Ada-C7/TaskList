@@ -4,15 +4,14 @@
   <li>
     <h3><%= task.id %>. <%= link_to task.name.upcase, task_path(task.id) %></h3>
     <p>
-      <!-- <%= task.desc %>
-    </p> -->
+
     <p class="comp">
-      <% if task.complete != nil %>
+      <% if task.complete %>
         Completed on: <%= task.complete.strftime("%b %d, %Y") %> at <%= task.complete.strftime("%I:%M %p") %>
         <% end %>
     </p>
     <p class="incomp">
-      <% if task.complete == nil %>
+      <% if !task.complete %>
       Not done yet! Get on it!
       <% end %>
     </p>
@@ -20,6 +19,8 @@
   <% end %>
 </ul>
 
-<h3><%= link_to "New Task", "/tasks/new" %></h3>
+<h1 id="newtask"><%= link_to "New Task", new_task_path %></h1>
 
-<img src="http://icons.veryicon.com/png/System/Kameleon/Checklist.png" alt="checklist icon"  />
+<%= link_to tasks_path do %>
+  <%= image_tag "checklist.png", alt: "checklist" %>
+<% end %>
