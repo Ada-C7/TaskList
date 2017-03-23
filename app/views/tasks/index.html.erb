@@ -9,11 +9,11 @@
         <ul class="main-nav">
           <li class="task-title">
             <div class="<%= 'task-done' if task.completed != nil %>">
-            
+
             <%= link_to task.title, task_path(task.id) %>
           </li>
           <li class="hidden">
-            <%= button_to "delete", task_delete_path(task.id), method: :delete %>
+            <%= button_to "delete", task_delete_path(task.id), method: :delete, data: { confirm: 'really delete this task?' } %>
           </li>
           <li class="hidden">
             <%= button_to "edit", task_edit_path(task.id), method: :get %>
