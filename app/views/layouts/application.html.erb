@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskList</title>
+    <title>Task</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-
   <body>
-    <%= yield %>
+    <header>
+      <a href=tasks_path><h1>Task.</h1></a>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>&copy; 2017 | Kelsey McAlpine</p>
+    </footer>
   </body>
 </html>

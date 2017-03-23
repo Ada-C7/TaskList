@@ -1,71 +1,139 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Permanent+Marker');
-
+/* GLOBAL STYLES
+=============================== */
  * {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
  }
 
+h1, h2, h3, h4, h5, p, a {
+  color: #4d4d4d;
+  font-kerning: normal;
+}
+
 h1 {
-  font: 3em/1em 'Permanent Marker', sans-serif;
-  letter-spacing: -.07em;
-  margin-bottom: 5%;
+  font: 700 4em/1em 'Open Sans', sans-serif;
+  letter-spacing: -.05em;
+  text-transform: lowercase;
+  color: CornflowerBlue;
 }
 
 h2 {
   font: 300 2em/1.3em 'Open Sans', sans-serif;
   width: 70%;
-  margin-bottom: 2.5%;
+  margin-bottom: 1em;
 }
 
-h3, main#form label {
+h3 {
   font: 300 1.5em 'Open Sans', sans-serif;
 }
 
-p {
-  font: 400 1em/2em 'Open Sans', sans-serif;
-  color: DimGrey;
+h4 {
+  font: 600 1em 'Open Sans', sans-serif;
+  color: #4d4d4d;
 }
-/*border-top: 1px solid black;*/
+
+p {
+  font: 400 1.1em/2em 'Open Sans', sans-serif;
+}
 
 a {
   font: 300 1em/2em 'Open Sans', sans-serif;
   text-decoration: none;
   width: 100%;
-  color: black;
 }
 
-ul, main#show, main#form {
+ul {
   list-style: none;
-  background: white;
-  padding: 1em;
-}
-
-a:hover {
-  color: DeepSkyBlue;
-}
-
-a:visited {
-  color: black;
 }
 
 body {
   background: WhiteSmoke;
+}
+
+main, header {
+  margin: 2em;
+}
+
+main {
+  background: white;
+  padding: 1.5em;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: CornflowerBlue;
+  color: white;
   padding: 2em;
+}
+
+footer p {
+  color: white;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: .5em;
+}
+
+.button:hover {
+  background: CornflowerBlue;
+  border: 1px solid CornflowerBlue;
+  color: white;
+}
+
+/* INDEX STYLES
+=============================== */
+#task-list li {
+  clear: both;
+  padding-bottom: .25em;
+  border-bottom: 1px solid #cccccc;
+}
+
+#task-list h3 {
+  display: inline-block;
+}
+
+#task-list #task-details {
+  float: right;
+  text-align: right;
+}
+
+#task-status {
+  color: CornflowerBlue;
+  padding-right: .25em;
+}
+
+#task-details h3 a {
+  color: CornflowerBlue;
+}
+
+
+/* NEW STYLES
+=============================== */
+
+
+/* SHOW STYLES
+=============================== */
+.details-field {
+  padding-top: 1em;
+}
+
+.details-field h4 {
+  padding-bottom: .25em;
+  border-bottom: 1px solid #cccccc;
+}
+
+.complete {
+
+}
+
+.incomplete {
+
 }

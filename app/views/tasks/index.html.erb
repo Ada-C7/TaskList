@@ -1,18 +1,23 @@
-<header>
-  <a href=tasks_path><h1>Task List</h1></a>
-</header>
-<main>
-  <h2>An Easy Way to Keep Track of Everything You Need to do!</h2>
+<h2>You have the following tasks to complete:</h2>
+<section id="task-list">
   <ul>
     <h4>
       <% @tasks.each do | task | %>
-        <li>
-          <h3>
-            <%= link_to task.name.capitalize, task_path(task.id) %>
-          </h3>
-        </li>
+      <li>
+        <h3 id="task-status">
+          <% if task.complete == false %>
+            <i class="fa fa-square-o"></i>
+          <% else %>
+            <i class="fa fa-check-square-o"></i>
+          <% end %>
+        </h3>
+        <h3 id="task-name">
+          <%= link_to task.name.capitalize, task_path(task.id) %>
+        </h3>
+      </li>
       <% end %>
     </h4>
   </ul>
-  <!-- <a href="new_task" class="button">Add Another Task!</a> -->
-</main>
+</section>
+
+<a href="new_task" class="button">Add Another Task!</a>

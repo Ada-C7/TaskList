@@ -1,8 +1,5 @@
-<header>
-  <a href="index.html"><h1>Task List</h1></a>
-</header>
-<main id="form">
-  <h2>Add a new task!</h2>
+<h2>Add Your Task!</h2>
+<section id="task-form">
   <form action="/tasks" method="post" accept-charset="utf-8">
     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
@@ -17,4 +14,4 @@
 
     <input type="submit" value="Add task">
   </form>
-</main>
+</section>
