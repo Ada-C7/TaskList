@@ -6,7 +6,11 @@
 </p>
 
 <p>
-  <img src="<%= @result_task.image %>" alt="task photo">
+  <% if @result_task.image == nil %>
+    <%= image_tag("to-do.jpg", alt:"task photo") %>
+  <% else %>
+    <%= image_tag(@result_task.image, alt:"task photo") %>
+  <% end %>
 </p>
 
 <p>

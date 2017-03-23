@@ -1,8 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-textarea, label {
+// Color Pallet
+// TEAL/BLUE (RGB) 5, 181, 214
+    //   light: 148, 230, 245
+    //   bright: 0, 215, 255
+    // LIME 208, 188, 4
+    //   lightest 214, 203, 107
+    //   light 215, 198, 45
+    //   dark 195, 175, 0
+    //   darker 179, 161, 0
+    // GREY 143, 141, 142
+    //   purply 122, 111, 118
+    //   darker 111, 109, 111
+    //   darkest 98, 96, 97
+//
+
+html {
+  font-family: 'Raleway', sans-serif;
+  margin: 10px 50px;
+}
+
+h1, h2, h3, h4, a {
+  color: rgb(5, 181, 214);
+  font-family: 'Rock Salt', cursive;
+}
+
+textarea, label, date_select {
   box-sizing: border-box;
   display: block;
+  margin: 10px;
+}
+
+img {
+  height: 200px;
+}
+
+
+// Styling the all task list area
+
+.main-list li {
+  list-style: upper-roman;
+  margin: 2px;
+}
+
+.main-list {
+  background-color: rgba(214, 203, 107, 1);
+  width: 500px;
+  color: white;
+  font-weight: bold;
+  padding: 2px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.main-list a {
+  color: grey;
+}
+
+.main-list a:hover {
+  color: rgb(5, 181, 214);
+}
+
+.main-list h2 {
+  border-bottom: 1px solid rgb(5, 181, 214);
+  text-align: center;
+}
+
+// Just home button issues
+
+a.bottom-button {
+  background-color: white;
+  padding-top: 20px;
+  width: 500px;
+  text-align: center;
 }
