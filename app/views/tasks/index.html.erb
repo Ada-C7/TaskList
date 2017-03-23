@@ -26,7 +26,7 @@
             <%= link_to "edit", task_edit_path(task.id), method: :get %>
           </li>
           <li class="hidden">
-            <%= link_to @button_text, complete_task_path(task.id), method: :put %>
+            <%= link_to @button_text, complete_task_path(task.id), method: :patch %>
           </li>
         </ul>
       <% end %>
