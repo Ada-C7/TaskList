@@ -1,14 +1,9 @@
 <%= form_for @task do |f| %>
 
-  <ul>
+  <ul id="input-form">
     <li>
       <%= f.label :title %>:
       <%= f.text_field :title %>
-    </li>
-
-    <li>
-      <%= f.label :description %>:
-      <%= f.text_area :description, width: "auto" %>
     </li>
 
     <li>
@@ -22,8 +17,18 @@
     </li>
 
     <li>
+      <%= f.label :description %>:
+    </li>
+    <li>
+      <%= f.text_area :description, size: "60x12" %>
+    </li>
+
+    <li>
       <%= f.submit "save" %>
     </li>
   </ul>
+
+  <h3 id="cancel-button"><%= button_to "cancel", tasks_path, method: :get %></h3>
+
 
 <% end %>

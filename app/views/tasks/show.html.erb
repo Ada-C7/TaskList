@@ -2,9 +2,10 @@
 
 <%= render partial: "header", locals: {zone: @zone} %>
 <body>
-  <h3><%= @task.title %></h3>
+  <h3 id="task-name"><%= @task.title %></h3>
 
   <section class="task-data">
+
     <p>
       <strong>due date:</strong> <%= @task.due %>
     </p>
@@ -31,7 +32,7 @@
         <%= link_to "next", @next_id %>
       </li>
       <li>
-        <%= link_to "back", tasks_path %>
+        <%= link_to "home", tasks_path %>
       </li>
     </ul>
   </section>
