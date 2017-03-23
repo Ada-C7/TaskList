@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   post 'tasks', to: 'tasks#create'
 
-
   # routes that act on one instance go here
   # the as task is a little bit of "rails magic" that sets up routes to each individual task
   get 'tasks/:id', to: 'tasks#show', as: 'task'
