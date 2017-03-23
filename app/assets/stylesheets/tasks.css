@@ -1,7 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha|Inconsolata');
+
 body {
-  background-color: pink;
+  background-color: #CAF25A;
+}
+
+header h1 {
+  border: solid grey;
+  padding: 2em;
+  width: 30%;
+  background-color: #F7E674;
+  margin-left: 30%;
+}
+
+header, main h2 {
+  font-family: 'Neucha', cursive;
+  text-align: center;
+}
+
+main ol {
+  margin-left: 33%;
+}
+
+main li {
+  padding-left: 2em;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.5em;
+}
+
+main li a {
+  margin-right: 5%;
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: 2em;
+  font-family: 'Neucha', cursive;
+}
+
+footer ul {
+  /*text-align: center;*/
+}
+
+footer ul li {
+  list-style-type: none;
+  /*text-align: center;*/
+}
+
+footer ul li a:before {
+  content: "🌺 ";
+}
+
+footer ul li a {
+  text-decoration: none;
+  float: left;
+  margin: 2em;
 }

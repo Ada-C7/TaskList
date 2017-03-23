@@ -1,5 +1,13 @@
-<h2> This is the task with task#show </h2>
-<h3> <%= @task[:name] %></h3>
-<h4> Description: <%= @task[:description] %></h4>
-<h4> Completed at: <%= @task[:completed_at] %></h4>
-<%= link_to "Back to all tasks", tasks_path %>
+<body>
+  <h2> <%= @task[:name] %></h2>
+  <h4> Description: <%= @task[:description] %></h4>
+  <h4> Complete by: <%= @task[:completed_at] %></h4>
+  <p><%= link_to "Edit Task", edit_task_path %>
+</body>
+
+<footer>
+  <ul>
+    <li><%= link_to "Back to All Tasks", tasks_path %></li>
+    <li><%= link_to "Return Home", welcome_path %></li>
+  </ul>
+</footer>
