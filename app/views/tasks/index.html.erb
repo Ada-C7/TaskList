@@ -17,10 +17,12 @@
   </nav>
 
 
-  <%= link_to "Add new task", new_task_path %>
+  <!-- <%= link_to "Add new task", new_task_path %> -->
 
-  <%= image_tag 'ducks.jpg', alt: 'The canal ducks' , width: '75%' %>
-  <%= link_to image_tag("crew.jpg", alt: "The crew", width: "75%"), "http://www.google.com" %>
+  <%= link_to image_tag("new_task_button.jpg", alt: "New task button", height: "100px"), new_task_path, id: "new_task_button" %>
+
+  <!-- <%= image_tag 'ducks.jpg', alt: 'The canal ducks' , width: '75%' %>
+  <%= link_to image_tag("crew.jpg", alt: "The crew", width: "75%"), "http://www.google.com" %> -->
 
 
 </main>

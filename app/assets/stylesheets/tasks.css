@@ -23,7 +23,7 @@ HEADER
 #index_main h1 {
   width: 100%;
   text-align: center;
-  background-color: black;
+  background-color: green;
   color: white;
   z-index: 50
 }
@@ -47,4 +47,9 @@ HEADER
 
 #index_main a {
   text-decoration: none;
+}
+
+#new_task_button {
+  display: inline-block;
+  float: right
 }

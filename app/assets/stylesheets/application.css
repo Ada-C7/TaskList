@@ -20,7 +20,7 @@ header {
   border: 2px solid red;
   position: fixed;
   width: 98%;
-  background-color: orange;
+  background-color: green;
   z-index: 100;
   text-align: center;
 }
