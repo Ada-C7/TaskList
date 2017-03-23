@@ -5,23 +5,9 @@
 </header>
 
 <section class="form">
-  <%= form_for @task do |f| %>
-
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <%= f.label :context %>
-    <%= f.select :context, [["< none >", ""], ["downtown", "downtown"], ["home", "home"], ["out and about", "out and about"]]%>
-
-    <%= f.submit %>
-  <% end %>
+    <%= render partial: "form", locals: {task: @task} %>
 </section>
 
 <footer class="form_footer">
-  <p>
-    <%= link_to "[return to task listing]", tasks_path %>
-  </p>
+  <p><%= link_to "[return to task listing]", tasks_path %></p>
 </footer>

@@ -5,9 +5,10 @@
 </header>
 
 <section class="form">
-  <%= form_for @task, method: :put do |f| %>
+  <!-- <%= form_for @task, method: :put do |f| %> -->
+    <%= render partial: "form", locals: {task: @task, method: @method} %>
 
-    <%= f.label :name %>
+    <!-- <%= f.label :name %>
     <%= f.text_field :name %>
 
     <%= f.label :description %>
@@ -16,8 +17,8 @@
     <%= f.label :context %>
     <%= f.select :context, [["< none >", ""], ["downtown", "downtown"], ["home", "home"], ["out and about", "out and about"]]%>
 
-    <%= f.submit %>
-  <% end %>
+    <%= f.submit %> -->
+  <!-- <% end %> -->
 </section>
 
 <footer class="form_footer">
