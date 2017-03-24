@@ -1,12 +1,4 @@
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :description%>
-  <%= f.text_field :description%>
-
-  <%= f.submit%>
-<% end %>
+<%= render partial: "form", locals: {submit_text: "Create"} %>
 
 <!-- <form action="/tasks" method="post" accept-charset="utf-8"> -->
   <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
