@@ -1,25 +1,7 @@
 <h1>Edit Task</h1>
 
-<ul>
-<%= form_for @task, method: :put do |f| %>
-  <li>
-    <%= f.label :name, "Task Name: " %>
-    <%= f.text_field :name %>
-  </li>
-  <li>
-    <%= f.label :desc, "Description: " %>
-    <%= f.text_area :desc, size: "25%" %>
-  </li>
-  <li>
-    <%= f.submit "Edit Task"%>
-  </li>
-  <% end %>
-</ul>
+<%= render partial: "form" %>
 
 <h4>
     <%= link_to "Back", task_path(@task.id) %>
 </h4>
-
-<%= link_to tasks_path do %>
-  <%= image_tag "checklist.png", alt: "checklist" %>
-<% end %>

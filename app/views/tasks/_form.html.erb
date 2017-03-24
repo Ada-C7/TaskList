@@ -1,0 +1,15 @@
+<ul>
+<%= form_for @task do |f| %>
+  <li>
+    <%= f.label :name, "Task Name: " %>
+    <%= f.text_field :name %>
+  </li>
+  <li>
+    <%= f.label :desc, "Description: " %>
+    <%= f.text_area :desc, size: "25%" %>
+  </li>
+  <li>
+    <%= f.submit %>
+  </li>
+  <% end %>
+</ul>

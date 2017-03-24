@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <%= link_to tasks_path do %>
+      <%= image_tag "checklist.png", alt: "checklist" %>
+    <% end %>
     <%= yield %>
   </body>
+  <footer>
+    <%= link_to "Home", tasks_path %>
+  </footer>
 </html>

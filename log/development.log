@@ -4383,3 +4383,297 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/" for ::1 at 2017-03-24 13:11:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 25ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:11:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (257.7ms)
+Completed 200 OK in 319ms (Views: 307.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:17:42 -0700
+  
+SyntaxError (/Users/brenna/ada/week7/TaskList/config/routes.rb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+id', to: 'tasks#destroy', as 'delete_book'
+                              ^):
+  
+config/routes.rb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+Started GET "/tasks" for ::1 at 2017-03-24 13:17:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 53ms (Views: 42.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-24 13:17:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (192.5ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete_task_path' for #<#<Class:0x007f8b776b6e80>:0x007f8b7755d8b8>
+Did you mean?  delete_book_path
+               edit_task_path):
+    21: </h4>
+    22: 
+    23: <h2>
+    24:   <%= link_to "Delete Task", delete_task_path,
+    25:   data: { confirm: "Are you sure you want to delete this task?" },
+    26:   method: :delete %>
+    27: </h2>
+  
+app/views/tasks/show.html.erb:24:in `_app_views_tasks_show_html_erb___3876167088320270851_70118489651760'
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.4ms)
+Started GET "/tasks" for ::1 at 2017-03-24 13:18:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 55ms (Views: 44.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 13:18:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 48ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 13:19:27 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 13:19:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:20:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-24 13:20:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:20:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-24 13:20:07 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:20:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/9" for ::1 at 2017-03-24 13:20:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:20:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/8" for ::1 at 2017-03-24 13:20:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/8" for ::1 at 2017-03-24 13:21:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:21:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:21:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:21:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:22:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/9" for ::1 at 2017-03-24 13:23:07 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/books/9" for ::1 at 2017-03-24 13:23:11 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pHlSf0wbYC8WmD3OeSFYhDpExiV1h9WCmhPmROJQs1zwvHMWivlP8f7QpJzT3R6gJyFiCu3H1CFXp3V6Ve8hwQ==", "id"=>"9"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant TasksController::Book):
+  
+app/controllers/tasks_controller.rb:36:in `destroy'
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/brenna/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.7ms)
+Started GET "/tasks/9" for ::1 at 2017-03-24 13:23:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/9" for ::1 at 2017-03-24 13:23:40 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L5LaE/dE+qtpF9Gixeetlat5IB155e+q+Bn5vTeXWtt7V/t6MabVdYFfSPBvG+uxthyEMuGl7gk1rWqDgCjIRg==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 9]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:23:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:27:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 88ms (Views: 75.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-24 13:28:03 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (2.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 48.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 13:28:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 68ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
