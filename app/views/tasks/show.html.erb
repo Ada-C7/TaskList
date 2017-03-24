@@ -1,6 +1,7 @@
 
 <h3> Task </h3>
 <%date= @task[:deadline].to_s%>
-<h3><%=@task[:name].capitalize%> by: <%=Date.parse(date).strftime("%m-%d-%Y")%></h3>
-
+<%date_class= @task[:deadline].class%>
+<h3><%=@task[:name].capitalize%> by: <%=date_class == ActiveSupport::TimeWithZone ? (Date.parse(date).strftime("%m-%d-%Y")) : ( "Unknown Date Format")%></h3>
+<%= link_to "Edit Task", edit_path%>
 <%=link_to "Return Home", tasks_path%>

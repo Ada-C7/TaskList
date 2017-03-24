@@ -1,11 +1,10 @@
 
-<%= form_for @task do |f| %>
 
+<%= form_for @task do |f| %>
 Name:<%= f.text_field :name%>
 Deadline: <%= f.text_field :deadline%>
-<%= f.submit%>
+<%= f.submit value:"Update task"%>
 <% end %>
-
 
 
 <%=link_to "Return Home", tasks_path%>
