@@ -1,0 +1,19 @@
+<!-- _ makes it a partial -->
+<section>
+  <%= form_for @task do |t| %>
+  <%= t.label :name %>
+  <%= t.text_field :name %>
+
+  <%= t.label :description %>
+  <%= t.text_field :description %>
+
+  <%= t.label :done %>
+  <%= t.check_box :done %>
+
+  <!-- FIXME: :completed_date is NOT saving to database. -->
+  <%= t.label :completed_date %>
+  <%= t.date_field :completed_date %>
+
+  <%= t.submit value: "#{submit_text}" %>
+  <% end %>
+</section>

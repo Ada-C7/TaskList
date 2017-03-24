@@ -1,0 +1,7 @@
+<h2><%= @task[:name] %></h2>
+
+<h3><%= @task[:description] == "" ? "" : "Description: #{@task[:description]}" %></h3>
+<h3><%= @task[:done] == true ? "Status: Finished #{@task[:completed_date]}" : "" %></h3> <!-- FIXME: :completed_date is NOT saving to database -->
+
+<%= link_to "Back to Task List", tasks_path %>
+<%= link_to "Edit This Task", edit_task_path %>
