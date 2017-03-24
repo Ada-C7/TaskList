@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task.name = task_params[:name]
     task.description = task_params[:description]
     task.completion_date = task_params[:completion_date]
-    # task.complete = task_params[:complete]
+    task.complete = task_params[:complete]
 
     if task.save
       redirect_to task_path(task.id)

@@ -10,12 +10,14 @@
     <%= favicon_link_tag 'favicon-check-square-o.ico' %>
   </head>
   <body>
+    <section id="page-wrapper">
     <header>
       <%= link_to "Task.", tasks_path, :class => "logo" %>
     </header>
     <main>
       <%= yield %>
     </main>
+    </section>
     <footer>
       <p>&copy; 2017 | Kelsey McAlpine</p>
     </footer>

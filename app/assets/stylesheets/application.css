@@ -2,22 +2,28 @@
 
 /* GLOBAL STYLES
 =============================== */
- * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
- }
-
-h1, h2, h3, h4, h5, p, a {
-  color: #4d4d4d;
-  font-kerning: normal;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.logo {
-  font: 700 4em/1em 'Open Sans', sans-serif;
-  letter-spacing: -.05em;
-  text-transform: lowercase;
-  color: CornflowerBlue;
+html, body {
+  height: 100%;
+  background: WhiteSmoke;
+}
+
+main {
+  background: white;
+  padding: 1.5em;
+  margin: 2em;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+h2, h3, h4, h5, p, a {
+  color: #4d4d4d;
+  font-kerning: normal;
 }
 
 h2 {
@@ -30,7 +36,6 @@ h3 {
   font: 300 1.375em 'Open Sans', sans-serif;
 }
 
-
 h4, label {
   font: 600 1em 'Open Sans', sans-serif;
   color: #4d4d4d;
@@ -40,45 +45,17 @@ p {
   font: 300 1.3em/2em 'Open Sans', sans-serif;
 }
 
-a {
-  font: 300 1em/2em 'Open Sans', sans-serif;
-  text-decoration: none;
-  /*width: 100%;*/
-}
-
-a:hover {
-  color: CornflowerBlue;
-}
-
 ul {
   list-style: none;
 }
 
-body {
-  background: WhiteSmoke;
+a {
+  font: 300 1em/2em 'Open Sans', sans-serif;
+  text-decoration: none;
 }
 
-main, header {
-  margin: 2em;
-}
-
-main {
-  background: white;
-  padding: 1.5em;
-  margin-bottom: 4em;
-  border: 2px solid white;
-  border-radius: 5px;
-}
-
-footer {
-  width: 100%;
-  background: CornflowerBlue;
-  color: white;
-  padding: 2em;
-}
-
-footer p {
-  color: white;
+a:hover {
+  color: CornflowerBlue;
 }
 
 .button {
@@ -90,15 +67,20 @@ footer p {
   color: #cccccc;
 }
 
-.form-field {
-  font: 300 1.375em 'Open Sans', sans-serif;
-  background: WhiteSmoke;
-  border-radius: 5px;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 1px #FFF, 0 1px 0 #FFF;
-  margin-bottom: 1em;
-  padding: .5em;
-  border: 0px;
+
+/* HEADER STYLES
+=============================== */
+header {
+  margin: 2em;
 }
+
+header .logo {
+  font: 700 4em/1em 'Open Sans', sans-serif;
+  letter-spacing: -.05em;
+  text-transform: lowercase;
+  color: CornflowerBlue;
+}
+
 
 /* INDEX STYLES
 =============================== */
@@ -113,14 +95,6 @@ footer p {
   border-bottom: 0px;
 }
 
-#task-list h3 {
-  display: inline-block;
-}
-
-#task-list #remove-task {
-  color: #cccccc;
-}
-
 #task-status {
   color: CornflowerBlue;
   padding-right: .25em;
@@ -130,12 +104,45 @@ footer p {
   color: #cccccc;
 }
 
+#task-list h3 {
+  display: inline-block;
+}
 
-/* NEW STYLES
+#x-remove {
+  color: #cccccc;
+  text-align: right;
+  float: right;
+}
+
+
+/* FORM STYLES
 =============================== */
 #task-form label {
   display: block;
   margin-bottom: .5em;
+}
+
+#task-form .form-field {
+  font: 300 1.375em 'Open Sans', sans-serif;
+  background: WhiteSmoke;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 1px #FFF, 0 1px 0 #FFF;
+  margin-bottom: 1em;
+  padding: .5em;
+  border: 0px;
+}
+
+#task-form .button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin: none;
+  padding: none;
+}
+
+#form-button {
+  margin-top: 3em;
+  font-size: 1em;
 }
 
 
@@ -146,18 +153,11 @@ footer p {
 }
 
 .details-field h4 {
-  width: 49%;
-  display: inline-block;
   padding-bottom: .5em;
   border-bottom: 1px solid #cccccc;
 }
 
-.details-field h4:nth-of-type(2) {
-  text-align: right;
-}
-
 .details-field h3 {
-  clear: both;
   padding-top: .25em;
   padding-bottom: .5em;
 }
@@ -165,4 +165,18 @@ footer p {
 .status {
   display: inline-block;
   margin-bottom: 3em;
+}
+
+
+/* FOOTER STYLES
+=============================== */
+footer {
+  width: 100%;
+  background: CornflowerBlue;
+  padding: 1em 1em 1em 2em;
+}
+
+footer p {
+  color: white;
+  font-size: 1em;;
 }
