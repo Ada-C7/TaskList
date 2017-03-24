@@ -1,0 +1,56 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+body {
+  background: linear-gradient(to right,#6190E8,#A7BFE8);
+  color: white;
+  margin-left: 70px;
+  font-family: "Baloo Bhaina"
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+
+}
+
+h1 {
+  color: blue;
+  margin-left:70px;
+
+}
+
+table {
+  margin-left: 60px;
+  border: .2em dashed black;
+
+}
+
+
+td {
+  padding: 20px;
+  text-align: center;
+}
+
+tr {
+  border: .2em dashd black;
+
+
+}
+
+li {
+  list-style: none;
+  line-height: 30px;
+
+}
+
+.button {
+  width: 50px;
+  color: white;
+  background-color: blue;
+
+}

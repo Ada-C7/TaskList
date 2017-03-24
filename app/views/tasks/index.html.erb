@@ -1,0 +1,41 @@
+<h1>My Tasks List</h1>
+
+  <table>
+    <tr>
+      <th>
+      Task Name
+      </th>
+      <th>
+      Description
+      </th>
+      <th>
+      Completion_date
+      </th>
+      <th>
+        Status
+      </th>
+    </tr>
+
+    <% @my_task.each do |task| %>
+    <tr>
+      <td>  <%= link_to task.name, task_path(task.id) %></td>
+
+      <td>  <%= task.description %></td>
+      <td> <%=task.completion_date %> </td>
+      <td> <%if task.completion_date != nil %>
+        <%= link_to "👍🏻", task_completed_path(task.id), method: :patch %>
+        <% else %>
+        <%= link_to "👎", task_completed_path(task.id), method: :patch %>
+
+        <%end%>
+      </td>
+
+      <td>
+        <%= button_to "Delete", delete_task_path(task.id), :class => "button", :method => :delete, data: {confirm: "Are you sure you want to delete this"} %>
+      </td>
+
+    </tr>
+    <% end%>
+  </table>
+
+<%= button_to "Add New Task", { :action => "new" }, :method => :get %>
