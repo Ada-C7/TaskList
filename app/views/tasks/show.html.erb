@@ -10,21 +10,26 @@
   <nav>
     <p><%= link_to "Home", tasks_path %></p>
     <p><%= link_to "Add New Task", new_task_path %></p>
-    <p><%= link_to "Edit Task", edit_task_path %></p>
-    <p><%= link_to "Delete Task", @task, method: :delete, data: { confirm: "You sure?" } %></p>
   </nav>
 
   <section>
     <ul>
       <li>Description: <%= @task[:description].capitalize %></li>
       <li>Complete By:
-
         <%= @task[:complete_by].nil? ? "NA" : @task[:complete_by].strftime("%D - %l:%M %p") %>
-
+      </li>
+      <li>Completed At:
+        <%= @task[:completed_at].nil? ? "NA" : @task[:completed_at].strftime("%D - %l:%M %p") %>
       </li>
     </ul>
+
+    <p><%= link_to "Edit Task", edit_task_path %></p>
+
+    <p><%= link_to "Delete Task",
+            @task, method: :delete,
+            data: { confirm: "You sure?" } %></p>
   </section>
-  
+
 </main>
 
 <footer>

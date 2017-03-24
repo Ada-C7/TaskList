@@ -54,12 +54,14 @@ header {
 main {
   vertical-align: text-top;
   display: inline-block;
-  text-align: center;
+  // text-align: center;
   width: 100%;
   /*margin-top: 1%;*/
 
   nav {
     padding-top: 1%;
+    margin: 2%;
+    margin-top: 0;
     display: inline-block;
     vertical-align: text-top;
     text-align: left;
@@ -101,7 +103,7 @@ main {
         font-size: 1.3em;
         // text-align: center;
         text-align: left;
-        margin: 1%;
+        // margin: 1%;
         // padding-left: 5%;
       }
 
@@ -112,13 +114,22 @@ main {
       }
     }
 
-
+    p {
+      // display: inline-block;
+      font-size: 2em;
+      padding: .5%;
+      margin: 0;
+      // text-align: left;
+    }
+    a {
+      color: red;
+    }
 
     ul {
       list-style-type: disc;
-      margin: 1%;
+      // margin: 1%;
       text-align: left;
-      padding-left: 5%;
+      // padding-left: 5%;
       //  padding-top: 2%;
     }
 
@@ -131,11 +142,11 @@ main {
 }
 
 label {
- display: inline-block;
+ // display: inline-block;
  font-family: 'Patrick Hand SC';
  font-size: 1.3em;
- margin: 3%;
- text-align: center;
+ margin: 1%;
+ // text-align: center;
 }
 
 input {
@@ -148,6 +159,10 @@ input {
 
 footer {
   text-align: center;
+
+  a {
+    font-size: 1.9em;
+  }
 }
 
 // selector for submit button

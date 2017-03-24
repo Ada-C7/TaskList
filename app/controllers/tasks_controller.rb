@@ -44,6 +44,6 @@ private
 # if given bad stuff - it gets dumped but any "good data" will get through
 # need to validate user input but we wont do that here or right now
   def task_params
-    return params.require(:task).permit(:name, :description, :complete_by)
+    return params.require(:task).permit(:name, :description, :complete_by, :completed_at)
   end
 end
