@@ -18,7 +18,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
+    rescue ActiveRecord::RecordNotFound
     redirect_to(tasks_path, :notice => 'Task is not found') unless @task
   end
 
@@ -43,7 +43,7 @@ class TasksController < ApplicationController
   def complete
     @task = Task.find(params[:id])
     @task.update({:completed_at=>Time.now})
-    
+
     redirect_to tasks_path
   end
 
@@ -51,5 +51,4 @@ class TasksController < ApplicationController
   def task_params
     return params.require(:task).permit(:name, :description, :completed_at, :location)
   end
-
 end
