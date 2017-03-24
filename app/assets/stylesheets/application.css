@@ -16,7 +16,7 @@
 * {
   font-family: 'Poppins', sans-serif;
   font-weight: lighter;
-  list-style-type: square;
+  list-style-type: decimal;
 }
 
 *:link {

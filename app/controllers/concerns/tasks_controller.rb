@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+
   end
 
   def update
@@ -31,10 +32,6 @@ class TasksController < ApplicationController
     redirect_to task_path
   end
 
-  def done
-    # task =
-  end
-
   def destroy
     task = Task.find(params[:id])
     task.destroy
@@ -42,9 +39,16 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def done
+    task = Task.find(params[:id])
+    task.update_attribute(:done, true)
+
+    redirect_to task_path
+  end
+
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :finished)
+    return params.require(:task).permit(:name, :description, :done)
   end
 end

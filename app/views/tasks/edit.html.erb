@@ -1,12 +1,1 @@
-<%= form_for @task do |t| %>
-  <%= t.label :name %>
-  <%= t.text_field :name %>
-
-  <%= t.label :description %>
-  <%= t.text_field :description %>
-
-  <%= t.label :done %>
-  <%= t.check_box :done %>
-
-  <%= t.submit value: "Edit Task" %>
-<% end %>
+<%= render partial: "form", locals: { submit_text: "Edit Task" } %>

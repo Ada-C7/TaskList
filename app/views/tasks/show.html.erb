@@ -2,7 +2,7 @@
 
 <h3><%= @task[:description] == "" ? "" : "Description: #{@task[:description]}" %></h3>
 <h3><%= @task[:completed_at] == nil ? "" : "At: #{@task[:completed_at]}" %></h3>
-<h3><%= "#{@task[:done]}" %></h3>
+<h3><%= @task[:done] == true ? "Status: Finished!" : "" %></h3> <!-- NOT WORKING -->
 
 <%= link_to "Back to Task List", tasks_path %>
 <%= link_to "Edit This Task", edit_task_path %>
