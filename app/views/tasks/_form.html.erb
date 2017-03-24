@@ -6,12 +6,19 @@
     <%= t.label :description %>
     <%= t.text_area :description, size: "100% x 5", class: "form-field" %>
 
-    <%= t.label :completion_date, "Completion Date" %>
-    <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
+    <%= t.label :status %>
+    <section class="radio-button-option">
+      <%= t.radio_button :status, 'incomplete' %>
+      <%= label :status, 'Incomplete', id: "radio-button-label" %>
+    </section>
+    <section class="radio-button-option">
+      <%= t.radio_button :status, 'complete' %>
+      <%= label :status, 'Complete', id: "radio-button-label" %>
+    </section>
 
-    <%= t.label :status, "Status" %>
-    <%= t.select :status, [["Complete", "complete"], ["incomplete", "incomplete"]]  %>
+    <%= button_tag(type: 'submit', class: "button") do %>
+      <i class="fa fa-save"></i>&ensp;Save Changes
+    <% end %>
 
-    <%= t.submit button_text.html_safe, id: "form-button" %>
   <% end %>
 </section>

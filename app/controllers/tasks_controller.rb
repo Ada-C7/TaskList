@@ -16,8 +16,11 @@ class TasksController < ApplicationController
 
     task.name = task_params[:name]
     task.description = task_params[:description]
-    task.completion_date = task_params[:completion_date]
     task.status = task_params[:status]
+
+    if task.status == "complete"
+      complete(params[:id])
+    end
 
     if task.save
       redirect_to task_path(task.id)
@@ -40,6 +43,14 @@ class TasksController < ApplicationController
     Task.destroy(params[:id])
 
     redirect_to root_path
+  end
+
+  def complete(id)
+    Date::DATE_FORMATS[:default] = "%B %e, %Y"
+
+    task = Task.find(id)
+    task.completion_date = DateTime.now.to_date
+    task.save
   end
 
   private

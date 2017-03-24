@@ -4,21 +4,19 @@
     <h4>
       <% @tasks.each do | task | %>
       <li>
-        <h3 id="task-status">
-          <% if task.status == "incomplete" %>
-            <i class="fa fa-square-o"></i>
-          <% elsif task.status == "complete" %>
-            <i class="fa fa-check-square-o"></i>
-          <% end %>
-        </h3>
         <h3>
+          <% if task.status == "incomplete" %>
+            <i class="fa fa-square-o task-status"></i>
+          <% elsif task.status == "complete" %>
+            <i class="fa fa-check-square-o task-status"></i>
+          <% end %>
           <%= link_to task.name.capitalize, task_path(task.id), :id => "task-name" %>
+        </h3>
           <%= link_to raw("&times;"), delete_task_path(task.id),
               :id => "x-remove",
-              data: { confirm: "Are you sure you want to delete this book?" },
+              data: { confirm: "Are you sure you want to remove this task from your task list?" },
               method: :delete
           %>
-        </h3>
       </li>
       <% end %>
     </h4>

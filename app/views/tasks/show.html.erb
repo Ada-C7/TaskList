@@ -2,20 +2,22 @@
   <h2><%= @show_task[:name].capitalize %></h2>
   <section class="details-field">
     <h4>Name</h4>
-    <h3><%= @show_task[:name] %></h3>
+    <h3><%= @show_task[:name].capitalize %></h3>
   </section>
   <section class="details-field">
     <h4>Description</h4>
-    <h3><%= @show_task[:description] %></h3>
-  </section>
-  <section class="details-field">
-    <h4>Completion Date</h4>
-    <h3><%= @show_task[:completion_date] %></h3>
+    <h3><%= @show_task[:description].capitalize %></h3>
   </section>
   <section class="details-field">
     <h4>Status</h4>
       <h3><%= @show_task[:status].capitalize %></h3>
   </section>
+  <% if @show_task[:status] == "complete" %>
+  <section class="details-field">
+    <h4>Completion Date</h4>
+    <h3><%= @show_task[:completion_date] %></h3>
+  </section>
+  <% end %>
 </section>
 
 <%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i>&ensp;Edit Task'.html_safe, edit_task_path, :class => "button" %>
