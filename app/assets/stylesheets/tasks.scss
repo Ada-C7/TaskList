@@ -7,7 +7,21 @@ body {
 * {
  margin: 0;
  padding: 0;
- /*border: solid;*/
+ // border: solid
+}
+
+a {
+ // color: hotpink;
+ color: black;
+ font-family: 'Patrick Hand SC';
+ font-size: 1em;
+ text-decoration: none;
+ // text-align: center;
+}
+
+a:hover {
+ color: grey;
+ text-decoration: line-through;
 }
 
 header {
@@ -42,6 +56,7 @@ main {
   display: inline-block;
   text-align: center;
   width: 100%;
+  /*margin-top: 1%;*/
 
   nav {
     padding-top: 1%;
@@ -49,6 +64,7 @@ main {
     vertical-align: text-top;
     text-align: left;
     width: 20%;
+  /*border-right: solid;*/
 
     a {
       display: inline-block;
@@ -69,64 +85,69 @@ main {
     width: 75%;
     display: inline-block;
     vertical-align: text-top;
+    // padding-left: 5%;
+    padding-top: 1%;
     /*border-left: solid;*/
 
-    p {
-       font-family: 'Permanent Marker';
-       /*font-family: 'Patrick Hand SC';*/
-       /*font-family: 'Patrick Hand';*/
-       /*font-family: 'Lato';*/
-       font-size: 1.3em;
-       text-align: center;
-       text-align: left;
-       margin: 1%;
-       padding-left: 5%;
+    div {
+      text-align: left;
+
+      p {
+        display: inline-block;
+        font-family: 'Permanent Marker';
+        /*font-family: 'Patrick Hand SC';*/
+        /*font-family: 'Patrick Hand';*/
+        /*font-family: 'Lato';*/
+        font-size: 1.3em;
+        // text-align: center;
+        text-align: left;
+        margin: 1%;
+        // padding-left: 5%;
+      }
+
+      #task_title a {
+        color: hotpink;
+        font-family: 'Permanent Marker';
+        font-size: 1.4em;
+      }
     }
 
+
+
     ul {
-       list-style-type: disc;
-       margin: 1%;
-       text-align: left;
-       padding-left: 5%;
-       padding-top: 2%;
+      list-style-type: disc;
+      margin: 1%;
+      text-align: left;
+      padding-left: 5%;
+      //  padding-top: 2%;
     }
 
     li {
-       font-size: 1.5em;
-       font-family: 'Patrick Hand';
-      //font-family: 'Patrick Hand SC';
-      //  font-family: 'Permanent Marker';
-       margin: 1%;
-    }
-
-    a {
-     color: hotpink;
-     font-family: 'Permanent Marker';
-     font-size: 1.3em;
-     text-decoration: none;
-    }
-
-    a:hover {
-     color: mediumvioletred;
-     text-decoration: line-through;
+      font-size: 1.5em;
+      font-family: 'Patrick Hand';
+      margin: 1%;
     }
   }
 }
 
 label {
  display: inline-block;
- text-align: center;
- margin: 3%;
  font-family: 'Patrick Hand SC';
  font-size: 1.3em;
+ margin: 3%;
+ text-align: center;
 }
 
 input {
  /*this changed the color of submit text on submit button*/
  color: midnightblue;
- font-family: 'Patrick Hand';
+ font-family: 'Lato';
  font-size: 1.2em;
  padding: 0.5%;
+}
+
+footer {
+  text-align: center;
 }
 
 /*input[type=submit] {

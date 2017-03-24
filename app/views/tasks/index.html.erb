@@ -11,13 +11,17 @@
   <nav>
     <p><%= link_to "Add New Task", new_task_path %></p>
   </nav>
-  
+
   <section>
+
     <% @tasks.each_with_index do |task, index| %>
+      <div><p>Todo <%=index +1%>:
+        <p id="task_title"><%= link_to task[:name].capitalize, task_path(task.id) %></p>
+        <p><%= link_to "Edit Task", edit_task_path(task) %></p>
+        <p><%= link_to "Delete Task", task_path(task), method: :delete, data: { confirm: "You sure?" } %></p>
+      </div>
+    <% end %></p>
 
-      <p>Todo <%=index +1%>: <%=link_to task[:name].capitalize, task_path(task.id) %></p>
-
-    <% end %>
   </section>
 </main>
 
