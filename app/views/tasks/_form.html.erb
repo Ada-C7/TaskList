@@ -1,0 +1,14 @@
+<section id="task-form">
+  <%= form_for @task do | t | %>
+    <%= t.label :name %>
+    <%= t.text_field :name, size: "100%", class: "form-field"  %>
+
+    <%= t.label :description %>
+    <%= t.text_area :description, size: "100% x 5", class: "form-field" %>
+
+    <%= t.label :completion_date, "Completion Date" %>
+    <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
+
+    <%= t.submit button_text_html, id: "form-button" %>
+  <% end %>
+</section>

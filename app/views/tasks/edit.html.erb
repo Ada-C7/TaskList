@@ -1,21 +1,5 @@
 <h2>Update Your Task</h2>
-<section id="task-form">
-  <%= form_for @task, method: :put do | t | %>
-    <%= t.label :name %>
-    <%= t.text_field :name, size: "100%", class: "form-field"  %>
-
-    <%= t.label :description %>
-    <%= t.text_area :description, size: "100% x 5", class: "form-field" %>
-
-    <%= t.label :completion_date, "Completion Date" %>
-    <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
-
-    <%= t.label :complete, "Status" %>
-    <%= t.text_field :complete, size: "100%", class: "form-field" %>
-
-    <%= button_tag type: 'submit', class: "button", id: "form-button" do %>
-        <i class="fa fa-check" aria-hidden="true"></i>&ensp;Update Task
-    <% end %>
-    <!-- <%= t.submit '<i class="fa fa-plus" aria-hidden="true"></i>&ensp;Update Task'.html_safe, class: "button" %> -->
-  <% end %>
-</section>
+<%= render partial: "form" ,
+    locals: { button_text_html: "Update Task" }
+%>
+<!-- <i class="fa fa-check" aria-hidden="true"></i>&ensp; -->

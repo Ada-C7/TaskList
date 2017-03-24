@@ -1,17 +1,5 @@
 <h2>Add Your Task</h2>
-<section id="task-form">
-  <%= form_for @task do | t | %>
-    <%= t.label :name %>
-    <%= t.text_field :name, size: "100%", class: "form-field"  %>
-
-    <%= t.label :description %>
-    <%= t.text_area :description, size: "100% x 5", class: "form-field" %>
-
-    <%= t.label :completion_date, "Completion Date" %>
-    <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
-
-    <%= button_tag type: 'submit', class: "button", id: "form-button" do %>
-        <i class="fa fa-check" aria-hidden="true"></i>&ensp;Add Task
-    <% end %>
-  <% end %>
-</section>
+<%= render partial: "form" ,
+    locals: { button_text_html: "Add Task" }
+%>
+<!-- <i class="fa fa-check" aria-hidden="true"></i>&ensp; -->
