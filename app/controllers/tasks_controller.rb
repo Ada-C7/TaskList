@@ -46,6 +46,12 @@ class TasksController < ApplicationController
         redirect_to :back
     end
 
+    def incomplete
+        task = Task.find(params[:id])
+        task.update_attribute(:completed_at, nil)
+        redirect_to :back
+    end
+
     private
 
     def task_params

@@ -10,7 +10,11 @@
     <li>
       <p><%= link_to task[:name], task_path(task[:id]) %></p>
       <span>
+        <%- if task[:completed_at].nil? %>
       <%= link_to "Mark as Complete", complete_task_path(task[:id]), :method => :patch %>
+      <%- else %>
+      <%= link_to "Mark Incomplete", incomplete_task_path(task[:id]), :method => :patch %>
+      <%-end%>
       	●	●
       <%= link_to 'Delete', task_path(task[:id]), data: {:confirm => 'You sure?'}, :method => :delete%>
     </span>
