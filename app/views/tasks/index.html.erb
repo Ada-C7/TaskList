@@ -1,13 +1,26 @@
 <h1>Emma's Tasks</h1>
 
 <h2>To do list before trip!</h2>
+
+<main>
+  <section>
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <%= task[:name] %> : <%= task[:description] %> <%= task[:completed_at] %>
+    <%= task[:name] %>: <%= task[:description] %> <%= task[:completed_at] %>
   </li>
   <% end %>
 </ul>
+</section>
 
-<%= link_to "go back to the homepage", welcome_path %> <br />
-<%= link_to "create a new task", new_task_path %>
+<section>
+<ul id="links">
+  <li>
+    <%= link_to "go back to the homepage", welcome_path %>
+  </li>
+  <li>
+    <%= link_to "create a new task", new_task_path %>
+  </li>
+</ul>
+</section>
+</main>
