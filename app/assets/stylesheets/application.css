@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  list-style-type: square;
+}
+
+*:link {
+  color: black;
+}
+
+*:visited {
+  color: black;
+}
