@@ -1,19 +1,38 @@
 class TasksController < ApplicationController
   def index
-    @tasks = [
-      { name: "The First Task", description: "", completed_at: "" },
-      { name: "Go to Brunch", description: "" },
-      { name: "Go to Lunch", description: "", completed_at: "" },
-      { name: "Go to Second Lunch", description: "" },
-      { name: "Play Video Games", description: "", completed_at: "" },
-      { name: "High Five Somebody You Don't Know", description: "", completed_at: "" },
-      { name: "Plant Flowers", description: "", completed_at: "" },
-      { name: "Call Mom", description: "" },
-      { name: "She worries, you know.", description: "" },
-      { name: "Nap.", description: "", completed_at: "" }
-    ]
+    @tasks = Task.all
+  end
+
+  def new
+    @task = Task.new
   end
 
   def show
+    @task = Task.find(params[:id])
   end
+
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    task = Task.find(params[:id])
+    task.update_attributes(task_params)
+    task.save
+    redirect_to task_path(task)
+  end
+
+  def create
+    Task.create(task_params)
+    redirect_to tasks_path
+    # puts ">>>>> ANG: In TasksController#create"
+    # puts params[:task].to_hash
+    # Task.create(params[:task])
+  end
+
+private
+  def task_params
+    return params.require(:task).permit(:name, :description, :completed_at)
+  end
+
 end

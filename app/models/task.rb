@@ -1,3 +1,5 @@
 class Task < ApplicationRecord
-  # the Task model should include at least a name, a description and a completion date
+  #this represents one task in our database (similar to driver class in RideShare)
+  #rails knows this is connected to a record in our database called tasks. Active record built that association
+
 end
