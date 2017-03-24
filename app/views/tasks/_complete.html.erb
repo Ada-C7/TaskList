@@ -1,0 +1,10 @@
+<p class="comp">
+  <% if task_var.complete %>
+    Completed on: <%= task_var.completed_on.strftime("%b %d, %Y") %> at <%= task_var.completed_on.strftime("%I:%M %p") %>
+    <% end %>
+</p>
+<p class="incomp">
+  <% if !task_var.complete %>
+  Not done yet! Get on it!
+  <% end %>
+</p>

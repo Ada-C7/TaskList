@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @this_task = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def edit
@@ -16,6 +16,16 @@ class TasksController < ApplicationController
     task.name = params[:task][:name]
     task.desc = params[:task][:desc]
 
+    if task.save
+      redirect_to tasks_path
+    end
+  end
+
+  def complete
+    task = Task.find(params[:id])
+    task.complete = true
+    task.completed_on = DateTime.new
+    
     if task.save
       redirect_to tasks_path
     end
@@ -40,7 +50,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :desc)
+    params.require(:task).permit(:name, :desc, :complete, :completed_on)
   end
 
 end

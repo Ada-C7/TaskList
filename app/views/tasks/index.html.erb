@@ -1,20 +1,17 @@
-<h1>Brenna's To Do List:</h1>
 <ul>
   <% Task.all.each do |task| %>
   <li>
-    <h3><%= task.id %>. <%= link_to task.name.upcase, task_path(task.id) %></h3>
+    <h3><%= link_to task.name.upcase, task_path(task.id) %></h3>
     <p>
 
-    <p class="comp">
-      <% if task.complete %>
-        Completed on: <%= task.complete.strftime("%b %d, %Y") %> at <%= task.complete.strftime("%I:%M %p") %>
-        <% end %>
-    </p>
-    <p class="incomp">
-      <% if !task.complete %>
-      Not done yet! Get on it!
-      <% end %>
-    </p>
+    <%= render partial: "complete", locals: { task_var: task } %>
+
+    <%= form_for task, url: complete_task_path(task.id), method: :patch do |f| %>
+      <p>
+        <%= f.submit "Complete?" %>
+      </p>
+    <% end %>
+
   </li>
   <% end %>
 </ul>
