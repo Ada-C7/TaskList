@@ -13,3 +13,11 @@ h1 {
 h1 {
   border: 1px solid red;
 }
+
+.task_marked li a {
+  display: inline-block;
+}
+
+.task_marked li form {
+  display: inline-block;
+}

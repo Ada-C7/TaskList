@@ -2,10 +2,12 @@
 <%= link_to "Create a new task", new_task_path %>
 
 <div>
-  <ul>
+  <ul class="task_marked">
     <% @tasks.each do |task| %>
     <li>
       <%= link_to task[:name], task_path(task.id) %>
+      <%= button_to "completed_at", "/tasks/#{task.id}/mark_complete" %>
+
     </li>
 
     <% end %>

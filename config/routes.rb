@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 resources :tasks
 
 patch 'tasks/:id/mark_complete', to: 'tasks#mark_complete'
+
+post 'tasks/:id/mark_complete', to: 'tasks#mark_complete'
 end

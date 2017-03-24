@@ -33,9 +33,9 @@ class TasksController < ApplicationController
   end
 
   def update #patch request doesn't need view only Get request needs view
-    @task = Task.find(params[:id])
-    if @task.update({:name=>params[:task][:name], :description=>params[:task][:description]})
-      redirect_to task_path(@task.id)
+    task = Task.find(params[:id])
+    if task.update({:name=>params[:task][:name], :description=>params[:task][:description]})
+      redirect_to task_path(task.id)
     else
       render :edit #render to edit page
     end
@@ -44,7 +44,8 @@ class TasksController < ApplicationController
   def mark_complete
     @task = Task.find(params[:id])
     @task.update({:completed_at=>Time.now})
-    redirect_to task_path(@task.id)
+    # redirect_to task_path(@task.id)
+    redirect_to tasks_path
   end
 
 end
