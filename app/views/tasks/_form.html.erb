@@ -9,6 +9,10 @@
     <%= t.label :completion_date, "Completion Date" %>
     <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
 
-    <%= t.submit button_text_html, id: "form-button" %>
+    <!-- TO DO: ADD STATUS DROPDOWN MENU -->
+    <!-- <%= t.label :completion_date, "Completion Date" %>
+    <%= t.text_field :completion_date, size: "100%", class: "form-field" %> -->
+
+    <%= t.submit button_text.html_safe, id: "form-button" %>
   <% end %>
 </section>

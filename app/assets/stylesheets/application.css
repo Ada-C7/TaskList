@@ -105,13 +105,14 @@ header .logo {
 }
 
 #task-list h3 {
+  clear: both;
   display: inline-block;
 }
 
 #x-remove {
   color: #cccccc;
-  text-align: right;
   float: right;
+  text-align: right;
 }
 
 
