@@ -1,0 +1,25 @@
+
+<head>
+  <title> TaskMaster </title>
+  <link rel="stylesheet"type="text/css"href="https://fonts.googleapis.com/css?family=Muli|Raleway">
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <header class="ID">
+    <h1><%= @show_task.title %></h1>
+  </header>
+
+  <p>
+    <ul>
+      <li class="task_attributes">
+        <%= @show_task.title %>
+        <%= @show_task.day %>
+        <%= @show_task.priority %>
+        <%= @show_task.description %>
+      </li>
+    </ul>
+  </p>
+
+  <%= button_to "Home", tasks_path, method: :get %>
+  <%= button_to "Edit A Task", edit_task_path(@show_task.id), method: :get %>
