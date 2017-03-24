@@ -4,17 +4,20 @@ class TasksController < ApplicationController
     end
 
     def new
-      @task = Task.new
+      # @task = Task.new
     end
 
     def create
-      Task.new(task_params)
+      task_data = task_params
+      puts task_data.to_hash
+      Task.create(task_data)
 
       redirect_to tasks_path
     end
 
     def show
-      @task = Task.find(params[:id])
+      id = params[:id].to_i
+      @task = Task.find(id)
     end
 
   private
