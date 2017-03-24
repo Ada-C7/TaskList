@@ -1,11 +1,1 @@
-
-<%= form_for @task do |f| %>
-
-Name:<%= f.text_field :name%>
-Deadline: <%= f.text_field :deadline%>
-<%= f.submit%>
-<% end %>
-
-
-
-<%=link_to "Return Home", tasks_path%>
+<%=render partial: "form", locals:{submit_text: "Create"}%>
