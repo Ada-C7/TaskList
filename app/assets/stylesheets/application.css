@@ -56,18 +56,26 @@ img {
 
 /*Styling the all task list area*/
 
-.task {
+.incomplete, .complete {
   margin: 2px;
-  background-color: white;
   display:inline-block;
-  height: 200px;
-  width: 30%;
+  height: 100px;
+  width: 21%;
   margin: 20px 1.5%;
   text-align: center;
 }
 
-.task P {
-  margin: 10px;
+.incomplete {
+  background-color: white;
+}
+
+.complete {
+  background-color: grey;
+  clear: both;
+}
+
+.complete a {
+  color: rgb(5, 181, 214);
 }
 
 .main-list {

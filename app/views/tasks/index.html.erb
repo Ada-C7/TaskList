@@ -3,11 +3,25 @@
 <article class="main-list">
 
   <h2>TO DO</h2>
+
   <% @tasks.each do |task| %>
-  <section class="task">
+  <section class="
+    <% if task.completion_date == nil %>
+      <%= "incomplete" %>
+    <% else %>
+      <%= "complete" %>
+    <% end %>" />
+
     <h3><%= link_to task.name, task_path(task.id) %></h3>
     <p>
-      <%= task.description %>
+      <%= form_for task do |f| %>
+        <%= f.submit "Mark Complete" %>
+      <% end %>
+
+      <% if task.completion_date != nil %>
+          <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} %>
+      <% end %>
+
     </p>
   </section>
   <% end %>
