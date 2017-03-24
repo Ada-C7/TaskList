@@ -10,4 +10,15 @@
       <li>Status: <%= @result_task[:completion] %></li>
   </ul>
 
-  <a href="/tasks" id="status_link">Back to Tasks List</a>
+  <%= link_to "Edit", edit_task_path(@result_task.id), class: 'button' %>
+  <%= link_to "Delete", delete_task_path(@result_task.id), method: :delete,
+      data: { confirm: "Are you sure you want to delete?"},
+      class: 'button' %>
+  <% if @result_task.completion == "Not Yet Completed" %>
+      <%= link_to "Complete Task", task_update_path(@result_task.id),
+      method: :complete, class: "button" %>
+  <% end %>
+
+
+
+  <a href="/tasks" class="button">Back to Tasks List</a>

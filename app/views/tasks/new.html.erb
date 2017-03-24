@@ -4,12 +4,11 @@
 
 <h1>Add New Tasks</h1>
 
-<%= form_for @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :description %>
-  <%= f.text_field :description, size: "40x10" %>
-  <%= f.hidden_field :completion, value: "Not Yet Completed" %>
-  <%= f.submit %>
 
-<% end %>
+
+<%= render partial: "form", locals: { action_name: "New", form_method: :new } %>
+
+
+<section id="new_button">
+  <a href="/tasks" class="button">Back to Tasks List</a>
+</section>

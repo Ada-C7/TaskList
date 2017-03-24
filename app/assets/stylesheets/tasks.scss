@@ -4,6 +4,7 @@
 
 $text_color: lighten(complement(#4AC29A), 10%);
 $box_size: 300px;
+$text_font: 'Nunito', sans-serif;
 
  @mixin gradient {
    background: #4AC29A; /* fallback for old browsers */
@@ -35,6 +36,8 @@ $box_size: 300px;
    text-align:center;
    a {
      color:$text_color;
+     font-family: $text_font;
+     text-decoration:none;
    }
  }
 
@@ -44,15 +47,21 @@ h1 {
   font-size: 2.0em;
 }
 
+nav {
+  margin:50px;
+}
+
 .tasks {
+  display:inline-block;
+  vertical-align: middle;
   .task {
-    font-family: 'Nunito', sans-serif;
+    font-family:$text_font;
     position:relative;
-    display:inline-block;
     border-style:solid;
     list-style:none;
     height:$box_size;
     width:$box_size;
+    border-radius: 10px;
      #description {
         @include centerer(-50%);
     }
@@ -67,11 +76,12 @@ h1 {
 }
 
 .status {
-  font-family: 'Nunito', sans-serif;
+  font-family: $text-font;
   list-style:none;
   padding:50px;
   h2 {
     font-size:2.0em;
+    border-style-bottom:none;
   }
   li {
     padding:10px;
@@ -79,12 +89,30 @@ h1 {
   }
 }
 
-#status_link {
+.button {
   border-style:solid;
   padding:20px;
   text-decoration:none;
+  border-radius: 10px;
   &:hover {
     @include hover_gradient;
-
   }
+}
+
+.new_button {
+  @extend .button;
+  background:white;
+  font-family: $text-font;
+  color: $text_color;
+  font-size:1em;
+}
+
+form {
+  font-family: $text-font;
+  margin-top:30px;
+}
+
+#new_button {
+  display:inline-block;
+  margin-top:100px;
 }

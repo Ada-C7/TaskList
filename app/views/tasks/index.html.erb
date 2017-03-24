@@ -3,6 +3,10 @@
 </head>
 
 <h1>Tasks To-Do</h1>
+<nav>
+  <a href="/tasks/new" class="button">Add a New Task</a>
+</nav>
+
     <% @tasks.each do |task| %>
     <section class="tasks">
     <a href="/tasks/<%= task.id %>"><ul class="task">
