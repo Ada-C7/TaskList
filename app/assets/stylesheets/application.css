@@ -96,6 +96,27 @@ Task list
    font-style: italic;
    color: #cfe0fc;
  }
+ .task_name,
+ .task_complete,
+ .task_delete,
+ .date_complete {
+   display: inline-block;
+ }
+
+ .task_name {
+   width: 205px;
+ }
+ .task_complete {
+   margin: 0px 10px;
+
+ }
+ .task_delete {
+   margin: 3px;
+ }
+ .date_complete {
+   margin: 0px 5px;
+   color: #b7d1fb;
+ }
 
  /*
  ==============================================

@@ -8,12 +8,20 @@
   <ul>
     <% @tasks.each do |task| %>
       <li class="task">
-        <%= link_to task.name, task_path(task.id) %>
-        <%= link_to "[mark complete]", complete_task_path(task.id) %>
-        <%= link_to "[delete]", delete_task_path(task.id),
+        <%= link_to task.name, task_path(task.id), class: "task_name" %>
+
+        <% if task.date_complete %>
+          <span class="task_complete">🎏</span>
+        <% else %>
+          <%= link_to "◻", complete_task_path(task.id), class: "task_complete" %>
+        <% end %>
+
+        <%= link_to "✖", delete_task_path(task.id),
         data: {confirm: "Delete this task?"},
-        method: :delete %>
-        <%= task.date_complete %>
+        method: :delete,
+        class: "task_delete"%>
+
+        <span class="date_complete"><%= task.date_complete %></span>
       </li>
 
     <% end %>
