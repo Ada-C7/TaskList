@@ -1,15 +1,16 @@
 <section id="index">
 
-<h1>Tasks</h1>
-<h2>Let's Get Organized!</h2>
-<h3>A list of all tasks:</h3>
-<ul>
-<% @tasks.each do |task| %>
-  <li>The task to do is: <%= link_to task.description, task_path(task.id) %></li>
-  <% end %>
-</ul>
-<p>*Click on each task for more information*</p>
+  <h1>Tasks</h1>
+  <h2>Let's Get Organized!</h2>
+  <h3>A list of all tasks:</h3>
+  <ul>
+  <% @tasks.each do |task| %>
+  <li>The task to do is: <%= link_to task.description, task_path(task.id) %> </li>
+    <li> <%= link_to "Edit Task", edit_task_path(task.id) %> </li>
+    <% end %>
+  </ul>
+  <p>*Click on each task for more information*</p>
 
 
-<p><%= link_to "New Task", new_task_path %> </p>
+  <p><%= link_to "New Task", new_task_path %> </p>
 </section>

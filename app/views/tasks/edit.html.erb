@@ -1,7 +1,7 @@
 <h2>Edit a Task</h2>
 
 
-<%= form_for @task, method: :put do |f| %>
+<%= form_for @task, method: :patch do |f| %>
 <%= f.label :description %>
 <%= f.text_field :description %>
 <%= f.label :assignee %>
@@ -13,5 +13,6 @@
 <%= f.submit %>
 <% end %>
 
+<%= link_to "Delete", delete_task_path %>
 <%= link_to "Home", tasks_path %>
 <%= link_to "New Task", new_task_path %>
