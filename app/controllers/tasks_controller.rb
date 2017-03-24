@@ -1,3 +1,5 @@
+require 'date'
+
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -17,7 +19,6 @@ class TasksController < ApplicationController
     unless task.id == nil
       redirect_to tasks_path
     end
-
   end
 
   def edit
@@ -34,6 +35,14 @@ class TasksController < ApplicationController
 
   def destroy
     Task.destroy(params[:id])
+    redirect_to tasks_path
+  end
+
+  def complete
+    #add current date to date_complete field
+    task = Task.find(params[:id])
+    task.date_complete = Date.today
+    task.save
     redirect_to tasks_path
   end
 

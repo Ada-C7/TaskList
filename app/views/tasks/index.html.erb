@@ -9,10 +9,11 @@
     <% @tasks.each do |task| %>
       <li class="task">
         <%= link_to task.name, task_path(task.id) %>
-        [complete]
+        <%= link_to "[mark complete]", complete_task_path(task.id) %>
         <%= link_to "[delete]", delete_task_path(task.id),
         data: {confirm: "Delete this task?"},
         method: :delete %>
+        <%= task.date_complete %>
       </li>
 
     <% end %>

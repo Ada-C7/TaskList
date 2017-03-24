@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   delete "/tasks/:id", to: "tasks#destroy", as: "delete_task"
 
+  get "tasks/:id/complete", to: "tasks#complete", as: "complete_task"
+
 end
