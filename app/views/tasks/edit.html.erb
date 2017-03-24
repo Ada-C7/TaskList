@@ -1,6 +1,6 @@
 <h1>Edit a Task</h1>
 
-<%= form_for @task do |f| %>
+<%= form_for @task, method: :put  do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -9,7 +9,7 @@
   <%= f.text_area :description, size: "50x12" %>
 
   <%= f.label :completion_date %>
-  <%= f.datetime_field :completion_date %>
+  <%= f.date_field :completion_date %>
 
   <%= f.label :completed %>
   <%= f.check_box :completed %>

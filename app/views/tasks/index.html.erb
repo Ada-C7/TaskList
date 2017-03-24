@@ -1,6 +1,9 @@
 <h1>Awesome To Do List</h1>
  <ul>
    <% @tasks.each do |task| %>
-    <li>Task <%= task.id %>: <%= link_to task.name, task_path(task.id) %></li>
+    <li> <%= button_to "Completed", completed_task_path(task.id), method: :patch, class: "button" %> </li>
+    <li> Task <%= task.id %>: <%= link_to task.name, task_path(task.id) %> </li>
    <% end %>
  </ul>
+
+<%= link_to "Add Task", new_task_path %>

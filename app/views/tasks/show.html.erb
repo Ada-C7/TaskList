@@ -2,13 +2,22 @@
 <ul>
     <li>Name: <%= @result_task.name %></li>
     <li>Description: <%= @result_task.description %></li>
-    <li>Completion Date: <%= @result_task.completion_date %></li>
-    <li>Completed:
-    <% if @result_task.completed == false %>
-          Not yet!
-    <% else %>
-          You are done!
-    <% end %>
-  </li>
+    <!-- <li>Due Date: <%= @result_task.completion_date %></li> -->
+    <li>Completed: <%= @result_task.completion_date %> </li>
+    <li>
+      <% if @result_task.completed == false %>
+            Not yet!
+      <% else %>
+            You are done!
+      <% end %>
+      <%= button_to "Undo Completed", completed_task_path(@result_task.id), method: :patch %>
+    </li>
 </ul>
+
 <%= link_to "Task list", tasks_path %>
+
+<%= link_to "Edit Task", edit_task_path(@result_task.id) %>
+
+<%= link_to "Delete Task", delete_task_path(@result_task.id),
+    data: {confirm: "Are you sure you want to delete this task?"},
+    method: :delete %>
