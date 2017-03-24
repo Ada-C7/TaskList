@@ -4,3 +4,9 @@
   Task name: <%= @result_task.name %> Description: <%= @result_task.description %>.
   Date completed:<%= @result_task.completion_date %>
 </p>
+
+<%= link_to "Edit", edit_task_path(@result_task.id) %>
+
+<p>
+  <%= link_to "Home", tasks_path %>
+</p>
