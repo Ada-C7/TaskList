@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
-  def self.random_time
-    Time.at(rand * Time.now.to_i)
-  end
+  # def self.random_time
+  #   Time.at(rand * Time.now.to_i)
+  # end
 
 # TASKS = [{ name: "Breakfast", description: "Don't forget to eat", completion_date: random_time },
 #          { name: "Lunch", description: "Eat MOAR. Food 4 lyfe", completion_date: random_time },
@@ -35,6 +35,13 @@ class TasksController < ApplicationController
     task.save
 
     redirect_to task_path(task)
+  end
+
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+
+    redirect_to tasks_path
   end
 
 private
