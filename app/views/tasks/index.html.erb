@@ -11,8 +11,9 @@
             <i class="fa fa-check-square-o"></i>
           <% end %>
         </h3>
-        <h3 id="task-name">
-          <%= link_to task.name.capitalize, task_path(task.id) %>
+        <h3>
+          <%= link_to task.name.capitalize, task_path(task.id), :id => "task-name" %>
+          <%= link_to raw("&times;"), task_path(task.id), :id => "remove-task" %>
         </h3>
       </li>
       <% end %>
@@ -20,4 +21,4 @@
   </ul>
 </section>
 
-<a href="new_task" class="button">Add Another Task!</a>
+<%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>&ensp;Add Task'.html_safe, new_task_path, :class => "button" %>

@@ -1,6 +1,6 @@
-<h2>Add Your Task</h2>
+<h2>Update Your Task</h2>
 <section id="task-form">
-  <%= form_for @task do | t | %>
+  <%= form_for @task, method: :put do | t | %>
     <%= t.label :name %>
     <%= t.text_field :name, size: "100%", class: "form-field"  %>
 
@@ -10,6 +10,6 @@
     <%= t.label :completion_date, "Completion Date" %>
     <%= t.text_field :completion_date, size: "100%", class: "form-field" %>
 
-    <%= t.submit "Add Task", class: "button" %>
+    <%= t.submit "Update Task", class: "button" %>
   <% end %>
 </section>

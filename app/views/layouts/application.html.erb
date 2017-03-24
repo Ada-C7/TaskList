@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task</title>
+    <title>task.</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%= favicon_link_tag 'favicon-check-square-o.ico' %>
   </head>
   <body>
     <header>
-      <a href=tasks_path><h1>Task.</h1></a>
+      <%= link_to "Task.", tasks_path, :class => "logo" %>
     </header>
     <main>
       <%= yield %>

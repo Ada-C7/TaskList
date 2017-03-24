@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700');
 
 /* GLOBAL STYLES
 =============================== */
@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, p, a {
   font-kerning: normal;
 }
 
-h1 {
+.logo {
   font: 700 4em/1em 'Open Sans', sans-serif;
   letter-spacing: -.05em;
   text-transform: lowercase;
@@ -27,22 +27,27 @@ h2 {
 }
 
 h3 {
-  font: 300 1.5em 'Open Sans', sans-serif;
+  font: 300 1.375em 'Open Sans', sans-serif;
 }
 
-h4 {
+
+h4, label {
   font: 600 1em 'Open Sans', sans-serif;
   color: #4d4d4d;
 }
 
 p {
-  font: 400 1.1em/2em 'Open Sans', sans-serif;
+  font: 300 1.3em/2em 'Open Sans', sans-serif;
 }
 
 a {
   font: 300 1em/2em 'Open Sans', sans-serif;
   text-decoration: none;
-  width: 100%;
+  /*width: 100%;*/
+}
+
+a:hover {
+  color: CornflowerBlue;
 }
 
 ul {
@@ -60,13 +65,13 @@ main, header {
 main {
   background: white;
   padding: 1.5em;
+  margin-bottom: 4em;
+  border: 2px solid white;
+  border-radius: 5px;
 }
 
 footer {
   width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   background: CornflowerBlue;
   color: white;
   padding: 2em;
@@ -77,15 +82,22 @@ footer p {
 }
 
 .button {
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: .5em;
+  font-weight: 600;
+  color: CornflowerBlue;
 }
 
 .button:hover {
-  background: CornflowerBlue;
-  border: 1px solid CornflowerBlue;
-  color: white;
+  color: #cccccc;
+}
+
+.form-field {
+  font: 300 1.375em 'Open Sans', sans-serif;
+  background: WhiteSmoke;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 1px #FFF, 0 1px 0 #FFF;
+  margin-bottom: 1em;
+  padding: .5em;
+  border: 0px;
 }
 
 /* INDEX STYLES
@@ -96,13 +108,17 @@ footer p {
   border-bottom: 1px solid #cccccc;
 }
 
+#task-list li:last-child {
+  margin-bottom: 3em;
+  border-bottom: 0px;
+}
+
 #task-list h3 {
   display: inline-block;
 }
 
-#task-list #task-details {
-  float: right;
-  text-align: right;
+#task-list #remove-task {
+  color: #cccccc;
 }
 
 #task-status {
@@ -110,13 +126,17 @@ footer p {
   padding-right: .25em;
 }
 
-#task-details h3 a {
-  color: CornflowerBlue;
+#task-status:hover {
+  color: #cccccc;
 }
 
 
 /* NEW STYLES
 =============================== */
+#task-form label {
+  display: block;
+  margin-bottom: .5em;
+}
 
 
 /* SHOW STYLES
@@ -126,14 +146,23 @@ footer p {
 }
 
 .details-field h4 {
-  padding-bottom: .25em;
+  width: 49%;
+  display: inline-block;
+  padding-bottom: .5em;
   border-bottom: 1px solid #cccccc;
 }
 
-.complete {
-
+.details-field h4:nth-of-type(2) {
+  text-align: right;
 }
 
-.incomplete {
+.details-field h3 {
+  clear: both;
+  padding-top: .25em;
+  padding-bottom: .5em;
+}
 
+.status {
+  display: inline-block;
+  margin-bottom: 3em;
 }
