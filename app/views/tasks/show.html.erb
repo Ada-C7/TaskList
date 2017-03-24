@@ -4,6 +4,7 @@
 <h3>Tools to use: <%= @task[:tools] %></h3>
 <h3>Completed_at: <%= @task[:completed_at] %></h3>
 
-
-<%= link_to "Back to task list", tasks_path %>
-<%= link_to "Edit", edit_book_path %>
+<ul class = "nav_links">
+  <li><%= link_to "Back to task list", tasks_path %></li>
+  <li><%= link_to "Edit", edit_task_path %></li>
+</ul>

@@ -32,8 +32,8 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    task.update_attributes(task_params)
-    task.save
+    task.update_attributes(task_params) #instead of .update_attributes + .save,
+    task.save                           #you can use .update
 
     redirect_to task_path(task) #can be task_path(task.id)
 
@@ -41,7 +41,7 @@ class TasksController < ApplicationController
 
   private
 
-  def task_params
+  def task_params #strong params
     return params.require(:task).permit(:name, :description, :completed_at, :tools, :tools_how_often)
   end
 
