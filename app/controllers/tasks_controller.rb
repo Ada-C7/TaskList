@@ -3,9 +3,11 @@ class TasksController < ApplicationController
       @tasks = Task.all
     end
 
-    # def random_time
-    #   Time.at(rand * Time.now.to_i)
-    # end
+    def new
+      @task = Task.new
+    end
+
+
 
     def show
       @task = Task.find(params[:id])

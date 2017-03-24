@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # root 'tasks#index', as: 'book'
 
   get 'tasks', to: 'tasks#index'
 
