@@ -9,7 +9,6 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
-    
   end
 
   def create
@@ -23,18 +22,14 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
-    @method = :put
   end
 
   def update
     task = Task.find(params[:id])
-    task.name = params[:task][:name]
-    task.description = params[:task][:description]
-    task.context = params[:task][:context]
-    if task.save
+
+    if task.update(task_params)
       redirect_to task_path
     end
-
   end
 
   private
