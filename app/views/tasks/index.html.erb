@@ -1,7 +1,5 @@
 <h1> Welcome to Task List App </h1>
 <p id = "add_task"> <%= link_to "Add new task", new_task_path %> </p>
-<h2>List of all tasks:</h2>
-
 <ul>
   <%@tasks.each do |task| %>
   <div>

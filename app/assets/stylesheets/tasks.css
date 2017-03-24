@@ -1,21 +1,19 @@
 body{
-  background-color: #C79CD6;
+  background-color: #82DDF0;
   font-family: sans-serif;
 }
 body h1, #goback, #add_task{
-  color:#DA4167;
+  color:#415282;
   font-weight: bold;
   margin-left: 15%;
 }
-body h2{
-  color:#C2FCEB;
-  margin-left: 15%;
-}
+
 p{
   font-weight: bold;
   text-decoration: underline;
   font-size: 1.5em;
 }
+
 ul li{
   color:#586994;
 }
@@ -29,6 +27,7 @@ div{
   width: 27%;
   vertical-align: top;
   background-color: #E5E8B6;
+  line-height: 1.5em;
 }
 div a{
   color: #586994;
@@ -43,6 +42,7 @@ div li:last-child{
 .see_task h3:first-of-type{
   color: #083D77;
   font-style: italic;
+  font-weight: bold;
 }
 
 .new_task, .edit_task, .see_task{
@@ -69,7 +69,7 @@ input[type=submit] {
 }
 
 #delete_button{
-  background-color: #DA4167;
+  background-color: #415282;
   border-radius: 10px;
   color: white;
   float: right;
@@ -87,7 +87,7 @@ input[type=submit] {
 }
 
 #completed_button{
-  background-color: #832161;
+  background-color: #F28100;
   color: #F0EFF4;
   border-radius: 10px;
   float: left;
