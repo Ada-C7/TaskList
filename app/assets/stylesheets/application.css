@@ -57,11 +57,10 @@ img {
 /*Styling the all task list area*/
 
 .incomplete, .complete {
-  margin: 2px;
   display:inline-block;
-  height: 100px;
+  height: 120px;
   width: 21%;
-  margin: 20px 1.5%;
+  margin: 20px 1.6%;
   text-align: center;
 }
 
@@ -74,8 +73,17 @@ img {
   clear: both;
 }
 
+.complete input {
+  margin: 5px;
+}
+
 .complete a {
   color: rgb(5, 181, 214);
+  margin: 5px;
+}
+
+section.incomplete:hover {
+  border: 2px solid rgb(5, 181, 214);
 }
 
 .main-list {
@@ -84,6 +92,10 @@ img {
   padding: 2px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.main-list h2 {
+  font-size: 1.75em;
 }
 
 a {

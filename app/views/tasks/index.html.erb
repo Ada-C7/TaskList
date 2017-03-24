@@ -2,7 +2,7 @@
 
 <article class="main-list">
 
-  <h2>TO DO</h2>
+  <h2>Don't Forget</h2>
 
   <% @tasks.each do |task| %>
   <section class="
@@ -11,7 +11,7 @@
     <% else %>
       <%= "complete" %>
     <% end %>" />
-
+    
     <h3><%= link_to task.name, task_path(task.id) %></h3>
     <p>
       <%= form_for task do |f| %>

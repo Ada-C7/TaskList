@@ -22,7 +22,10 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_task_path %>
+  <% if @result_task.completion_date == nil %>
+    <%= link_to "Edit", edit_task_path %>
+  <% end %>
+
   <%= link_to "Delete", delete_task_path, method: :delete, data: { confirm: "Are you sure?"} %>
 </p>
 
