@@ -12,6 +12,11 @@
             data: { confirm: "Have you really completed this task?"},
             method: :patch %>
         </p>
+        <p>
+            <%= link_to 'Delete Task', delete_task_path(task.id),
+            data: { confirm: "Do you really mean to delete this task?"},
+            method: :delete %>
+        </p>
 
     </li>
     <% end %>

@@ -32,7 +32,7 @@ class TasksController < ApplicationController
   def complete
       task = Task.find(params[:id])
 
-      task.date = "March 24, 2017"
+      task.date = DateTime.now.strftime('%v')
 
     if task.save
       redirect_to task_path(task.id)
