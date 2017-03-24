@@ -1,9 +1,9 @@
 <h1>Show a task</h1>
 
-<p>
-    Task: Description
-</p>
 <%= @task.name %>: <%= @task.description%>
+<p>
+    <%= image_tag "http://www.fillmurray.com/200/200" %>
+</p>
 
 <%= link_to 'Edit', edit_task_path(@task.id) %>
 <%= link_to 'Home', tasks_path %>
