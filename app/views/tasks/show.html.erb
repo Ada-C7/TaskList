@@ -1,9 +1,19 @@
-<h1>Task Details</h1>
-<ul>
-  <li>Task Name: <%= @result_task.name %></li>
-  <li>Description: <%= @result_task.description %></li>
-  <li>completion_date: <%= @result_task.completion_date %></li>
-  <li>completed: <%= @result_task.completed %></li>
-</ul>
+<div class=header>
+  <h1>Task Details</h1>
+</div>
 
-<h4><%= link_to "Home", tasks_path %></h4>
+<div id=task_detail>
+  <ul>
+    <li><h3>Task Name:</h3> <%= @result_task.name %></li>
+    <li><h3>Description:</h3> <%= @result_task.description %></li>
+    <li><h3>completion_dat3:</h3> <%= @result_task.completion_date %></li>
+    <li><h3>completed:</h3> <%= @result_task.completed %></li>
+  </ul>
+
+</div>
+
+<div class=options>
+  <h2><%= link_to "Home", tasks_path %></h2>
+  <h2><%= link_to "Edit", edit_task_path(@result_task.id) %></h2>
+  <h2><%= link_to "Delete", delete_task_path(@result_task.id), data: { confirm: "Are you sure you want to delete this task?" }, method: :delete %></h2>
+</div>

@@ -1,0 +1,11 @@
+<div class=header>
+  <h1>Edit a Task</h1>
+</div>
+
+<div class=form_area>
+  <%= render partial: "form", locals: {  form_method: :put } %>
+</div>
+
+<div class=options>
+  <h2><%= link_to "Home", tasks_path %></h2>
+</div>

@@ -1,9 +1,18 @@
-<h1>Task List</h1>
-<p>You've got some tasks to do!</p>
-<h3>
-  <ul>
-    <% @tasks.each_with_index do |task| %>
-    <li><%= link_to task.name, task_path(task.id) %></li>
-    <% end %>
-  </ul>
-</h3>
+<div class=header>
+  <h1>Task List</h1>
+  <h2>You've got some tasks to do!</h2>
+</div>
+
+<div id=tasks>
+  <h3>
+    <ul>
+      <% @tasks.each_with_index do |task| %>
+      <li><%= link_to task.name, task_path(task.id) %></li>
+      <% end %>
+    </ul>
+  </h3>
+</div>
+
+<div class=options>
+  <h2><%= link_to "Add New Task", new_task_path %></h2>
+</div>
