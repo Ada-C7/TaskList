@@ -38,12 +38,15 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  def mark_complete
+  def toggle_complete
     task = Task.find(params[:id])
-    task.completed = true
-    if task.save
-      redirect_to tasks_path
+    if task.completed
+      task.completed = nil
+    else
+      task.completed = DateTime.now
     end
+    
+    redirect_to tasks_path if task.save
   end
 
   private

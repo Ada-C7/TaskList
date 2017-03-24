@@ -3,7 +3,7 @@
 <p><%= @task.description %></p>
 
 <% if @task.completed %>
-  <p>&check; Task completed! Yay!</p>
+  <p>&check; Task completed on <%= @task.completed %>! Yay!</p>
 <% else %>
   <p>Complete by: <%= @task.deadline %></p>
 <% end %>
