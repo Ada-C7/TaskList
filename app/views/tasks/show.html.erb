@@ -1,7 +1,7 @@
 
 <section class="container">
 
-  <%= render partial: "header", locals: {zone: @zone} %>
+  <%= render partial: "header" %>
   <article class="body">
     <h3 id="task-name"><%= @task.title %></h3>
 
@@ -38,5 +38,5 @@
       </ul>
     </section>
   </article>
-  <%= render partial: "footer", locals: {zone: @zone} %>
+  <%= render partial: "footer" %>
 </section>
