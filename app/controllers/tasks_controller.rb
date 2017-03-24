@@ -27,7 +27,16 @@ class TasksController < ApplicationController
       Task.destroy(params[:id])
 
       redirect_to tasks_path
+  end
 
+  def complete
+      task = Task.find(params[:id])
+
+      task.date = "March 24, 2017"
+
+    if task.save
+      redirect_to task_path(task.id)
+    end
   end
 
 

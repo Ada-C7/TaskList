@@ -2,13 +2,19 @@
 
 <%= @task.name %>: <%= @task.description%>
 <p>
+    Completed on: <%= @task.date %>
+</p>
+<p>
     <%= image_tag "http://www.fillmurray.com/200/200" %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task.id) %>
 <%= link_to 'Delete', delete_task_path(@task.id),
     data: {confirm: "Do you really want to delete this task?"},
-    method: :delete%>
+    method: :delete %>
+<%= link_to 'Mark Complete', complete_task_path(@task.id),
+    data: { confirm: "Have you really completed this task?"},
+    method: :patch %>
 <h2>
     <%= link_to 'Home', tasks_path %>
 </h2>
