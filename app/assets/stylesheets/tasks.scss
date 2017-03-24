@@ -31,3 +31,11 @@ h1 {
     float: left;
     // clear: right;
 }
+
+.complete_box {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: solid;
+    border-color: red;
+}

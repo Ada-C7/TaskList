@@ -8,9 +8,14 @@
     <li>
         <%= link_to task.name, task_path(task.id) %>: <%= task.description %>
         <p>
-            <%= link_to "Mark Complete", complete_task_path(task.id),
-            data: { confirm: "Have you really completed this task?"},
-            method: :patch %>
+
+            <% if task.date == nil %>
+                <%= link_to '◻️', complete_task_path(task.id),
+                data: { confirm: "Have you really completed this task?"},
+                method: :patch %>
+            <% else %>
+                ✔️
+            <% end %>
         </p>
         <p>
             <%= link_to 'Delete Task', delete_task_path(task.id),
