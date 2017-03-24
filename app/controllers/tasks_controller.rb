@@ -40,9 +40,16 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    @task.update({:completed_at=>Time.now})
+    
+    redirect_to tasks_path
+  end
+
   private
   def task_params
-    return params.require(:task).permit(:name, :description, :completed_at,:location)
+    return params.require(:task).permit(:name, :description, :completed_at, :location)
   end
 
 end

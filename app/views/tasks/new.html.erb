@@ -1,19 +1,5 @@
 <h1>Add a new task:</h1>
-<%= form_for @task do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
 
-<%= f.label :description %>
-<%= f.text_field :description %>
-
-<%= f.label :completed_at %>
-<%= f.text_field :completed_at %>
-
-<%= f.label :location %>
-<%= f.text_field :location %>
-
-<%= f.submit value: "Add Task"%>
-
-<% end %>
+<%= render partial: "form", locals: {submit_text: "New"}%>
 
 <p id = "goback"> <%= link_to "Go back", tasks_path %> </p>

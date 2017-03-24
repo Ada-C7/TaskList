@@ -68,12 +68,40 @@ input[type=submit] {
    display: block;
 }
 
+#delete_button{
+  background-color: #DA4167;
+  border-radius: 10px;
+  color: white;
+  float: right;
+  font-size: 1em;
+  margin-top: 10px;
+}
 
-.notice{
-  z-index: 1000;
-  position: absolute;
-  top: 10%;
-  left: 30%;
-  text-align: center;
-  font-size: 3em;
+#uncompleted_button{
+  background-color: white;
+  border-radius: 10px;
+  float: left;
+  font-size: 1em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#completed_button{
+  background-color: #832161;
+  color: #F0EFF4;
+  border-radius: 10px;
+  float: left;
+  font-size: 1em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#new_task_button{
+  background-color: #832161;
+  color: #F0EFF4;
+  border-radius: 10px;
+  margin-left: 10%;
+  font-size: 2em;
+  margin-top: 10px;
+  display: inline-block;
 }
