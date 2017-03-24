@@ -1,0 +1,20 @@
+<%= form_for @task, method: form_method do |f| %>
+
+<%= f.label :title, class: "title" %>
+<%= f.text_field :title %>
+
+<%= f.label :priority %>
+<%= f.text_field :priority %>
+
+<%= f.label :description %>
+<%= f.text_area :description, size: "60x12" %>
+
+<%= f.submit "Create" %>
+<%= f.submit "Edit A Task" %>
+
+<%= link_to "Home", tasks_path %>
+
+<%= f.submit %>
+
+
+<% end %>
