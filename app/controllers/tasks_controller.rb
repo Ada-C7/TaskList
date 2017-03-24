@@ -8,15 +8,15 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
-  def show
-    id = params[:id].to_i
-    @task = Task.find(id)
-  end
-
   def create
     Task.create(task_params)
 
     redirect_to tasks_path
+  end
+
+  def show
+    id = params[:id].to_i
+    @task = Task.find(id)
   end
 
   def edit

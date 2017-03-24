@@ -1,7 +1,7 @@
 <h2><%= @task[:name] %></h2>
 <h3>description: <%= @task[:description] %></h3>
 <h4>time completed: <%= @task[:completion_date] %></h4>
-<%= button_to "Edit This Task", edit_task_path %>
-<%= button_to "Back to Yr Epic List of Stuff", tasks_path %>
+<%= button_to "Edit This Task", edit_task_path, method: :get %>
+<%= button_to "Back to Yr Epic List of Stuff", tasks_path, method: :get %>
 <%= button_to "Delete This Task", task_path(@task), method: :delete,
     data: { confirm: "Are you sure you want to delete task #{@task.name}?" } %>
