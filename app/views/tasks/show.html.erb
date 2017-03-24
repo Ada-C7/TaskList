@@ -23,7 +23,7 @@
 
 <p>
   <%= link_to "Edit", edit_task_path %>
-  <%= link_to "Delete", delete_task_path %>
+  <%= link_to "Delete", delete_task_path, method: :delete, data: { confirm: "Are you sure?"} %>
 </p>
 
 <p>
