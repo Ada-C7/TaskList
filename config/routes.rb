@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
   patch 'tasks/:id', to: 'tasks#update'
 
-  #Some sort of a route to delete a book
+  patch 'tasks/:id/completed', to: 'tasks#task_completed', as: 'task_completed'
   delete 'tasks/:id', to: 'tasks#destroy'
-
 
 end

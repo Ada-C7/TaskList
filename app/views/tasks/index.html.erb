@@ -11,8 +11,12 @@
           <%= link_to task[:name], task_path(task.id) %>
           <%= ":    "%>
           <%= task[:description] %>
-          <!-- Some sort of link to edit -->
-          <!-- Some sort of a link to delete -->
+          <%= "/    "%>
+          <%= task[:completion_date] %>
+
+
+          <%= link_to "Edit task", edit_task_path(task) %>
+          <%= link_to "Completed", task_completed_path(task), method: :patch %>
           <%= link_to "Delete", task_path(task),
                 data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
           <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
@@ -22,23 +26,8 @@
     </ul>
   </nav>
 
-
-  <!-- <%= link_to "Add new task", new_task_path %> -->
+  <!-- <%################= link_to "Add new task", new_task_path %> -->
 
   <%= link_to image_tag("new_task_button.jpg", alt: "New task button", height: "100px"), new_task_path, id: "new_task_button" %>
 
-  <!-- <%= image_tag 'ducks.jpg', alt: 'The canal ducks' , width: '75%' %>
-  <%= link_to image_tag("crew.jpg", alt: "The crew", width: "75%"), "http://www.google.com" %> -->
-
-
 </main>
-
-
-
-
-
-<!-- <% 10.times do %>
-  <p>
-    This will be there 10 times
-  </p>
-<% end %> -->

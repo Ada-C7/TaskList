@@ -20,12 +20,10 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
-
   def create
     Task.create(task_params)
     redirect_to tasks_path
   end
-
 
 
 #### SINGLE ITEM
@@ -38,28 +36,34 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
   end
-
   def update
     task =  Task.find(params[:id])
     task.update_attributes(task_params)
     task.save
-
     redirect_to task_path(task)
+  end
+
+  def task_completed
+    task = Task.find(params[:id])
+    task[:completion_date] = Time.now
+    task.save
+    redirect_to tasks_path
   end
 
   def destroy
     task = Task.find(params[:id])
     task.destroy
     # Todo show the list of tska//
-    
+
     redirect_to tasks_path
     #Another way instead of re_direct
     # @tasks = Tasks.all
     # render :index
   end
 
+
   private
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :completion_date)
   end
 end

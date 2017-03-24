@@ -4,9 +4,11 @@
   <p>
     Description: <%= @task[:description] %>
   </p>
+  <p>
+    Completed date: <%= @task[:completion_date] %>
+  </p>
 
     <%= link_to "Back to tasks", tasks_path %>
-
     <%= link_to "Edit task", edit_task_path %>
 
 </section>

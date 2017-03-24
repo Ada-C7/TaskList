@@ -6,7 +6,7 @@
 /*********************************************************
 HEADER
 **********************************************************/
-#index_main, #new_task_section, #edit_task_section, #show_section {
+#index_main, #form_for_new_and_edit, #show_section {
   margin-top: 100px;
   padding: 15px;
 }
