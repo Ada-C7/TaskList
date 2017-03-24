@@ -6,6 +6,12 @@
       <%= link_to task.name, task_path(task.id) %>
       <% if task.completed %>
         &check;
+      <% else %>
+        <%=
+          link_to "mark completed", complete_task_path(task.id),
+          method: :patch,
+          class: "complete_button"
+        %>
       <% end %>
     </li>
   <% end %>
