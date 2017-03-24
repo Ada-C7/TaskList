@@ -174,8 +174,7 @@ header .logo {
   padding-bottom: .5em;
 }
 
-.status {
-  display: inline-block;
+#task-details .details-field:last-child h3 {
   margin-bottom: 3em;
 }
 
