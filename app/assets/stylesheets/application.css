@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* Start http://www.cursors-4u.com */
+body, a:hover {
+  cursor: url(http://ani.cursors-4u.net/nature/nat-11/nat1037.cur),
+  progress !important;}
+/* End http://www.cursors-4u.com */
