@@ -13,13 +13,8 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-
   def show
-    if !Task.exists?(params[:id])
-      redirect_to tasks_path
-    else
       @task=Task.find(params[:id])
-    end
   end
 
   def edit
@@ -33,11 +28,18 @@ class TasksController < ApplicationController
     redirect_to task_path(task)
   end
 
-  def delete
+  def destroy
     task = Task.find(params[:id])
     task.destroy
     redirect_to tasks_path
   end
+
+def complete
+  task = Task.find(params[:id])
+  completion_time=DateTime.now
+  task.update(completed_at:completion_time)
+  redirect_to tasks_path
+end
 
   private
   def task_params

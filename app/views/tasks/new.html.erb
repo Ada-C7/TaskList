@@ -1,24 +1,6 @@
 <h1>Here you can add a new task to the list:</h1>
 
-<%= render partial: "form", locals: { action_name: "Create Task" } %>
-
-<!-- <%= form_for @task do |f| %>
-
-<%= f.label :name %>
-<%= f.text_field :name %>
-</br>
-</br>
-<%= f.label :description %>
-<%= f.text_field :description %>
-</br>
-</br>
-<%= f.label :completed_at %>
-<%= f.text_field :completed_at %>
-</br>
-</br>
-<%= f.submit %>
-
-<% end %>   -->
+<%= render partial: "form", locals: { button_text: "Create Task" } %>
 
 </br>
 </br>

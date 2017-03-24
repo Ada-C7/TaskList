@@ -1,25 +1,11 @@
 <h1>Here you can modify a task from the list:</h1>
 
-<%= render partial: "form", locals: { action_name: "Update Task" } %>
+<%= render partial: "form", locals: { button_text: "Update Task" } %>
 
-<!--
-<%= form_for @task do |f| %>
+</br>
+</br>
 
-<%= f.label :name %>
-<%= f.text_field :name %>
-</br>
-</br>
-<%= f.label :description %>
-<%= f.text_field :description %>
-</br>
-</br>
-<%= f.label :completed_at %>
-<%= f.text_field :completed_at %>
-</br>
-</br>
-<%= f.submit %>
-
-<% end %> -->
+<%=button_to "Delete this task", task_path(@task), method: :delete, data:  {confirm: "Are you sure you want to delete this task?"} %>
 
 </br>
 </br>

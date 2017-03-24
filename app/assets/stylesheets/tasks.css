@@ -18,6 +18,7 @@ li{
   padding-bottom: 1rem;
 }
 
-/*.delete_button{
+
+.task_list form.button_to{
   display:inline-block;
-}*/
+}
