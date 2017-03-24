@@ -4,3 +4,6 @@
     Task: Description
 </p>
 <%= @task.name %>: <%= @task.description%>
+
+<%= link_to 'Edit', edit_task_path(@task.id) %>
+<%= link_to 'Home', tasks_path %>

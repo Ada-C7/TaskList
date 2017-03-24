@@ -7,6 +7,23 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
   end
 
+  def edit
+      @task = Task.find(params[:id])
+  end
+
+  def update
+      task = Task.find(params[:id])
+
+      task.name = params[:task][:name]
+      task.description = params[:task][:description]
+
+      if task.save
+        redirect_to task_path(task.id)
+      end
+
+  end
+
+
   def new
       @task = Task.new
   end
