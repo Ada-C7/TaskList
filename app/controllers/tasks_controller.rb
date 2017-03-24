@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task.name = task_params[:name]
     task.description = task_params[:description]
     task.completion_date = task_params[:completion_date]
-    task.complete = task_params[:complete]
+    task.status = task_params[:status]
 
     if task.save
       redirect_to task_path(task.id)
@@ -45,6 +45,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description, :completion_date, :complete)
+    params.require(:task).permit(:name, :description, :completion_date, :status)
   end
 end

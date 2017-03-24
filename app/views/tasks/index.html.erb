@@ -5,9 +5,9 @@
       <% @tasks.each do | task | %>
       <li>
         <h3 id="task-status">
-          <% if task.complete == false %>
+          <% if task.status == "incomplete" %>
             <i class="fa fa-square-o"></i>
-          <% else %>
+          <% elsif task.status == "complete" %>
             <i class="fa fa-check-square-o"></i>
           <% end %>
         </h3>
