@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   patch 'tasks/:id', to:'tasks#update'
   delete 'tasks/:id', to: 'tasks#destroy'
   patch 'tasks/:id/done', to: 'tasks#done', as: 'done_task'
+  patch 'tasks/:id/date', to: 'tasks#completed_date', as: "date_task"
 
 
 end
