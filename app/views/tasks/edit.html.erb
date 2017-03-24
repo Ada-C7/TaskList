@@ -15,7 +15,7 @@
   <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
 
   <%= f.label :complete_by, "Task should be completed by:"%>
-  <%= f.date_select :complete_by, :start_year => 2017 %>
+  <%= f.date_field :complete_by %>
 
   <%= f.submit "Save" %>
 

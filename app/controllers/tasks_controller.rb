@@ -23,7 +23,6 @@ class TasksController < ApplicationController
     if task.save
       redirect_to task_path
     end
-
   end
 
   def new
