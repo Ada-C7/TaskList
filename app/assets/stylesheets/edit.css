@@ -1,0 +1,12 @@
+input[type=submit] {
+  color: blue;
+}
+
+li {
+  padding: 10px;
+}
+
+input {
+  width: 100px;
+  height: 15px;
+}

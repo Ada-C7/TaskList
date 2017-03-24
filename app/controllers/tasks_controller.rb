@@ -14,7 +14,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    puts ">>>>>>AEW stuff"
     Task.create(task_params)
 
     redirect_to tasks_path
@@ -31,6 +30,14 @@ class TasksController < ApplicationController
 
     redirect_to task_path(task)
   end
+
+  def destroy
+    task =  Task.find(params[:id])
+    task.destroy
+
+    redirect_to tasks_path
+  end
+
 private
   def task_params
     return params.require(:task).permit(:name, :description, :completion_date)
