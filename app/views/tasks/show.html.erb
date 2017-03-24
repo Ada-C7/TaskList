@@ -1,8 +1,9 @@
 <body>
   <h2> <%= @task[:name] %></h2>
   <h4> Description: <%= @task[:description] %></h4>
-  <h4> Complete by: <%= @task[:completed_at] %></h4>
-  <p><%= link_to "Edit Task", edit_task_path %>
+  <h4> Completed at: <%= @task[:completed_by] %></h4>
+  <%= button_to "Edit", edit_task_path(@task), method: :get %>
+  <%= button_to "Delete", task_path(@task), method: :delete, data: {confirm: "Are you sure you want to delete #{@task.name}?"} %>
 </body>
 
 <footer>

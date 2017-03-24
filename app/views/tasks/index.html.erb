@@ -1,14 +1,12 @@
 <body>
   <main>
     <h2> All the Things! </h2>
-    <% @tasks.each do |task, id| %>
     <ol>
-      <li>
-        <%= link_to task[:name], task_path(task.id) %>
-         Complete By: <%= task.completed_by %>
-      </li>
+      <% @tasks.each do |t| %>
+      <%= render partial: "task_summary", locals: { task: t} %>
+      <%= button_to "Mark as Complete", charles_path(t), method: :patch %>
+      <% end %>
     </ol>
-    <% end %>
   </main>
 </body>
 
