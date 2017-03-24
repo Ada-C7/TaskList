@@ -2,9 +2,9 @@
 
 <h3> <%= link_to "New Task", new_task_path %> </h3>
 <ul>
-  <% @tasks.each do |task, id| %>
-  <li><%= link_to task[:name], task_path(task.id) %></li>
-  <li><%= link_to "Edit", edit_task_path(task) %></li>
+  <% @tasks.each do |task| %>
+  <li><%= render partial: "task_summary", locals: { task: task } %></li>
+
   <%end%>
 
 
