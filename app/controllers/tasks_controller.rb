@@ -15,8 +15,6 @@ class TasksController < ApplicationController
 
 
   def show
-
-
     if !Task.exists?(params[:id])
       redirect_to tasks_path
     else
@@ -30,12 +28,16 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    task.update_attributes(task_params)
-    task.save
+    task.update(task_params)
 
     redirect_to task_path(task)
   end
 
+  def delete
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to tasks_path
+  end
 
   private
   def task_params

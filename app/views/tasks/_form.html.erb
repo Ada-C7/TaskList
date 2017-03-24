@@ -1,8 +1,4 @@
-<h1>Here you can modify a task from the list:</h1>
 
-<%= render partial: "form", locals: { action_name: "Update Task" } %>
-
-<!--
 <%= form_for @task do |f| %>
 
 <%= f.label :name %>
@@ -17,10 +13,6 @@
 <%= f.text_field :completed_at %>
 </br>
 </br>
-<%= f.submit %>
+<%= f.submit action_name %>
 
-<% end %> -->
-
-</br>
-</br>
-<%= link_to "Back to task", task_path %>
+<% end %>
