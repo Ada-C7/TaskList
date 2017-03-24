@@ -1,12 +1,1 @@
-
-<%= form_for @task do |tsk| %>
-<%= tsk.label :name %>
-<%= tsk.text_field :name  %>
-<%= tsk.label :chore %>
-  <%= tsk.text_field :chore%>
-
-<%= tsk.label :completed %>
-    <%= tsk.text_field :completed %>
-<%= tsk.submit value: "Make changes"%>
-
-<% end %>
+<%= render partial: "form", locals: { action_name: "Edit" } %>
