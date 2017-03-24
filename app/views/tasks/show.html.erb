@@ -1,11 +1,15 @@
 <h1>Tasks TO-DO</h1>
-<img src="http://placebeyonce.com/450-300" />
+<!-- <img src="http://placebeyonce.com/450-300" /> -->
 <p>
-  Task #<%= @result_task[:id] %>: <%= @result_task[:title] %> | <%= @result_task[:priority] %> priority | notes: <%= @result_task[:description] %>
+  Task #<%= @result_task[:id] %>: <%= @result_task[:title] %> | notes: <%= @result_task[:description] %>
   Completed?
-  <% if @result_task != nil %>
+  <% if @result_task[:completion] == nil %>
+     NO
+  <% else %>
      <%= @result_task[:completion] %>
-  <% end %>   
+  <% end %>
 </p>
 
+<%= link_to "Edit", edit_task_path(@result_task.id) %>
+<%= link_to "Delete", delete_task_path(@result_task.id), data: { confirm: "Are you sure you want to delete this task?" }, method: :delete %>
 <%= link_to "Home", tasks_path %>

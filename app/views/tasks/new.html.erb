@@ -21,18 +21,17 @@
 
 <h1>Add New Task</h1>
 
-<%= form_for @task do |f| %>
+<!-- <%= form_for @task do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
 
-  <%= f.label :priority %>
-  <%= f.text_field :priority %>
-
   <%= f.label :completion %>
-  <%= f.text_field :completion %>
+  <%= f.date_field :completion %>
 
   <%= f.label :description %>
   <%= f.text_area :description, size: "60x12" %>
 
   <%= f.submit %>
-<% end %>
+<% end %> -->
+
+<%= render partial: "form" %>
