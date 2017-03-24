@@ -59,7 +59,7 @@ In this wave we will extend the interactivity with users, allowing them to edit 
     - Hint: Rendering _partials_ in Rails
 
 
-<!--
+
 ## Wave 4
 In this wave, we will add the ability to delete tasks. We will also add the ability for a user to mark a task complete.
 
@@ -70,4 +70,3 @@ In this wave, we will add the ability to delete tasks. We will also add the abil
 1. Mark a task complete
     - Add a button to the list of tasks on the home page that, when clicked, will mark a task complete
     - Update the database with the task's completed date
--->
