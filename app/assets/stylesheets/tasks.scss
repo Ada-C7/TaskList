@@ -8,6 +8,19 @@ body {
   margin: auto;
 }
 
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:before {
+    content: "\2610";
+    margin-right:5px;
+}
+
 header {
   background: orange;
   padding: 2%;
