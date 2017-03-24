@@ -1,9 +1,15 @@
-<h1>Each Task</h1>
+<h1>Details</h1>
 
 <section>
   <h2><%= @result_task.name%> :</h2>
   <p>
-    <%=@result_task.description%>
+    <strong>Description:</strong> <%=@result_task.description%><br />
+  </p>
+  <p>
+    <strong>Status:</strong <%=@result_task.status%><br />
+  </p>
+  <p>
+    <strong>Complete by:</strong> <%=@result_task.complete_by%><br />
   </p>
 </section>
 
@@ -17,5 +23,5 @@
 
 <p>
   <%= link_to "Home", tasks_path %>
-  <%= link_to "Edit Task", edit_task_path %>
+  <%= link_to "Edit", edit_task_path %>
 </p>

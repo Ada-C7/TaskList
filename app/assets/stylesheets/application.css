@@ -34,10 +34,11 @@
 
 html {
   font-family: 'Raleway', sans-serif;
-  margin: 10px 50px;
+  margin: 10px 5%;
+  overflow: auto;
 }
 
-h1 {
+h1, h2 {
   color: rgb(5, 181, 214);
   font-family: 'Rock Salt', cursive;
 }
@@ -53,37 +54,45 @@ img {
 }
 
 
-// Styling the all task list area
+/*Styling the all task list area*/
 
-.main-list li {
-  list-style: upper-roman;
+.task {
   margin: 2px;
+  background-color: white;
+  display:inline-block;
+  height: 200px;
+  width: 30%;
+  margin: 20px 1.5%;
+  text-align: center;
+}
+
+.task P {
+  margin: 10px;
 }
 
 .main-list {
   background-color: rgba(214, 203, 107, 1);
-  width: 500px;
-  color: white;
   font-weight: bold;
   padding: 2px;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 
-.main-list a {
+a {
   color: grey;
+  text-decoration: none;
+  padding: 10px;
 }
 
-.main-list a:hover {
+a:hover {
   color: rgb(5, 181, 214);
 }
 
 .main-list h2 {
-  border-bottom: 1px solid rgb(5, 181, 214);
   text-align: center;
 }
 
-// Just home button issues
+/*Just home button issues*/
 
 a.bottom-button {
   background-color: white;
