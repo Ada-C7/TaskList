@@ -56,7 +56,6 @@ a:hover {
 }
 
 #cancel-button {
-  // margin-top: 20px;
   padding-top: 40px;
 }
 
@@ -71,10 +70,10 @@ a:hover {
 .task-done {
   text-decoration: line-through;
 }
+
 .body {
   text-align: center;
   padding-bottom: 75px;
-  // height: 100%;
 }
 
 .task-data, #list, #input-form {
@@ -84,7 +83,6 @@ a:hover {
   min-width: 380px;
   padding: 26px 0 40px 0;
   overflow: scroll;
-
 }
 
 .task-title {
@@ -121,13 +119,11 @@ footer {
 .undo a {
   color: blue;
   content: "";
-  // content:
 }
 
 ul:hover li.hidden {
   visibility: visible;
 }
-
 
 a:hover {
   color: #E36A65;
