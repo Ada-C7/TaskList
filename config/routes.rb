@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   get "/tasks/:id", to: "tasks#show", as: "task"
 
-  get "/tasks/:id/edit", to: "books#edit", as: "edit_task_path"
-
+  get "/tasks/:id/edit", to: "tasks#edit", as: "edit_task_path"
+  put "/tasks/:id", to: "tasks#update"
 end
