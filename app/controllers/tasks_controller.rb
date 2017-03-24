@@ -7,8 +7,7 @@ class TasksController < ApplicationController
     #   Time.at(rand * Time.now.to_i)
     # end
 
-    # def show
-    #   id = params[:id].to_i
-    #   @task = Tasks.all[id]
-    # end
-end
+    def show
+      @task = Task.find(params[:id])
+    end
+  end
