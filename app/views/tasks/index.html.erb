@@ -11,6 +11,12 @@
           <%= link_to task[:name], task_path(task.id) %>
           <%= ":    "%>
           <%= task[:description] %>
+          <!-- Some sort of link to edit -->
+          <!-- Some sort of a link to delete -->
+          <%= link_to "Delete", task_path(task),
+                data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
+          <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
+          <!-- If the method is not specified the default is GET -->
         </li>
       <% end %>
     </ul>

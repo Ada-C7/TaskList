@@ -47,6 +47,17 @@ class TasksController < ApplicationController
     redirect_to task_path(task)
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    # Todo show the list of tska//
+    
+    redirect_to tasks_path
+    #Another way instead of re_direct
+    # @tasks = Tasks.all
+    # render :index
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description)
