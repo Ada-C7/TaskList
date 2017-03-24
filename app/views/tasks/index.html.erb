@@ -6,6 +6,11 @@
     <p><%= link_to task[:name], task_path(task.id) %> </p>
     <li>Description: <%=task[:description]%></li>
     <li>Location: <%=task[:location]%></li>
+    <%if task[:completed_at] != nil%>
+        <li>Completed at: <%= task[:completed_at]%></li>
+      <% else %>
+        <li>Task is not completed yet</li>
+    <%end%>
     <%= button_to 'Delete', task_path(task), method: :delete, data: {confirm: 'Are you sure?' }, id: "delete_button"%>
     <%if task[:completed_at] == nil%>
     <%= button_to 'Complete task', complete_task_path(task), method: :patch,  id: "uncompleted_button" %>
