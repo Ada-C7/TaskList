@@ -13,12 +13,12 @@ class TasksController < ApplicationController
             redirect_to tasks_path
         else
             render 'new'
+        end
     end
-  end
 
     def edit
         @task = Task.find(params[:id])
-     end
+    end
 
     def update
         task = Task.find(params[:id])
@@ -37,15 +37,13 @@ class TasksController < ApplicationController
     def destroy
         task = Task.find(params[:id])
         task.destroy
-        flash[:success] = 'Task deleted'
         redirect_to tasks_path
     end
 
     def complete
         task = Task.find(params[:id])
-        task.update_attribute(:completed_at, DateTime.current)
-        flash[:success] = 'Task completed'
-        redirect_to task_path(task)
+        task.update_attribute(:completed_at, DateTime.current.localtime)
+        redirect_to :back
     end
 
     private

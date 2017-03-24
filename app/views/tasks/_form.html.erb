@@ -1,0 +1,8 @@
+<section>
+  <%= form_for @task do |t| %>
+    Name: <%= t.text_field :name %>
+    Description: <%= t.text_field :description %>
+    Completion Time: <%= t.datetime_select :completed_at, {:include_blank => true, :default => nil} %>
+    <%= t.submit value: "#{submit_text}"%>
+  <%end%>
+</section>

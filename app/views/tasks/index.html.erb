@@ -1,13 +1,24 @@
+
+<main>
 <h1>All the tasks</h1>
+
+<%= link_to 'Click to add new task', new_task_path %>
 
 <ul>
   <% @tasks.each do |task| %>
+  <article>
     <li>
-      <p><%= link_to task[:name], task_path(task[:id]) %></p> <%= link_to 'delete', task_path(task[:id]), data: {:confirm => 'You sure?'}, :method => :delete%>
+      <p><%= link_to task[:name], task_path(task[:id]) %></p>
+      <span>
+      <%= link_to "Mark as Complete", complete_task_path(task[:id]), :method => :patch %>
+      	●	●
+      <%= link_to 'Delete', task_path(task[:id]), data: {:confirm => 'You sure?'}, :method => :delete%>
+    </span>
       <p>Description: <%= task[:description] %></p>
-      <p> Completed Time: <%= task[:completed_at] %></p><%= link_to "Mark as Complete", complete_task_path(task[:id]), :method => :patch %>
+      <%= task[:completed_at].nil? ? "Incomplete Task" : "Completed Time: #{task[:completed_at]}" %>
     </li>
     <% end %>
+  </article>
 </ul>
 
-<%= link_to 'Click to add new task', new_task_path %>
+</main>
