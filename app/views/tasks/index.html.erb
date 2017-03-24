@@ -2,7 +2,7 @@
 
 <article class="main-list">
 
-  <h2>Don't Forget</h2>
+  <h2>Don't Forget!</h2>
 
   <% @tasks.each do |task| %>
   <section class="
@@ -11,19 +11,22 @@
     <% else %>
       <%= "complete" %>
     <% end %>" />
-    
-    <h3><%= link_to task.name, task_path(task.id) %></h3>
-    <p>
-      <%= form_for task do |f| %>
-        <%= f.submit "Mark Complete" %>
-      <% end %>
 
-      <% if task.completion_date != nil %>
-          <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} %>
-      <% end %>
-
-    </p>
+    <%= link_to task_path(task.id) do %></h3>
+      <h3><%= task.name %></h3>
+      <p>
+        <% if task.completion_date == nil %>
+          <%= form_for task do |f| %>
+            <%= f.submit "Mark Complete" %>
+          <% end %>
+        <% end %>
+        <% if task.completion_date != nil %>
+            <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} %>
+        <% end %>
+      </p>
+    <% end %>
   </section>
+  
   <% end %>
 
 </article>

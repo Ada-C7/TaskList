@@ -1,7 +1,5 @@
-<h1>Details</h1>
-
 <section>
-  <h2><%= @result_task.name%> :</h2>
+  <h1> <%= @result_task.name%> :</h1>
   <p>
     <strong>Description:</strong> <%= @result_task.description %>
   </p>
@@ -13,6 +11,13 @@
   </p>
 </section>
 
+<p>
+  <% if @result_task.completion_date == nil %>
+    <%= form_for @result_task do |f| %>
+      <%= f.submit "Mark Complete" %>
+    <% end %>
+  <% end %>
+</p>
 <p>
   <% if @result_task.image == nil %>
     <%= image_tag("to-do.jpg", alt:"task photo") %>
