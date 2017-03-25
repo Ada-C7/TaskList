@@ -13,6 +13,17 @@ body {
   background-color: #bfbfbf;
 }
 
+h1 {
+  background-image: image_url('pink-salmon');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 500px;
+  height: 120px;
+  margin: 0 auto 10px;
+  padding-top: 100px;
+}
+
 img {
   height: 20px;
 }
@@ -53,7 +64,7 @@ td:first-child {
 }
 
 td:nth-child(2) {
-  min-width: 60px;
+  min-width: 70px;
 }
 
 .task-actions img {

@@ -1,4 +1,4 @@
-<h1>Tasks</h1>
+<h1>Taskfish</h1>
 
 <% completed = @tasks.select { |task| !task.completion_date.nil? } %>
 <% incomplete = @tasks.select { |task| task.completion_date.nil? } %>
