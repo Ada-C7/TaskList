@@ -10,6 +10,11 @@
 body {
   font-family: sans-serif;
   text-align: center;
+  background-color: #bfbfbf;
+}
+
+img {
+  height: 20px;
 }
 
 a {
@@ -22,11 +27,12 @@ table {
   margin: 0 auto 30px;
   border-collapse: collapse;
   background-image: linear-gradient(#fa7070, #fab570);
+  box-shadow:5px 0px 50px 2px gray;
 }
 
 tr {
   height: 30px;
-  background-color: white;
+  background-color: #f2f2f2;
 }
 
 tr:hover {
@@ -38,28 +44,38 @@ td {
   padding: 10px;
 }
 
-.completed a {
+.completed td:first-child {
   text-decoration: line-through;
 }
 
-.task-action-buttons {
-  text-align: right;
-  min-width: 190px;
+td:first-child {
+  min-width: 200px;
 }
 
-.task-action-buttons .button_to {
-  display: inline-block;
+td:nth-child(2) {
+  min-width: 60px;
+}
+
+.task-actions img {
   visibility: hidden;
 }
 
-tr:hover .task-action-buttons .button_to {
+tr:hover .task-actions img {
   visibility: visible;
 }
 
-form.button_to {
-  text-align: center;
+input[type="submit"] {
+  font-size: 1.25em;
+  font-weight: bold;
+  border: none;
+  background-color: inherit;
 }
 
-form {
+#new-task-button {
   text-align: center;
+  font-weight: bold;
+}
+
+#new-task-button:hover, input[type="submit"]:hover {
+  cursor: pointer;
 }

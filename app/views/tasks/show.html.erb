@@ -1,9 +1,27 @@
-<h1>Task</h1>
-<h3><%= @task.name %></h3>
-<p><%= @task.description %></p>
+<h1><%= @task.name %> <%= link_to image_tag('pencil-icon'), task_edit_path(@task.id), method: :get %></h1>
 
-<% unless @task.completion_date.nil? %>
-  <p>Completed: <%= @task.completion_date %></p>
-<% end %>
+<table>
+  <tr>
+    <td><strong>Description</strong></td>
+    <td>
+      <% if @task.description.empty? %>
+        N/A
+      <% else %>
+        <%= @task.description %>
+      <% end %>
+    </td>
+  </tr>
+  
+  <tr>
+    <td><strong>Status</strong></td>
+    <td>
+      <% if @task.completion_date.nil? %>
+        Incomplete
+      <% else %>
+        Completed on <%= @task.completion_date.strftime("%A, %B %d") %>
+      <% end %>
+    </td>
+  </tr>
+</table>
 
 <%= link_to "<<", tasks_path %>
