@@ -3,13 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
   <li>
-      <% if task.completed_at.nil? %>
-      <%= button_to " ", complete_task_path(task), method: :patch %>
-      <% else %>
-      <%= button_to "✔︎", complete_task_path(task), method: :patch %>
-      <% end %>
+    <%= render partial: "checkbox", locals: {task: task} %>
 
-      <%= link_to task.name, task_path(task.id) %>
+    <%= link_to task.name, task_path(task.id) %>
   </li>
   <% end %>
 </ul>
