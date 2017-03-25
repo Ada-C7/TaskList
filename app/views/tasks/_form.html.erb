@@ -1,0 +1,15 @@
+<section id="form">
+  <%= form_for @task do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit value: "#{submit_text}", class: "buttons"%>
+    </div>
+  <% end %>
+</section>

@@ -1,24 +1,6 @@
-<!-- <form action="/tasks" method="post" accept-charset="utf-8">
+<h1>Add a task</h1>
+<%= render partial: "form", locals: {submit_text: "Add"} %>
 
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-  <label for="name">Name</label>
-  <input type="text" name="task[name]" value="" id="name">
-
-  <label for="description">Description</label>
-  <input type="text" name="task[description]" value="" id="description">
-
-  <input type="submit" value="Submit">
-</form> -->
-
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.submit %>
-<% end %>
-
-<%= button_to "Back", tasks_path, method: :get %>
+<div class="back">
+  <%= button_to "←", tasks_path, method: :get, class: "buttons"%>
+</div>
