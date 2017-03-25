@@ -1,0 +1,8 @@
+<%= link_to task.name, task_path(task.id) %>
+<%= link_to "Edit", "/tasks/#{task.id}/edit" %>
+<%= button_to "Complete", "/tasks/#{task.id}/complete", method: :get %>
+<% if task.completed_at != nil %>
+      <p> Complete! <p>
+<% end %>
+<%= link_to "Delete", "/tasks/#{task.id}", method: :delete,
+      data: { confirm: "Are you sure you want to delete task #{task.name}" } %>

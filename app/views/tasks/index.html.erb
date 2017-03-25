@@ -1,0 +1,11 @@
+<h1>Task Lists</h1>
+
+<h3> <%= link_to "New Task", new_task_path %> </h3>
+<ul>
+  <% @tasks.each do |task| %>
+  <li><%= render partial: "task_summary", locals: { task: task } %></li>
+
+  <%end%>
+
+
+</ul>
