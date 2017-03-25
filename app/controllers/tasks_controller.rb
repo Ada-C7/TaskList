@@ -20,7 +20,6 @@ class TasksController < ApplicationController
 
     task.title = params[:task][:title]
     task.description = params[:task][:description]
-    task.completion = params[:task][:completion]
 
     if task.save
       redirect_to tasks_id_url
@@ -29,7 +28,12 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
+    if task.completion == "Not Yet Completed"
     task.completion = "Completed at #{Date.today}"
+    else
+    task.completion = "Not Yet Completed"
+    end
+
     if task.save
       redirect_to tasks_id_url
     end
