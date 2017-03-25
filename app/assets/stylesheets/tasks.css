@@ -4,6 +4,10 @@
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
 
+.completed{
+  text-decoration: line-through;
+}
+
 h1{
   font-style: oblique;
   font-size: 4em;

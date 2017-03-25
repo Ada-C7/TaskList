@@ -2,15 +2,15 @@
 
 <h2>To do list before trip!</h2>
 
-<main>
+
   <section>
 <ul>
   <% @tasks.each do |task| %>
   <li>
-    <%= task[:name] %>: <%= task[:description] %> <%= task[:completed_at] %> <%= task.description %> | <%= link_to "Complete", complete_task_path(task), method: :put %> <%= render partial: "task_summary", locals: { task: task} %> 
-
+    <span class="<%=  task.completed.nil? ?  "" : "completed" %>"><%= task[:name] %>: <%= task[:description] %> <%= task[:completed_at] %> </span> | <%= link_to "Complete", complete_task_path(task), method: :put %> <%= render partial: "task_summary", locals: { task: task} %>
   </li>
   <% end %>
+
 </ul>
 </section>
 
@@ -24,4 +24,3 @@
   </li>
 </ul>
 </section>
-</main>

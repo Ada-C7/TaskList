@@ -36,6 +36,7 @@ class TasksController < ApplicationController
     task.destroy
     redirect_to tasks_path #refreshes the page
   end
+  
   def complete
     @task = Task.find(params[:id])
     @task.completed = DateTime.now
