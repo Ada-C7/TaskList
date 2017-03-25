@@ -1,0 +1,36 @@
+<ul class="form_new">
+
+  <%= form_for @task, method: form_method do |f| %>
+
+  <li><%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+
+  <li>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </li>
+
+  <li>
+    <%= f.label :due_date %>
+    <%= f.date_field :due_date %> </li>
+
+  <li>
+    <%= f.label :priority %>
+    <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
+  </li>
+
+  <% unless @task.id == nil %>
+  <li>
+    <%= f.label :done? %>
+    <%= f.check_box :done? %>
+  </li>
+  <% end %>
+
+    <!-- options_for_select([['High', 1], ['Medium', 2], ['Low', 3]]) -->
+    <!-- default name on submit button is "Create + Name of model -->
+  <li><%= f.submit %></li>
+
+  <% end %>
+
+</ul>

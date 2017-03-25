@@ -14,7 +14,13 @@
     <header>
       <h1>most maginificent task list</h1>
     </header>
-    
+    <nav>
+      <h3>Let's GSD!</h3>
+      <ul>
+        <li><%= link_to "all", tasks_path %></li>
+        <li><%= link_to "new", tasks_new_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
 
     <footer><p>&copy; <%= Time.current.year %> </p></footer>

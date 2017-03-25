@@ -1,18 +1,17 @@
 <main>
-  <nav>
-    <h3>welcome to your to-dos. let's GSD.</h4>
-    <ul>
-      <li><%= link_to "all", tasks_path %></li>
-      <li><%= link_to "new", tasks_new_path %></li>
-    </ul>
-  </nav>
+
 <section class="high">
 
 <h4>You have some high priority tasks:</h4>
 <ul>
   <% @tasks.each do |task| %>
     <% if task.priority == 1 %>
-      <li><%= link_to task.name, task_path(task.id) %> </li>
+      <li><%= link_to task.name, task_path(task.id) %>
+        <% if task.done %>
+            ✔︎
+        <% else %>
+        <%= link_to "done", task_done_path(task.id), method: :patch %> </li>
+          <% end %>
     <% end %>
   <% end %>
 </ul>
@@ -23,7 +22,12 @@
 <ul>
   <% @tasks.each do |task| %>
     <% if task.priority != 1 %>
-      <li><%= link_to task.name, task_path(task.id) %> </li>
+    <li><%= link_to task.name, task_path(task.id) %>
+      <% if task.done %>
+          ✔︎
+      <% else %>
+      <%= link_to "done", task_done_path(task.id), method: :patch %> </li>
+      <% end %>
     <% end %>
   <% end %>
 </ul>

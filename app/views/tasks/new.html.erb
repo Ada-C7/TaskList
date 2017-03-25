@@ -1,42 +1,5 @@
 <main>
-
-<nav>
-  <h3>Add a New Task</h3>
-  <ul>
-    <li><%= link_to "all", tasks_path %></li>
-    <li><%= link_to "new", tasks_new_path %></li>
-  </ul>
-</nav>
-
-<ul class="form_new">
-
-  <%= form_for @task do |f| %>
-
-  <li><%= f.label :name %>
-    <%= f.text_field :name %>
-  </li>
-
-  <li>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </li>
-
-  <li>
-    <%= f.label :due_date %>
-    <%= f.date_field :due_date %> </li>
-
-  <li>
-    <%= f.label :priority %>
-    <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
-  </li>
-
-    <!-- options_for_select([['High', 1], ['Medium', 2], ['Low', 3]]) -->
-    <!-- default name on submit button is "Create + Name of model -->
-  <li><%= f.submit "add task"%></li>
-
-  <% end %>
-
-</ul>
-
+<h1>Add a New Task</h1>
+<%= render partial: "form", locals: { form_method: :post } %>
 
 </main>
