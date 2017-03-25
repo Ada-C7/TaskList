@@ -1,0 +1,13 @@
+<h1> List of Tasks </h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= render partial: "checkbox", locals: {task: task} %>
+
+    <%= link_to task.name, task_path(task.id) %>
+  </li>
+  <% end %>
+</ul>
+
+<%= button_to "Add", new_task_path, method: :get, class: "buttons" %>

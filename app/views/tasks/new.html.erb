@@ -1,0 +1,6 @@
+<h1>Add a task</h1>
+<%= render partial: "form", locals: {submit_text: "Add"} %>
+
+<div class="back">
+  <%= button_to "←", tasks_path, method: :get, class: "buttons"%>
+</div>
