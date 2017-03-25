@@ -30,7 +30,7 @@ body {
 
 .header, .form_area, #tasks, #task_detail{
   background-color: white;
-  min-width: 400px;
+  min-width: 350px;
   margin: auto;
   width: 50%;
   padding: 10px;
@@ -47,7 +47,7 @@ h1 {
 }
 
 h3 {
-  padding-top: 10px;
+  font-size: 0.9em;
 }
 
 #tasks, .form_area, #task_detail {
@@ -64,12 +64,18 @@ textarea, .field {
 }
 
 #tasks li, .form_area li , #task_detail li {
+  padding-bottom: 10px;
   list-style: none;
   background-color: white;
 }
 
-#task_detail {
+.complete {
+  text-decoration: line-through;
+  color:red;
+}
 
+.options .complete:hover {
+  color:blue;
 }
 
 .options {
@@ -79,6 +85,7 @@ textarea, .field {
 .options h2 {
   display: inline;
 }
+
 .options a {
   background-color: black;
   color: white;

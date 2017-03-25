@@ -7,7 +7,15 @@
   <h3>
     <ul>
       <% @tasks.each_with_index do |task| %>
-      <li><%= link_to task.name, task_path(task.id) %></li>
+      <li>
+        <% if task.completed%>
+        <%= link_to image_tag("checked.png", border: 0, size: 20), complete_task_path(task.id), method: :patch %>
+        <%= link_to task.name, task_path(task.id), class: "complete" %>
+        <% else %>
+        <%= link_to image_tag("unchecked.png", border: 0, size: 20), complete_task_path(task.id), method: :patch %>
+        <%= link_to task.name, task_path(task.id) %>
+        <% end %>
+      </li>
       <% end %>
     </ul>
   </h3>

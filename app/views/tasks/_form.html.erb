@@ -1,9 +1,8 @@
-<div id=edit_form>
   <%= form_for @task do |f| %>
   <ul>
     <h3>
       <li>
-        <%= f.label :name, "Task name"  %>
+        <%= f.label :name, "Task Name"  %>
       </li>
     </h3>
     <li>
@@ -19,18 +18,20 @@
     </li>
     <h3>
       <li>
-        <%= f.label :completion_date, "Task Due Date" %>
+        <%= f.label :duedate, "Due Date" %>
       </li>
     </h3>
     <li>
-      <%= f.datetime_field :completion_date, class: "field"%>
+      <%= f.date_field :duedate, class: "field"%>
     </li>
     <h3>
       <li>
-        <%= f.label :completed, "Completed" %>
-        <%= f.check_box :completed, class: "field"%>
+        <%= f.label :completed, "Task Status" %>
       </li>
     </h3>
+    <li>
+      <%= f.check_box :completed, class: "field" %>
+    </li>
     <li>
       <%= f.submit nil, class: "field" %>
     </li>

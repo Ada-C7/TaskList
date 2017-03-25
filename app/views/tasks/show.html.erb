@@ -6,10 +6,13 @@
   <ul>
     <li><h3>Task Name:</h3> <%= @result_task.name %></li>
     <li><h3>Description:</h3> <%= @result_task.description %></li>
-    <li><h3>completion_dat3:</h3> <%= @result_task.completion_date %></li>
-    <li><h3>completed:</h3> <%= @result_task.completed %></li>
-  </ul>
+    <li><h3>Task Due Date:</h3> <%= @result_task.duedate.to_date %></li>
 
+    <% if @result_task.completed %>
+    <li><h3>Completed:</h3><%= @result_task.completed %></li>
+    <li><h3>Completion Date:</h3><%= @result_task.completion_date.to_date %></li>
+    <% end %>
+</ul>
 </div>
 
 <div class=options>
