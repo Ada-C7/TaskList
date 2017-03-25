@@ -1,0 +1,12 @@
+<h1>Here you can modify a task from the list:</h1>
+
+<%= render partial: "form", locals: { button_text: "Update Task" } %>
+
+</br>
+</br>
+
+<%=button_to "Delete this task", task_path(@task), method: :delete, data:  {confirm: "Are you sure you want to delete this task?"} %>
+
+</br>
+</br>
+<%= link_to "Back to task", task_path %>

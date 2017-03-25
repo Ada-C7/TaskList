@@ -1,0 +1,24 @@
+
+*{
+  background-color:lightblue;
+}
+
+
+li {
+list-style-type: none;
+}
+
+
+ul{
+  padding:0;
+  margin-left: 4rem;
+}
+
+li{
+  padding-bottom: 1rem;
+}
+
+
+.task_list form.button_to{
+  display:inline-block;
+}
