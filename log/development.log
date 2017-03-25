@@ -12528,3 +12528,526 @@ Migrating to AddCompletedTime (20170325013236)
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for ::1 at 2017-03-24 18:38:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (199.4ms)
+  Rendered tasks/index.html.erb within layouts/application (209.1ms)
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `number' for #<#<Class:0x007ff8b3934e88>:0x007ff8b68eb8e8>):
+    1: <li>
+    2: 
+    3:   <%=link_to "Task #{number} : #{task.name.capitalize}",task_path(task.id)%>
+    4: 
+    5:   <%= button_to "Delete", task_path(task),method: :delete%>
+    6:   <%= button_to "Complete", task_path(task),method: :patch%>
+  
+app/views/tasks/_task_summary.html.erb:3:in `_app_views_tasks__task_summary_html_erb__3267515721167883847_70353086756500'
+app/views/tasks/index.html.erb:7:in `block in _app_views_tasks_index_html_erb__316047444140115868_70353070698020'
+app/views/tasks/index.html.erb:5:in `each_with_index'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__316047444140115868_70353070698020'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.3ms)
+Started GET "/tasks" for ::1 at 2017-03-24 18:40:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.4ms)
+  Rendered tasks/_task_summary.html.erb (0.3ms)
+  Rendered tasks/_task_summary.html.erb (0.6ms)
+  Rendered tasks/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 212ms (Views: 209.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:40:31 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"1UwUNLxrk8vwkrPX4pR6rYvR17m7Oz0zOpOoRQSX8NDT1P7Wzkok7g06V2F55cDGIw2QJCONVBbApYc3GrhhmQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:60:in `task_params'
+app/controllers/tasks_controller.rb:51:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:41:39 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"1UwUNLxrk8vwkrPX4pR6rYvR17m7Oz0zOpOoRQSX8NDT1P7Wzkok7g06V2F55cDGIw2QJCONVBbApYc3GrhhmQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:60:in `task_params'
+app/controllers/tasks_controller.rb:51:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.9ms)
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:42:39 -0700
+Processing by TasksController#complete as HTML
+Started GET "/tasks/1" for ::1 at 2017-03-24 18:42:49 -0700
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:42:49 -0700
+  Parameters: {"authenticity_token"=>"1UwUNLxrk8vwkrPX4pR6rYvR17m7Oz0zOpOoRQSX8NDT1P7Wzkok7g06V2F55cDGIw2QJCONVBbApYc3GrhhmQ==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 29ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:61:in `task_params'
+app/controllers/tasks_controller.rb:52:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.4ms)
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"1UwUNLxrk8vwkrPX4pR6rYvR17m7Oz0zOpOoRQSX8NDT1P7Wzkok7g06V2F55cDGIw2QJCONVBbApYc3GrhhmQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  Rendering tasks/show.html.erb within layouts/application
+  
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+app/controllers/tasks_controller.rb:61:in `task_params'
+app/controllers/tasks_controller.rb:52:in `complete'
+Completed 200 OK in 65ms (Views: 51.0ms | ActiveRecord: 1.1ms)
+
+
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.9ms)
+Started GET "/tasks/1/edit" for ::1 at 2017-03-24 18:42:55 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (30.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 18:42:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 18:43:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.9ms)
+  Rendered tasks/_task_summary.html.erb (0.8ms)
+  Rendered tasks/_task_summary.html.erb (0.9ms)
+  Rendered tasks/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:43:01 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"CQlhtc9qcLyp9aJrWuCfJ7enzOG10v7ZYVbmo7xYzZUne/y1pSBkUousGJNVRRbsTi+4MV7Q7YQKnqZljVysZQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:61:in `task_params'
+app/controllers/tasks_controller.rb:52:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.4ms)
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:43:40 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"CQlhtc9qcLyp9aJrWuCfJ7enzOG10v7ZYVbmo7xYzZUne/y1pSBkUousGJNVRRbsTi+4MV7Q7YQKnqZljVysZQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/tasks_controller.rb:52:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:44:20 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"CQlhtc9qcLyp9aJrWuCfJ7enzOG10v7ZYVbmo7xYzZUne/y1pSBkUousGJNVRRbsTi+4MV7Q7YQKnqZljVysZQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:61:in `task_params'
+app/controllers/tasks_controller.rb:52:in `complete'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:46:45 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"CQlhtc9qcLyp9aJrWuCfJ7enzOG10v7ZYVbmo7xYzZUne/y1pSBkUousGJNVRRbsTi+4MV7Q7YQKnqZljVysZQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 01:46:45 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 18:46:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 18:46:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (2.1ms)
+  Rendered tasks/_task_summary.html.erb (1.5ms)
+  Rendered tasks/_task_summary.html.erb (0.9ms)
+  Rendered tasks/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 18:46:49 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"w1wN7gU116RN/C7rJL+ToWMcVgranu9Kp3PdFPqMrK/tLpDub3/DSm+llBMrGhpqmpQi2jGc/BfMu53Sy4jNXw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 18:46:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2017-03-24 18:47:16 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (6.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 18:47:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.5ms)
+  Rendered tasks/_task_summary.html.erb (0.7ms)
+  Rendered tasks/_task_summary.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 20:20:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.5ms)
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/tehutgetahun/ada/que/week7/hw/TaskList/app/views/tasks/_task_summary.html.erb:6: syntax error, unexpected ':', expecting '}'
+hod: :patch, params{completed: true});@output_buffer.safe_ap
+                              ^
+/Users/tehutgetahun/ada/que/week7/hw/TaskList/app/views/tasks/_task_summary.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/tehutgetahun/ada/que/week7/hw/TaskList/app/views/tasks/_task_summary.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/tasks/_task_summary.html.erb:6: syntax error, unexpected ':', expecting '}'
+app/views/tasks/_task_summary.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tasks/_task_summary.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+app/views/tasks/index.html.erb:7:in `block in _app_views_tasks_index_html_erb__316047444140115868_70353079831600'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__316047444140115868_70353079831600'
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.6ms)
+Started GET "/tasks" for ::1 at 2017-03-24 20:20:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.0ms)
+  Rendered tasks/_task_summary.html.erb (0.4ms)
+  Rendered tasks/_task_summary.html.erb (0.3ms)
+  Rendered tasks/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 20:20:38 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"pQZJFIwa9Y3A29wbeb18Cgx2y1azHeYn/3oVfHgQgF+jnqP2/jtCqD1zOK3izMZhpKqMyyurjwIFTDoOZj8RFg==", "completed"=>"true", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-03-25 03:20:38 UTC], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 20:20:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2017-03-24 20:20:40 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 20:20:41 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"th4eY1VvPzUvZW6XzECYFunzTQnCAyDoWhh1dbJjtd+YbINjPyUr2w081G/D5RHdEHs52SkBM7Ux0DWzg2fULw==", "task"=>{"name"=>"Cook Dinner", "deadline"=>"2017-03-22 14:09:00 UTC", "completed"=>"1"}, "commit"=>"Edit", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 03:20:41 UTC], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 20:20:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 21:01:57 -0700
+  
+SyntaxError (/Users/tehutgetahun/ada/que/week7/hw/TaskList/app/controllers/tasks_controller.rb:66: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tasks_controller.rb:66: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tehutgetahun/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.8ms)
+Started GET "/tasks" for ::1 at 2017-03-24 21:02:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.0ms)
+  Rendered tasks/_task_summary.html.erb (0.3ms)
+  Rendered tasks/_task_summary.html.erb (0.3ms)
+  Rendered tasks/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-24 21:02:26 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"cIjb3l+v03uGfgoz3nm+B2GVAFoFLTFrT+tALEqUD0Z2EDE8LY5kXnvW7oVFCARsyUlHx52bWE613W9eVLueDw==", "completed"=>"true", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", true], ["updated_at", 2017-03-25 04:02:26 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 21:02:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 21:02:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.0ms)
+  Rendered tasks/_task_summary.html.erb (2.8ms)
+  Rendered tasks/_task_summary.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-24 21:02:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 21:02:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.2ms)
+  Rendered tasks/_task_summary.html.erb (1.0ms)
+  Rendered tasks/_task_summary.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-24 21:02:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11/edit" for ::1 at 2017-03-24 21:02:43 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/11" for ::1 at 2017-03-24 21:02:46 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5T6iimug/G9G3ZyawvkV3bLJKaNOCV+yzkhsbyQCLJ78Egham1aNfHTvpsaEq/bn1BTePDPt247vzFk7P/4/WQ==", "task"=>{"name"=>"Pet Tofu", "deadline"=>"", "completed"=>"0"}, "commit"=>"Edit", "id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 04:02:46 UTC], ["id", 11]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/11
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-24 21:02:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-24 21:03:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task_summary.html.erb (1.9ms)
+  Rendered tasks/_task_summary.html.erb (0.8ms)
+  Rendered tasks/_task_summary.html.erb (0.8ms)
+  Rendered tasks/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+

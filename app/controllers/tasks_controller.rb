@@ -47,9 +47,9 @@ class TasksController < ApplicationController
   end
 
   def complete
+    # @task
     task = Task.find(params[:id])
-      task.update_attributes(task_params)
-
+    task.update_attribute(:completed,params[:completed])
     task.save
     redirect_to task_path
   end
