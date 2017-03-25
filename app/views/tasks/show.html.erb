@@ -10,9 +10,9 @@
 <p><%= @task.description %></p>
 
 <% if @task.completed %>
-  <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y at %I:%M%p") %>! Yay!</p>
+  <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
 <% else %>
-  <p>Complete by: <%= @task.deadline.strftime("%m/%d/%Y at %I:%M%p") %></p>
+  <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
 <% end %>
 
 <p>

@@ -22,14 +22,8 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-
-    task.name = task_params[:name]
-    task.description = task_params[:description]
-    task.deadline = task_params[:deadline]
-    task.completed = task_params[:completed]
-
-    if task.save
-      redirect_to task_path(task.id)
+    if task.update(task_params)
+      redirect_to task_path
     end
   end
 
@@ -43,7 +37,7 @@ class TasksController < ApplicationController
     if task.completed
       task.completed = nil
     else
-      task.completed = DateTime.now
+      task.completed = Time.now
     end
 
     redirect_to(:back) if task.save
@@ -52,6 +46,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description, :deadline, :completed)
+    params.require(:task).permit(:name, :description, :deadline)
   end
 end
