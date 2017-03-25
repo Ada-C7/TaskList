@@ -3,7 +3,7 @@
   <%=link_to "#{task.name.capitalize}",task_path(task.id)%>
 
   <%= button_to "Delete", task_path(task),method: :delete%>
-  <%= button_to "Complete", task_path(task),method: :patch, params:{completed: true}%>
+  <%= button_to "Mark Complete", task_path(task),method: :patch, params:{completed: true}%>
 
 
 </li>
