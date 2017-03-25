@@ -14,15 +14,24 @@ ul {
 
 li {
   list-style-type: none;
+  font-size: 1.5em;
 }
 
-li:before {
-  content: "\2610";
-  margin-right:5px;
+li a:first-child {
+  margin-right: 3px;
+  color: #000;
 }
 
-li.completed::before {
-  content: "\2713"
+li a:first-child:hover {
+  text-shadow: 0 0 6px rgba(35, 173, 255, 1);
+}
+
+li a + a {
+  color: #000;
+}
+
+li a + a:hover {
+  color: #808080;
 }
 
 header {
@@ -33,10 +42,11 @@ header {
 header h1 a {
   color: #fff;
   margin: 0;
+  transition: all 0.5s;
 }
 
 header h1 a:hover {
-  color: #eee;
+  color: #ffe14f;
 }
 
 a {

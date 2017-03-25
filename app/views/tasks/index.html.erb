@@ -2,25 +2,14 @@
 
 <ul>
   <% @tasks.each do |task| %>
-    <% if task.completed %>
-      <li class="completed">
-        <%= link_to task.name, task_path(task.id) %>
-        <%=
-          link_to "undo", toggle_complete_path(task.id),
-          method: :patch,
-          class: "complete_button"
-        %>
-      </li>
-    <% else %>
-      <li>
-        <%= link_to task.name, task_path(task.id) %>
-        <%=
-          link_to "mark completed", toggle_complete_path(task.id),
-          method: :patch,
-          class: "complete_button"
-        %>
-      </li>
-    <% end %>
+    <li>
+      <% if task.completed %>
+        <%= link_to raw("&#9745;"), toggle_complete_path(task.id), method: :patch %>
+      <% else %>
+        <%= link_to raw("&#9744;"), toggle_complete_path(task.id), method: :patch %>
+      <% end %>
+      <%= link_to task.name, task_path(task.id) %>
+    </li>
   <% end %>
 </ul>
 
