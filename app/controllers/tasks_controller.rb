@@ -45,8 +45,8 @@ class TasksController < ApplicationController
     else
       task.completed = DateTime.now
     end
-    
-    redirect_to tasks_path if task.save
+
+    redirect_to(:back) if task.save
   end
 
   private

@@ -1,11 +1,18 @@
-<h2><%= @task.name %></h2>
+<h2>
+  <% if @task.completed %>
+    <%= link_to raw("&#9745;"), toggle_complete_path, method: :patch %>
+  <% else %>
+    <%= link_to raw("&#9744;"), toggle_complete_path, method: :patch %>
+  <% end %>
+  <%= @task.name %>
+</h2>
 
 <p><%= @task.description %></p>
 
 <% if @task.completed %>
-  <p>&check; Task completed on <%= @task.completed %>! Yay!</p>
+  <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y at %I:%M%p") %>! Yay!</p>
 <% else %>
-  <p>Complete by: <%= @task.deadline %></p>
+  <p>Complete by: <%= @task.deadline.strftime("%m/%d/%Y at %I:%M%p") %></p>
 <% end %>
 
 <p>

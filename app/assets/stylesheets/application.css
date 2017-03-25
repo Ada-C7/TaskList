@@ -26,15 +26,15 @@
 
  li {
    list-style-type: none;
-   font-size: 1.5em;
+   font-size: 1.3em;
  }
 
- li a:first-child {
+ li a:first-child, h2 a {
    margin-right: 3px;
    color: #000;
  }
 
- li a:first-child:hover {
+ li a:first-child:hover, h2 a:hover {
    text-shadow: 0 0 6px rgba(35, 173, 255, 1);
  }
 
