@@ -38,6 +38,14 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    task = Task.find(params[:id])
+    task.completion_date = Time.now.strftime("%l:%M %P, %B %d, %Y")
+
+    task.save
+    redirect_to tasks_path
+  end
+
 private
   def task_params
     return params.require(:task).permit(:name, :description, :completion_date)
