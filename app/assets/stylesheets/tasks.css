@@ -1,19 +1,10 @@
-.completed {
-  font-style: italic;
-}
+/*************************************
+                  All
+*************************************/
 
-.button_to {
-  display: inline-block;
-  padding-left: 42vw;
-}
-
-h2, h3 {
-  padding-left: 42vw;
-}
-
-ul li {
-  font-size: 1.2em;
-  padding: 0.5vh 0;
+body {
+  background-color: #B2C9FF;
+  margin: 0;
 }
 
 .buttons {
@@ -29,9 +20,23 @@ h1 {
   font-size: 2.2em;
 }
 
-body {
-  background-color: #B2C9FF;
-  margin: 0;
+/*************************************
+                INDEX
+*************************************/
+
+
+h2, h3 {
+  padding-left: 42vw;
+}
+
+.button_to {
+  display: inline-block;
+  padding-left: 42vw;
+}
+
+ul li, #form {
+  font-size: 1.2em;
+  padding: 0.5vh 0;
 }
 
 ul a {
@@ -48,8 +53,11 @@ ul {
   padding: 0;
 }
 
+/*************************************
+                SHOW
+*************************************/
+
 aside .button_to {
-  /*display: inline-block;*/
   padding: 0 0.5vw;
 }
 
@@ -60,4 +68,35 @@ aside {
 #details h1, #details h3, #details h4 {
   padding-left: 0;
   text-align: center;
+}
+
+.completed {
+  font-style: italic;
+}
+
+/*************************************
+              NEW & EDIT
+*************************************/
+
+#form {
+  padding: 3vh 0 0 0;
+  text-align: center;
+}
+
+#form label, #form input {
+  padding: 0 0.5vw;
+}
+
+#form div {
+  display: block;
+  padding-bottom: 1vh;
+}
+
+.back .button_to {
+  padding: 0;
+}
+
+.back {
+  text-align: center;
+  padding-top: 1vh;
 }

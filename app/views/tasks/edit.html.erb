@@ -1,11 +1,6 @@
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<h1>Update a task</h1>
+<%= render partial: "form", locals: {submit_text: "Update"} %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.submit %>
-<% end %>
-
-<%= button_to "Back", task_path(@task.id), method: :get %>
+<div class="back">
+  <%= button_to "←", task_path(@task.id), method: :get, class: "buttons", class: "back" %>
+</div>

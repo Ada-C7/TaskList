@@ -8,9 +8,9 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_params) # create new book and add to database
+    Task.create(task_params) # create new task and add to database
 
-    redirect_to tasks_path # return to books page
+    redirect_to tasks_path # return to tasks page
   end
 
   def show
