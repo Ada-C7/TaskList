@@ -1,0 +1,21 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+
+<h1>Tasks To-Do</h1>
+<nav>
+  <a href="/tasks/new" class="button">Add a New Task</a>
+</nav>
+
+    <% @tasks.each do |task| %>
+    <section class="tasks">
+    <a href="/tasks/<%= task.id %>"><ul class="task">
+        <h2><%= task.title %></h2>
+      <li id="description">
+        <%= task.description %>
+      </li>
+    </ul></a>
+    <br />
+  </section>
+
+    <% end %>

@@ -1,0 +1,14 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+
+<h1>Add New Tasks</h1>
+
+
+
+<%= render partial: "form", locals: { action_name: "New", form_method: :new } %>
+
+
+<section id="new_button">
+  <a href="/tasks" class="button">Back to Tasks List</a>
+</section>

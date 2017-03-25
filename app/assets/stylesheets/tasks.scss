@@ -1,0 +1,118 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$text_color: lighten(complement(#4AC29A), 10%);
+$box_size: 300px;
+$text_font: 'Nunito', sans-serif;
+
+ @mixin gradient {
+   background: #4AC29A; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #4AC29A , #BDFFF3); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #4AC29A , #BDFFF3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+ @mixin hover_gradient {
+   background: #FFAFBD; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to left, #FFAFBD , #ffc3a0); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to left, #FFAFBD , #ffc3a0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   color:desaturate(complement(#FFAFBD), 10%);
+   transition: color 0.3s linear;
+   -webkit-transition: color 0.3s linear;
+   -moz-transition: color 0.3s linear;
+ }
+
+ @mixin centerer($translate) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate($translate, $translate);
+}
+
+
+ body {
+   @include gradient;
+   color:$text_color;
+   text-align:center;
+   a {
+     color:$text_color;
+     font-family: $text_font;
+     text-decoration:none;
+   }
+ }
+
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 2.0em;
+}
+
+nav {
+  margin:50px;
+}
+
+.tasks {
+  display:inline-block;
+  vertical-align: middle;
+  .task {
+    font-family:$text_font;
+    position:relative;
+    border-style:solid;
+    list-style:none;
+    height:$box_size;
+    width:$box_size;
+    border-radius: 10px;
+     #description {
+        @include centerer(-50%);
+    }
+    h2 {
+      margin-right:30px;
+    }
+    &:hover {
+      @include hover_gradient;
+    }
+  }
+
+}
+
+.status {
+  font-family: $text-font;
+  list-style:none;
+  padding:50px;
+  h2 {
+    font-size:2.0em;
+    border-style-bottom:none;
+  }
+  li {
+    padding:10px;
+    font-size:1.5em;
+  }
+}
+
+.button {
+  border-style:solid;
+  padding:20px;
+  text-decoration:none;
+  border-radius: 10px;
+  &:hover {
+    @include hover_gradient;
+  }
+}
+
+.new_button {
+  @extend .button;
+  background:white;
+  font-family: $text-font;
+  color: $text_color;
+  font-size:1em;
+}
+
+form {
+  font-family: $text-font;
+  margin-top:30px;
+}
+
+#new_button {
+  display:inline-block;
+  margin-top:100px;
+}

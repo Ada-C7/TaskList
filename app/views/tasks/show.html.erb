@@ -1,0 +1,22 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+
+<h1>Task Status</h1>
+
+  <ul class = "status">
+    <h2><%= @result_task[:title] %></h2>
+      <li><%= @result_task[:description] %></li>
+      <li>Status: <%= @result_task[:completion] %></li>
+  </ul>
+
+  <%= link_to "Edit", edit_task_path(@result_task.id), class: 'button' %>
+  <%= link_to "Delete", delete_task_path(@result_task.id), method: :delete,
+      data: { confirm: "Are you sure you want to delete?"},
+      class: 'button' %>
+      <%= link_to "Update Completion", complete_task_path(@result_task.id),
+      method: :complete, class: "button" %>
+
+
+
+  <a href="/tasks" class="button">Back to Tasks List</a>

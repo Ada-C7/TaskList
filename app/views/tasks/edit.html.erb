@@ -1,0 +1,20 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Nunito" rel="stylesheet">
+</head>
+<h1>Edit Task</h1>
+<br />
+<%= link_to "Back to Task", tasks_id_path, class: 'button' %>
+<br />
+<br />
+<%= form_for @task, url: tasks_id_url, method: :put do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :description %>
+<%= f.text_field :description, :size => 150 %>
+<br />
+<br />
+
+<%= f.submit "Submit", class: 'new_button' %>
+<% end %>
