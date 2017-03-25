@@ -8,6 +8,37 @@ body {
   color: white;
   margin-left: 70px;
   font-family: "Baloo Bhaina"
+}
+
+.button {
+  width: 100px;
+  color: white;
+  background-color: #6217C4
+}
+
+.add-button {
+
+  margin-left: 60px;
+  margin-top: 70px;
+
+}
+
+.name {
+  margin-left: 50px;
+}
+
+input {
+  // background-color: #6217C4
+}
+
+.description {
+  margin-left: 9px;
+
+}
+
+.completion_date {
+
+  margin-left: -25px;
 
 }
 
@@ -19,7 +50,16 @@ a {
 }
 
 h1 {
-  color: blue;
+  color: #52F4FF;
+  margin-left:70px;
+
+}
+
+h2 {
+  margin-left:70px;
+
+}
+p {
   margin-left:70px;
 
 }
@@ -29,7 +69,11 @@ table {
   border: .2em dashed black;
 
 }
+th {
+  color:#C317C4;
+   font-size: 1.1em;
 
+}
 
 td {
   padding: 20px;
@@ -45,12 +89,5 @@ tr {
 li {
   list-style: none;
   line-height: 30px;
-
-}
-
-.button {
-  width: 50px;
-  color: white;
-  background-color: blue;
 
 }

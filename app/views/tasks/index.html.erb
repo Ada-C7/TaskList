@@ -1,4 +1,4 @@
-<h1>My Tasks List</h1>
+<h1>My Task List</h1>
 
   <table>
     <tr>
@@ -23,7 +23,7 @@
       <td>  <%= task.description %></td>
       <td> <%=task.completion_date %> </td>
       <td> <%if task.completion_date != nil %>
-        <%= link_to "👍🏻", task_completed_path(task.id), method: :patch %>
+        <%= link_to "👍", task_completed_path(task.id), method: :patch %>
         <% else %>
         <%= link_to "👎", task_completed_path(task.id), method: :patch %>
 
@@ -38,4 +38,4 @@
     <% end%>
   </table>
 
-<%= button_to "Add New Task", { :action => "new" }, :method => :get %>
+<%= button_to "Add New Task", { :action => "new" }, :method => :get, :class =>"add-button" %>

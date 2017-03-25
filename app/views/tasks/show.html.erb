@@ -1,9 +1,12 @@
 <h1>All about This Task</h1>
 
-<p> This task is :
-  <%= @result_task[:description]%> should be completed by, <%= @result_task[:Due_date]%>
+<p>
 
-
+  <% if @result_task.completion_date != nil %>
+  <%= @result_task[:description]%> was completed on <%= @result_task[:completion_date] %> 😀
+  <% else %>
+  <%= @result_task[:description]%> need to be completed 😡
+  <% end %>
 </p>
 
 <h2>
