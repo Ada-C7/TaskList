@@ -16,12 +16,22 @@
 
 
 body {
-  background-color: DarkGray;
-  font-family: fantasy;
-  color: white;
+  background-color: #b8a9c9;
+  font-family: cursive;
+  color: #622569;
   text-align: left;
 }
 
+a {
+  color: #588c7e;
+}
+
 a:visited {
-  color: black;
+  color: #f0efef;
+}
+
+ul {
+  border: solid;
+  border-color: inherit;
+  width: 50%;
 }
