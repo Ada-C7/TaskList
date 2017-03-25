@@ -1,5 +1,8 @@
 <h1><%= @task.name %></h1>
 <h2><%= @task.description %></h2>
+<h3 class="completed">
+  <%= @task.completed_at.nil? ? "" : "Completed: #{@task.completed_at}" %>
+</h3>
 
 <%= button_to "Edit", edit_task_path(@task.id), method: :get %>
 <%= button_to "Delete", task_path(@task.id), method: :delete,

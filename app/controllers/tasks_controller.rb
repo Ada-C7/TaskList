@@ -36,6 +36,12 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    Task.find(params[:id]).reverse_complete
+
+    redirect_to tasks_path
+  end
+
   private
 
   def task_params # strong params, prevent bad user input, only permit a task and a name and description to describe that task

@@ -1,0 +1,13 @@
+.completed {
+  font-style: italic;
+}
+
+.button_to {
+  /*text-decoration: line-through;*/
+  display: inline-block;
+  /*text-decoration: none;*/
+}
+
+/*.task_list {
+  text-decoration: none;
+}*/
