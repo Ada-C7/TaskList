@@ -23,11 +23,12 @@ class TasksController < ApplicationController
     redirect_to task_path(task)
   end
 
-  # def complete
-  #   task = Task.find(params[:id])
-  #   task.completed_at =
-  #
-  # end
+  def complete
+    task = Task.find(params[:id])
+    task.completed_at = Time.now
+    task.save
+    redirect_to tasks_path
+  end
 
   def create
     Task.create(task_params)
