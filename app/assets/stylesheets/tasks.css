@@ -4,5 +4,21 @@
 
 h1 {
   font-size: 100px;
-  font: helvetica; 
+  font: helvetica;
+  color: slategray;
+}
+
+h3 {
+  font-size: 30px;
+  font: helvetica;
+}
+
+p {
+  font-size: 20px;
+  font: helvetica;
+}
+
+ul {
+  font-size: 20px;
+  font: helvetica;
 }
