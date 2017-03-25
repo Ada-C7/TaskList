@@ -3,7 +3,11 @@
 
   Name:<%= f.text_field :name%>
   Deadline: <%= f.text_field :deadline%>
+  Completed: <%= f.check_box :completed %>
   <%= f.submit value: "#{submit_text}"%>
+<br>
+<br>
+  <%=link_to "Return to Task: #{@task.id}",task_path(@task.id)%>
   <% end %>
 
 

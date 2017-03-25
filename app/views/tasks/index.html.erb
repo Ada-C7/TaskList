@@ -3,7 +3,10 @@
 
 <ul>
   <%@tasks.each do |task|%>
-    <%= render partial:'task_summary', locals:{task:task}%>
+
+  <%= render partial:'task_summary', locals:{task:task}%>
+
+
 <%end%>
   </ul>
 <h4> <%= link_to "add a new task", new_task_path%></h4

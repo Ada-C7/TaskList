@@ -2,6 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+
   end
 
 
@@ -14,7 +15,7 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.update_attributes(task_params)
     task.save
-    redirect_to tasks_path
+    redirect_to task_path
   end
 
   def edit
@@ -45,10 +46,18 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    task = Task.find(params[:id])
+      task.update_attributes(task_params)
+
+    task.save
+    redirect_to task_path
+  end
+
 
   private
   def task_params
-    return params.require(:task).permit(:name, :deadline)
+    return params.require(:task).permit(:name, :deadline, :completed)
   end
 
   def not_found

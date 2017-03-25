@@ -2,7 +2,8 @@
 
   <%=link_to "Task #{task.id} : #{task.name.capitalize}",task_path(task.id)%>
 
-  <%= button_to "Delete", task_path(task),method: :delete,
-        data:{ confirm: "Are you sure you want to delete the task #{task.name}"}%>
+  <%= button_to "Delete", task_path(task),method: :delete%>
+  <%= button_to "Complete", task_path(task),method: :patch%>
 
+        
 </li>
