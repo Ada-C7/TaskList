@@ -17,8 +17,12 @@ li {
 }
 
 li:before {
-    content: "\2610";
-    margin-right:5px;
+  content: "\2610";
+  margin-right:5px;
+}
+
+li.completed::before {
+  content: "\2713"
 }
 
 header {
