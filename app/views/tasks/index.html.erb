@@ -6,7 +6,7 @@
 <li>
   <%= link_to task.name, task_path(task.id) %>: <%= task.description %>
   Date completed: <%= task.completion_date %>
-  <%= content_tag(:button,"Task Complete!", :type=> :submit)%>
+  <%= link_to "Task Complete!", complete_path(task.id), method: :put %>
 </li>
 <% end %>
 </ul>

@@ -20,7 +20,12 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @task = Task.find(params[:id]) 
+    @task = Task.find(params[:id])
+    if @task.completion_date == nil
+      @task.completion_date = Date.today
+      @task.save
+    end
+    redirect_to tasks_path
   end
 
   def destroy
@@ -44,6 +49,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description, :completion_date)
+    params.require(:task).permit(:name, :description)
   end
 end
