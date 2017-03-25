@@ -3,11 +3,61 @@
 }
 
 .button_to {
-  /*text-decoration: line-through;*/
   display: inline-block;
-  /*text-decoration: none;*/
+  padding-left: 42vw;
 }
 
-/*.task_list {
+h2, h3 {
+  padding-left: 42vw;
+}
+
+ul li {
+  font-size: 1.2em;
+  padding: 0.5vh 0;
+}
+
+.buttons {
+    font-size: 2em;
+}
+
+h1 {
+  background-color: #59647F;
+  margin: 0;
+  padding: 20px 0;
+  padding-left: 42vw;
+  color: #D3DDE5;
+  font-size: 2.2em;
+}
+
+body {
+  background-color: #B2C9FF;
+  margin: 0;
+}
+
+ul a {
   text-decoration: none;
-}*/
+  color: black;
+}
+
+ul a:hover {
+  color: #B07CBF;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside .button_to {
+  /*display: inline-block;*/
+  padding: 0 0.5vw;
+}
+
+aside {
+  text-align: center;
+}
+
+#details h1, #details h3, #details h4 {
+  padding-left: 0;
+  text-align: center;
+}

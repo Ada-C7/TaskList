@@ -2,7 +2,7 @@
 
 <ul>
   <% @tasks.each do |task| %>
-  <li class="task_list">
+  <li>
       <% if task.completed_at.nil? %>
       <%= button_to " ", complete_task_path(task), method: :patch %>
       <% else %>
@@ -15,4 +15,4 @@
   <% end %>
 </ul>
 
-<%= button_to "Add", new_task_path, method: :get %>
+<%= button_to "Add", new_task_path, method: :get, class: "buttons" %>
