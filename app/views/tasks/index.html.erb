@@ -1,0 +1,15 @@
+<h1>List of tasks</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+
+<li>
+  <%= link_to task.name, task_path(task.id) %>- <%= task.description %>.
+  Date completed: <%= task.completion_date %>
+  <%= button_to "Task done!", complete_path(task.id), :method => :put %>
+  <!-- <%= link_to "Task done!", complete_path(task.id), method: :put %> -->
+</li>
+<% end %>
+</ul>
+
+<a href="/tasks/new">Add a new task!</a>

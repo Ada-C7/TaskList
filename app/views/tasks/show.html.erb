@@ -1,0 +1,15 @@
+<h1>The task everyones talking about!</h1>
+
+<p>
+  Task name: <%= @result_task.name %> Description: <%= @result_task.description %>.
+  Date completed:<%= @result_task.completion_date %>
+</p>
+
+<%= link_to "Edit", edit_task_path(@result_task.id) %>
+<%= link_to "Delete", delete_task_path(@result_task.id),
+data: {confirm: "Are you sure you want to delete this book?"},
+method: :delete
+%>
+<p>
+  <%= link_to "Home", tasks_path %>
+</p>
