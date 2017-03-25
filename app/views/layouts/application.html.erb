@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<%#comment%>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<div class="paper">
+  <div class="lines">
+      <div class="text" spellcheck="false">
+
+    <body>
+      <header>
+        <h1>Erica's Terrible Chores</h1>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+      <br />
+    </body>
+    </html>
+
+      </div>
+      <div class="holes hole-top"></div>
+      <div class="holes hole-middle"></div>
+      <div class="holes hole-bottom"></div>
+    </div>
+
+  <div class="holes hole-middle"></div>
+  <div class="holes hole-bottom"></div>
+</div>
