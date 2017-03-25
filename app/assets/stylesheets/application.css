@@ -5,9 +5,10 @@ header {
   font-size: 2em;
 }
 
-main h1 {
+main h1, main h2 {
   font-family: fantasy;
   color: cadetblue;
+  font-size: 2.5em;
 }
 
 ul {
