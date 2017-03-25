@@ -19,6 +19,10 @@ class TasksController < ApplicationController
       end
   end
 
+  def complete
+    @task = Task.find(params[:id]) 
+  end
+
   def destroy
     Task.destroy(params[:id])
 
