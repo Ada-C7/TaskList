@@ -3,15 +3,17 @@
 <ul>
   <% @tasks.each  do |task| %>
   <li>
-    <%= link_to task[:chore], task_path(task.id) %>
-    <%= link_to "Edit Chore", edit_task_path(task.id) %>
-    <%= button_to "Delete", task_path(task.id), method: :delete,
-    data: { confirm: "Are you sure you want to remove #{task.chore}?" }%>
-  </li>
-  <% end %>
-  <p>
-    <%= link_to "Add Chore", new_task_path %>
-  </p>
-</ul>
+      <%= complete_button(task) %>
+      <%= link_to task[:chore], task_path(task.id) %>
+      <%= link_to "Edit Chore", edit_task_path(task.id) %>
+      <%= button_to "Delete", task_path(task.id), method: :delete,
+      data: { confirm: "Are you sure you want to remove #{task.chore}?" }%>
 
-<%= link_to "go back to the home page", welcome_path %>
+    </li>
+    <% end %>
+    <p>
+      <%= link_to "Add Chore", new_task_path %>
+    </p>
+  </ul>
+
+  <%= link_to "go back to the home page", welcome_path %>

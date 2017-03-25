@@ -4,6 +4,9 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+  def check
+    @task=Task.find(params[:id])
+  end
 
   def create
     Task.create(task_params)
@@ -12,10 +15,10 @@ class TasksController < ApplicationController
   end
 
   def destroy
-     task = Task.find(params[:id])
-     task.destroy
+    task = Task.find(params[:id])
+    task.destroy
 
-     redirect_to tasks_path
+    redirect_to tasks_path
   end
 
   def edit
@@ -23,7 +26,7 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    @task = Task.new(completed: nil)
   end
 
   def show
@@ -31,18 +34,25 @@ class TasksController < ApplicationController
   end
 
 
-def update
-  task = Task.find(params[:id])
-  task.update_attributes(task_params)
-  task.save
+  def update
+    task = Task.find(params[:id])
+    task.update_attributes(task_params)
+    task.save
 
-  redirect_to task_path(task)
-end
+    redirect_to tasks_path
+  end
+
+  def completed
+    task = Task.find(params[:id])
+    task.complete
+    task.save
+    redirect_to tasks_path
+  end
 
 
 
-private
-def task_params
-  return params.require(:task).permit(:chore, :completed, :name)
-end
+  private
+  def task_params
+    return params.require(:task).permit(:chore, :completed, :name)
+  end
 end
