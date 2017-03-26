@@ -1,3 +1,5 @@
+<article class="page">
+
 <h1>Edit a Task</h1>
 
 <%= form_for @task, method: :put do |f| %>
@@ -9,7 +11,7 @@
   <%= f.text_field :image %>
 
   <%= f.label :description %>
-  <%= f.text_area :description, size: "60x12" %>
+  <%= f.text_area :description, size: "43x12" %>
 
   <%= f.label :status %>
   <%= f.select :status, ["Haven't Started", "Getting There", "Almost Done!"] %>
@@ -20,3 +22,5 @@
   <%= f.submit "Save" %>
 
 <% end %>
+
+</article>

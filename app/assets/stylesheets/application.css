@@ -146,15 +146,16 @@ a.bottom-button:hover {
   color: rgb(5, 181, 214);
 }
 
-/*Adding styling to the show page*/
+/*Adding styling to the show, new & edit pages*/
 
-.showpage {
+.page {
   border: 5px solid rgb(208, 188, 4);
   width: 300px;
   padding: 10px;
   border-radius: 10px;
+  clear: both;
 }
 
-.showpage h1 {
+.page h1 {
   margin-top: 0;
 }

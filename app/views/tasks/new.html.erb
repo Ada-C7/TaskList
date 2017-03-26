@@ -1,3 +1,4 @@
+<article class="page">
 <h1>Create New Task</h1>
 
   <%= form_for @task do |f| %>
@@ -6,7 +7,7 @@
     <%= f.text_field :name %>
 
     <%= f.label :description %>
-    <%= f.text_area :description, size: "60x12" %>
+    <%= f.text_area :description, size: "43x12" %>
 
     <%= f.label :status %>
     <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
@@ -17,3 +18,4 @@
     <%= f.submit "Add Task" %>
 
   <% end %>
+</article>
