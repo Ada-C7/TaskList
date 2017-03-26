@@ -11,23 +11,27 @@
 
 
 
-  <nav>
+  <nav id = "index_nav">
     <ul>
       <% @tasks.each_with_index do |task| %>
         <li>
-          <%= link_to task[:name], task_path(task.id) %>
-          <%= ":    "%>
-          <%= task[:description] %>
-          <%= "/    "%>
-          <%= task[:completion_date] %>
+          <p>
+            Task <%= task.id%>
+          </p>
 
-
-          <%= link_to "Edit task", edit_task_path(task) %>
-          <%= link_to "Completed", status_path(task), method: :patch %>
-          <%= link_to "Delete", task_path(task),
-                data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
-          <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
-          <!-- If the method is not specified the default is GET -->
+          <li id = "index_task_info">
+            <%= link_to task[:name], task_path(task.id) %>
+            <%= task[:description] %>
+            <%= task[:completion_date] %>
+          </li>
+          <li id = "index_action_buttons">
+            <%= link_to "Edit task", edit_task_path(task) %>
+            <%= link_to "Completed", status_path(task), method: :patch %>
+            <%= link_to "Delete", task_path(task),
+                  data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
+            <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
+            <!-- If the method is not specified the default is GET -->
+          </li>
         </li>
       <% end %>
     </ul>

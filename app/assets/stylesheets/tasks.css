@@ -11,6 +11,20 @@
   padding: 15px;
 }
 
+#index_main li {
+  list-style-type: none;
+}
+
+#index_main a {
+  text-decoration: none;
+}
+
+#index_main ul {
+  padding: 0;
+}
+
+
+
 #index_section_1 {
   position: relative;
 }
@@ -26,6 +40,7 @@
 
 #index_h1 {
   display: inline-block;
+  width: 50%;
   color: #0B3C5D;
 }
 
@@ -34,37 +49,26 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 2%;
+  right: 0%;
 }
 
+#index_nav p {
+  display: inline-block;
+  margin: 0;
+  float: left;
+  width: 10%;
+}
 
-
-
-
-
-
-
-#index_main nav {
+#index_task_info {
   display: inline-block;
   width: 50%;
-
-  /*text-align: center;*/
 }
 
-#index_main ul {
-  padding-left: 10px;
-}
-
-
-#index_main li {
-  list-style-type: none;
-}
-
-#index_main a {
-  text-decoration: none;
-}
-
-#new_task_button {
+#index_action_buttons {
   display: inline-block;
-  float: right
+  float: right;
+}
+
+#index_action_buttons a{
+  margin-left: 15px;
 }
