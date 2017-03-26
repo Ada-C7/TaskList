@@ -95,6 +95,24 @@ ul {
     margin-left: 30px;
 }
 
-// #undone_button {
-//     font-size: 80px;
-// }
+.label {
+    color: #46494C;
+    font-family: 'Didact Gothic', sans-serif;;
+}
+
+.text_field {
+    font-family: Arimo;
+    color: #46494C;
+    font-size: 20px;
+    display: block;
+}
+
+#submit_button {
+    font-size: 20px;
+    font-family: Arimo;
+    color: #46494C;
+    padding: 15px 30px 15px 30px;
+    border: solid;
+    border-color: #1985A1;
+    border-radius: 15%;
+}
