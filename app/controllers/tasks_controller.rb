@@ -36,6 +36,21 @@ class TasksController < ApplicationController
     end
   end
 
+  def complete
+    @task = Task.find(params[:id])
+
+    @task.completion_date = Time.now.strftime("%m/%d/%Y")
+
+    if @task.save
+      redirect_to task_path(@task.id)
+    end
+  end
+
+  def destroy
+    Task.destroy(params[:id])
+    redirect_to tasks_path
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description, :due_date, :completion_date)

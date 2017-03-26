@@ -1,13 +1,21 @@
-<h1>Tasks</h1>
+<h1>Incomplete Tasks</h1>
 
 <section class="index">
   <ul>
     <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.name, task_path(task.id) %>
+
+      <%# if task.completion_date == nil %>
+        <%= link_to "⬜️", complete_task_path(task.id), data: { confirm: "Is this task truely complete?" }, method: :patch %>
+        <%= link_to task.name, task_path(task.id)%>
+
+      <%# else %>
+        <%#= "✔️" %>
+      <%# end %>
     </li>
     <% end %>
   </ul>
+
   <p>
     <%= link_to "Add Task", new_task_path %>
   </p>
