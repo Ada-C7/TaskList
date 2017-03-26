@@ -3,15 +3,17 @@
 <section class="high">
 
 <h4>You have some high priority tasks:</h4>
-<ul>
+<ul class="task_list">
   <% @tasks.each do |task| %>
-    <% if task.priority == 1 %>
-      <li><%= link_to task.name, task_path(task.id) %>
+    <% if task.priority == "high" %>
+      <li>
+        <p><%= link_to task.name, task_path(task.id) %></p>
         <% if task.done %>
-            ✔︎
+          <p >✔︎</p>
         <% else %>
-        <%= link_to "done", task_done_path(task.id), method: :patch %> </li>
-          <% end %>
+          <p id="done"><%= link_to "done!", task_done_path(task.id), method: :patch %></p>
+        <% end %>
+      </li>
     <% end %>
   <% end %>
 </ul>
@@ -19,15 +21,17 @@
 
 <section>
 <h4>Your other tasks are not as urgent:</h4>
-<ul>
+<ul class="task_list">
   <% @tasks.each do |task| %>
-    <% if task.priority != 1 %>
-    <li><%= link_to task.name, task_path(task.id) %>
+    <% if task.priority != "high" %>
+    <li>
+      <p><%= link_to task.name, task_path(task.id) %></p>
       <% if task.done %>
-          ✔︎
+        <p>✔︎</p>
       <% else %>
-      <%= link_to "done", task_done_path(task.id), method: :patch %> </li>
+        <p id="done"><%= link_to "done!", task_done_path(task.id), method: :patch %></p>
       <% end %>
+    </li>
     <% end %>
   <% end %>
 </ul>

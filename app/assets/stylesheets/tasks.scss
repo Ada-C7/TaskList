@@ -20,8 +20,8 @@
    margin: 0;
  }
 
-h4 {
-  padding: 2% 0;
+h3, h4, h5 {
+  padding: 2% 0 0 0;
 }
 
  header {
@@ -38,7 +38,7 @@ h4 {
  }
 
  main {
-  padding-bottom: 40%;
+  padding: 0 0 40% 3%;
   //  padding: 0 5% 3% 5%;
    background-color: #DDDDDD;
   //  position: absolute;
@@ -48,7 +48,7 @@ h4 {
  }
 
 section {
-  padding: 2% 0 0 3%;
+  padding: 2% 0 0 0;
 }
 
 
@@ -62,11 +62,11 @@ section {
  }
 
  main ul {
-      width: 40%;
+      width: 70%;
  }
 
  ul {
-   padding: 1% 2%;
+   padding-top: 2%;
    list-style-type: none;
 
  }
@@ -87,7 +87,7 @@ section {
  }
 
  nav {
-   padding: 0 2%;
+   padding: 2%;
    background-color: #AAAAAA;
  }
 
@@ -98,11 +98,16 @@ section {
 
  nav ul {
    display: inline-block;
-      text-align: right;
-      width: 35%
+   text-align: right;
+   width: 35%;
+   padding: 0;
  }
- nav li {
 
+li {
+  padding-top: 1%;
+}
+
+ nav li {
    padding: 0.5% 2%;
    display: inline-block;
  }
@@ -122,5 +127,23 @@ section {
  }
 
 .form_new li {
-  padding: 5% 3%;
+  padding: 3% 0;
+}
+
+.task_list p {
+  display: inline-block;
+  padding: 1% 0;
+}
+
+#done {
+  background-color: #AAAAAA;
+
+  margin: 0 0 1% 2%;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 10%;
+  border-color: #AAAAAA;
+  padding: 1% 1%;
+  font-size: 0.80em;
+  vertical-align: middle;
 }

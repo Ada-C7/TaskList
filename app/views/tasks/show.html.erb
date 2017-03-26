@@ -4,15 +4,34 @@
 
 <section>
 
-<p> <% if @selected_task.done? %>
+
+
+
+<h4> <% if @selected_task.done %>
         Nice! You completed this task on <%= @selected_task.complete_date  %>
+        <% elsif @selected_task.due_date > Date.current %>
+        *This task is due in <%= pluralize((@selected_task.due_date - Date.current).to_i, 'day') %>*
+        <% elsif @selected_task.due_date == Date.current %>
+        *This task is due today*
+        <% elsif @selected_task.due_date < Date.current %>
+        This task is overdue!
     <% end %>
-</p>
-<h3><%= @selected_task.name %> (<%= @selected_task.description %>)</h3>
-<p>You need to complete this task by: <%= @selected_task.due_date %> </p>
-<p>Priority level: <%= @selected_task.priority %></p>
-<p><%= link_to "edit", edit_task_path(@selected_task.id) %></p>
-<h5> <%= link_to "delete", delete_task_path(@selected_task.id), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete %> </h5>
+</h4>
+
+<h3><%= @selected_task.name %></h3>
+
+<ul>
+  <li><%= @selected_task.description %></li>
+  <li>
+    <% if @selected_task.due_date == nil %>
+    This task has no due date. Click edit below to add one.
+    <% else %>
+    You need to complete this task by: <%= @selected_task.due_date.to_formatted_s(:long_ordinal) %>
+    <% end %>
+  </li>
+  <li>This is a <%= @selected_task.priority %> priority task</li>
+</ul>
+<h5><%= link_to "edit", edit_task_path(@selected_task.id) %>   <%= link_to "delete", delete_task_path(@selected_task.id), data: {confirm: "Are you sure you want to delete this task?"}, method: :delete %> </h5>
 
 </section>
 

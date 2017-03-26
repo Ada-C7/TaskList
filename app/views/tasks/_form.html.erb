@@ -17,7 +17,7 @@
 
   <li>
     <%= f.label :priority %>
-    <%= f.select :priority, [['High', 1], ['Medium', 2], ['Low', 3]] %>
+    <%= f.select :priority, ["high", "medium", "low"] %>
   </li>
 
   <% unless @task.id == nil %>
