@@ -1,0 +1,43 @@
+<h1>ToDo</h1>
+<%= link_to 'Home', tasks_path, class:"button" %>
+
+<div id="task_info">
+    <h2 class="task_list"><%= @task.name %>: </h2>
+    <span id="arrow">
+        ↳
+    </span>
+    <p class="list_description">
+        <%= @task.description%>
+    </p>
+
+
+    <h2 class="task_list">Completed on:</h2>
+    <span id="arrow">
+        ↳
+    </span>
+    <p class="list_description">
+        <%= @task.date %>
+    </p>
+</div>
+
+<span>
+    <div id="show_edit">
+        <%= link_to '✎', edit_task_path(@task.id), class:"control_button" %>
+        <p class="control_button_text"> Edit</p>
+    </div>
+    <div id="show_complete">
+        <%= link_to '✓', complete_task_path(@task.id),
+        data: { confirm: "Have you really completed this task?"},
+        method: :patch, class:"control_button" %>
+        <p class="control_button_text">Complete</p>
+    </div>
+    <div id="show_delete">
+        <%= link_to 'Ⓧ', delete_task_path(@task.id),
+        data: {confirm: "Do you really want to delete this task?"},
+        method: :delete, class:"control_button" %>
+        <p class="control_button_text">Delete</p>
+    </div>
+</span>
+<footer>
+        ©Alison Zerbe 2017
+</footer>
