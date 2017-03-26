@@ -1,0 +1,38 @@
+  <%= form_for @task do |f| %>
+  <ul>
+    <h3>
+      <li>
+        <%= f.label :name, "Task Name"  %>
+      </li>
+    </h3>
+    <li>
+      <%= f.text_field :name, class: "field" %>
+    </li>
+    <h3>
+      <li>
+        <%= f.label :description %>
+      </li>
+    </h3>
+    <li>
+      <%= f.text_area :description, size: "20x5" %>
+    </li>
+    <h3>
+      <li>
+        <%= f.label :duedate, "Due Date" %>
+      </li>
+    </h3>
+    <li>
+      <%= f.date_field :duedate, class: "field"%>
+    </li>
+    <h3>
+      <li>
+        <%= f.label :completed, "Task Status" %>
+      </li>
+    </h3>
+    <li>
+      <%= f.check_box :completed, class: "field" %>
+    </li>
+    <li>
+      <%= f.submit nil, class: "field" %>
+    </li>
+    <% end %>

@@ -1,0 +1,26 @@
+<div class=header>
+  <h1>Task List</h1>
+  <h2>You've got some tasks to do!</h2>
+</div>
+
+<div id=tasks>
+  <h3>
+    <ul>
+      <% @tasks.each_with_index do |task| %>
+      <li>
+        <% if task.completed%>
+        <%= link_to image_tag("checked.png", border: 0, size: 20), complete_task_path(task.id), method: :patch %>
+        <%= link_to task.name, task_path(task.id), class: "complete" %>
+        <% else %>
+        <%= link_to image_tag("unchecked.png", border: 0, size: 20), complete_task_path(task.id), method: :patch %>
+        <%= link_to task.name, task_path(task.id) %>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </h3>
+</div>
+
+<div class=options>
+  <h2><%= link_to "Add New Task", new_task_path %></h2>
+</div>

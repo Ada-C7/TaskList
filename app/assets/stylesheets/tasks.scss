@@ -1,0 +1,99 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Reenie+Beanie');
+
+* {
+  text-align: center;
+  font-family: 'Reenie Beanie', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: silver;
+}
+
+body {
+  background-image: url("https://previews.123rf.com/images/jojjik/jojjik1205/jojjik120500256/13859455-Large-corkboard-texture-or-background-Stock-Photo.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header, .form_area, #tasks, #task_detail{
+  background-color: white;
+  min-width: 350px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.header {
+  margin: 15px auto;
+}
+
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 4.0em;
+}
+
+h3 {
+  font-size: 0.9em;
+}
+
+#tasks, .form_area, #task_detail {
+  font-size: 1.7em;
+}
+
+.form_area {
+  padding: 10px;
+}
+
+textarea, .field {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+#tasks li, .form_area li , #task_detail li {
+  padding-bottom: 10px;
+  list-style: none;
+  background-color: white;
+}
+
+.complete {
+  text-decoration: line-through;
+  color:red;
+}
+
+.options .complete:hover {
+  color:blue;
+}
+
+.options {
+  padding: 25px;
+}
+
+.options h2 {
+  display: inline;
+}
+
+.options a {
+  background-color: black;
+  color: white;
+  padding: 6px 5%;
+}
+
+.options a:hover {
+  text-decoration: none;
+  color: silver;
+  font-size: 0.9em;
+}
