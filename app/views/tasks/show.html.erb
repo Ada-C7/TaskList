@@ -1,16 +1,15 @@
 <h2>Current Task:</h2>
 <ul>
-    <li>Name: <%= @result_task.name %></li>
-    <li>Description: <%= @result_task.description %></li>
-    <!-- <li>Due Date: <%= @result_task.completion_date %></li> -->
-    <li>Completed: <%= @result_task.completion_date %> </li>
+    <li> Name: <%= @result_task.name %></li>
+    <li> Description: <%= @result_task.description %></li>
+    <li> Completion Date: <%= @result_task.completion_date if @result_task.completed %> </li>
     <li>
       <% if @result_task.completed == false %>
             Not yet!
       <% else %>
             You are done!
       <% end %>
-      <%= button_to "Undo Completed", completed_task_path(@result_task.id), method: :patch %>
+      <%= render partial: "toggle-button", locals: { task: @result_task } %>
     </li>
 </ul>
 
