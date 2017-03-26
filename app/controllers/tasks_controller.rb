@@ -43,7 +43,7 @@ class TasksController < ApplicationController
     redirect_to task_path(task)
   end
 
-  def task_completed
+  def status
     task = Task.find(params[:id])
     task[:completion_date] = Time.now
     task.save
