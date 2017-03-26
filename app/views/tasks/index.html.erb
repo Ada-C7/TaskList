@@ -5,29 +5,32 @@
   <h2>Don't Forget!</h2>
 
   <% @tasks.each do |task| %>
-  <section class="
-    <% if task.completion_date == nil %>
-      <%= "incomplete" %>
-    <% else %>
-      <%= "complete" %>
-    <% end %>" />
 
-    <%= link_to task_path(task.id) do %></h3>
-      <h3><%= task.name %></h3>
-      <p>
+      <section class="
         <% if task.completion_date == nil %>
-          <%= form_for task do |f| %>
-            <%= f.submit "Mark Complete" %>
+          <%= "incomplete" %>
+        <% else %>
+          <%= "complete" %>
+        <% end %>" />
+
+        <h3>
+          <%= link_to task.name, task_path(task.id) %>
+        </h3>
+
+        <p>
+          <% if task.completion_date == nil %>
+            <%= form_for task do |f| %>
+              <%= f.submit "Mark Complete" %>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if task.completion_date != nil %>
-            <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} %>
-        <% end %>
-      </p>
+
+          <% if task.completion_date != nil %>
+              <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure?"} %>
+          <% end %>
+        </p>
+      </section>
+
     <% end %>
-  </section>
-  
-  <% end %>
 
 </article>
 

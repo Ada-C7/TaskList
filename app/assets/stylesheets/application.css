@@ -34,7 +34,7 @@
 
 html {
   font-family: 'Raleway', sans-serif;
-  margin: 10px 5%;
+  margin: 10px 10%;
   overflow: auto;
 }
 
@@ -107,7 +107,7 @@ section.incomplete:hover {
   background-color: rgb(5, 181, 214);
 }
 
-section.incomplete:hover > a {
+.main-list a:hover {
   color: white;
 }
 
