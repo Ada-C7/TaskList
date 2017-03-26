@@ -1,18 +1,20 @@
-<h2>Tasks</h2>
+<main>
+  <h2>Tasks</h2>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <% if task.completed %>
-        <%= link_to raw("&#9745;"), toggle_complete_path(task.id), method: :patch %>
-      <% else %>
-        <%= link_to raw("&#9744;"), toggle_complete_path(task.id), method: :patch %>
-      <% end %>
-      <%= link_to task.name, task_path(task.id) %>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completed %>
+          <%= link_to raw("&#9745;"), toggle_complete_path(task.id), method: :patch %>
+        <% else %>
+          <%= link_to raw("&#9744;"), toggle_complete_path(task.id), method: :patch %>
+        <% end %>
+        <%= link_to task.name, task_path(task.id) %>
+      </li>
+    <% end %>
+  </ul>
 
-<p>
-  <%= link_to "Add New Task", new_task_path %>
-</p>
+  <p>
+    <%= link_to "Add New Task", new_task_path %>
+  </p>
+</main>

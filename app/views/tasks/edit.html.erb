@@ -1,7 +1,9 @@
-<h2>Edit <%= @task.name %></h2>
+<% @title = "Edit " + @task.name + " - " %>
 
-<%= render partial: "form", locals: { action_name: "Edit"} %>
+<main>
+  <h2>Edit <%= @task.name %></h2>
 
-<p>
-  <%= link_to "Back to " + @task.name, task_path(@task.id) %>
-</p>
+  <%= render partial: "form", locals: { action_name: "Edit"} %>
+
+  <p><%= link_to "Back to " + @task.name, task_path(@task.id) %></p>
+</main>

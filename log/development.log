@@ -10981,3 +10981,2619 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 294ms (Views: 270.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:47 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:49 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"YC8vMZh29ICWgx5a8VZBQgEme9shdgkbcLFS7ocMVIudc1Sg96GMoD9sA3Dm6LWUnYPw5BWyS3sCd+qbo7iMuw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:00:49 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:50 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"/N6b0RkZcLRDf3h6xjVuM8MYFjoZTDQytwAIcYysTvEBguBAds4IlOqQZVDRi5rlX72dBS2IdlLFxrAEqBiWwQ==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:00:50 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:50 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:51 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"jzp+d6zCOF9LdSHYlBHikGarLwMG/0sONzVE6WYcDWtyZgXmwxVAf+KaPPKDrxZG+g6kPDI7CW5F8/ycQqjVWw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:00:51 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:52 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"cPonfxBRyMSyU2ZXNm19Us80JHfgpKJU4kmbK/orh7uNplzuf4aw5Bu8e30h04mEU5GvSNRg4DSQjyNe3p9fiw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:00:52 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:52 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"fPj49S6jz4oT9orXAOq6nPKg11NXqi/n4M3Nuw6x5/qBpINkQXS3qroZl/0XVE5KbgVcbGNubYeSC3XOKgU/yg==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:00:52 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:00:53 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"sPj9R9wudRRW9yqYpbMMieZA0M8cheadZpcZ1oI056xNpIbWs/kNNP8YN7KyDfhfeuVb8ChBpP0UUaGjpoA/nA==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:00:53 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:00:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:18:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-25 16:18:13 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215581080180'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.7ms)
+Started GET "/" for ::1 at 2017-03-25 16:18:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:18:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 16:18:29 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 16:18:32 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 16:18:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 16:18:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-25 16:18:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215553615480'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.8ms)
+Started GET "/" for ::1 at 2017-03-25 16:18:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-25 16:18:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215568393140'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.5ms)
+Started GET "/" for ::1 at 2017-03-25 16:19:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-25 16:19:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215583469380'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.4ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.8ms)
+Started GET "/" for ::1 at 2017-03-25 16:19:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/10" for ::1 at 2017-03-25 16:19:05 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/11/toggle_complete" for ::1 at 2017-03-25 16:19:11 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"mlxWtMb+5KtM8j1Xd3aP3Ar9aKx3YS9/brsaMgPMIXRnAC0lqSmci+UdIH1gyHsKlljjk0OlbR8cfaJHJ3j5RA==", "id"=>"11"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:19:11 UTC], ["id", 11]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:19:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/11" for ::1 at 2017-03-25 16:19:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/tasks/11" for ::1 at 2017-03-25 16:19:18 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"faWR5j/kiuR3PqgLhIUoO76Zg0BHSHj1mKj9nC7EQ5iA+ep3UDPyxN7RtSGTO9ztIjwIf3OMOpXqbkXpCnCbqA==", "id"=>"11"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 11]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:19:19 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"OXXUMMEjs9oRx/IvWQRgumqdQPZ+JAiNCRuiQlrOwDrEKa+hrvTL+rgo7wVOupRs9jjLyUrgSu173Ro3fnoYCg==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:19 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for ::1 at 2017-03-25 16:19:20 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"/377uP207ApOm/Dw/Sl26Mvg3QGk93Lzt2cHLuot6kECIoApkmOUKud07drql4I+V0VWPpAzMJPFob9bzpkycQ==", "id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:20 UTC], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 16:19:20 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"LbygRNd82GP02rveGhtwLI7726712mOr8lRTY7N232DQ4NvVuKugQ101pvQNpYT6El5QkcEeIcuAkusWl8IHUA==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:20 UTC], ["id", 3]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/5/toggle_complete" for ::1 at 2017-03-25 16:19:21 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"VZLZ90kB2bVC8PD0rnPgJoLU4KIusTp7rEOkqqnNs0GozqJmJtahlesf7d65zRTwHnFrnRp1eBvehRzfjXlrcQ==", "id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:21 UTC], ["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 16:19:22 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"uG4nR1dT85SPIpss/QBdgal8i85+1/NB10g8Dv8faxVFMlzWOISLtCbNhgbqvqlXNdkA8UoTsSGljoR726uzJQ==", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:22 UTC], ["id", 6]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/10/toggle_complete" for ::1 at 2017-03-25 16:19:22 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"1J11WxSEaWKd06Q4ph9Qd1w7X212QtGN4COARRxLcNcpwQ7Ke1MRQjQ8uRKxoaShwJ7UUkKGk+2S5TgwOP+o5w==", "id"=>"10"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:22 UTC], ["id", 10]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/12/toggle_complete" for ::1 at 2017-03-25 16:19:23 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"Cbm4g88teWOdhQ5S4J8fLx/SOgb92EbSddbvnuGl9n705cMSoPoBQzRqE3j3Iev5g3exOckcBLIHEFfrxREuTg==", "id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:19:23 UTC], ["id", 12]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:19:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 16:19:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 16:19:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 16:19:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 16:19:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/10" for ::1 at 2017-03-25 16:19:43 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215556316620'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.2ms)
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/10/toggle_complete" for ::1 at 2017-03-25 16:19:46 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"DSu5yU1KejlXq1EjYMiJ1XGtdN9Vg2mTF6P/XI51hTrwd8JYIp0CGf5ETAl3dn0D7Qj/4GFHK/NlZUcpqsFdCg==", "id"=>"10"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:19:46 UTC], ["id", 10]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/10" for ::1 at 2017-03-25 16:19:47 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/10" for ::1 at 2017-03-25 16:19:49 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nbYc9+4NK0czGV6yRdAWrvufOgZjRAChdwcZA+JJv1tg6mdmgdpTZ5r2Q5hSbuJ4ZzqxOVeAQsEFwaF2xv1naw==", "id"=>"10"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/12" for ::1 at 2017-03-25 16:19:50 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215546964100'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.4ms)
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/12/toggle_complete" for ::1 at 2017-03-25 16:19:53 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"/5YONh7XEq7sq5ShL/Bed0iDqyVs3IOeo74EWukvpIgCynWncQBqjkVEiYs4Tqqh1CYgGlgYwf7ReLwvzZt8uA==", "id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:19:53 UTC], ["id", 12]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/12" for ::1 at 2017-03-25 16:19:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/12" for ::1 at 2017-03-25 16:19:57 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R95EauFt/QRaYKUyPMuHZ84+YxT/cT6hqu+hDJ2xzRO6gj/7jrqFJPOPuBgrdXOxUpvoK8u1fMHYKRl5uQUVIw==", "id"=>"12"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 12]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:19:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/13" for ::1 at 2017-03-25 16:19:59 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    12: <% if @task.completed %>
+    13:   <p>&check; Task completed on <%= @task.completed.strftime("%m/%d/%Y") %>! Yay!</p>
+    14: <% else %>
+    15:   <p><%= @task.deadline.strftime("Complete by: %m/%d/%Y") %></p>
+    16: <% end %>
+    17: 
+    18: <p>
+  
+app/views/tasks/show.html.erb:15:in `_app_views_tasks_show_html_erb___2482853104900709163_70215581751520'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.1ms)
+Started GET "/tasks" for ::1 at 2017-03-25 16:20:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/13/toggle_complete" for ::1 at 2017-03-25 16:20:02 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"h1VFNCgHwcUvCQO65u4yewHT4awX1mILBdoOMDGqY6h6CT6lR9C55YbmHpDxUMatnXZqkyMSIGt3HLZFFR67mA==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:20:02 UTC], ["id", 13]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:20:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/13" for ::1 at 2017-03-25 16:20:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/13" for ::1 at 2017-03-25 16:20:04 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dX1rQ33B5W5lnQPEYBhaNFP46XjFbczigJHhgPrchvyIIRDSEhadTsxyHu53pq7iz11iR/GpjoLyV1n13mhezA==", "id"=>"13"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 13]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 16:20:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/13" for ::1 at 2017-03-25 16:20:06 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=13):
+  
+app/controllers/tasks_controller.rb:7:in `show'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.9ms)
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:20:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:45:21 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"GIretf0bmhBxxJULw7eGGOmXtPPiU0rUAu5Crg+z7wPl1qUkksziMNgriCHUCXLOdTI/zNaXCLRwKPrbKwc3Mw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:45:21 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:21 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (2.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 31.0ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:45:24 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"WZGzYb4fcKIi41Op4G8waeO0YqIJRuZtS7O1RB9mBHukzcjw0cgIgosMToP30cS/fxHpnT2CpA05dQ0xO9LcSw==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:45:24 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:24 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:45:27 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"CZFXmOtAKhYt7rM6NlV9zfRy+Xab2btCeZc+/h2GWe30zSwJhJdSNoQBrhAh64kbaNdySa8d+SILUYaLOTKB3Q==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:45:27 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:27 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:45:28 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"6iYe9/wYjXNGL5b4ECV4/393eyY+H64M1jnWE1cBI2MXemVmk8/1U+/Ai9IHm4wp49LwGQrb7Gyk/25mc7X7Uw==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-25 23:45:28 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:45:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/5/toggle_complete" for ::1 at 2017-03-25 16:45:34 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"l+vavCH5u9ykDqEWzJzyJA7l35FWMGm2MrAQw+dbF+Jqt6EtTi7D/A3hvDzbIgbykkBUrmL0K9ZAdqi2w+/P0g==", "id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:45:34 UTC], ["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:45:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 16:45:37 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"ipwdJeA//zdHDj0OkmVZUFgGO9/EiIfzJVW9NMPXb7d3wGa0j+iHF+7hICSF262GxKOw4PBMxZNXkwVB52O3hw==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:45:37 UTC], ["id", 3]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:45:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1/toggle_complete" for ::1 at 2017-03-25 16:45:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"1PyiDtHA1MMFZPhAac9snL1YaEv7qov61jibEtfs1OIpoNmfvhes46yL5Wp+cZhKIf3jdM9uyZqk/iNn81gM0g==", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-25 23:45:38 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 16:45:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 16:45:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:02:06 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:02:16 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:02:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:02:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:03:06 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:08:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2017-03-25 17:08:05 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (34.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 73ms (Views: 65.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2017-03-25 17:08:08 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CseFv7ohRfJIym0gOupH4RVFSL6LfBp/TWrvrp0snO33m/4u1fY90uElcAotVLM3ieDDgb+4WB8/rFfbuZhE3Q==", "task"=>{"name"=>"Wash dishes", "description"=>"Get them dishes washed! WASH ME HEYO WOO", "deadline"=>"2017-03-30"}, "commit"=>"Edit Task", "id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Get them dishes washed! WASH ME HEYO WOO"], ["updated_at", 2017-03-26 00:08:08 UTC], ["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/1" for ::1 at 2017-03-25 17:08:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/1" for ::1 at 2017-03-25 17:08:13 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"koKx3lQB21huG20GJTyAG4gwG/eFds9Dxg4/GCVzlJlv3spPO9ajeMf0cCwygnTNFJWQyLGyjSO0yIdtAcdMqQ==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 17:08:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:08:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:08:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:08:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:08:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6/edit" for ::1 at 2017-03-25 17:08:59 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:17:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:17:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:17:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6/edit" for ::1 at 2017-03-25 17:17:43 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.7ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:33:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 17:33:19 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"S1rMAUwZRNAGo+KN7CH/zcL5K8SBqLFKCEWx5M+PNWm2BreQI8488K9M/6f7nwsbXlyg+7Vs8yp6gwmR6zvtWQ==", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 00:33:19 UTC], ["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 17:33:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 17:33:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 17:33:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 17:33:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/2/toggle_complete" for ::1 at 2017-03-25 17:33:47 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"DJyrcvc6LXKOtecCCm7fjKwORBenO+/AV+lqIact4MzxwNDjmO1VUida+igd0CtaMKvPKJP/raAlL9JUg5k4/A==", "id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 00:33:47 UTC], ["id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 17:33:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/5/toggle_complete" for ::1 at 2017-03-25 17:33:49 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"hfebYJ4et8KtVxu9wslZkkzK6oSC57qSeJrf+3enx9d4q+Dx8cnP4gS4BpfVd61E0G9hu7Yj+PIKXGeOUxMf5w==", "id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 00:33:49 UTC], ["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 17:33:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 17:33:50 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"v7vZ1QogWmFoyKkA3V2SM+7ZusRiZ8ppOeGf+ECyUPxC56JEZfciQcEntCrK42blcnwx+1ajiAlLJyeNZAaIzA==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 00:33:50 UTC], ["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 17:33:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 17:33:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 17:33:55 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 17:33:59 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 18:46:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 18:46:54 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 61ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 18:46:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 18:47:01 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"3sJnN55cPZwPisosb0E+Br8XAHwikxRCvqr42USmMCEjnhym8YtFvKZl1wZ4/8rQI7KLQxZXViLMbECsYBLoEQ==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 01:47:01 UTC], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 18:47:01 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 18:47:07 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 18:47:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 52ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 18:47:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 18:47:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 18:47:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:17:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:17:34 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:17:43 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:18:06 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:18:21 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:18:31 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 19:19:05 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.4ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:19:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 19:19:08 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:19:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:19:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:19:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:20:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:20:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:20:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 19:20:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/5/toggle_complete" for ::1 at 2017-03-25 19:20:51 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"OF1FejBOpRpDvDXxoqffkpHwPi8VPRHUSTHFw09wVfXFAT7rX5ndOupTKNu1GStEDVW1ECH5U7Q79322a8SNxQ==", "id"=>"5"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 02:20:51 UTC], ["id", 5]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/5
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 19:20:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/5/toggle_complete" for ::1 at 2017-03-25 19:20:53 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"mHbDB2nBk7obvjFbAZq1LURKAAmfVtvN1qh7Un+QPWtlKriWBhbrmrJRLHEWJEH72O+LNquSma2kbsMnWyTlWw==", "id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 02:20:53 UTC], ["id", 5]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/5
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 19:20:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:20:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:20:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:08 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"6hSEy1YQSjhVoDSa3hqfJ50VdGOYjr6XDSHWFUohSfwXSP9aOccyGPxPKbDJpGvxAbD/XKxK/Pd/525gbpWRzA==", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 02:21:08 UTC], ["id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:09 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"19wpG7pcN8dGDOhF6dU+k9bksgNQ/MzxnpEwoFvZfyoqgFKK1YtP5+/j9W/+a8pFSkE5PGQ4jpHsV4jVf22nGg==", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 02:21:09 UTC], ["id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:09 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"UoIWQP1Yf6sadEOVnbokeCbxXStXjNYR7oAekOe2MSmv3m3Rko8Hi7ObXr+KBNCuulTWFGNIlHGcRqblwwLpGQ==", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 02:21:09 UTC], ["id", 6]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"GG026JKMBrfBqV+LF/M/XzGJvF2h3qVGjc0tEPGXOWblMU15/Vt+l2hGQqEATcuJrSw3YpUa5yb/C5Vl1SPhVg==", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 02:21:38 UTC], ["id", 6]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:40 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"UwQ31XR8MNcggwS/jcqIf+wTouDlRyLndZZ5VyytfqOuWExEG6tI94lsGZWadHypcLYp39GDYIcHUMEiCBmmkw==", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 02:21:40 UTC], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 9ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:40 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"4ScbP5+8IKRVD8quQ2BfR/+WcnQwXpVeyS1jezJel3wce2Cu8GtYhPzg14RU3quRYzP5SwSa1z6769sOFupPTA==", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 02:21:40 UTC], ["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:40 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/6/toggle_complete" for ::1 at 2017-03-25 19:21:43 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"/WHp3cnNMvadduiQqjKyhpioJO/hXXF+KsIixzoLXvIAPZJMphpK1jSZ9bq9jEZQBA2v0NWZMx5YBJqyHr+Gwg==", "id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 02:21:43 UTC], ["id", 6]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:21:43 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:21:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:25:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2017-03-25 19:29:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:29:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 66ms (Views: 61.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 19:30:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:30:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:46:42 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:47:16 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:47:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:48:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:48:50 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:48:58 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:49:05 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:49:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:49:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:49:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:49:53 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:51:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:52:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:57:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:57:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:59:42 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 19:59:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:00:50 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:01:06 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:01:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:01:29 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 85ms (Views: 81.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:06:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:06:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:09:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.5ms)
+  Rendered tasks/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:09:12 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.3ms)
+  Rendered tasks/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:09:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.8ms)
+  Rendered tasks/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:09:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.5ms)
+  Rendered tasks/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:15:50 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.4ms)
+  Rendered tasks/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:15:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:15:56 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:24 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 20:16:28 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"g2E3YzBVG+hkcZHHsnuiKmfceQLqkdB1D3AdD7f7Wmd+PUzyX4JjyM2ejO2lxVb8+3nyPd5VkhV9tqV6k0+CVw==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 03:16:28 UTC], ["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 20:16:29 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"DCjdyzjEYyc2GCf3BYwyCpTepMPGDiDRDEMnJ5PtICPxdKZaVxMbB5/3Ot0SMsbcCHsv/PLKYrF+hZ9St1n4Ew==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 03:16:29 UTC], ["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:29 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 20:16:38 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"bcSu31LfTNUX0xR01iYhDvi1StyT0ZMSaamuTt7Z0bSQmNVOPQg09b48CV7BmNXYZBDB46cV0XIbbxY7+m0JhA==", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", nil], ["updated_at", 2017-03-26 03:16:38 UTC], ["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3/toggle_complete" for ::1 at 2017-03-25 20:16:39 -0700
+Processing by TasksController#toggle_complete as HTML
+  Parameters: {"authenticity_token"=>"27HINzzf5/ouG8C5k+O+QEbtus+jq3eOvqiITG6CHZMm7bOmUwif2of03ZOEXUqW2kgx8JdvNe7MbjA5SjbFow==", "id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["completed", Sat, 25 Mar 2017], ["updated_at", 2017-03-26 03:16:39 UTC], ["id", 3]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from toggle_complete at /Users/addieland/ada/projects/TaskList/app/controllers/tasks_controller.rb:43)
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 6ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:16:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:16:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 20:16:52 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:16:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:17:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:18:01 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (0.9ms)
+  Rendered tasks/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/addieland/ada/projects/TaskList/app/views/tasks/_form.html.erb:1: syntax error, unexpected '='
+ppend=  form_for @task, class="main-form" do |f| @output_buf
+                              ^
+/Users/addieland/ada/projects/TaskList/app/views/tasks/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+or @task, class="main-form" do |f| @output_buffer.safe_appen
+                              ^
+/Users/addieland/ada/projects/TaskList/app/views/tasks/_form.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/tasks/_form.html.erb:1: syntax error, unexpected '='
+app/views/tasks/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/tasks/_form.html.erb:14: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/tasks/new.html.erb:6:in `_app_views_tasks_new_html_erb___3375847703332865436_70215583325140'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.8ms)
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:18:14 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:19:33 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:20:47 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2017-03-25 20:20:59 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=1):
+  
+app/controllers/tasks_controller.rb:20:in `edit'
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/addieland/.rvm/gems/ruby-2.4.0@TaskListRails/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.9ms)
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 20:21:06 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/2/edit" for ::1 at 2017-03-25 20:22:09 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:22:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:22:18 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:22:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:24:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/2" for ::1 at 2017-03-25 20:24:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:24:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:24:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 20:24:51 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (4.2ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:24:55 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:26:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:26:46 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:26:58 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:27:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:27:23 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 20:27:30 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.6ms)
+  Rendered tasks/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:27:34 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:27:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 48ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:27:39 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-25 20:27:58 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VkUoTo3dyw+Wv/7avgIOBINsqW8HI+G87s/2atd2xKRvW3BnnHq3R1UDm0BiZjwNe2gPKCdA2HG4TeFDTjqbyg==", "task"=>{"name"=>"Walk the Dog", "description"=>"Doggies need walks!", "deadline"=>"2017-03-26"}, "commit"=>"Add Task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Walk the Dog"], ["description", "Doggies need walks!"], ["deadline", Sun, 26 Mar 2017], ["created_at", 2017-03-26 03:27:58 UTC], ["updated_at", 2017-03-26 03:27:58 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:27:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/5" for ::1 at 2017-03-25 20:28:04 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/5" for ::1 at 2017-03-25 20:28:09 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ida4YOi1J0kW0hxyk2v4klyhigIgPeSpv9p/1A+WXfHcisPxh2Jfab89AViE1QxEwAQBPRT5psnNHMehKyKFwQ==", "id"=>"5"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:28:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:28:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2017-03-25 20:28:17 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/3" for ::1 at 2017-03-25 20:28:26 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ePRzw0vQivd7tspr/nUeOB5R3DlCKOVw3vDI7xY7asjrg1wFgYFugN+cqYkgC+/TgHA4WxixR+EESYPwYKzNiQ==", "task"=>{"name"=>"Make dinner", "description"=>"Food is good! Yum!", "deadline"=>"2017-03-22"}, "commit"=>"Edit Task", "id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Food is good! Yum!"], ["updated_at", 2017-03-26 03:28:26 UTC], ["id", 3]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/tasks/3" for ::1 at 2017-03-25 20:28:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-25 20:28:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
