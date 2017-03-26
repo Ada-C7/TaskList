@@ -1,11 +1,10 @@
 <h1>All about This Task</h1>
 
-<p>
-
-  <% if @result_task.completion_date != nil %>
-  <%= @result_task[:description]%> was completed on <%= @result_task[:completion_date] %> 😀
+<p class="show">
+  <% if @result_task.completed == true %>
+    <%= @result_task[:description]%> task was completed on <%= @result_task[:updated_at].strftime("%F") %> 😀
   <% else %>
-  <%= @result_task[:description]%> need to be completed 😡
+    <%= @result_task[:description]%> task needs to be completed by <%= @result_task[:completion_date].strftime("%F") %> 😡
   <% end %>
 </p>
 

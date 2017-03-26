@@ -5,25 +5,25 @@
       <th>
       Task Name
       </th>
-      <th>
+      <th id="table_head2">
       Description
       </th>
       <th>
-      Completion_date
+      Completion Date
       </th>
       <th>
-        Completed
+        Status
       </th>
       <th>
-        Actual Completion
+        Actual
       </th>
     </tr>
 
     <% @my_tasks.each do |task| %>
     <tr>
-      <td>  <%= link_to task.name, task_path(task.id) %></td>
+      <td class="column">  <%= link_to task.name, task_path(task.id) %></td>
 
-      <td>  <%= task.description %></td>
+      <td class="column">  <%= task.description %></td>
       <td> <%= task.completion_date.strftime("%F") %> </td>
       <td> <%if task.completed == true %>
         <%= link_to "👍", task_completed_path(task.id), method: :patch %>
@@ -32,6 +32,7 @@
         <%end%>
       </td>
       <td> <%if task.completed == true %>
+        <!-- # updated_at always generated in schema -->
         <%= task.updated_at.strftime("%F") %>
         <% else %>
           <%= "" %>

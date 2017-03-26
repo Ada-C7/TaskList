@@ -27,9 +27,6 @@ body {
   margin-left: 50px;
 }
 
-input {
-  // background-color: #6217C4
-}
 
 .description {
   margin-left: 9px;
@@ -37,7 +34,6 @@ input {
 }
 
 .completion_date {
-
   margin-left: -25px;
 
 }
@@ -45,8 +41,6 @@ input {
 a {
   color: white;
   text-decoration: none;
-
-
 }
 
 h1 {
@@ -61,33 +55,50 @@ h2 {
 }
 p {
   margin-left:70px;
+}
 
+.show {
+  font-size: 1.1em;
+  width: 60%;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 80px;
+  height: 80px;
+  border: .2em dashed black;
 }
 
 table {
   margin-left: 60px;
   border: .2em dashed black;
-
 }
+
+.column {
+  text-align: left;
+}
+
+
+
+
 th {
   color:#C317C4;
    font-size: 1.1em;
+}
 
+#table_head2 {
+  text-align: left;
+  padding-left: 30px;
 }
 
 td {
-  padding: 20px;
+  padding: 30px;
   text-align: center;
 }
 
 tr {
   border: .2em dashd black;
-
-
 }
 
 li {
   list-style: none;
   line-height: 30px;
-
 }
