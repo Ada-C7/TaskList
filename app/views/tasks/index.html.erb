@@ -1,27 +1,52 @@
-<h1>To Do List</h1>
+<h1>ToDo</h1>
 
-<%= link_to 'Create New Task', new_task_path %>
+<%= link_to 'New', new_task_path, class:"button"%>
 
 
-<ul id=index_list>
+<ul>
     <% @tasks. each do |task|  %>
     <li>
-        <%= link_to task.name, task_path(task.id) %>: <%= task.description %>
         <p>
+            <h2 class='task_list'><%= link_to task.name, task_path(task.id), class:'task_list' %>:</h2>
+            <span id="arrow">
+                ↳
+            </span>
+            <p id="list_description">
+                <%= task.description %>
+            </p>
+        </p>
 
+
+        <span class="control_button", id="status_option">
             <% if task.date == nil %>
-                <%= link_to '◻️', complete_task_path(task.id),
+            <p id="undone_button">
+                <%= link_to '◯', complete_task_path(task.id),
                 data: { confirm: "Have you really completed this task?"},
-                method: :patch %>
+                method: :patch, id:'undone_button' %>
+            </p>
+            <p class="control_button_text">
+                ToDo
+            </p>
             <% else %>
-                ✔️
+            <p id="complete_button">
+              ∅
+            </p>
+            <p class="control_button_text">
+                Done
+            </p>
             <% end %>
-        </p>
-        <p>
-            <%= link_to 'Delete Task', delete_task_path(task.id),
-            data: { confirm: "Do you really mean to delete this task?"},
-            method: :delete %>
-        </p>
+        </span>
+
+        <span class="control_button", id="delete_option">
+            <p id='delete_button'>
+                <%= link_to 'Ⓧ', delete_task_path(task.id),
+                data: { confirm: "Do you really mean to delete this task?"},
+                method: :delete, id:'delete_button'%>
+            </p>
+            <p class="control_button_text", id="delete_button_text">
+                Delete
+            </p>
+        </span>
 
     </li>
     <% end %>

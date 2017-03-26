@@ -1,20 +1,17 @@
-<h1>Show a task</h1>
+<h1>ToDo</h1>
 
-<%= @task.name %>: <%= @task.description%>
-<p>
-    Completed on: <%= @task.date %>
-</p>
-<p>
-    <%= image_tag "http://www.fillmurray.com/200/200" %>
-</p>
+<h2><%= @task.name %>:</h2> <%= @task.description%>
+<h2>Completed on:</h2><%= @task.date %>
 
-<%= link_to 'Edit', edit_task_path(@task.id) %>
-<%= link_to 'Delete', delete_task_path(@task.id),
+<p>
+    <%= link_to 'Edit', edit_task_path(@task.id) %>
+    <%= link_to 'Delete', delete_task_path(@task.id),
     data: {confirm: "Do you really want to delete this task?"},
     method: :delete %>
-<%= link_to 'Mark Complete', complete_task_path(@task.id),
+    <%= link_to 'Mark Complete', complete_task_path(@task.id),
     data: { confirm: "Have you really completed this task?"},
     method: :patch %>
+</p>
 <h2>
     <%= link_to 'Home', tasks_path %>
 </h2>
