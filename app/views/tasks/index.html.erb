@@ -17,37 +17,36 @@
         </p>
 
 
-        <span class="control_button", id="status_option">
-            <% if task.date == nil %>
-            <p id="undone_button">
-                <%= link_to '◯', complete_task_path(task.id),
-                data: { confirm: "Have you really completed this task?"},
-                method: :patch, id:'undone_button' %>
-            </p>
-            <p class="control_button_text">
-                ToDo
-            </p>
-            <% else %>
-            <p id="complete_button">
-              ∅
-            </p>
-            <p class="control_button_text">
-                Done
-            </p>
-            <% end %>
-        </span>
+        <span>
+            <div id="main_complete">
+                <% if task.date == nil %>
+                <p>
+                    <%= link_to '◯', complete_task_path(task.id),
+                    data: { confirm: "Have you really completed this task?"},
+                    method: :patch, class:'control_button' %>
+                </p>
+                <p class='control_button_text'>ToDo</p>
+                <% else %>
+                <p id="completed_icon">
+                    ⃠
+                </p>
+                <p class='control_button_text'>
+                    Done
+                </p>
+                <% end %>
+            </div>
 
-        <span class="control_button", id="delete_option">
-            <p id='delete_button'>
+            <div id="main_delete">
                 <%= link_to 'Ⓧ', delete_task_path(task.id),
                 data: { confirm: "Do you really mean to delete this task?"},
-                method: :delete, id:'delete_button'%>
-            </p>
-            <p class="control_button_text", id="delete_button_text">
-                Delete
-            </p>
+                method: :delete, class: 'control_button'%>
+                <p class='control_button_text'>Delete</p>
+            </div>
         </span>
-
     </li>
     <% end %>
 </ul>
+
+<footer>
+        ©Alison Zerbe 2017
+</footer>

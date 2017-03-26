@@ -11478,3 +11478,1147 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.2ms)
 
 
+Started PATCH "/tasks/23" for ::1 at 2017-03-25 18:27:11 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"U61IDOvnphXhcz+7RiX4VUxXi386N/05H+0rDsR+CeNG5zyf46xc2zjRsZ3stQDfRT7A+UdOnQxaNCS9PndlJA==", "id"=>"23"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["date", "25-Mar-2017"], ["updated_at", 2017-03-26 01:27:11 UTC], ["id", 23]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/23
+Completed 302 Found in 14ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/tasks/23" for ::1 at 2017-03-25 18:27:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:27:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 18:27:44 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:28:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:30:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:30:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:48:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:51:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:51:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:51:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:52:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/23" for ::1 at 2017-03-25 18:54:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 18:55:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/22" for ::1 at 2017-03-25 18:55:05 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:44:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 51ms (Views: 44.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:45:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 19:45:46 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/22" for ::1 at 2017-03-25 19:45:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/22" for ::1 at 2017-03-25 19:47:50 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:47:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:50:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:53:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:53:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:53:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 70ms (Views: 65.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:54:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:54:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:54:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:54:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:55:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:55:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:55:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:56:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:57:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:57:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 19:57:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:00:27 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:01:05 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:04:37 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:07:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:19:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after ".../images/chevron": expected ";", was ".jpg;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <meta charset="UTF-8"></meta>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic" rel="stylesheet">
+    11:   </head>
+  
+app/assets/stylesheets/tasks.scss:6
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1482640428496915447_70206988260980'
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.8ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.1ms)
+Started GET "/tasks" for ::1 at 2017-03-25 20:20:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 268ms (Views: 265.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:20:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 111ms (Views: 106.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:21:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:29:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:30:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 76.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:31:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 93ms (Views: 90.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:35:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:37:05 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.4ms)
+  Rendered tasks/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:37:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:37:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:38:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 72.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:38:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:38:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:38:46 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 96ms (Views: 93.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:39:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:39:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 78ms (Views: 74.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:39:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:40:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:40:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:40:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:40:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/22" for ::1 at 2017-03-25 20:40:39 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:44:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:46:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:46:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:47:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:48:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:48:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    color: red;s": expected "{", was "}"):
+     5:     <%= csrf_meta_tags %>
+     6:     <meta charset="UTF-8"></meta>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic" rel="stylesheet">
+    11:   </head>
+  
+app/assets/stylesheets/tasks.scss:138
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1482640428496915447_70207017972060'
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.5ms)
+Started GET "/tasks" for ::1 at 2017-03-25 20:48:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:48:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:49:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 20:50:55 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.1ms)
+  Rendered tasks/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-25 20:51:14 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sT8Gmp3+mNWkqT3nwpj18qfR/H1OFDfsDvNWaOZLALf5jhnoRHRmlpxvrHE+LtrnfICUycHbKH/OL67B5OG90Q==", "task"=>{"name"=>"Hang out with Robert", "description"=>"Spend some quality time; eat pizza"}, "commit"=>"Create task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hang out with Robert"], ["description", "Spend some quality time; eat pizza"], ["created_at", 2017-03-26 03:51:14 UTC], ["updated_at", 2017-03-26 03:51:14 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 11ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:51:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/26" for ::1 at 2017-03-25 20:51:22 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/26/edit" for ::1 at 2017-03-25 20:51:27 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.8ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/tasks/26" for ::1 at 2017-03-25 20:51:37 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"phZpPyySBO2KS03elkEWigK1Mf2WcFwY1j0ZSHhXwqMJgJisy4EAyp6NdYB/QnXH/fUFnX6dFq3zRlJdFo5pNg==", "task"=>{"name"=>"Hang out with Robert", "description"=>"Spend some quality time; eat pizza\r\nwhat kind of pizza?"}, "commit"=>"Edit Task", "id"=>"26"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Spend some quality time; eat pizza\r\nwhat kind of pizza?"], ["updated_at", 2017-03-26 03:51:37 UTC], ["id", 26]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/26
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/tasks/26" for ::1 at 2017-03-25 20:51:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:51:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/26" for ::1 at 2017-03-25 20:51:51 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"VQ/mLMSJQE6PmyewU41l8+J/b+9MG2PnXNG13xSr2b5ARZK/zMK6gFY5qZb5HZ156xYkaTFiA9IZCLps7qK1eQ==", "id"=>"26"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "date" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["date", "25-Mar-2017"], ["updated_at", 2017-03-26 03:51:51 UTC], ["id", 26]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks/26
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tasks/26" for ::1 at 2017-03-25 20:51:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:51:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tasks/23" for ::1 at 2017-03-25 20:52:19 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9jD/MKTdvYXFOGKprbLtQzteEnMhh4G5qFh81CL6QVLjeoujrJZHSxya7I8HIhXJMjdZ9Vz+4YztgXNn2PMtlQ==", "id"=>"23"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 23]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:52:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/25" for ::1 at 2017-03-25 20:52:30 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eHGidMPmMgn+wljC7rU9+0GZEEVbY9RNURWPYMmTK3xtO9bny63Ixydg1uREJcVxSPBbwyYatHgUzIDTM5pHuw==", "id"=>"25"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 25]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:52:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:52:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 91ms (Views: 87.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:53:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:56:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 20:57:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:00:00 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:00:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:01:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:01:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:02:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 89ms (Views: 85.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 21:02:47 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.9ms)
+  Rendered tasks/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-25 21:02:52 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DYKuWIaALCyzlnc1N4bn9xNeKfeR7HWM4cpRpmHUbYdFM7EqXwrSb4tQ5qPLMMjiyA9BQx4jah8hFqkPY37Q4Q==", "task"=>{"name"=>"", "description"=>""}, "commit"=>"Create task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["description", ""], ["created_at", 2017-03-26 04:02:52 UTC], ["updated_at", 2017-03-26 04:02:52 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:02:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/22" for ::1 at 2017-03-25 21:02:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:03:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:05:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:06:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:06:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:07:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:07:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:09:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:14:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 67.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:15:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 84ms (Views: 79.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:16:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:17:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 83ms (Views: 78.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:18:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:18:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:20:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:20:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:25:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    border-color: ": expected expression (e.g. 1px, bold), was "##373F51;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <meta charset="UTF-8"></meta>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic" rel="stylesheet">
+    11:   </head>
+  
+app/assets/stylesheets/tasks.scss:31
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1482640428496915447_70206988212040'
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.5ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.0ms)
+Started GET "/tasks" for ::1 at 2017-03-25 21:26:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    border-color: ": expected expression (e.g. 1px, bold), was "##373F51;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <meta charset="UTF-8"></meta>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic" rel="stylesheet">
+    11:   </head>
+  
+app/assets/stylesheets/tasks.scss:31
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1482640428496915447_70206988393340'
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.7ms)
+Started GET "/tasks" for ::1 at 2017-03-25 21:26:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    color: ": expected expression (e.g. 1px, bold), was "##373F51;"):
+     5:     <%= csrf_meta_tags %>
+     6:     <meta charset="UTF-8"></meta>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:     <link href="https://fonts.googleapis.com/css?family=Arimo|Didact+Gothic" rel="stylesheet">
+    11:   </head>
+  
+app/assets/stylesheets/tasks.scss:77
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___1482640428496915447_70206974836740'
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/alisonzerbe/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.0ms)
+Started GET "/tasks" for ::1 at 2017-03-25 21:26:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:26:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 81ms (Views: 77.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/tasks/27" for ::1 at 2017-03-25 21:35:28 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tLg0zdVhA6dykVJA0i6nVLpBBsEWJmiRZBsSSDQDel+h8kBe3Sr5aasz3GZ4vl/esyhNR2tfCKQhwh37zgoWmA==", "id"=>"27"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 27]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:35:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 21:35:31 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for ::1 at 2017-03-25 21:36:32 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xt5DDfqezRw+Q2zw1xbG+Zvo01jHPcXsHGWFTEIuOdCOb1x/IxQzXwaF/WYroOnsQLm77Ejy2n/cuX3lQISEtg==", "task"=>{"name"=>"Figure out CSS stuff on footer", "description"=>"Why can't I get to the text in the footer? I put it in a <p> tag and it popped outside of the footer. definitely something to think about and deal with later"}, "commit"=>"Create task"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Figure out CSS stuff on footer"], ["description", "Why can't I get to the text in the footer? I put it in a <p> tag and it popped outside of the footer. definitely something to think about and deal with later"], ["created_at", 2017-03-26 04:36:32 UTC], ["updated_at", 2017-03-26 04:36:32 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/tasks" for ::1 at 2017-03-25 21:36:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for ::1 at 2017-03-25 21:55:50 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.1ms)
+  Rendered tasks/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+

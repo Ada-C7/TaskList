@@ -2,17 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * {
-    background: #DCDCDD;
+    background-color: #d8dbe2;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='anchors-away' fill='%23a9bcd0' fill-opacity='0.4'%3E%3Cpath d='M12.392 14v15.95c-3.278-.325-6.09-2.233-7.66-4.95l3.464-2L0 20.804 2.885 25.8C4.93 29.498 8.87 32 13.392 32c4.524 0 8.463-2.503 10.508-6.2l2.885-4.996L18.588 23l3.466 2c-1.57 2.717-4.384 4.625-7.662 4.95V14h5v-2h-5V7.874c1.726-.444 3-2.01 3-3.874 0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.864 1.275 3.43 3 3.874V12h-5v2h5zm1-8c1.105 0 2-.895 2-2s-.895-2-2-2c-1.104 0-2 .895-2 2s.896 2 2 2zm39 48v15.95c-3.278-.325-6.09-2.233-7.66-4.95l3.464-2L40 60.804l2.885 4.997C44.93 69.498 48.87 72 53.392 72c4.524 0 8.463-2.503 10.508-6.2l2.885-4.996L58.588 63l3.466 2c-1.57 2.717-4.384 4.625-7.662 4.95V54h5v-2h-5v-4.126c1.726-.444 3-2.01 3-3.874 0-2.21-1.79-4-4-4s-4 1.79-4 4c0 1.864 1.275 3.43 3 3.874V52h-5v2h5zm1-8c1.105 0 2-.895 2-2s-.895-2-2-2c-1.104 0-2 .895-2 2s.896 2 2 2zm-40 14c1.105 0 2-.895 2-2s-.895-2-2-2c-1.104 0-2 .895-2 2s.896 2 2 2zm40-40c1.105 0 2-.895 2-2s-.895-2-2-2c-1.104 0-2 .895-2 2s.896 2 2 2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1 {
-    background: #1985A1;
+    background: #007991; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #007991 , #78ffd6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #007991 , #78ffd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     height: 150px;
     width: 100%;
     margin-top: 0px;
     padding-top: 75px;
     text-align: center;
-    color: #46494C;
+    color: #373F51;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 95px;
 }
@@ -24,21 +28,19 @@ h1 {
     padding-right: 30px;
     margin-right: 50px;
     border: solid;
-    border-color: #1985A1;
+    border-color: #007991;
     border-radius: 50%;
     float: right;
     font-family: Arimo;
     font-size: 30px;
     text-decoration: none;
-}
+    color: #373F51;
 
-.button:visited {
-    color: #46494C;
 }
 
 // want this to be an id that gets both the link AND the :, how to do this?
 .task_list {
-    color: #46494C;
+    color: #373F51;
     font-family: Arimo;
     font-size: 40px;
     text-decoration: none;
@@ -50,14 +52,13 @@ ul {
     list-style: none;
 }
 
-.arrow {
+#arrow {
     font-size: 40px;
-    margin-top: 0px;
-    color: #46494C;
+    // color: red;
 }
 
 .list_description {
-    color: #46494C;
+    color: #373F51;
     display: inline-block;
     font-family: Arimo;
 }
@@ -66,55 +67,52 @@ ul {
 .control_button {
     font-size: 45px;
     display: inline-block;
-    color: #46494C;
+    color: #373F51;
     margin-top: -40px;
     text-decoration: none;
 }
 
 .control_button_text {
     font-family: Arimo;
-    color: #1985A1;
+    color: #007991;
     font-size: 30px;
     line-height: 1.6em;
     margin-top: 0;
 }
 
-#complete_button {
-    margin-bottom: 8px;
-    font-size: 50px;
+#main_complete, #main_delete {
+    margin-left: 40px;
+    margin-right: 50px;
     text-align: center;
+    display: inline-block;
 }
 
-#delete_button, #undone_button {
-    text-decoration: none;
-    color: #46494C;
-    text-align: center;
-    margin-bottom: 1px;
-}
-
-#delete_option {
-    margin-left: 30px;
+#completed_icon {
+    font-size: 56px;
+    margin-bottom: 4px;
+    margin-top: 0;
 }
 
 .label {
-    color: #46494C;
+    color: #373F51;
     font-family: 'Didact Gothic', sans-serif;;
 }
 
 .text_field {
     font-family: Arimo;
-    color: #46494C;
+    color: #373F51;
     font-size: 20px;
     display: block;
+    background: #A9BCD0;
 }
 
 #submit_button {
     font-size: 20px;
     font-family: Arimo;
-    color: #46494C;
+    color: #373F51;
     padding: 15px 30px 15px 30px;
     border: solid;
-    border-color: #1985A1;
+    border-color: #007991;
     border-radius: 15%;
 }
 
@@ -127,4 +125,18 @@ ul {
     margin-left: 40px;
     margin-top: 50px;
     text-align: center;
+}
+
+.footer_text{
+    color: red;
+}
+
+footer {
+    background: #007991; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #007991 , #78ffd6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #007991 , #78ffd6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 100px;
+    width: 100%;
+    color: #373F51;
 }
