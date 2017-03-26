@@ -50,13 +50,13 @@ ul {
     list-style: none;
 }
 
-#arrow {
+.arrow {
     font-size: 40px;
     margin-top: 0px;
     color: #46494C;
 }
 
-#list_description {
+.list_description {
     color: #46494C;
     display: inline-block;
     font-family: Arimo;
@@ -68,6 +68,7 @@ ul {
     display: inline-block;
     color: #46494C;
     margin-top: -40px;
+    text-decoration: none;
 }
 
 .control_button_text {
@@ -115,4 +116,15 @@ ul {
     border: solid;
     border-color: #1985A1;
     border-radius: 15%;
+}
+
+#task_info {
+    margin-left: 40px;
+}
+
+#show_edit, #show_complete, #show_delete {
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 50px;
+    text-align: center;
 }
