@@ -90,8 +90,12 @@ li a + a {
   color: #000;
 }
 
-li a + a:hover {
+li a:nth-child(2):hover {
   color: #808080;
+}
+
+li a:last-child:hover {
+  color: red;
 }
 
 /*** forms ***/

@@ -13,6 +13,8 @@ class TasksController < ApplicationController
 
   def create
     task = Task.create task_params
+    task.deadline ||= Time.now
+    task.save
     redirect_to tasks_path unless task.id == nil
   end
 
