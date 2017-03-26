@@ -4,11 +4,15 @@
 
 
 /*********************************************************
-HEADER
+
 **********************************************************/
 #index_main, #form_for_new_and_edit, #show_section {
   margin-top: 100px;
   padding: 15px;
+}
+
+#index_section_1 {
+  position: relative;
 }
 
 
@@ -20,13 +24,24 @@ HEADER
 }*/
 
 
-#index_main h1 {
-  width: 100%;
-  text-align: center;
-  background-color: green;
-  color: white;
-  z-index: 50
+#index_h1 {
+  display: inline-block;
+  color: #0B3C5D;
 }
+
+#index_add_button {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+}
+
+
+
+
+
+
 
 
 #index_main nav {
