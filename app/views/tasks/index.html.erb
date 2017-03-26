@@ -12,7 +12,7 @@
       Completion_date
       </th>
       <th>
-        Status
+        Completed
       </th>
     </tr>
 
@@ -21,14 +21,15 @@
       <td>  <%= link_to task.name, task_path(task.id) %></td>
 
       <td>  <%= task.description %></td>
-      <td> <%=task.completion_date %> </td>
-      <td> <%if task.completion_date != nil %>
+      <td> <%= task.completion_date %> </td>
+      <td> <%if task.completed == true %>
         <%= link_to "👍", task_completed_path(task.id), method: :patch %>
         <% else %>
         <%= link_to "👎", task_completed_path(task.id), method: :patch %>
 
         <%end%>
       </td>
+      <td> <%= task.completed %> </td>
 
       <td>
         <%= button_to "Delete", delete_task_path(task.id), :class => "button", :method => :delete, data: {confirm: "Are you sure you want to delete this"} %>

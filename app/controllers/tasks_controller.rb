@@ -16,14 +16,17 @@ class TasksController < ApplicationController
     if task.update(task_params)
       redirect_to tasks_path
     end
+    # task.save
+
   end
 
   def completed
     task = Task.find(params[:id])
-    if task.completion_date != nil
-      task.completion_date = nil
+    if task.completed == false
+      task.completed = true
     else
-      task.completion_date = Time.now
+      task.completed = false
+      #task.completion_date = Time.now
     end
     task.save
 
@@ -35,17 +38,10 @@ class TasksController < ApplicationController
   end
 
   def create
-  #   task = Task.new
-  #   task.name = params[:name]
-  #   task.description = params[:description]
-  #   task.completion_date = params[:completion_date]
-  #
-  #   if task.save
-  #     redirect_to tasks_path
-  #   end
   task = Task.create task_params
 
     unless task.id == nil
+
       redirect_to tasks_path
     end
   end
@@ -58,7 +54,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:name, :description, :Due_date)
+    params.require(:task).permit(:name, :description, :completion_date)
   end
 
 end
