@@ -53,6 +53,17 @@ img {
   height: 200px;
 }
 
+/*Styling the Header NAVBAR*/
+
+.navbar li {
+  display: inline;
+  float: right;
+  border-right: 2px solid rgb(5, 181, 214);
+}
+
+.navbar li a:hover {
+  color: rgb(5, 181, 214);
+}
 
 /*Styling the all task list area*/
 .main-list {
@@ -61,6 +72,11 @@ img {
   padding: 2px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+.main-list h3 {
+  text-align: center;
+  color: rgb(98, 96, 97);
 }
 
 .main-list h2 {

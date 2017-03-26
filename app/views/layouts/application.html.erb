@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <header>
+      <ul class="navbar">
+        <li>
+          <%= link_to "Create New Task", new_task_path %>
+        </li>
+        <li>
+          <%= link_to "All Tasks", tasks_path %>
+        </li>
+      </ul>
+    </header>
+
     <%= yield %>
   </body>
 </html>
