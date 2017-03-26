@@ -2,25 +2,6 @@
 
   <h1>Create New Task</h1>
 
-  <%= form_for @task do |f| %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :image, "Image URL" %>
-  <%= f.text_field :image %>
-
-  <%= f.label :description %>
-  <%= f.text_area :description, size: "43x12" %>
-
-  <%= f.label :status %>
-  <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
-
-  <%= f.label :complete_by, "Task should be completed by:"%>
-  <%= f.date_field :complete_by %>
-
-  <%= f.submit "Add Task" %>
-
-  <% end %>
+  <%= render partial: "form", locals: { action_name: "Add Task", form_method: :post } %>
 
 </article>
