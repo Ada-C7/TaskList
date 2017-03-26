@@ -50,7 +50,7 @@ textarea, label, date_select {
 }
 
 img {
-  height: 200px;
+  width: 300px;
 }
 
 /*Styling the Header NAVBAR*/
@@ -140,4 +140,21 @@ a.bottom-button {
   padding-top: 20px;
   width: 500px;
   text-align: center;
+}
+
+a.bottom-button:hover {
+  color: rgb(5, 181, 214);
+}
+
+/*Adding styling to the show page*/
+
+.showpage {
+  border: 5px solid rgb(208, 188, 4);
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.showpage h1 {
+  margin-top: 0;
 }

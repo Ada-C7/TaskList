@@ -1,3 +1,5 @@
+<article  class="showpage">
+
 <section>
   <h1> <%= @result_task.name%> :</h1>
   <p>
@@ -34,6 +36,5 @@
   <%= link_to "Delete", delete_task_path, method: :delete, data: { confirm: "Are you sure?"} %>
 </p>
 
-<p>
-  <%= link_to "Home", tasks_path %>
-</p>
+
+</article>

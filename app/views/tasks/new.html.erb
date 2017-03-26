@@ -12,12 +12,8 @@
     <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
 
     <%= f.label :complete_by, "Complete Task on date:"%>
-    <%= f.date_select :complete_by, :start_year => 2017 %>
+    <%= f.date_field :complete_by %>
 
     <%= f.submit "Add Task" %>
 
   <% end %>
-
-  <p>
-    <%= link_to "home", tasks_path %>
-  </p>
