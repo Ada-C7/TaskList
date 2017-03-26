@@ -15,7 +15,7 @@
     <ul>
       <% @tasks.each_with_index do |task| %>
         <li>
-          <p>
+          <p id = "index_task_id">
             Task <%= task.id%>
           </p>
 
@@ -25,6 +25,9 @@
             <%= task[:completion_date] %>
           </li>
           <li id = "index_action_buttons">
+            <p>
+              <%= task.id%>>
+            </p>
             <%= link_to "Edit task", edit_task_path(task) %>
             <%= link_to "Completed", status_path(task), method: :patch %>
             <%= link_to "Delete", task_path(task),

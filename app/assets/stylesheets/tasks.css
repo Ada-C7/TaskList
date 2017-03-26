@@ -52,7 +52,7 @@
   right: 0%;
 }
 
-#index_nav p {
+#index_task_id {
   display: inline-block;
   margin: 0;
   float: left;
@@ -67,6 +67,11 @@
 #index_action_buttons {
   display: inline-block;
   float: right;
+}
+
+#index_action_buttons p{
+  display: inline-block;
+  margin: 0;
 }
 
 #index_action_buttons a{
