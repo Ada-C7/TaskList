@@ -1,21 +1,26 @@
 <article class="page">
-<h1>Create New Task</h1>
+
+  <h1>Create New Task</h1>
 
   <%= form_for @task do |f| %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-    <%= f.label :description %>
-    <%= f.text_area :description, size: "43x12" %>
+  <%= f.label :image, "Image URL" %>
+  <%= f.text_field :image %>
 
-    <%= f.label :status %>
-    <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
+  <%= f.label :description %>
+  <%= f.text_area :description, size: "43x12" %>
 
-    <%= f.label :complete_by, "Complete Task on date:"%>
-    <%= f.date_field :complete_by %>
+  <%= f.label :status %>
+  <%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
 
-    <%= f.submit "Add Task" %>
+  <%= f.label :complete_by, "Task should be completed by:"%>
+  <%= f.date_field :complete_by %>
+
+  <%= f.submit "Add Task" %>
 
   <% end %>
+
 </article>

@@ -119,6 +119,10 @@ img {
   margin: 5px;
 }
 
+.complete h3::before {
+  content: "✓";
+}
+
 section.incomplete:hover {
   background-color: rgb(5, 181, 214);
 }
@@ -158,4 +162,8 @@ a.bottom-button:hover {
 
 .page h1 {
   margin-top: 0;
+}
+
+.page a:hover {
+  color: rgb(5, 181, 214);
 }

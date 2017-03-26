@@ -1,8 +1,8 @@
 <article class="page">
 
-<h1>Edit a Task</h1>
+  <h1>Edit a Task</h1>
 
-<%= form_for @task, method: :put do |f| %>
+  <%= form_for @task, method: :put do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -21,6 +21,6 @@
 
   <%= f.submit "Save" %>
 
-<% end %>
+  <% end %>
 
 </article>

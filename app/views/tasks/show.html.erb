@@ -1,40 +1,40 @@
 <article  class="page">
 
-<section>
-  <h1> <%= @result_task.name%> :</h1>
-  <p>
-    <strong>Description:</strong> <%= @result_task.description %>
-  </p>
-  <p>
-    <strong>Status:</strong> <%= @result_task.status %>
-  </p>
-  <p>
-    <strong>Complete by:</strong> <%= @result_task.complete_by %>
-  </p>
-</section>
+  <section>
+    <h1> <%= @result_task.name%> :</h1>
+    <p>
+      <strong>Description:</strong> <%= @result_task.description %>
+    </p>
+    <p>
+      <strong>Status:</strong> <%= @result_task.status %>
+    </p>
+    <p>
+      <strong>Complete by:</strong> <%= @result_task.complete_by %>
+    </p>
+  </section>
 
-<p>
-  <% if @result_task.completion_date == nil %>
+  <p>
+    <% if @result_task.completion_date == nil %>
     <%= form_for @result_task do |f| %>
-      <%= f.submit "Mark Complete", data: { confirm: "Are you sure you want to mark this task as Complete?"} %>
+    <%= f.submit "Mark Complete", data: { confirm: "Are you sure you want to mark this task as Complete?"} %>
     <% end %>
-  <% end %>
-</p>
-<p>
-  <% if @result_task.image == nil %>
+    <% end %>
+  </p>
+  <p>
+    <% if @result_task.image == nil %>
     <%= image_tag("to-do.jpg", alt:"task photo") %>
-  <% else %>
+    <% else %>
     <%= image_tag(@result_task.image, alt:"task photo") %>
-  <% end %>
-</p>
+    <% end %>
+  </p>
 
-<p>
-  <% if @result_task.completion_date == nil %>
+  <p>
+    <% if @result_task.completion_date == nil %>
     <%= link_to "Edit", edit_task_path %>
-  <% end %>
+    <% end %>
 
-  <%= link_to "Delete", delete_task_path, method: :delete, data: { confirm: "Are you sure?"} %>
-</p>
+    <%= link_to "Delete", delete_task_path, method: :delete, data: { confirm: "Are you sure?"} %>
+  </p>
 
 
 </article>
