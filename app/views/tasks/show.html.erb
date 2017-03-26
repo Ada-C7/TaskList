@@ -16,7 +16,7 @@
 <p>
   <% if @result_task.completion_date == nil %>
     <%= form_for @result_task do |f| %>
-      <%= f.submit "Mark Complete" %>
+      <%= f.submit "Mark Complete", data: { confirm: "Are you sure you want to mark this task as Complete?"} %>
     <% end %>
   <% end %>
 </p>
