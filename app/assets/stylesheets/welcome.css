@@ -5,9 +5,25 @@
 #welcome_main {
   margin-top: 100px;
   padding: 15px;
+  color; #0B3C5D;
 }
 
-#welcome_header {
-  color: orange;
+#welcome_h1 {
   text-align: center;
+}
+
+#welcome_box1{
+  position: relative;
+}
+
+#welcome_box1 p {
+  display: inline-block;
+}
+
+#welcome_box1 div {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0%;
 }

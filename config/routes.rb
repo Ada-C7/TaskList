@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'welcome#index', as: 'welcome'
 
 ##
+  # get 'welcome', to: 'welcome#index'
+
   get 'tasks', to: 'tasks#index', as: 'tasks' #The index always requires the controllers?????
 
   get 'tasks/new', to: 'tasks#new', as: 'new_task' #Important to have after index before show

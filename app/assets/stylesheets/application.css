@@ -20,11 +20,21 @@ header {
   border: 2px solid red;
   position: fixed;
   width: 98%;
-  background-color: green;
+  /*background-color: rgba(11,60,93,1);*/
+  background-color: #0B3C5D;
+  color: #D9B310;
   z-index: 100;
   text-align: center;
 }
 
+header div {
+  display: inline-block;
+  float:left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2%;
+}
 
 header h1{
   display: inline-block;
