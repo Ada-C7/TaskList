@@ -44,6 +44,22 @@ class TasksController < ApplicationController
     redirect_to task_path(task)
   end
 
+  def completed
+    task = Task.find(params[:id])
+    time = DateTime.now
+    task.write_attribute(:completed_at, time)
+    task.save
+
+    redirect_to tasks_path
+  end
+
+  def destroy
+  task = Task.find(params[:id])
+  task.destroy
+
+  redirect_to tasks_path
+  end
+
 private
   def task_params
     return params.require(:task).permit(:name, :description, :completed_at)

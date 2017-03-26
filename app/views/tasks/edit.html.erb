@@ -2,11 +2,8 @@
 <%= form_for @task do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <!-- <%= f.text_field :title, value: "initial title", class: "title-field" %> -->
-
   <%= f.label :description %>
   <%= f.text_field :description %>
-
   <%= f.submit value: "Edit Task" %>
 
 <% end %>
