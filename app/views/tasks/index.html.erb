@@ -15,26 +15,29 @@
     <ul>
       <% @tasks.each_with_index do |task| %>
         <li>
-          <p id = "index_task_id">
+          <div id = "index_task_id">
             Task <%= task.id%>
-          </p>
-
-          <li id = "index_task_info">
+          </div>
+          <div id = "index_task_name">
             <%= link_to task[:name], task_path(task.id) %>
+          </div>
+          <div id = "index_task_description">
             <%= task[:description] %>
             <%= task[:completion_date] %>
-          </li>
-          <li id = "index_action_buttons">
+          </div>
+          <div id = "index_action_buttons">
             <p>
               <%= task.id%>>
+              <%= link_to "Completed", status_path(task), method: :patch %>
             </p>
-            <%= link_to "Edit task", edit_task_path(task) %>
-            <%= link_to "Completed", status_path(task), method: :patch %>
-            <%= link_to "Delete", task_path(task),
+            <div>
+              <%= link_to image_tag("edit1.png", alt: "Edit buttom", height: "30px", class: "button"), edit_task_path(task) %>
+              <%= link_to image_tag("delete1.png", alt: "Delete buttom", height: "30px", class: "button"), task_path(task),
                   data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
             <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
             <!-- If the method is not specified the default is GET -->
-          </li>
+            </div>
+          </di>
         </li>
       <% end %>
     </ul>

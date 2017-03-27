@@ -23,7 +23,9 @@
   padding: 0;
 }
 
-
+/*********************************************************
+ SECTION 1
+**********************************************************/
 
 #index_section_1 {
   position: relative;
@@ -52,16 +54,28 @@
   right: 0%;
 }
 
-#index_task_id {
-  display: inline-block;
-  margin: 0;
-  float: left;
-  width: 10%;
+/*********************************************************
+ THE NAV SECTION
+**********************************************************/
+
+#index_nav {
+  line-height: 35px;
 }
 
-#index_task_info {
+#index_task_id {
   display: inline-block;
-  width: 50%;
+  float: left;
+  width: 8%;
+}
+#index_task_name {
+  display: inline-block;
+  float: left;
+  width: 20%;
+  margin-right: 10px;
+}
+#index_task_description {
+  display: inline-block;
+  width: 40%;
 }
 
 #index_action_buttons {
@@ -73,7 +87,12 @@
   display: inline-block;
   margin: 0;
 }
+#index_action_buttons div{
+  display: inline-block;
+  margin: 0;
+}
 
-#index_action_buttons a{
-  margin-left: 15px;
+#index_action_buttons .button {
+  /*margin-left: 15px;*/
+  vertical-align: middle;
 }
