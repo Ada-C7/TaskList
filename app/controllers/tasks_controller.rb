@@ -55,7 +55,7 @@ class TasksController < ApplicationController
     task.assignee = task_params[:assignee]
     task.completed = task_params[:completed]
     task.duration = task_params[:duration]
-    task.completion_date = "Not Complete"
+    task.completion_date = task_params[:completion_date]
 
     unless task.id == nil
       redirect_to tasks_path
@@ -64,8 +64,8 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
-    if task.completion_date == "Not Complete"
-      task.completion_date = "Complete at #{Date.today}"
+    if task.complete(task_params) == true
+      task.completion_date = Time.now
     else
       task.completion_date = "Not Complete"
     end
