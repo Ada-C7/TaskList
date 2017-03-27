@@ -38,20 +38,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
-  
-  def complete
-    task = Task.find(params[:id])
-    if task.completion == "Not Complete"
-      task.completion = "Complete at #{Date.today}"
-    else
-      task.completion = "Not Complete"
-    end
 
-    if task.save
-      redirect_to task_path(task.id)
-    end
-
-  end
 
   def create
     # task = Task.new
@@ -63,17 +50,35 @@ class TasksController < ApplicationController
     # if task.save
     #   redirect_to tasks_path
     # end
-    task = Task.create task_params
+    task = Task.new
+    task.description = task_params[:description]
+    task.assignee = task_params[:assignee]
+    task.completed = task_params[:completed]
+    task.duration = task_params[:duration]
+    task.completion_date = "Not Complete"
 
     unless task.id == nil
       redirect_to tasks_path
     end
   end
 
+  def complete
+    task = Task.find(params[:id])
+    if task.completion_date == "Not Complete"
+      task.completion_date = "Complete at #{Date.today}"
+    else
+      task.completion_date = "Not Complete"
+    end
+
+    if task.save
+      redirect_to task_path(task.id)
+    end
+  end
+
   private
 
   def task_params
-    params.require(:task).permit(:description, :assignee, :completed, :duration)
+    params.require(:task).permit(:description, :assignee, :completed, :duration, :completion_date)
   end
 
 
