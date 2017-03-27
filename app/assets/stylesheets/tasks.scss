@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  background-color: #fefbd8;
+}
+
+header {
+  background-color: #80ced6;
+  text-align: center;
+}
+
+body {
+  color: #618685;
+  // border
+}
+
 h3 {
   color: blue;
 }
@@ -23,3 +37,11 @@ section {
   border-color: blue;
   border-radius: 10%;
 }
+
+// HEX: #d5f4e6
+//
+// HEX: #80ced6
+//
+// HEX: #fefbd8
+//
+// HEX: #618685
