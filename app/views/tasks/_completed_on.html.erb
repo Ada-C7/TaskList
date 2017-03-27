@@ -1,0 +1,13 @@
+<% def completed_on %>
+  <% @task = Task.find(params[:id]) %>
+  <% if @task.completion_date? %>
+    <% return "Completed On: " %>
+  <%# else %>
+    <%# return "you got this!" %>
+  <% end %>
+<% end %>
+
+
+<p class: "task_complete">
+    <%= completed_on %> <%=@task.completion_date %>
+</p>

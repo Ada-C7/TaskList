@@ -1,0 +1,37 @@
+<h1 class: "page_title">Task List</h1>
+
+<ul class: "task_list">
+  <% title = String.new %>
+
+  <% @tasks.each do |task| %>
+
+    <% if title != task.title %>
+      <% title = task.title %>
+      <p class: "title" >
+        <%= title.upcase %>
+      </p>
+    <% end %>
+
+
+    <li>
+
+      <% if task.complete %>
+        <del><%= link_to task.name, task_path(task.id) %></del>
+        <%= link_to "☑️", update_task_path(task[:id],
+        task: { complete: false, completion_date: nil}),
+        method: :put %>
+      <% else  %>
+        <%= link_to task.name, task_path(task.id) %>
+        <%= link_to "🔘", update_task_path(task[:id],
+        task: {complete: true, completion_date: Time.now}), method: :put %>
+      <% end %>
+
+      <%= link_to "␡", delete_task_path(task.id),
+      data: { confirm: "Are you sure you want to delete this task?"},
+      method: :delete%>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add Task", new_task_path, class: "button" %>

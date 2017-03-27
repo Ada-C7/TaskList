@@ -1,0 +1,45 @@
+<h1 class: "page_title">Show Task</h1>
+
+<p class: = "task_title">
+  <%= @task.title %>
+</p >
+
+<img src="http://placebeyonce.com/300-300" alt="beyonce" class: = "task_image">
+
+
+
+
+
+
+<% if @task.complete %>
+  <p>
+    <%= @task.id %>. <del><%= @task.name %>: <%= @task.description %></del>
+
+
+  <%= link_to "☑️", complete_task_path(@task,
+  task: { complete: false, completion_date: nil}),
+  method: :patch %>
+  </p>
+<% else  %>
+  <p>
+    <%= @task.id %>. <%= @task.name %>: <%= @task.description %>
+  <%= link_to "🔘", complete_task_path(@task,
+  task: {complete: true, completion_date: Time.now}), method: :patch %>
+</p>
+<% end %>
+
+
+
+
+
+
+
+
+<%= render partial: "completed_on" %>
+
+
+
+<%= link_to "edit task", edit_task_path(@task) %>
+<%= link_to "Delete Task", delete_task_path(@task),
+data: { confirm: "Are you sure you want to delete this task?"},
+method: :delete%>
