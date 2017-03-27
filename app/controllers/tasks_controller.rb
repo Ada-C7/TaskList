@@ -38,6 +38,19 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
+  def complete
+    task = Task.find(params[:id])
+    if task.completion == "Not Complete"
+      task.completion = "Complete at #{Date.today}"
+    else
+      task.completion = "Not Complete"
+    end
+
+    if task.save
+      redirect_to task_path(task.id)
+    end
+
+  end
 
   def create
     # task = Task.new
