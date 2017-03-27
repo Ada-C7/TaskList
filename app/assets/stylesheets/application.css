@@ -17,8 +17,66 @@
 
 body {
   background: linear-gradient(to left, #E8CBC0 , #636FA4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Fredericka the Great";
+}
+
+header {
+  /*background-color: #C9B1FF;*/
+  box-sizing: border-box;
+  padding: 0 3%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+header li {
+  display: inline;
+  font-size: 1.5em;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 72px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.button_links {
+  padding: 0 1%;
+}
+
+a:visited {
+  color: blue;
 }
 
 .toggle-button {
   display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+.new_task, div {
+  display: inline-block;
+  text-align: left;
+}
+
+.new_task li {
+  padding: 1% 1%;
 }
