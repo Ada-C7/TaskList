@@ -28,7 +28,8 @@
           <div id = "index_action_buttons">
             <p>
               <%= task.id%>>
-              <%= link_to task.status_info, status_path(task), method: :patch %>
+              <!-- <%###= link_to task.status_info, status_path(task), method: :patch %> -->
+              <%= link_to task.status_info[0], status_path(task), task.status_info[1] %>
             </p>
             <div>
               <%= link_to image_tag("edit1.png", alt: "Edit buttom", height: "30px", class: "button"), edit_task_path(task) %>
