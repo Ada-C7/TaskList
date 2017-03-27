@@ -5,3 +5,25 @@ h1 {
 li {
   color: blue;
 }
+
+h2 {
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+ul {
+  vertical-align: top;
+}
+
+.complete {
+  width: 50%;
+  float: right;
+  margin-left: 60%;
+}
+
+.incomplete {
+  width: 50%;
+  float: left;
+  margin-right: 60%;
+}

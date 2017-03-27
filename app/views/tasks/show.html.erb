@@ -2,6 +2,9 @@
 <h3><%= @task[:description] %></h3>
 <h3><%= @task[:completed_at] %></h3>
 
-<%= link_to "Edit this task", edit_task_path %>
+<% if @task.completed_at == nil %>
+  <%= link_to "Edit this task", edit_task_path %>
+<% end %>
+
 <%= link_to "Back to tasks list", tasks_path %>
 <%= link_to "Delete", task_path(@task), data: {method: :delete, confirm: "Are you sure you want to delete this task: #{@task.name}?"} %>

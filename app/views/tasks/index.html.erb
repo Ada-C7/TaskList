@@ -1,12 +1,18 @@
 <h1>Tasks List</h1>
 
+<h2 class="incomplete"> <%= "To do:" %> </h2>
+<h2 class="complete"> <%= "Completed:" %> </h2>
 <ul>
   <% @tasks.each do |task| %>
-    <li>
-      <%= link_to task.name, task_path(task.id) %>
-      <%= link_to "Delete", task_path(task), data: {method: :delete, confirm: "Are you sure you want to delete this task: #{task.name}?"} %>
-      <%= button_to "Completed", completed_task_path(task), method: :patch %>
-    </li>
+    <% if task.completed_at == nil %>
+      <li class="incomplete">   <%= link_to task.name, task_path(task.id) %>
+        <%= link_to "Delete", task_path(task), data: {method: :delete, confirm: "Are you sure you want to delete this task: #{task.name}?"} %>
+        <%= button_to "Completed", completed_task_path(task), method: :patch %> </li>
+    <% else %>
+      <li class="complete">   <%= link_to task.name, task_path(task.id) %>
+        <%= link_to "Delete", task_path(task), data: {method: :delete, confirm: "Are you sure you want to delete this task: #{task.name}?"} %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 
