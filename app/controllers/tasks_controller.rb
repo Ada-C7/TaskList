@@ -38,6 +38,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
+  
   def complete
     task = Task.find(params[:id])
     if task.completion == "Not Complete"
