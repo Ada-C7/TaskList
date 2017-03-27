@@ -29,9 +29,10 @@
             <p>
               <%= task.id%>>
               <!-- <%###= link_to task.status_info, status_path(task), method: :patch %> -->
-              <%= link_to task.status_info[0], status_path(task), task.status_info[1] %>
+              <!-- <%###= link_to task.status_info[0], status_path(task), task.status_info[1] %> -->
             </p>
             <div>
+              <%= link_to image_tag(task.status_info[0], alt: "Status buttom", height: "30px", class: "button"), status_path(task), task.status_info[1] %>
               <%= link_to image_tag("edit1.png", alt: "Edit buttom", height: "30px", class: "button"), edit_task_path(task) %>
               <%= link_to image_tag("delete1.png", alt: "Delete buttom", height: "30px", class: "button"), task_path(task),
                   data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>

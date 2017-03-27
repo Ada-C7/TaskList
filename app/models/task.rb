@@ -10,9 +10,9 @@ class Task < ApplicationRecord
 
   def status_info
     if completion_date == nil
-      return ["Not yet completed", method: :patch]
+      return ["status_notdone1.png", method: :patch]
     else
-      return ["Completed", data: {method: :patch, confirm: "Are you sure you want to mark this task as undone?"}]
+      return ["status_done1.png", data: {method: :patch, confirm: "Are you sure you want to mark this task as undone?"}]
     end
   end
 
