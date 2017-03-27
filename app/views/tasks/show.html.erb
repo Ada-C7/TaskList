@@ -1,9 +1,20 @@
-<h1>Task: <%= @task_result.name %></h1>
-<p>
-  <%= @task_result.description %>
-</p>
-<h3>Status: <%= @task_result.status %></h3>
-<p>
-  <h3>Completion Date: <%= @task_result.completion_date %></h3>
-</p>
-<h2><%= link_to "Home", tasks_index_path %></h2>
+<body>
+  <main>
+    <h1><%= @task_result.status %>: <%= @task_result.name %></h1>
+    <p>
+      :<%= @task_result.description %>
+    </p>
+    <p>
+      Date Completed: <%= @task_result.completion_date %>
+    </p>
+    <h2> <%= link_to "{ update this task }", update_task_path %> </h2>
+    <h2> <%= link_to "{ back to my task list }", tasks_index_path %></h2>
+    <h2> <%= link_to '{ delete this task }',url_for(action: :delete,id: @task_result.id),method: :delete, data: {confirm: "Are you sure?"} %> </h2>
+
+
+    <footer>
+      copyright ann dai 2017
+    </footer>
+
+  </main>
+</body>

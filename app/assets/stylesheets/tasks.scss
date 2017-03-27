@@ -1,3 +1,130 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+
+// body {
+//   background: #ff4b1f; /* fallback for old browsers */
+//   background: -webkit-linear-gradient(to left, #ff4b1f , #1fddff); /* Chrome 10-25, Safari 5.1-6 */
+//   background: linear-gradient(to left, #ff4b1f , #1fddff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//   font-family: 'Dosis', sans-serif;
+//   color: white;
+//   text-align: center;
+// }
+
+$bg-color: #99fcf7; //start color
+$stops: 100; //smoothness
+$time: 20s; //duration of animation
+$hue-range: 20; //of 360deg
+
+body{
+  background-color: $bg-color;
+  -webkit-animation: colorChange $time linear 0s infinite;
+  animation: colorChange $time linear 0s infinite ;
+  font-family: 'Dosis', sans-serif;
+  color: purple;
+  text-align: center;
+}
+
+@-webkit-keyframes colorChange{
+  @for $i from 0 through $stops{
+    $old-color: adjust-hue($bg-color, (360/$stops)*$i);
+    $new-color: adjust-hue($bg-color, (360/$stops)*$i + $hue-range);
+    #{$i}% {
+      background: -webkit-linear-gradient(left, $old-color, $new-color);
+      background: linear-gradient(to right, $old-color, $new-color);
+    }
+  }
+}
+@keyframes colorChange{
+  @for $i from 0 through $stops{
+    $old-color: adjust-hue($bg-color, (360/$stops)*$i);
+    $new-color: adjust-hue($bg-color, (360/$stops)*$i + $hue-range);
+    #{$i}% {
+      background: linear-gradient(to right, $old-color, $new-color);
+    }
+  }
+}
+
+
+main {
+  padding-top: 10%;
+}
+
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	}
+
+a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: #9685BA;
+ -o-transition:.5s;
+ -ms-transition:.5s;
+ -moz-transition:.5s;
+ -webkit-transition:.5s;
+ transition:.5s;
+	}
+
+section {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  width: 20%;
+}
+
+.forms {
+  text-align: right;
+  // position: relative;
+  display: block;
+  color: white;
+  margin: 2%;
+  left: 35%;
+}
+
+.status ul {
+  margin: 10%
+}
+
+h4 {
+  color: purple;
+  font-weight: 1000
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+div.forms {
+  margin: 1%;
+  text-align: left
+}
+
+input  {
+    width: 100%;
+    color: purple;
+}
+
+textarea  {
+    width: 100%;
+    color: black;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+
+footer {
+  font-size: 3%;
+  position: fixed;
+  bottom: 3%;
+  text-align: center
+
+}

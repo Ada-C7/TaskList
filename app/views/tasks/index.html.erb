@@ -1,8 +1,64 @@
-<h1>Ann's Big 'Ol Task List</h1>
-<ul>
-  <% @tasks.each do |task| %>
-  <li><%= link_to task.name, task_path(task.id) %> : <%= task.status %>
-  </li>
-  <% end %>
-</ul>
-<p>Find me in app/views/tasks/index.html.erb</p>
+
+
+<body>
+
+  <main>
+
+    <h1>my task list</h1>
+
+      <ul>
+
+          <% @tasks.each do |task| %>
+          <li>
+          <%= link_to task.name, task_path(task.id) %> : <%= task.description %> completed on <%= task.completion_date %>
+        </li>
+
+          <% end %>
+
+      </ul>
+
+
+    <!-- <section class="status">
+      <h4>I haven't started...</h4>
+        <% @tasks.each do |task| %>
+          <% if task.status == "haven't started" %>
+          <ul>
+            <li> <%= link_to task.name, task_path(task.id) %> : <%= task.description %> <%= check_box(task, task.completion_date, options = {}, checked_value = Date.today, unchecked_value = nil) %>
+            </li>
+          </ul>
+        <% end %>
+      <% end %>
+    </section>
+
+    <section class="status">
+      <h4>I'm working on...</h4>
+        <% @tasks.each do |task| %>
+          <% if task.status == "working on it" %>
+          <ul>
+            <li> <%= link_to task.name, task_path(task.id) %> : <%= task.description %>
+            </li>
+          </ul>
+        <% end %>
+      <% end %>
+    </section>
+
+    <section class="status">
+      <h4>I'm done with...</h4>
+        <% @tasks.each do |task| %>
+          <% if task.status == "I'm done!" %>
+          <ul>
+            <li> <%= link_to task.name, task_path(task.id) %> : <%= task.description %>
+            </li>
+          </ul>
+        <% end %>
+      <% end %>
+    </section> -->
+    <h2>  {    <%= link_to "add a task", new_task_path %>    }  </h2>
+
+  </main>
+  <footer>
+    copyright ann dai 2017
+  </footer>
+
+
+</body>

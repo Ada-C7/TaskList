@@ -1,0 +1,50 @@
+<body>
+  <main>
+    <h1>add a new task</h1>
+    <%= form_for @task do |f| %>
+
+    <section class="forms">
+      <%= f.label :name, "Task Name" %>
+      <div class="box">
+        <%= f.text_field :name %>
+      </div>
+    </section>
+
+    <section class="forms">
+      <%= f.label :description, "Task Description" %>
+      <div class="box">
+        <%= f.text_area :description %>
+      </div>
+    </section>
+
+    <section class="forms">
+      <%= f.label :completion_date, "Completed On"%>
+      <div class="box">
+        <%= f.date_field :completion_date %>
+      </div>
+    </section>
+
+    <section class="forms">
+      <%= f.label :status %>
+      <div class="box">
+        <%= f.select :status, ["haven't started", "working on it", "I'm done!" ] %>
+      </div>
+    </section>
+
+    <section class="forms">
+      <%= f.submit "Submit"%>
+    <section class="forms">
+
+
+
+    <% end %>
+
+    <h2><%= link_to "nevermind...", tasks_path %></h2>
+  </main>
+
+  <footer>
+    copyright ann dai 2017
+  </footer>
+
+
+</body>

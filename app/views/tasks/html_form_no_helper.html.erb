@@ -1,0 +1,41 @@
+<form action="/tasks" method="post" accept-charset="utf-8">
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+ <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+<h2>
+ <label for="name">Task Name</label>
+ <!-- value is prepopulated text -->
+ <input type="text" name="name" value="" id="name" placeholder="Laundry">
+</h2>
+
+<h2>
+ <label for="description">Description</label>
+</h2>
+
+ <!-- <input type="text" name="description" value="" placeholder="socks, coat, towels" id="description"> -->
+ <textarea type="text" for="description" name="description" rows="5" cols="50" placeholder="Wash sheets and towels" id="description"></textarea>
+ <!-- <input type="text" name="status" value="" placeholder="completed" id="status"> -->
+<!-- the id matching the for in the label makes the text box focused if the label is selected -->
+<h2>
+  <label for="status">Status</label>
+</h2>
+ <ul>
+  <li>
+   <input type="radio" name="status" value="Not Started"> Not Started
+  </li>
+  <li>
+  <input type="radio" name="status" value="Work in Progress" > Work in Progress
+    </li>
+  <li>
+    <input type="radio" name="status" value="completed"> Completed
+  </li>
+</ul>
+
+<h2>
+ <label for="completion_date">Completion Date</label>
+ <input type="text" name="completion_date" value="" placeholder="mm/dd/yyyy" id="completion_date">
+</h2>
+
+ <input type="submit" value="Submit">
+
+</form>
