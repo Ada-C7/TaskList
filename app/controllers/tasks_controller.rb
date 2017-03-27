@@ -36,6 +36,7 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
   end
+
   def update
     task =  Task.find(params[:id])
     task.update_attributes(task_params)
@@ -45,8 +46,9 @@ class TasksController < ApplicationController
 
   def status
     task = Task.find(params[:id])
-    task[:completion_date] = Time.now
-    task.save
+    task.status_change
+    # task[:completion_date] = Time.now
+    # task.save
     redirect_to tasks_path
   end
 

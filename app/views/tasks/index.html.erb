@@ -28,7 +28,7 @@
           <div id = "index_action_buttons">
             <p>
               <%= task.id%>>
-              <%= link_to "Completed", status_path(task), method: :patch %>
+              <%= link_to task.status_info, status_path(task), method: :patch %>
             </p>
             <div>
               <%= link_to image_tag("edit1.png", alt: "Edit buttom", height: "30px", class: "button"), edit_task_path(task) %>
@@ -37,7 +37,7 @@
             <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
             <!-- If the method is not specified the default is GET -->
             </div>
-          </di>
+          </div>
         </li>
       <% end %>
     </ul>
