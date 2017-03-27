@@ -64,10 +64,10 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
-    if task.complete(task_params) == true
+    if task.complete == true
       task.completion_date = Time.now
     else
-      task.completion_date = "Not Complete"
+      task.completion_date = nil 
     end
 
     if task.save
