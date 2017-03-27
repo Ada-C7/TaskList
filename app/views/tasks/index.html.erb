@@ -8,7 +8,7 @@
       <li>
         <%= link_to task.title, task_path(task.id) %>
         <% if task.completion == nil %>
-          <%= link_to "Mark as Complete", complete_task_path(task.id), data: { confirm: "Are you sure you want to complete this task?" }, method: :patch %>
+          <%= link_to "Mark as Complete", complete_task_path(task.id), data: { confirm: "Are you sure you want to complete this task?" }, method: :patch, class: "complete_button" %>
         <% end %>
       </li>
     <% end %>
