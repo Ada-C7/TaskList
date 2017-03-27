@@ -1,12 +1,1 @@
-<form action="/tasks" method="post" accept-charset="utf-8">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-
-  <label for="name">Task name</label>
-  <input type="text" name= "task[name]" value="" id="name">
-
-  <label for="description"> What needs to get done?</label>
-  <input type="text" name="task[description]" value="" id="description">
-
-  <input type="submit" value="Add task">
-</form>
+<%= render partial: "form", locals: { submit_text: "New"} %>
