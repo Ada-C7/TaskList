@@ -17,16 +17,17 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
+
+#### SINGLE ITEM
   def new
     @task = Task.new
   end
+  
   def create
     Task.create(task_params)
     redirect_to tasks_path
   end
 
-
-#### SINGLE ITEM
   def show
     # id = params[:id].to_i
     # @task = Task.find(id)
@@ -55,8 +56,6 @@ class TasksController < ApplicationController
   def destroy
     task = Task.find(params[:id])
     task.destroy
-    # Todo show the list of tska//
-
     redirect_to tasks_path
     #Another way instead of re_direct
     # @tasks = Tasks.all
@@ -64,6 +63,7 @@ class TasksController < ApplicationController
   end
 
 
+#### PRIVATE
   private
   def task_params
     params.require(:task).permit(:name, :description, :completion_date)

@@ -9,6 +9,7 @@
 #index_main, #form_for_new_and_edit, #show_section {
   margin-top: 100px;
   padding: 15px;
+  color: #0B3C5D;
 }
 
 #index_main li {
@@ -17,6 +18,7 @@
 
 #index_main a {
   text-decoration: none;
+  color: #0B3C5D;
 }
 
 #index_main ul {
@@ -24,7 +26,7 @@
 }
 
 /*********************************************************
- SECTION 1
+ INDEX: SECTION 1
 **********************************************************/
 
 #index_section_1 {
@@ -34,7 +36,6 @@
 #index_h1 {
   display: inline-block;
   width: 50%;
-  color: #0B3C5D;
 }
 
 #index_add_button {
@@ -46,7 +47,7 @@
 }
 
 /*********************************************************
- THE NAV SECTION
+ INDEX: THE NAV SECTION
 **********************************************************/
 
 #index_nav {
@@ -78,6 +79,16 @@
   display: inline-block;
   margin: 0;
 }
+
+#index_action_buttons a{
+  display: inline-block;
+  margin: 0;
+}
+
+#ndex_action_buttons a:hover {
+  background-color: #D9B310;
+}
+
 #index_action_buttons div{
   display: inline-block;
   margin: 0;

@@ -1,5 +1,3 @@
-
-
 <main id = "index_main">
 
   <section id = "index_section_1">
@@ -8,8 +6,6 @@
       <%= link_to image_tag("add1.png", alt: "New task button", height: "50px"), new_task_path, id: "new_task_button" %>
     </div>
   </section>
-
-
 
   <nav id = "index_nav">
     <ul>
@@ -23,30 +19,23 @@
           </div>
           <div id = "index_task_description">
             <%= task[:description] %>
-            <!-- <%###= task[:completion_date] %> -->
+            (<%= task[:completion_date] %>)
           </div>
           <div id = "index_action_buttons">
             <p>
               <%= task.id%>>
-              <!-- <%###= link_to task.status_info, status_path(task), method: :patch %> -->
-              <!-- <%###= link_to task.status_info[0], status_path(task), task.status_info[1] %> -->
-            </p>
+              <!-- <%###= link_to "Completed", status_path(task), method: :patch %> -->
             <div>
+              <!-- If the method is not specified the default is GET -->
               <%= link_to image_tag(task.status_info[0], alt: "Status buttom", height: "30px", class: "button"), status_path(task), task.status_info[1] %>
               <%= link_to image_tag("edit1.png", alt: "Edit buttom", height: "30px", class: "button"), edit_task_path(task) %>
               <%= link_to image_tag("delete1.png", alt: "Delete buttom", height: "30px", class: "button"), task_path(task),
                   data: {method: :delete, confirm: "Are you sure you want to delete the task #{task.name}"}%>
-            <!-- <%###################= button_to "Delete", task_path(task), method: :delete%>  -->
-            <!-- If the method is not specified the default is GET -->
             </div>
           </div>
         </li>
       <% end %>
     </ul>
   </nav>
-
-  <!-- <%################= link_to "Add new task", new_task_path %> -->
-
-
 
 </main>
