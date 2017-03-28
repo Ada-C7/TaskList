@@ -21,6 +21,7 @@
 </form> -->
 <!--  need to edit so that the methods read from here in forms, then have a link to home-->
 <!-- special view helper form , building a form around specific models, such as the @task instance variable -->
+<section class="form">
   <%= form_for @task do |f| %>
   <%= f.label :description %>
   <%= f.text_field :description %>
@@ -34,5 +35,5 @@
   <%= f.submit %>
 
   <% end %>
-
-  <p> <%= link_to "Home", tasks_path%> </p>
+</section>
+  <!-- <p> <%= link_to "Home", tasks_path%> </p> -->

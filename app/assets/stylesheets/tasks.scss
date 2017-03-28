@@ -22,9 +22,9 @@ h1 {
 //   text-align: center;
 
 a[href]:hover {
-    color: pink;
-    // list-style: none;
-    // text-decoration: none;
+  color: pink;
+  // list-style: none;
+  // text-decoration: none;
 }
 
 a[href] {
@@ -43,11 +43,13 @@ footer {
   background-color: #80ced6;
   height: 100px;
   width: 100%;
+  position: absolute;
+  bottom: -350px;
 }
 
 footer p {
-    padding-top: 40px;
-    margin-left: 18px;
+  padding-top: 40px;
+  margin-left: 18px;
 }
 
 body {
@@ -67,6 +69,14 @@ nav li {
   margin-right: 15px;
 }
 
+input[type=text] {
+  background-color: #80ced6;
+  color: white;
+}
+
+.form {
+  padding: 50px;
+}
 
 #main h2 {
   font-family: monospace;
