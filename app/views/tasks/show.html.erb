@@ -1,0 +1,24 @@
+<h2><%= @task[:name] %></h2>
+<h3>Description: <%= @task[:description] %></h3>
+
+<p>
+  Task Completed on: <%= @task[:completion_date] %>
+</p>
+
+<p class="edit_link"><%= button_to "Mark Complete", mark_complete_path(@task), method: :post,
+  data: { confirm: "Are you sure you want to mark this task - #{@task.name} - as complete?" } %></p>
+
+<p class="edit_link"><%= button_to "Mark Incomplete", mark_incomplete_path(@task), method: :post,
+    data: { confirm: "Are you sure you want to mark this task - #{@task.name} - as incomplete?" } %></p>
+
+<p class="edit_link">
+<%= link_to "Edit task", edit_task_path%>
+</p>
+
+<p class="link">
+<%= link_to "Back to Task list", tasks_path %>
+</p>
+
+
+<p><%= link_to "Delete", task_path(@task), method: :delete,
+  data: { confirm: "Are you sure you want to delete task #{@task.name}?" } %></p>
