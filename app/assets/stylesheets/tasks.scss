@@ -1,9 +1,35 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
 
 html {
   background-color: #fefbd8;
+  font-family: 'Harmattan', 'serif';
+  text-align: center;
+}
+
+h1 {
+  text-align: left;
+}
+.index {
+  width: 100%;
+  text-align: center;
+  padding-left: 15px;
+  color: inherit;
+}
+// .index ul {
+//   text-align: center;
+
+a[href]:hover {
+    color: pink;
+    // list-style: none;
+    // text-decoration: none;
+}
+
+a[href] {
+  text-decoration: none;
+  color: cadetblue;
 }
 
 header {

@@ -2,7 +2,7 @@
 
   <h1>Tasks</h1>
   <h2>Let's Get Organized!</h2>
-  <h3>A list of all tasks:</h3>
+  <h3 class="index">A list of all tasks:</h3>
   <ul>
   <% @tasks.each do |task| %>
   <li>The task to do is: <%= link_to task.description, task_path(task.id) %> </li>
