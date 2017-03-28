@@ -1,0 +1,10 @@
+<h1> Task List </h1>
+
+
+<ul class="task-list">
+  <% @tasks.each do |task, id| %>
+<%= render partial: "summary_page", locals: {task: task } %>
+  <% end %>
+</ul>
+
+<%= link_to "Want to create a new task?", new_task_path %>

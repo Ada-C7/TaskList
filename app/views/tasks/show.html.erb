@@ -1,0 +1,9 @@
+<h2><%= @task[:name] %></h2>
+  <h3> <%= @task[:description] %></h3>
+  <h3> <%= @task[:completion_date] %></h3>
+
+<%= link_to "Back to main page.", root_path %><br>
+
+<%= link_to "Whoops, do you need to make an edit?", edit_task_path(@task) %>
+<br>
+<%= link_to "Delete?", task_path(@task), data: {method: :delete, confirm: "Are you sure you want to delete #{@task.name}"} %><br>
