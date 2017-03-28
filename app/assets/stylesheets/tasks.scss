@@ -35,6 +35,19 @@ a[href] {
 header {
   background-color: #80ced6;
   text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+footer {
+  background-color: #80ced6;
+  height: 100px;
+  width: 100%;
+}
+
+footer p {
+    padding-top: 40px;
+    margin-left: 18px;
 }
 
 body {
@@ -50,10 +63,22 @@ li {
   list-style: none;
 }
 
-#index h2 {
+nav li {
+  margin-right: 15px;
+}
+
+
+#main h2 {
   font-family: monospace;
   text-align: center;
+  padding-left: 35px;
+  margin-bottom: 50px;
+  margin-top: 35px;
   // color: white;
+}
+
+#main p {
+  margin-left: 35px;
 }
 
 section {

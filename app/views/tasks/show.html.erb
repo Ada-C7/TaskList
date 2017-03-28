@@ -7,7 +7,7 @@
   <li> The duration of the task is <%= @result_task.duration %> hour(s).</li>
   <li>The status of this task is <%
   if @result_task.completion_date == nil %>
-  Not Complete <% else %> : completed at:
+  Not Complete. <% else %> : completed at:
   <%= @result_task.completion_date %>
   <% end %> </li>
 </ul>
