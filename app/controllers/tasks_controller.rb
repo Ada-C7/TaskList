@@ -44,8 +44,11 @@ class TasksController < ApplicationController
   def mark_complete
     @task = Task.find(params[:id])
     @task.update({:completed_at=>Time.now})
-    # redirect_to task_path(@task.id)
     redirect_to tasks_path
+    ## redirect_to task_path(@task.id)
+
+    # @tasks = Task.all
+    # render :index
   end
 
 end
