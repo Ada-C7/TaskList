@@ -1,21 +1,30 @@
-<h1>Task List</h1>
+
+<h1>Get Organized</h1>
 
 <%= image_tag "http://www.gaffaneysoffice.com/sites/default/files/images/n2.jpg", alt: "Photo of Organized Desk" %>
+
 
 <p><%= link_to "Go back to the home page", welcome_path %></p>
 
 <p><%= link_to "Add a new task", new_task_path %></p>
 
 
-
+<h2>Task List</h2>
 
   <ul>
     <% @tasks.each do |task| %>
-    <div>
+    <div class="task">
       <%= link_to task[:name], task_path(task.id) %>
       <li>
         <%= task[:description] %>
       </li>
+      <p id="edit">
+        <%= link_to "Edit", edit_task_path(task) %>
+      </p>
+      <p id="delete">
+      <%= link_to "Delete", task_path(task), method: :delete,
+        data: { confirm: "Are you sure you want to delete task #{task.name}?" }%>
+      </p>
     </div>
     <% end %>
   </ul>

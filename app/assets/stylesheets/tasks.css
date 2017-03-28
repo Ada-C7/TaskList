@@ -16,9 +16,9 @@ img {
   border-radius: 20%;
 }*/
 
-div {
+.task {
   border: 2px solid gray;
-  padding-left: 5px;
+  padding-left: 25px;
   padding-top: 25px;
   padding-right: 5px;
   padding-bottom: 25px;
@@ -32,9 +32,23 @@ div {
 li {
   margin-left: 65px;
   margin-right: 100px;
+  text-decoration: none;
 }
 
 .link {
   margin-left: 0%;
-  margin-top: 10%;
+  margin-top: 3%;
+}
+
+.edit_link {
+  margin-top: 5%;
+  margin-left: 0%;
+}
+
+.button_to {
+  margin-right: 50px;
+}
+
+#edit, #delete {
+  display: inline-block;
 }
