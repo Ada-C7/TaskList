@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
-  # 
-  # def generate_completed_at_date_time
-  #   self.completed_at = DateTime.now
-  # end
+  #
+  def set_completed_at_time
+    self.completed_at = DateTime.now
+  end
 end

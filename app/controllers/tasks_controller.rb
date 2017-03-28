@@ -26,9 +26,14 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.update_attributes(task_params)
     task.save
-    # can use task.update to update and save to db at sametime
-    # this will do a update_attribute and save "under the hood"
     redirect_to task_path(task)
+  end
+
+  def completed
+    task = Task.find(params[:id])
+    task.set_completed_at_time
+    task.save
+    redirect_to tasks_path(task)
   end
 
   def delete
