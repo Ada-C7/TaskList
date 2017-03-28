@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-
+  include TasksHelper
   def index
     @tasks = Task.all
   end
@@ -14,7 +14,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new({:name=>params[:task][:name], :description=>params[:task][:description], :completed_at=>Time.at(rand * Time.now.to_i)})
+    @task = Task.new(task_params)
+    # @task = Task.new({:name=>params[:task][:name], :description=>params[:task][:description], :completed_at=>Time.at(rand * Time.now.to_i)})
     if @task.save
       redirect_to task_path(@task.id)
     else
@@ -34,7 +35,7 @@ class TasksController < ApplicationController
 
   def update #patch request doesn't need view only Get request needs view
     task = Task.find(params[:id])
-    if task.update({:name=>params[:task][:name], :description=>params[:task][:description]})
+    if task.update(task_params)
       redirect_to task_path(task.id)
     else
       render :edit #render to edit page
@@ -45,10 +46,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.update({:completed_at=>Time.now})
     redirect_to tasks_path
-    ## redirect_to task_path(@task.id)
-
-    # @tasks = Task.all
-    # render :index
   end
 
 end
