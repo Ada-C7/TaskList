@@ -46,6 +46,14 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  def complete
+    task = Task.find(params[:id])
+    # ":complete_by" might need to be a new column
+    task.update(:completed_on => Date.today)
+
+    redirect_to tasks_path
+  end
+
     private
       def task_params
         return params.require(:task).permit(:what, :when, :description)
