@@ -1,0 +1,18 @@
+<h1>My To-Do List</h1>
+
+<!-- <img src="http://placebeyonce.com/460-460" /> -->
+
+<h4>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <%= link_to task.title, task_path(task.id) %>
+        <% if task.completion == nil %>
+          <%= link_to "Mark as Complete", complete_task_path(task.id), data: { confirm: "Are you sure you want to complete this task?" }, method: :patch, class: "complete_button" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2><%= link_to "Add A New Task", new_task_path %></h2>
+</h4>
