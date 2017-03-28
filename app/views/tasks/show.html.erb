@@ -8,8 +8,13 @@
 
 <main>
   <nav>
-    <p><%= link_to "Home", tasks_path %></p>
+    <p><%= link_to "Completed", completed_path(@task), method: :patch %></p>
+    <p><%= link_to "Edit Task", edit_task_path %></p>
+    <p><%= link_to "Delete Task",
+            @task, method: :delete,
+            data: { confirm: "You sure?" } %></p>
     <p><%= link_to "Add New Task", new_task_path %></p>
+    <p><%= link_to "Home", tasks_path %></p>
   </nav>
 
   <section>
@@ -22,14 +27,7 @@
         <%= @task[:completed_at].nil? ? "NA" : @task[:completed_at].strftime("%D - %l:%M %p") %>
       </li>
     </ul>
-
-    <p><%= link_to "Edit Task", edit_task_path %></p>
-
-    <p><%= link_to "Delete Task",
-            @task, method: :delete,
-            data: { confirm: "You sure?" } %></p>
   </section>
-
 </main>
 
 <footer>

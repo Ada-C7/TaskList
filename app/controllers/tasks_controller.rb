@@ -33,7 +33,7 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.set_completed_at_time
     task.save
-    redirect_to tasks_path(task)
+    redirect_to task_path(task)
   end
 
   def delete

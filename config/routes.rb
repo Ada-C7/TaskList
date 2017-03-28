@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
 
   patch 'tasks/:id', to: 'tasks#update'
-  patch 'tasks/:id/completed', to: 'tasks#completed', as: 'completed_task'
+  patch 'tasks/:id/completed', to: 'tasks#completed', as: 'completed'
 
   # trying to create destory/delete path
   delete 'tasks/:id', to: 'tasks#delete'
