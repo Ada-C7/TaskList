@@ -18,7 +18,7 @@ $stops: 100; //smoothness
 $time: 20s; //duration of animation
 $hue-range: 20; //of 360deg
 
-body{
+body {
   background-color: $bg-color;
   -webkit-animation: colorChange $time linear 0s infinite;
   animation: colorChange $time linear 0s infinite ;
@@ -50,6 +50,7 @@ body{
 
 main {
   padding-top: 10%;
+
 }
 
 a:link {
@@ -92,6 +93,16 @@ h4 {
   color: purple;
   font-weight: 1000
 }
+
+.completed {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;}
 
 ul {
   list-style: none;
