@@ -22,7 +22,7 @@ body {
   background-color: #BDC3C7;
   margin: 100px 30%;
   padding: 60px;
-  height: 400px;
+  /*height: 400px;*/
   width: 300px;
   box-shadow: 14px 14px 28px -9px rgba(0,0,0,0.56);
 }
@@ -44,4 +44,10 @@ li a {
   color: #2ABB9B;
   font-family: helvetica;
   text-align: justify;
+}
+
+
+p {
+  font-family: helvetica;
+  color: yellow;
 }
