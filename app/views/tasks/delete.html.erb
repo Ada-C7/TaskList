@@ -1,0 +1,15 @@
+<h2>Edit Task</h2>
+<%= render partial: "form" %>
+
+
+<!-- BONUS: FIGURE OUT HOW TO PRE-FILL JUST FOR EDIT
+<section>
+  <%= form_for @task do |f| %>
+    Task: <%= f.text_field :name, value: @task.name %><br />
+    Description: <%= f.text_field :description, value: @task.description  %><br />
+    Complete by:<%= datetime_field( f, :completion_date, value: @task.completion_date ) %>
+    <%= f.submit :class => "button" %>
+  <% end %>
+</section> -->
+
+<!-- locals: {value: @task.KEYS} -->

@@ -1,15 +1,32 @@
+<h2> 🐕 My To-Do List 🐕 </h2>
 
-<h2>My to-do list:</h2>
-  <% @tasks.each do |task| %>
-  <p><%= task[:name] %></p>
-    <ul>
-    <% if task[:description]!="" && task[:priority]!= nil %>
-      <li><%= "notes: #{task[:description]}" %></li>
-    <% end %>
+<% @tasks.each do |task| %>
+  <p>
+    <section class="float-left">
+      → <%= link_to task.name, task_path(task.id) %>
+      <%= link_to " ✏️", edit_task_path(task) %>
+      <%= link_to " ✘", task_path(task), method: :delete, data: { confirm: "Are you SURE you don't need to do that!?!" }%>
+    </section>
+  </p>
 
-    <% if task[:priority]!= "" && task[:priority]!= nil %>
-      <li><%= "priority: #{task[:priority]}" %></li>
-    <% end %>
-    </ul>
+  <section class="float-right">
+  <% if task[:completion_date]== "" || task[:completion_date]== nil %>
+     Mark complete? <%= link_to "◽️", task_path(task), method: :put, data: { confirm: "Way to go!" } %>
   <% end %>
-</ul>
+
+  <!-- .strftime on nil is breaking something but it may not be from here -->
+  <% if task[:completion_date]!= "" && task[:completion_date]!= nil %>
+    <%="Completed: #{task[:completion_date].strftime("%m/%d/%Y")}" %>
+  <% end %>
+</section>
+
+  <ul>
+  <% if task[:description]!="" && task[:description]!= nil %>
+    <li>
+    <%= "#{task[:description]}" %></li>
+  <% end %>
+  </ul>
+<% end %>
+<br />
+<button><%= link_to "add a new task", new_task_path %></button>
+<button><%= link_to "home", welcome_path %></button>

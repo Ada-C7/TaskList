@@ -1,0 +1,9 @@
+<!-- shared by 2 views: edit and new  -->
+<section>
+  <%= form_for @task do |f| %>
+    Task name: <%= f.text_field :name %><br />
+    Description: <%= f.text_field :description %><br />
+    Completed on: <%= f.date_field :completion_date %><br />
+    <%= f.submit :class => "button" %>
+  <% end %>
+</section>

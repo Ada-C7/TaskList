@@ -1,0 +1,15 @@
+<h2> Task Details </h2>
+
+<ul>
+  <li>Task name: <%= @task[:name] %> </li>
+  <li>Description: <%= @task[:description] %></li>
+  <li>Completed:
+    <% if @task[:completion_date].nil? %>
+      <%= "(not yet)" %>
+    <% else %>
+      <%= @task[:completion_date].strftime("%m/%d/%Y") %>
+    <% end %>
+  </li>
+</ul>
+</br>
+<button><%= link_to "back to list", tasks_path %></button>

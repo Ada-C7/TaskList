@@ -1,32 +1,92 @@
-html {
-  padding-left: 30%;
-  padding-right: 30%;
-}
+/* Colors:
+FFFED7 - cream (background)
+5FAD56 - light green
+F2C14E - dark yellow
+26AFA3 - light teal
+F78154 - tangerine */
+
 
 body{
+  padding-left: 15%;
+  padding-right: 15%;
   font-family: "Helvetica", "Arial", sans-serif;
+  background-color: #FFFED7;
+  color: black;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  font-weight: 800;
 }
 
 h2 {
-  background-color: yellow;
+  background-color: #26AFA3;
+  color: black;
   padding: 0.25rem;
+  margin: 0;
 }
 
-p {
-  background-color: lightgrey;
+.centered {
+  text-align: center;
+}
+
+.highlight {
+  background-color: #F2C14E;
   padding-left: 0.25rem;
-
-}
-
-h4::before {
-  content: "-☆-";
 }
 
 ul {
+  clear: both;
   margin: 0;
 }
 
 li {
   list-style: square;
   padding: 0;
+}
+
+.float-left {
+  float: left;
+  width: 68%;
+  background-color: #F78154;
+  padding-left: 1%;
+  height: 1.5rem;
+}
+
+.float-right {
+  float: right;
+  width: 30%;
+  padding-left: 1%;
+  background-color: #F2C14E;
+  height: 1.5rem;
+}
+
+button {
+  border-radius: 0.25rem;
+  background-color: white;
+  border-color: #F78154;
+  border-width: 2px;
+  padding: 0.25rem;
+  margin: 4px 2px;
+}
+
+.button {
+  border-radius: 0.25rem;
+  background-color: white;
+  border-color: #F78154;
+  border-width: 2px;
+  padding: 0.25rem;
+  margin: 4px 2px;
+}
+
+img {
+  width: 100%;
 }
