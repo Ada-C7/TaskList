@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   put '/tasks/:id', to:'tasks#update'
 
+  get '/tasks/:id/complete', to: 'tasks#complete', as: 'complete_task'
+
   delete '/tasks/:id/delete', to: 'tasks#delete'
 
 end

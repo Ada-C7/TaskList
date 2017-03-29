@@ -52,11 +52,12 @@ class TasksController < ApplicationController
 
   end
 
-  def complete? f
-    if true
-    f.completion_date = Date.today
-    else
-    f.completion_date = nil
+  def complete
+    task = Task.find params[:id]
+    task.completion_date = Date.today
+
+    if task.save
+      redirect_to tasks_index_path
     end
   end
 
