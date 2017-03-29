@@ -6,12 +6,6 @@
 
     <%= render partial: "complete", locals: { task_var: task } %>
 
-    <%= form_for task, url: complete_task_path(task.id), method: :patch do |f| %>
-      <p>
-        <%= f.submit "Complete?" %>
-      </p>
-    <% end %>
-
   </li>
   <% end %>
 </ul>

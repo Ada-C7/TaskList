@@ -6,5 +6,11 @@
 <p class="incomp">
   <% if !task_var.complete %>
   Not done yet! Get on it!
+
+    <%= form_for task_var, url: complete_task_path(task_var.id), method: :patch do |f| %>
+      <p>
+        <%= f.submit "Complete?" %>
+      </p>
+    <% end %>
   <% end %>
 </p>
