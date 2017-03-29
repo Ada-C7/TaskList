@@ -15,12 +15,10 @@
   </p>
   <p>
     <%= link_to "Delete", delete_task_path(@result_task.id),
-    data: { confirm: "Are you sure you want to delete this task?" }, 
+    data: { confirm: "Are you sure you want to delete this task?" },
     method: :delete %>
   </p>
   <p>
     <%= link_to "Back to list", tasks_path %>
   </p>
-
-
 </section>
