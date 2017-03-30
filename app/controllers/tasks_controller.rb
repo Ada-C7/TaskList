@@ -4,7 +4,6 @@ class TasksController < ApplicationController
   # end
 
   def index
-    puts "HELLO TESTING TESTING"
     @tasks = Task.all
   end
 
@@ -15,7 +14,6 @@ class TasksController < ApplicationController
   def create
     a = Task.create(task_params)
     a.save
-    puts "I am here"
     redirect_to tasks_path
   end
 

@@ -9,11 +9,8 @@
      data: {confirm: "Are you sure to delete task #{task.name}"} %></li>
 
      <%= button_to "Complete", complete_task_path(task.id), method: :patch%>
-     <li><%= if task.completed_at == nil
-                print ""
-             else
-                "Completed at: #{task.completed_at}"
-             end %>
+     <li>
+             <%= task.completed_at == nil ? "" : "Completed at: #{task.completed_at}" %>
     </li>
 
     <%#= check_box_tag "Complete", complete_task_path(task.id), method: :patch %>
