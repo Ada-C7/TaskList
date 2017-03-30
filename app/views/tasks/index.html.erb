@@ -3,15 +3,20 @@
 <ul>
   <% @tasks.each do |task| %>
 
-    <li><div class="side_by_side"><%= link_to task.name, task_path(task.id) %>
+    <li><h2 class="side_by_side"><%= link_to task.name, task_path(task.id) %></h2>
+      <%= label_tag "Completed " %>
+      <%= check_box_tag :completed, 1, task.completed_at %>
+    </li>
+    <li class="no_button">
+      <%= task.completed_at == nil ? "" : "Completed at: #{task.completed_at}" %></div>
+    </li>
+    <li class="no_button">
       <%= button_to "Edit", edit_task_path(task.id), method: :get %>
       <%= button_to "Delete", task_path(task.id), method: :delete,
       data: {confirm: "Are you sure to delete task #{task.name}"} %>
       <%= button_to "Complete", complete_task_path(task.id), method: :patch%>
     </li>
-    <li class="no_button">
-      <%= task.completed_at == nil ? "" : "Completed at: #{task.completed_at}" %></div>
-    </li>
+
     <br>
 
   <% end %>
