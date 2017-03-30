@@ -1,0 +1,29 @@
+<h1>Task List</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+
+    <li><h2 class="side_by_side"><%= link_to task.name, task_path(task.id) %></h2>
+      <%= label_tag "Completed " %>
+      <%= check_box_tag :completed, 1, task.completed_at, disabled: true%>
+    </li>
+    <li class="no_button">
+      <%= task.completed_at == nil ? "" : "Completed at: #{task.completed_at}" %></div>
+    </li>
+    <li class="no_button">
+      <%= button_to "Edit", edit_task_path(task.id), method: :get %>
+      <%= button_to "Delete", task_path(task.id), method: :delete,
+      data: {confirm: "Are you sure to delete task #{task.name}"} %>
+      <%= button_to "Complete", complete_task_path(task.id), method: :patch%>
+    </li>
+
+    <br>
+
+  <% end %>
+</ul>
+
+<ul class ="nav_links">
+  <li><%= link_to "go back to the home page", welcome_path %></li>
+  <li><%= link_to "Add a new task", new_task_path %></li>
+
+</ul>

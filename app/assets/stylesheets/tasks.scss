@@ -1,0 +1,46 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+a {
+  text-decoration: none;
+}
+.nav_links {
+  list-style-type: none;
+
+}
+
+.nav_links a {
+    color: white;
+}
+
+.nav_links li {
+
+  background-color: gray;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.no_button {
+  list-style-type:none;
+}
+.side_by_side {
+  display: inline-block;
+}
+
+
+form.button_to {
+  display: inline-block;
+}
+
+input[type=submit] {
+   background-color: orange;
+}
+
+h2 {
+  padding-right: 1.3em;
+}

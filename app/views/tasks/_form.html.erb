@@ -1,0 +1,18 @@
+<section>
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name%> <!-- #, value: "initial name", class: "name-field" %> -->
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :tools %>
+    <%= f.text_field :tools %>
+
+    <%= f.submit value: "#{submit_text} Task"%>
+  <% end %>
+
+  <ul class ="nav_links">
+    <li><%= link_to "Go back to the Task list", tasks_path %></li>
+  </ul>
+</section>
