@@ -2,17 +2,28 @@
 
 <ul>
   <% @tasks.each do |task| %>
-  <li>
+
     <!-- <%= link_to task[:name], task_path(task.id) %> -->
-    <%= link_to task.name, task_path(task.id) %>
-  </li>
+    <li><div class="side_by_side"><%= link_to task.name, task_path(task.id) %></div>
+    <%= button_to "Delete", task_path(task), method: :delete,
+     data: {confirm: "Are you sure to delete task #{task.name}"} %></li>
+
+     <%= button_to "Complete", complete_task_path(task.id), method: :patch%>
+     <li><%= if task.completed_at == nil
+                print ""
+             else
+                "Completed at: #{task.completed_at}"
+             end %>
+    </li>
+
+    <%#= check_box_tag "Complete", complete_task_path(task.id), method: :patch %>
+    <%#= "Check if the task is finished"%>
+    <%#= submit_tag "Mark as Complete" %>
   <% end %>
 </ul>
 
 <ul class ="nav_links">
  <li><%= link_to "go back to the home page", welcome_path %></li>
  <li><%= link_to "Add a new task", new_task_path %></li>
- <!-- <li><#%= link_to "Delete", task_path(task), method: :delete,
-  data: {confirm: "Are you sure to delete task #{task.name}"} %>
-  <li> -->
+
 </ul>

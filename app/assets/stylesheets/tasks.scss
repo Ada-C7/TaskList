@@ -15,7 +15,7 @@ a {
 }
 
 .nav_links li {
-  display: inline;
+
   background-color: gray;
   border: none;
   padding: 15px 32px;
@@ -23,6 +23,15 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.side_by_side {
+  display: inline-block;
+}
+
+
+form.button_to {
+  display: inline-block;
 }
 
 input[type=submit] {

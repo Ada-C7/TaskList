@@ -7,4 +7,7 @@
 <ul class = "nav_links">
   <li><%= link_to "Back to task list", tasks_path %></li>
   <li><%= link_to "Edit", edit_task_path %></li>
+  <li><%= link_to "Delete", task_path(@task.id), method: :delete,
+   data: {confirm: "Are you sure to delete task #{@task.name}"} %>
+ </li>
 </ul>

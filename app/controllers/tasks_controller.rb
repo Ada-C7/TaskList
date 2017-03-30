@@ -14,7 +14,6 @@ class TasksController < ApplicationController
 
   def create
     a = Task.create(task_params)
-    a.completed_at = Time.now
     a.save
     puts "I am here"
     redirect_to tasks_path
@@ -37,6 +36,18 @@ class TasksController < ApplicationController
 
     redirect_to task_path(task) #can be task_path(task.id)
 
+  end
+
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy
+    redirect_to tasks_path #"render :index" works too.
+  end
+
+  def complete
+  task = Task.find(params[:id])
+  task.update(completed_at: Time.now)
+  redirect_to tasks_path
   end
 
   private
