@@ -16,19 +16,4 @@
   <!-- <input type="submit" value="Submit the form"> -->
 <!-- </form> -->
 
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.label :tools %>
-  <%= f.text_field :tools %>
-
-  <%= f.submit value: "Add Task"%>
-<% end %>
-
-<ul class ="nav_links">
-  <li><%= link_to "Go back to the Task list", tasks_path %></li>
-</ul>
+<%= render partial: "form", locals: { submit_text: "Create" }%>

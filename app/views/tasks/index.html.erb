@@ -5,7 +5,7 @@
 
     <li><h2 class="side_by_side"><%= link_to task.name, task_path(task.id) %></h2>
       <%= label_tag "Completed " %>
-      <%= check_box_tag :completed, 1, task.completed_at %>
+      <%= check_box_tag :completed, 1, task.completed_at, disabled: true%>
     </li>
     <li class="no_button">
       <%= task.completed_at == nil ? "" : "Completed at: #{task.completed_at}" %></div>
