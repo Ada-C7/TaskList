@@ -1,0 +1,14 @@
+
+
+<%= form_for @task do |f| %>
+  <%= f.label :what %>
+  <%= f.text_field :what %>
+
+  <%= f.label :when %>
+  <%= f.text_field :when %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit value: "Add new task" %>
+<% end %>

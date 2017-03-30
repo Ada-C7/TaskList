@@ -1,0 +1,53 @@
+/*// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+
+h2, h3, a {
+  font-family: helvetica;
+}
+
+h2 {
+  color: #fff;
+}
+
+h3 {
+  color: yellow;
+}
+
+a {
+  color: #2ABB9B;
+}
+
+li {
+  font-family: helvetica;
+}
+
+.show {
+  margin: 200px 30vw;
+  text-align: center;
+}
+
+#new_task a {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  color: #6C7A89;
+  margin-left: 25%;
+}
+
+#completed {
+  font-size: 0.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#complete {
+  font-size: 0.5em;
+  display: inline-block;
+}
+
+#delete {
+  font-size: 0.5em;
+  display: inline-block;
+}
