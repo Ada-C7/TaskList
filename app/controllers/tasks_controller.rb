@@ -37,12 +37,12 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @task = Task.find(params[:id])
+    task = Task.find(params[:id])
 
-    @task.completion_date = Time.now.strftime("%m/%d/%Y")
+    task.completion_date = Time.now.strftime("%m/%d/%Y")
 
-    if @task.save
-      redirect_to task_path(@task.id)
+    if task.save
+      redirect_to task_path(task.id)
     end
   end
 
