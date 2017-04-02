@@ -1,22 +1,21 @@
-# Task List
-Let's build a Task List in Rails! We will solve the problem of tracking tasks in a web application. This project will enable us to keep track of and persist, add, edit and remove tasks. This is an individual Stage 1 project.
+# README
 
-## Learning Goals
-Practice all aspects of Rails development.
-- Create a new Rails application
-- Explore each aspect of the Rails Request Cycle: Model, View, Controller
-- Implement RESTful routes using Rails standards
-- Complete all CRUD actions in a Rails application
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## Baseline
-In this baseline, you'll create a new Rails application and get started with two of the major components: route, controller and view.
+Things you may want to cover:
 
-- Fork and clone this repository to your computer
-- Create a new Rails application using `rails new .`
-  - create a `Tasks` controller
-  - create a route to view the task `index` page
-  - create a controller action for the task `index` page which contains an array of hard-coded tasks
-  - create an ERB view to display the tasks from the controller action
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
 
 ## Wave 1
 This wave is where we introduce ActiveRecord to create a model. We use the model to persist our data.
@@ -45,12 +44,7 @@ In this wave, we will expand the actions we support and introduce forms for user
 ## Wave 3
 In this wave we will extend the interactivity with users, allowing them to edit existing tasks.
 
-1. Edit a task
-    - update each task's show page to include an edit link
-      - this will give the user a new page with a **form** that is pre-populated with the data about that task
-      - the site should take the user back to the task's show page after the task is updated
-
-
+* Services (job queues, cache servers, search engines, etc.)
 
 ## Wave 4
 In this wave, we will add the ability to delete tasks. We will also add the ability for a user to mark a task complete.

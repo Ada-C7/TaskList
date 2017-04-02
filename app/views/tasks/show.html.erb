@@ -1,0 +1,24 @@
+<section id="show">
+  <h1> <%= @result_task.name %> </h1>
+
+  <p id="description">
+    <strong>Description:</strong> <%= @result_task.description %>
+  </p>
+  <p>
+    <strong>Due Date:</strong> <%= @result_task.due_date %>
+  </p>
+  <p>
+    <strong>Completion Date:</strong> <%= @result_task.completion_date %>
+  </p>
+  <p>
+    <%= link_to "Edit", edit_task_path(@result_task.id) %>
+  </p>
+  <p>
+    <%= link_to "Delete", delete_task_path(@result_task.id),
+    data: { confirm: "Are you sure you want to delete this task?" },
+    method: :delete %>
+  </p>
+  <p>
+    <%= link_to "Back to list", tasks_path %>
+  </p>
+</section>

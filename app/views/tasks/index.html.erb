@@ -1,0 +1,24 @@
+<h1>Tasks</h1>
+
+<section class="index">
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <% if task.completion_date == "" || task.completion_date == nil %>
+          <%= link_to "⬜️", complete_task_path(task.id), method: :patch %>
+          <%= link_to task.name, task_path(task.id) %>
+        <% else %>
+          <span>✔️</span>
+          <%= link_to task.name, task_path(task.id) %>
+        <% end %>
+        <%#=[used for testing] task.completion_date %>
+      </li>
+    <% end %>
+  </ul>
+
+  <p>
+    <%= link_to "Add Task", new_task_path %>
+  </p>
+</section>
+<%# NOTE: when you edit a task... it will rest the completion_dateand due date to nil. FIX THIS!%>
+<%# Still can't figure out how to change the link once its been clicked%>
