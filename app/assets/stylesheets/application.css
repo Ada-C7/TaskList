@@ -1,0 +1,26 @@
+header {
+  background-color: darkgrey;
+  color: white;
+  font-family: cursive;
+  font-size: 2em;
+}
+
+main h1, main h2 {
+  font-family: fantasy;
+  color: cadetblue;
+  font-size: 2.5em;
+}
+
+ul {
+  color: cadetblue;
+}
+
+li a {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+a:hover {
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
