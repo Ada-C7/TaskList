@@ -1,0 +1,11 @@
+<section>
+  <%= form_for @task do |task| %>
+    <%= task.label :name %>
+    <%= task.text_field :name %>
+    <%= task.label :description %>
+    <%= task.text_field :description %>
+    <%= task.label :completion_date %>
+    <%= task.date_field :completion_date %>
+    <%= task.submit %>
+  <% end %>
+</section>
