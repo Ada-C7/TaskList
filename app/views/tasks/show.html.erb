@@ -1,0 +1,28 @@
+
+<header>
+  <h1>Task view</h1>
+</header>
+
+<section class="task">
+
+<h2>
+  <%= @result_task.name %>
+</h2>
+
+<section class="task_details">
+  <p class="description">
+    <%= @result_task.description %>
+  </p>
+
+  <p class="context">
+    <%= @result_task.context %>
+  </p>
+</section>
+
+<footer class="task_view">
+  <p>
+    <%= link_to "[return to task listing]", tasks_path %>
+    <span class="spacer">|</span>
+    <%= link_to "[edit this task]", edit_task_path %>
+  </p>
+</footer>

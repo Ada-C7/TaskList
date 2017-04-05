@@ -1,0 +1,28 @@
+
+
+<header>
+  <h1>Edit a task</h1>
+</header>
+
+<section class="form">
+  <!-- <%= form_for @task, method: :put do |f| %> -->
+    <%= render partial: "form" %>
+
+    <!-- <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :context %>
+    <%= f.select :context, [["< none >", ""], ["downtown", "downtown"], ["home", "home"], ["out and about", "out and about"]]%>
+
+    <%= f.submit %> -->
+  <!-- <% end %> -->
+</section>
+
+<footer class="form_footer">
+  <p>
+    <%= link_to "[return to task view]", task_path %>
+  </p>
+</footer>

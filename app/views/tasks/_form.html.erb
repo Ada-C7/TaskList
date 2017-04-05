@@ -1,0 +1,13 @@
+<%= form_for @task do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :context %>
+  <%= f.select :context, [["< none >", ""], ["downtown", "downtown"], ["home", "home"], ["out and about", "out and about"]]%>
+
+  <%= f.submit %>
+<% end %>

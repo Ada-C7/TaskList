@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*
+=================================
+Typography
+=================================
+*/
+
+ * {
+   font-family: 'Raleway', sans-serif;
+ }
+
+ h1 {
+   font-size: 1.5rem;
+   color: #b7d1fb;
+   font-weight: normal;
+ }
+
+ h2 {
+   font-size: 1.3rem;
+ }
+
+ h2, label, a {
+     color: #4286f4;
+ }
+ a {
+   text-decoration: none;
+ }
+ a:hover {
+   color: lightgrey;
+ }
+/*
+=================================
+Header and footer
+=================================
+*/
+body {
+  margin-left: 10px;
+}
+header {
+  margin: 5px 0px 10px 10px;
+  width: 400px;
+}
+header h1 {
+  border-bottom: solid 1px lightgrey;
+}
+footer {
+  margin: 50px 10px 0px 0px;
+}
+footer.task_list_footer,
+footer.form_footer {
+  margin-left: 10px;
+}
+section.task_list,
+section.task,
+section.form {
+  margin-left: 10px;
+}
+.spacer {
+  margin: 0px 5px;
+}
+/*
+=================================
+Task list
+=================================
+*/
+ li {
+   list-style-type: square;
+   color: #4286f4;
+ }
+ li.description,
+ li.context {
+   list-style-type: none;
+ }
+ li.description,
+ p.description {
+   color: lightgrey;
+   font-style: italic;
+ }
+ li.context,
+ p.context {
+   font-style: italic;
+   color: #cfe0fc;
+ }
+ .task_name,
+ .task_complete,
+ .task_delete,
+ .date_complete {
+   display: inline-block;
+ }
+
+ .task_name {
+   width: 205px;
+ }
+ .task_complete {
+   margin: 0px 10px;
+
+ }
+ .task_delete {
+   margin: 3px;
+ }
+ .date_complete {
+   margin: 0px 5px;
+   color: #b7d1fb;
+ }
+
+ /*
+ ==============================================
+ Task details
+ ==============================================
+ */
+ .task_details {
+   width: 400px;
+ }
+/*
+ ==============================================
+ New task form
+ ==============================================
+ */
+ input#task_name,
+ input#task_description {
+   width: 400px;
+   display: block;
+   margin-bottom: 10px;
+ }
+ input#task_description {
+   height: 100px;
+ }
+ select#task_context {
+   margin: 0px 10px;
+ }
