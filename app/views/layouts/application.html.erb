@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h2><%= link_to "Awesome Task List", tasks_path %></h2>
+
+      <nav>
+        <ul>
+          <!-- both of these links would be link_to as well, if those pages existed,
+          right now I have no way to refer to them, so I'm using the a tag as a placeholder -->
+          <li><a class="header-link" href="#login"> Login </a></li>
+          <li><a class="header-link" href="#signup"> Signup </a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

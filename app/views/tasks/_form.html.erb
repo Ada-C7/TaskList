@@ -1,0 +1,17 @@
+<%= form_for @task, method: form_method  do |f| %>
+ <ul>
+   <li>
+     <%= f.label :task %>
+     <%= f.text_field :name %>
+   </li>
+
+   <li>
+     <%= f.label :description, class: :description_label %>
+     <%= f.text_area :description, size: "50x12" %>
+   </li>
+   
+   <li>
+     <%= f.submit action_name %>
+   </li>
+</ul>
+<% end %>

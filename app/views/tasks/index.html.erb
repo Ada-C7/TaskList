@@ -1,0 +1,11 @@
+<h1>To Do List</h1>
+<div>
+  <ul>
+    <% @tasks.each_with_index do |task, index| %>
+     <li> <%= render partial: "toggle-button", locals: { task: task } %>
+           Task <%= index + 1 %>: <%= link_to task.name, task_path(task.id) %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<br/><%= link_to "Add Task", new_task_path %>

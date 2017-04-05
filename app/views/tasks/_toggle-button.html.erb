@@ -1,0 +1,5 @@
+<% if task.completed %>
+          <%= button_to "Mark Incomplete", completed_task_path(task.id), method: :patch, form_class: "toggle-button" %>
+      <% else %>
+          <%= button_to "Mark Complete", completed_task_path(task.id), method: :patch, form_class: "toggle-button" %>
+<% end %>

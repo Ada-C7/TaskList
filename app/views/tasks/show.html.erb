@@ -1,0 +1,23 @@
+<h1>Current Task:</h1>
+
+  <ul>
+    <li> Task: <%= @result_task.name %></li>
+    <li> Description: <%= @result_task.description %></li>
+    <li> Completion Date: <%= @result_task.completion_date if @result_task.completed %> </li>
+    <li>
+      <% if @result_task.completed == false %>
+            Not yet!
+      <% else %>
+            You are done!
+      <% end %>
+      <%= render partial: "toggle-button", locals: { task: @result_task } %>
+    </li>
+</ul>
+
+<%= link_to "Task list", tasks_path, class: :button_links %>
+
+<%= link_to "Edit Task", edit_task_path(@result_task.id), class: :button_links %>
+
+<%= link_to "Delete Task", delete_task_path(@result_task.id),
+    data: {confirm: "Are you sure you want to delete this task?"},
+    method: :delete, class: :button_links %>

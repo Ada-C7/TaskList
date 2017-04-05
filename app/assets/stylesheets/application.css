@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great|Jacques+Francois+Shadow|Londrina+Sketch|Love+Ya+Like+A+Sister|Poiret+One|Raleway+Dots|Rock+Salt|Special+Elite');
+
+body {
+  background: linear-gradient(to left, #E8CBC0 , #636FA4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Fredericka the Great";
+}
+
+header {
+  /*background-color: #C9B1FF;*/
+  box-sizing: border-box;
+  padding: 0 3%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+header li {
+  display: inline;
+  font-size: 1.5em;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  margin-top: 72px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.button_links {
+  padding: 0 1%;
+}
+
+a:visited {
+  color: blue;
+}
+
+.toggle-button {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+.new_task, div {
+  display: inline-block;
+  text-align: left;
+}
+
+.new_task li {
+  padding: 1% 1%;
+}
