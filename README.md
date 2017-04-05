@@ -2,7 +2,7 @@
 Let's build a Task List in Rails! We will solve the problem of tracking tasks in a web application. This project will enable us to keep track of and persist, add, edit and remove tasks. This is an individual Stage 1 project.
 
 This is a test
-
+Another test 
 ## Learning Goals
 Practice all aspects of Rails development.
 - Create a new Rails application
