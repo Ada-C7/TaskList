@@ -1,22 +1,32 @@
-<h1>Tasks List</h1>
+<h1>Tasks Index</h1>
+<%= link_to('Add New Task' , { :action => 'new'})%>
 
-<ul>
-<% @tasks.each_with_index do |task| %>
-    <li>
-      <%= link_to task[:name] %>
-    </li>
-   <% end %>
- </ul>
-
-<%target = 'world'%><br/>
-<%= "hello + #{target}"%><br/>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
 
+   <table class="listing" summary="tasks list">
 
- <%= 9 + 1%><br/>
+     <tr class="header">
 
-<% @array.each do |n|%>
-<%= n%>
-<% end %>
+       <th>Name</th>
+       <th>Description</th>
+     </tr>
 
-<%= link_to('tasks completed' , { :action => 'completed'})%>
+     <% @tasks.each do |task| %>
+     <tr>
+       <td><%= task[:description] %></td>
+       <td><%= task[:name] %></td>
+
+
+
+
+     </tr>
+
+     <% end %>
+   </table>
+ </div>

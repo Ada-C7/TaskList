@@ -1,4 +1,9 @@
-<h1>Tasks Completed </h1>
+<h1>Show</h1>
+
+
+
+
+<%= link_to('Delete' , tasks_path(@task) , :method => :destroy, data: {confirm: "Are you sure?"}) %>
 
 
 <ul>
@@ -7,13 +12,11 @@
       <%= link_to task[:name] %>
     </li>
    <% end %>
- </ul>
+ </ul><br/>
 
 
 
 
 
-
-<%= 9 + 1%><br/>
 
 <%= link_to('tasks list' , { :action => 'index'})%>

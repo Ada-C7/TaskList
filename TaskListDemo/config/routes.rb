@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
     # root route
-    root 'tasks#index'
+    resources :tasks
 
     # simple route
     get 'tasks/index'
-    get 'tasks/completed'
+
+    # post 'tasks', to:'tasks#create'
+
+    
+
+    get 'tasks/new'
+    post 'tasks' , to: "tasks#create"
+
+    post 'tasks', to: 'taskss#destroy'
 
     # dafault route
-    # get ':controller(/:action)'
+    # get ':controller(/:action(/:id))'
 
 
 
