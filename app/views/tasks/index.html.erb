@@ -1,0 +1,34 @@
+
+
+<!-- <h3>(Tasks#index)</h1>
+<!-- <p>Find me in app/views/tasks/index.html.erb</p> -->
+<h1>My To-do List:</h1>
+<ol>
+  <% @tasks.each do |task| %>
+  <li class="list-items">
+    <% if task.complete == true %>
+      <%= link_to task.name, task_path(task.id), class: "complete" %>
+      <%= task.description %>
+      | Completed:
+      <%= task.completion_date %>
+    <% else %>
+      <%= link_to task.name, task_path(task.id), class: "incomplete" %>
+      <%= task.description %>
+        <%= form_for task, method: :put do |f| %>
+
+        <!-- <%= f.label :complete, "" %> -->
+        <%= f.check_box :complete, class: "index-checkbox"%>
+        <%= f.submit "Mark complete", data: { confirm: "Are you sure you want to mark this complete?", class: "complete-button" } %>
+
+        <% end %>
+
+    <% end %>
+
+<!-- .strftime("%m-%d-%y") -->
+        <% end %>
+
+  </li>
+
+</ol>
+
+<%= link_to "Add a new task", new_task_path, class: "add-button" %>
