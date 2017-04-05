@@ -1,0 +1,20 @@
+<%= form_for @task, method: form_method do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :image, "Image URL" %>
+<%= f.text_field :image %>
+
+<%= f.label :description %>
+<%= f.text_area :description, size: "43x12" %>
+
+<%= f.label :status %>
+<%= f.select :status, ["Haven't Started", "Getting There", "Done!"] %>
+
+<%= f.label :complete_by, "Task should be completed by:"%>
+<%= f.date_field :complete_by %>
+
+<%= f.submit action_name %>
+
+<% end %>

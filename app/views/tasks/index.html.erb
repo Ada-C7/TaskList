@@ -1,0 +1,38 @@
+<h1>All My Tasks</h1>
+
+<article class="main-list">
+
+  <h2>Don't Forget!</h2>
+  <h3>Click on the Task Name to Show Details or Edit Task</h3>
+
+  <% @tasks.each do |task| %>
+
+      <section class="
+        <% if task.completion_date == nil %>
+          <%= "incomplete" %>
+        <% else %>
+          <%= "complete" %>
+        <% end %>" />
+
+        <h3>
+          <%= link_to task.name, task_path(task.id) %>
+        </h3>
+
+        <p>
+          <% if task.completion_date == nil %>
+            <%= form_for task do |f| %>
+              <%= f.submit "Mark Complete", data: { confirm: "Are you sure you want to mark this task as Complete?"} %>
+            <% end %>
+          <% end %>
+
+          <% if task.completion_date != nil %>
+              <%= link_to "Delete", delete_task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to Delete this task?"} %>
+          <% end %>
+        </p>
+      </section>
+
+    <% end %>
+
+</article>
+
+<%= link_to "Create New Task", new_task_path, class: "bottom-button" %>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*
+// Color Pallet
+// TEAL/BLUE (RGB) 5, 181, 214
+    //   light: 148, 230, 245
+    //   bright: 0, 215, 255
+    // LIME 208, 188, 4
+    //   lightest 214, 203, 107
+    //   light 215, 198, 45
+    //   dark 195, 175, 0
+    //   darker 179, 161, 0
+    // GREY 143, 141, 142
+    //   purply 122, 111, 118
+    //   darker 111, 109, 111
+    //   darkest 98, 96, 97
+//
+*/
+
+html {
+  font-family: 'Raleway', sans-serif;
+  margin: 10px 5%;
+  overflow: auto;
+}
+
+h1, h2 {
+  color: rgb(5, 181, 214);
+  font-family: 'Rock Salt', cursive;
+}
+
+textarea, label, date_select {
+  box-sizing: border-box;
+  display: block;
+  margin: 10px;
+}
+
+img {
+  height: 200px;
+}
+
+
+/*Styling the all task list area*/
+.main-list {
+  background-color: rgba(214, 203, 107, 1);
+  font-weight: bold;
+  padding: 2px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.main-list h2 {
+  font-size: 1.75em;
+  text-align: center;
+  color: white;
+  background-color: rgb(5, 181, 214);
+  border-radius: 10px;
+  padding: 5px;
+  width: 400px;
+  letter-spacing: .2em;
+  position: relative;
+  left: 30%;
+}
+
+.incomplete, .complete {
+  display:inline-block;
+  height: 120px;
+  width: 21%;
+  margin: 20px 1.6%;
+  text-align: center;
+  clear: both;
+}
+
+.incomplete {
+  background-color: white;
+}
+
+.complete {
+  background-color: grey;
+  clear: both;
+}
+
+.complete input {
+  margin: 5px;
+}
+
+.complete a {
+  color: rgb(5, 181, 214);
+  margin: 5px;
+}
+
+section.incomplete:hover {
+  background-color: rgb(5, 181, 214);
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/*Just home button issues*/
+
+a.bottom-button {
+  background-color: white;
+  padding-top: 20px;
+  width: 500px;
+  text-align: center;
+}
