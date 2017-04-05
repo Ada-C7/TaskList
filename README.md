@@ -1,5 +1,8 @@
 Hehehehe I'm changing this you can't stop me ;-P
 
+"I'm hungry where is my snack"
+            - Brenna
+
 # Task List
 Let's build a Task List in Rails! We will solve the problem of tracking tasks in a web application. This project will enable us to keep track of and persist, add, edit and remove tasks. This is an individual Stage 1 project.
 
