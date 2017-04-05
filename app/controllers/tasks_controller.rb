@@ -7,7 +7,6 @@ class TasksController < ApplicationController
     @selected_task = Task.find params[:id]
   end
 
-
   def new
     @task = Task.new
   end
