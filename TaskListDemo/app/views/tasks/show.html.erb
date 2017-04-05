@@ -1,0 +1,22 @@
+<h1>Show</h1>
+
+
+
+
+<%= link_to('Delete' , tasks_path(@task) , :method => :destroy, data: {confirm: "Are you sure?"}) %>
+
+
+<ul>
+<% @tasks.each_with_index do |task| %>
+    <li>
+      <%= link_to task[:name] %>
+    </li>
+   <% end %>
+ </ul><br/>
+
+
+
+
+
+
+<%= link_to('tasks list' , { :action => 'index'})%>
