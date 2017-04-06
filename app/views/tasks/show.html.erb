@@ -1,0 +1,42 @@
+
+<section class="container">
+
+  <%= render partial: "header" %>
+  <article class="body">
+    <h3 id="task-name"><%= @task.title %></h3>
+
+    <section class="task-data">
+
+      <p>
+        <strong>due date:</strong> <%= @task.due %>
+      </p>
+      <p>
+        <strong>priority:</strong> <%= @task.priority %>
+      </p>
+      <p>
+        <strong>completed:</strong> <%= @task.completed %>
+      </p>
+      <p>
+        <strong>description:</strong> <%= @task.description %>
+      </p>
+    </section>
+
+    <section class="nav">
+      <ul>
+        <li>
+          <%= link_to "edit", task_edit_path(@task[:id]) %>
+        </li>
+        <li>
+          <%= link_to "prev", @prev_id %>
+        </li>
+        <li>
+          <%= link_to "next", @next_id %>
+        </li>
+        <li>
+          <%= link_to "home", tasks_path %>
+        </li>
+      </ul>
+    </section>
+  </article>
+  <%= render partial: "footer" %>
+</section>

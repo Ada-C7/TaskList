@@ -1,0 +1,46 @@
+<section class="container">
+  <%= render partial: "header" %>
+
+  <article class="body">
+    <section id="list">
+
+      <% @tasks.each do |task| %>
+        <% @button_text = "" %>
+        <% if task.completed != nil %>
+        <%  @button_text = "not done" %>
+        <% else %>
+        <%  @button_text = "done" %>
+        <% end %>
+
+
+        <ul class="main-nav">
+          <li class="task-title">
+            <div class="<%= 'task-done' if task.completed != nil %>">
+
+            <%= link_to task.title, task_path(task.id) %>
+          </li>
+          <li class="hidden">
+            <%= link_to "delete", task_delete_path(task.id), method: :delete, data: { confirm: 'really delete this task?' } %>
+          </li>
+          <li class="hidden">
+            <%= link_to "edit", task_edit_path(task.id), method: :get %>
+          </li>
+          <li class="hidden">
+            <%= link_to @button_text, complete_task_path(task.id), method: :patch %>
+          </li>
+        </ul>
+      <% end %>
+
+
+
+    </section>
+    <ul id="add_task">
+      <li>
+        <%= link_to "add task", tasks_new_path, method: :get %>
+      </li>
+    </ul>
+
+  </article>
+
+  <%= render partial: "footer" %>
+</section>

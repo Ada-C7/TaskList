@@ -1,0 +1,130 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: courier;
+}
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+
+h1, h3, footer p {
+  text-align: center;
+}
+
+header {
+  padding-top: 17px;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 2px;
+}
+
+li {
+  list-style-type: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+ul {
+  display: block;
+  margin: 0 auto;
+  padding: 2px 0;
+}  
+
+a:hover {
+  color: #E36A65;
+}
+
+#input-form li {
+  display: block;
+}
+
+.nav li {
+  padding: 0 20px;
+}
+
+#task-name {
+  padding-top: 35px;
+}
+
+#cancel-button {
+  padding-top: 40px;
+}
+
+#add_task {
+  padding: 0 0 65px 0;
+}
+
+.nav {
+  padding-bottom: 28px;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
+
+.body {
+  text-align: center;
+  padding-bottom: 75px;
+}
+
+.task-data, #list, #input-form {
+  text-align: left;
+  margin-left: 37%;
+  width: 35%;
+  min-width: 380px;
+  padding: 26px 0 40px 0;
+  overflow: scroll;
+}
+
+.task-title {
+  max-width: 190px;
+}
+
+#list {
+  height: 400px;
+}
+
+.container {
+  background-image: url("http://www.illustratoratoms.com/AtomsNetwork/Files/1414/10.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  min-height: 100%;
+  position: relative;
+  height: 100%;
+}
+
+footer {
+  height: 75px;
+  width: 100%;
+  bottom: 0;
+  font-size: .8em;
+  position: absolute;
+}
+
+.hidden {
+  visibility: hidden;
+  font-size: .7em;
+}
+
+.undo a {
+  color: blue;
+  content: "";
+}
+
+ul:hover li.hidden {
+  visibility: visible;
+}
+
+a:hover {
+  color: #E36A65;
+}
