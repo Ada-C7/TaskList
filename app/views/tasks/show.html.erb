@@ -1,0 +1,21 @@
+<h1>All about This Task</h1>
+
+<p class="show">
+  <% if @result_task.completed == true %>
+    <%= @result_task[:description]%> task was completed on <%= @result_task[:updated_at].strftime("%F") %> 😀
+  <% else %>
+    <%= @result_task[:description]%> task needs to be completed by <%= @result_task[:completion_date].strftime("%F") %> 😡
+  <% end %>
+</p>
+
+<h2>
+<%= link_to "Edit this Task", edit_task_path(@result_task.id) %>
+</h2>
+
+<h2>
+<%= link_to "Delete this Task", delete_task_path(@result_task.id), data: {confirm: "Are you sure you want to delete this task?" }, method: :delete %>
+</h2>
+
+<h2>
+<%= link_to "Full List", tasks_path %>
+</h2>
