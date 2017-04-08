@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   get "/tasks", to: "tasks#index"
   get "/tasks/:id", to: "tasks#show", as:'task'
 
-  patch "/tasks/:id", to: "tasks#complete", as: "completed_task"
-  post "/tasks/:id", to: "tasks#complete"
+  # patch "/tasks/:id", to: "tasks#complete", as: "completed_task"
+  post "/tasks/:id", to: "tasks#complete", as: "completed_task"
 
 
   get "/tasks/:id/edit", to: "tasks#edit", as: 'edit_task'
