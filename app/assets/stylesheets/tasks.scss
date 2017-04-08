@@ -1,0 +1,110 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Harmattan');
+
+html {
+  background-color: #fefbd8;
+  font-family: 'Harmattan', 'serif';
+  text-align: center;
+}
+
+h1 {
+  text-align: left;
+}
+.index {
+  width: 100%;
+  text-align: center;
+  padding-left: 15px;
+  color: inherit;
+}
+// .index ul {
+//   text-align: center;
+
+a[href]:hover {
+  color: pink;
+  // list-style: none;
+  // text-decoration: none;
+}
+
+a[href] {
+  text-decoration: none;
+  color: cadetblue;
+}
+
+header {
+  background-color: #80ced6;
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+footer {
+  background-color: #80ced6;
+  position: absolute;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  padding-top: 40px;
+  margin-left: 18px;
+}
+
+body {
+  color: #618685;
+  // border
+}
+
+h3 {
+  color: blue;
+}
+
+li {
+  list-style: none;
+}
+
+nav li {
+  margin-right: 15px;
+}
+
+input[type=text] {
+  background-color: #80ced6;
+  color: white;
+}
+
+.form {
+  padding: 50px;
+}
+
+#main h2 {
+  font-family: monospace;
+  text-align: center;
+  padding-left: 35px;
+  margin-bottom: 50px;
+  margin-top: 35px;
+  // color: white;
+}
+
+#main p {
+  margin-left: 35px;
+}
+
+section {
+  width: 100%;
+  // background-color: purple;
+  // border-style: groove;
+  border-color: blue;
+  border-radius: 10%;
+}
+
+// HEX: #d5f4e6
+//
+// HEX: #80ced6
+//
+// HEX: #fefbd8
+//
+// HEX: #618685

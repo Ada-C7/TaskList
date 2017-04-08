@@ -1,0 +1,39 @@
+<h2>Add New Task</h2>
+
+<!-- Html form  -->
+<!-- <form action="/tasks" method="post" accept-charset="utf-8">
+
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <label for="description">Task Description</label>
+  <input type="text" name="description" value="" id="title" />
+
+  <label for="assignee">Task Assignee</label>
+  <input type="text" name="assignee" value="" id="description" />
+
+  <label for="completed">Completion Date</label>
+  <input type="text" name="completed" value="" id="completed" />
+
+  <label for="duration">Task Duration</label>
+  <input tpe="text" name="duration" value="" id="duration" />
+
+  <input type="submit" value="Add Task" />
+</form> -->
+<!--  need to edit so that the methods read from here in forms, then have a link to home-->
+<!-- special view helper form , building a form around specific models, such as the @task instance variable -->
+<section class="form">
+  <%= form_for @task do |f| %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :assignee %>
+  <%= f.text_field :assignee %>
+  <%= f.label :completed %>
+  <%= f.text_field :completed %>
+  <%= f.label :duration %>
+  <%= f.text_field :duration %>
+
+  <%= f.submit %>
+
+  <% end %>
+</section>
+  <!-- <p> <%= link_to "Home", tasks_path%> </p> -->

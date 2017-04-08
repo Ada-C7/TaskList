@@ -1,0 +1,17 @@
+<section id="main">
+
+
+  <h2>Let's Get Organized!</h2>
+  <h3 class="index">A list of all tasks:</h3>
+  <ul>
+  <% @tasks.each do |task| %>
+  <li>The task to do is: <%= link_to task.description, task_path(task.id) %> </li>
+    <li> <%= link_to "Edit Task", edit_task_path(task.id) %> </li>
+    <li> <% if task.completion_date == nil %> <%= link_to "Complete?", completed_task_path(task.id), data: { confirm: "Are you sure you want to complete this task?" }, method: :complete %> <% else %> haha <% end %> </li>
+    <% end %>
+  </ul>
+  <p>*Click on each task for more information*</p>
+
+
+  <!-- <p><%= link_to "New Task", new_task_path %> </p> -->
+</section>

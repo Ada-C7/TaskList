@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<header>
+  <title>Haby's Tasks</title>
+  <h1>All The Tasks</h1>
+</header>
+<nav>
+  <ul>
+    <li> <%= link_to "Home", tasks_path %> </li>
+    <li> <%= link_to "New Task", new_task_path %> </li>
+  </ul>
+</nav>
+
+<body>
+  <%= yield %>
+</body>
+<footer>
+  <p> © Copyright 2017 by Haby Randall</p>
+</footer>
+</html>

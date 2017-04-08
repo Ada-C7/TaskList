@@ -1,0 +1,22 @@
+<h2>List of Tasks:</h2>
+
+<ul>
+  <li>The task to do is: <%= @result_task.description %>.</li>
+  <li>The assigned person is <%= @result_task.assignee %>. </li>
+  <li>This should be completed by <%= @result_task.completed %></li>
+  <li> The duration of the task is <%= @result_task.duration %> hour(s).</li>
+  <li>The status of this task is <%
+  if @result_task.completion_date == nil %>
+  Not Complete. <% else %> : completed at:
+  <%= @result_task.completion_date %>
+  <% end %> </li>
+</ul>
+
+
+<!-- <p> <%= link_to "Home", tasks_path %> </p> -->
+<p><%= link_to "Edit", edit_task_path(@result_task.id) %></p>
+
+<p> <%= link_to "Delete", delete_task_path(@result_task.id),
+data:{ confirm: "Are you sure you wish to delete this task?" }, method: :delete %> </p>
+
+<p> <% if @result_task.completion_date == nil %> <%= link_to "Complete?", completed_task_path(@result_task.id), data: { confirm: "Are you sure you want to complete this task?" }, method: :complete %> <% else %> haha <% end %> </p>
